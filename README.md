@@ -34,6 +34,9 @@ use. Keep `.upstream/`, `.venv/`, `data/`, and `runs/` out of Git.
 
 # Controlled pilot: eight training trials per arm and target mapping.
 .venv/bin/python sudokufly.py --trials 8
+
+# Same Level 1 task, with more existing connections allowed to learn.
+.venv/bin/python sudokufly.py --plasticity expanded --trials 8
 ```
 
 `--trials 8` is the default. Each invocation writes a new timestamped directory
@@ -42,7 +45,17 @@ See `--help` for parameters. Results include the exact protocol and source hash,
 cue images, per-trial activity and memory measurements, plastic-weight
 snapshots, and a `summary.json` with artifact hashes. These snapshots preserve
 selected weights and `u/w` at trial boundaries, not mid-trial electrical state.
-The probe never trains.
+The probe never trains. `--plasticity baseline` is the default and permits
+learning on 7,835 existing KC→MBON07/11 connections.
+
+Opt-in `--plasticity expanded` permits learning on 34,249 positive existing
+connections from Kenyon cells to 44 mushroom-body output neurons: **4.37× as
+many plastic connections**. It retains every baseline edge and its original
+modulation gain. Additional targets qualify with even one direct contact from
+the same 17 PAM11/PPL101 dopamine neurons; their gains use normalized contact
+fractions. Weakly supported targets can therefore receive unit total gain.
+This is an unvalidated anatomical proxy for dopamine modulation. Both variants
+use the same complete graph, stimuli, learning rule, and fixed action decoder.
 
 ## Protocol and interpretation
 
@@ -54,7 +67,7 @@ The probe never trains.
   no DNpe017 gate. These are engineered meanings assigned to neuron activity.
 - **Teaching:** after committing a decision, correctness selects a 200 ms PAM11
   reward or PPL101 aversive stimulation pulse. Timeouts count as errors. The
-  existing upstream local plasticity rule changes only its selected KC→MBON
+  existing upstream local plasticity rule changes only the selected KC→MBON
   memory connections. The remaining network and decoder are fixed.
 - **Counterbalancing:** two opposite target mappings exchange which cue means
   accept. Each arm starts from baseline weights and sees a balanced, seeded cue
@@ -74,6 +87,7 @@ and shuffled controls, and satisfy the control checks. Repeated deterministic
 trials are not independent training replicates. Even passing this gate would
 establish only a small cue-conditioning result; Sudoku, generalization to unseen
 stimuli, and an advantage from fly wiring require later experiments.
+Work stays at Level 1 until its gate passes; Level 2 has not started.
 
 ## Results
 
@@ -90,6 +104,12 @@ Training changed 2,919 and 2,963 of the 7,835 eligible connections, but the
 fixed decoder continued to accept both cues. Frozen and erased weights recovered
 the baseline spike traces exactly. This establishes an operating experimental
 loop, not learned cue discrimination. Sudoku levels have not started.
+
+Experiment 002 expanded the plastic set to 34,249 connections. The learned arm
+scored **50% / 100%** across the two opposite mappings; frozen, shuffled, and
+erased controls stayed at 50% in both. One mapping passes the exploratory gate,
+but **Level 1 remains unpassed** because both mappings must pass. Experiment 001
+above remains the preserved baseline result.
 
 See the [Level 1 experiment record](experiments/level-01/README.md) for the command,
 evidence, interpretation, and next diagnostic. Preserve each experiment in its

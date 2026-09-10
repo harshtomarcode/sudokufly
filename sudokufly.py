@@ -25,6 +25,64 @@ UPSTREAM_COMMIT = "78ef3e05ab0fa086032098558d893667068944a0"
 CUES = ("vertical", "horizontal")
 
 
+def expanded_memory_circuit():
+    """Extend plasticity to existing KC→MBON edges with direct DAN support.
+
+    Preserve the baseline 7,835 gains exactly. New targets share gain across the
+    same 17 DANs by contact fraction. Even one contact qualifies: this is an
+    exploratory connectivity proxy, not validated compartment physiology.
+    """
+    from stonkfly.neural.circuit import identify
+    from stonkfly.neural.common import GRAPH, annotations, digest
+    from stonkfly.neural.state import NativeBrain
+
+    graph = NativeBrain(GRAPH)
+    original = identify(graph)
+    a = annotations(graph.ids)
+    types = a.type.fillna("")
+    mb = np.flatnonzero(types.str.startswith("MBON")).astype(np.int32)
+    contact = np.zeros((len(original["dan"]), len(mb)), dtype=np.float64)
+    for row, neuron in enumerate(original["dan"]):
+        sl = slice(graph.ptr[neuron], graph.ptr[neuron + 1])
+        for col, target in enumerate(mb):
+            contact[row, col] = np.abs(graph.weight[sl][graph.post[sl] == target]).sum()
+    supported = contact.sum(axis=0) > 0
+    mb, contact = mb[supported], contact[:, supported]
+    edges = np.flatnonzero(np.isin(graph.post, mb)).astype(np.int64)
+    pre = (np.searchsorted(graph.ptr, edges, side="right") - 1).astype(np.int32)
+    keep = np.isin(pre, original["kc"]) & (graph.weight[edges] > 0)
+    edges, pre = edges[keep], pre[keep]
+    gains = np.zeros((len(original["dan"]), len(edges)), dtype=np.float32)
+    for col, target in enumerate(mb):
+        selected = np.flatnonzero(graph.post[edges] == target)
+        gains[:, selected] = (contact[:, col] / contact[:, col].sum())[:, None]
+    slots = np.searchsorted(edges, original["edges"])
+    if not np.array_equal(edges[slots], original["edges"]):
+        raise RuntimeError("Expanded circuit lost baseline connections")
+    gains[:, slots] = original["gain"]
+    if not np.array_equal(gains[:, slots], original["gain"]):
+        raise RuntimeError("Baseline modulation gains changed during expansion")
+    if len(edges) != 34249 or len(mb) != 44:
+        raise RuntimeError("Unexpected expanded circuit for the pinned dataset")
+    report = {
+        **original["report"],
+        "variant": "expanded-mbon-direct-dan-v1",
+        "plastic_edges": len(edges),
+        "plastic_edges_sha256": digest(edges),
+        "baseline_plastic_edges": len(original["edges"]),
+        "added_plastic_edges": len(edges) - len(original["edges"]),
+        "baseline_gains_preserved": True,
+        "memory_outputs": [
+            {"index": int(i), "id": str(graph.ids[i]), "type": str(types.iloc[i]),
+             "DAN_contacts": round(float(contact[:, col].sum()) / 0.275)}
+            for col, i in enumerate(mb)
+        ],
+        "selection": "Positive existing KC-to-MBON edges whose target receives >=1 direct contact from the original PAM11/PPL101 cells. All baseline edges retained; no graph edges added.",
+        "gain": "Baseline gains unchanged. New targets normalize contact fractions over the same 17 DANs. Weak contact support can receive unit total gain; this is an unvalidated cross-compartment extension.",
+    }
+    return {**original, "mb": mb, "edges": edges, "pre": pre, "gain": gains, "report": report}
+
+
 def cue_frame(cue):
     """Two centered, symmetric patterns with exactly equal pixel histograms."""
     frame = np.full((180, 320, 3), 235, dtype=np.uint8)
@@ -159,6 +217,7 @@ def main():
     parser.add_argument("--out", type=Path, default=ROOT / "runs" / time.strftime("level-01-%Y%m%d-%H%M%S"))
     parser.add_argument("--trials", type=int, default=8, help="Balanced training trials per arm and target mapping")
     parser.add_argument("--seed", type=int, default=20260910)
+    parser.add_argument("--plasticity", choices=("baseline", "expanded"), default="baseline", help="Original 7,835 or expanded 34,249 existing memory connections")
     parser.add_argument("--observe-ms", type=float, default=500)
     parser.add_argument("--feedback-ms", type=float, default=200)
     parser.add_argument("--settle-ms", type=float, default=250)
@@ -199,7 +258,8 @@ def main():
     print("Verifying connectome and loading the full neural model...", flush=True)
     verified = verify()
     started = time.perf_counter()
-    brain = VisualMemoryBrain(eta=args.eta)
+    circuit = expanded_memory_circuit() if args.plasticity == "expanded" else None
+    brain = VisualMemoryBrain(eta=args.eta, circuit=circuit)
     initial_weights = brain.weight.copy()
     a = annotations(brain.ids)
     motors = {

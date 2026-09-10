@@ -1,0 +1,328 @@
+[
+  {
+    "mapping": 0,
+    "targets": {
+      "vertical": "accept",
+      "horizontal": "reject"
+    },
+    "cue_order": [
+      "horizontal",
+      "vertical",
+      "horizontal",
+      "vertical",
+      "horizontal",
+      "vertical",
+      "vertical",
+      "horizontal"
+    ],
+    "baseline": {
+      "trials": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "by_cue": {
+        "vertical": 1.0,
+        "horizontal": 0.0
+      },
+      "coverage": 1.0,
+      "timeouts": 0,
+      "accuracy_when_responding": 0.5
+    },
+    "learned": {
+      "evaluation": {
+        "trials": 4,
+        "correct": 2,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "by_cue": {
+          "vertical": 1.0,
+          "horizontal": 0.0
+        },
+        "coverage": 1.0,
+        "timeouts": 0,
+        "accuracy_when_responding": 0.5
+      },
+      "memory": {
+        "plastic_edges": 34249,
+        "changed_edges": 14800,
+        "mean_efficacy": 1.0584046840667725,
+        "minimum_efficacy": 0.13715514540672302,
+        "sha256": "86bac73e275f3c33484e407d9380711e73440746083070aac5d2aa913beca43e",
+        "model": "stonkfly-dual-compartment-v1",
+        "maximum_efficacy": 1.9052238464355469,
+        "at_lower_bound": 0,
+        "at_upper_bound": 0,
+        "u_min": -0.8564926141315061,
+        "u_max": 0.9051986195020654,
+        "u_sha256": "9c2a0e20ed578baab68dca29b022e2dc014c82f3be7b61861f2e27b007d4db0d",
+        "w_sha256": "8450899a7921768f8b0addc440f0638ccd065d16140b07d374c942df4dffa906"
+      },
+      "nonplastic_weights_unchanged": true,
+      "output_changed_from_baseline": true
+    },
+    "learned_pulses": [
+      "aversive",
+      "reward",
+      "aversive",
+      "reward",
+      "aversive",
+      "aversive",
+      "reward",
+      "aversive"
+    ],
+    "shuffled_pulses": [
+      "reward",
+      "reward",
+      "aversive",
+      "aversive",
+      "aversive",
+      "aversive",
+      "reward",
+      "aversive"
+    ],
+    "shuffle_is_distinct": true,
+    "erased": {
+      "trials": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "by_cue": {
+        "vertical": 1.0,
+        "horizontal": 0.0
+      },
+      "coverage": 1.0,
+      "timeouts": 0,
+      "accuracy_when_responding": 0.5
+    },
+    "erasure_recovers_baseline": true,
+    "frozen": {
+      "evaluation": {
+        "trials": 4,
+        "correct": 2,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "by_cue": {
+          "vertical": 1.0,
+          "horizontal": 0.0
+        },
+        "coverage": 1.0,
+        "timeouts": 0,
+        "accuracy_when_responding": 0.5
+      },
+      "memory": {
+        "plastic_edges": 34249,
+        "changed_edges": 0,
+        "mean_efficacy": 1.0,
+        "minimum_efficacy": 1.0,
+        "sha256": "069366ccdde99fb21304db3963bfc9e321f5103ee068c3a229f04dac9d023533",
+        "model": "stonkfly-dual-compartment-v1",
+        "maximum_efficacy": 1.0,
+        "at_lower_bound": 0,
+        "at_upper_bound": 0,
+        "u_min": 0.0,
+        "u_max": 0.0,
+        "u_sha256": "1fc6dd328b94f7e422c5383a9cd61557bdea2deb734f1f34d315a4b47c1fc2f3",
+        "w_sha256": "1fc6dd328b94f7e422c5383a9cd61557bdea2deb734f1f34d315a4b47c1fc2f3"
+      },
+      "nonplastic_weights_unchanged": true,
+      "output_changed_from_baseline": false
+    },
+    "frozen_recovers_baseline": true,
+    "shuffled": {
+      "evaluation": {
+        "trials": 4,
+        "correct": 2,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "by_cue": {
+          "vertical": 1.0,
+          "horizontal": 0.0
+        },
+        "coverage": 1.0,
+        "timeouts": 0,
+        "accuracy_when_responding": 0.5
+      },
+      "memory": {
+        "plastic_edges": 34249,
+        "changed_edges": 14875,
+        "mean_efficacy": 1.052833914756775,
+        "minimum_efficacy": 0.13715514540672302,
+        "sha256": "408970c271ea300f725358d5c7a01a99614d8a825806841f18c32cc662afc29f",
+        "model": "stonkfly-dual-compartment-v1",
+        "maximum_efficacy": 1.78782057762146,
+        "at_lower_bound": 0,
+        "at_upper_bound": 0,
+        "u_min": -0.8564926141315061,
+        "u_max": 0.7877986647946849,
+        "u_sha256": "32ba4d4621795f74bcd1937fbce4359d34bbd5a86ba739cb72fc00a53eef34e6",
+        "w_sha256": "be29c34ba1285d4d239d5261ec85564f51bd7ba832bf4c9033c8f383f5fadb4d"
+      },
+      "nonplastic_weights_unchanged": true,
+      "output_changed_from_baseline": true
+    },
+    "behavior_gate_passed": false
+  },
+  {
+    "mapping": 1,
+    "targets": {
+      "vertical": "reject",
+      "horizontal": "accept"
+    },
+    "cue_order": [
+      "vertical",
+      "horizontal",
+      "vertical",
+      "horizontal",
+      "vertical",
+      "horizontal",
+      "vertical",
+      "horizontal"
+    ],
+    "baseline": {
+      "trials": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "by_cue": {
+        "vertical": 0.0,
+        "horizontal": 1.0
+      },
+      "coverage": 1.0,
+      "timeouts": 0,
+      "accuracy_when_responding": 0.5
+    },
+    "learned": {
+      "evaluation": {
+        "trials": 4,
+        "correct": 4,
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "by_cue": {
+          "vertical": 1.0,
+          "horizontal": 1.0
+        },
+        "coverage": 1.0,
+        "timeouts": 0,
+        "accuracy_when_responding": 1.0
+      },
+      "memory": {
+        "plastic_edges": 34249,
+        "changed_edges": 15065,
+        "mean_efficacy": 1.0527266263961792,
+        "minimum_efficacy": 0.15142111480236053,
+        "sha256": "a9f728d2af91cc0b0afe989dd3132d0d0ab1819d33a5895260f3e93fabb5b44a",
+        "model": "stonkfly-dual-compartment-v1",
+        "maximum_efficacy": 1.6623567342758179,
+        "at_lower_bound": 0,
+        "at_upper_bound": 0,
+        "u_min": -0.8684961134273216,
+        "u_max": 0.671650728913209,
+        "u_sha256": "835add328741d05c6a50f4be9fc49c2e9b858e8cbf6cb0a7308c381189135386",
+        "w_sha256": "fc7dc278c55a5021089e2a95953799cb5ed9d8c84f0fc7126f073264a3e7d46d"
+      },
+      "nonplastic_weights_unchanged": true,
+      "output_changed_from_baseline": true
+    },
+    "learned_pulses": [
+      "aversive",
+      "reward",
+      "aversive",
+      "reward",
+      "aversive",
+      "reward",
+      "aversive",
+      "reward"
+    ],
+    "shuffled_pulses": [
+      "reward",
+      "reward",
+      "aversive",
+      "reward",
+      "reward",
+      "aversive",
+      "aversive",
+      "aversive"
+    ],
+    "shuffle_is_distinct": true,
+    "erased": {
+      "trials": 4,
+      "correct": 2,
+      "accuracy": 0.5,
+      "balanced_accuracy": 0.5,
+      "by_cue": {
+        "vertical": 0.0,
+        "horizontal": 1.0
+      },
+      "coverage": 1.0,
+      "timeouts": 0,
+      "accuracy_when_responding": 0.5
+    },
+    "erasure_recovers_baseline": true,
+    "frozen": {
+      "evaluation": {
+        "trials": 4,
+        "correct": 2,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "by_cue": {
+          "vertical": 0.0,
+          "horizontal": 1.0
+        },
+        "coverage": 1.0,
+        "timeouts": 0,
+        "accuracy_when_responding": 0.5
+      },
+      "memory": {
+        "plastic_edges": 34249,
+        "changed_edges": 0,
+        "mean_efficacy": 1.0,
+        "minimum_efficacy": 1.0,
+        "sha256": "069366ccdde99fb21304db3963bfc9e321f5103ee068c3a229f04dac9d023533",
+        "model": "stonkfly-dual-compartment-v1",
+        "maximum_efficacy": 1.0,
+        "at_lower_bound": 0,
+        "at_upper_bound": 0,
+        "u_min": 0.0,
+        "u_max": 0.0,
+        "u_sha256": "1fc6dd328b94f7e422c5383a9cd61557bdea2deb734f1f34d315a4b47c1fc2f3",
+        "w_sha256": "1fc6dd328b94f7e422c5383a9cd61557bdea2deb734f1f34d315a4b47c1fc2f3"
+      },
+      "nonplastic_weights_unchanged": true,
+      "output_changed_from_baseline": false
+    },
+    "frozen_recovers_baseline": true,
+    "shuffled": {
+      "evaluation": {
+        "trials": 4,
+        "correct": 2,
+        "accuracy": 0.5,
+        "balanced_accuracy": 0.5,
+        "by_cue": {
+          "vertical": 0.0,
+          "horizontal": 1.0
+        },
+        "coverage": 1.0,
+        "timeouts": 0,
+        "accuracy_when_responding": 0.5
+      },
+      "memory": {
+        "plastic_edges": 34249,
+        "changed_edges": 14836,
+        "mean_efficacy": 1.0139563083648682,
+        "minimum_efficacy": 0.20736566185951233,
+        "sha256": "032983c7d5ace8024abb4b4efc83e8019280e8ed3a21ffc2c703e93cfbb42eb1",
+        "model": "stonkfly-dual-compartment-v1",
+        "maximum_efficacy": 1.3707292079925537,
+        "at_lower_bound": 0,
+        "at_upper_bound": 0,
+        "u_min": -0.7777725064995559,
+        "u_max": 0.37071885387509157,
+        "u_sha256": "a8031b099f96cda2122d9875b6df3a62ff5a9581ba3ea3eb26e381718ca5435c",
+        "w_sha256": "e5c6c3543c96ef98e06321cd4137a1a2673fc248a9ddf04e2f791b0d0ed86788"
+      },
+      "nonplastic_weights_unchanged": true,
+      "output_changed_from_baseline": true
+    },
+    "behavior_gate_passed": true
+  }
+]
