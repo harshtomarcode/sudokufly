@@ -1,0 +1,285 @@
+{
+  "level": 1,
+  "task": "Counterbalanced visual cue accept/reject conditioning",
+  "mode": "controlled_pilot",
+  "parameters": {
+    "trials": 8,
+    "seed": 20260910,
+    "observe_ms": 500,
+    "feedback_ms": 200,
+    "settle_ms": 250,
+    "threshold_hz": 2,
+    "pulse_current": 20,
+    "eta": 0.001,
+    "probe": false
+  },
+  "upstream_repository": "https://github.com/nftechie/stonkfly",
+  "upstream_commit": "78ef3e05ab0fa086032098558d893667068944a0",
+  "experiment_sha256": "a86d681436a35b8fe93ad2b2174a7a66add435ba62c74dba8eeedca7dc59abe4",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "Pillow": "12.3.0"
+  },
+  "python": "3.11.7",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "data": {
+    "release": "MaleCNS v1.0",
+    "neurons": 166700,
+    "directed_edges": 25582938,
+    "arrays_verified": true
+  },
+  "brain_configuration": {
+    "initial_weight": "40a2e78d7299197d24ba03a24c94a8e1cd0eb45a653d69f001fc3acee2fdc779",
+    "modulation_mask": "914dcf25dae442aecbcf27565f7bc8be76ea8254e7fbc944f2efe6e2413e6d5a",
+    "rule": {
+      "trace_kc_seconds": 1.0,
+      "trace_dan_seconds": 1.0,
+      "memory_decay_seconds": 1800.0,
+      "weight_filter_seconds": 0.05,
+      "minimum_fraction": 0.1,
+      "maximum_fraction": 2.0,
+      "maximum_rate_bin_ms": 10.0,
+      "source": "https://doi.org/10.1038/s41586-024-07819-w",
+      "interpretation": "Centered rate-rule adaptation on existing individual edges, not an exact reproduction of the published nine-unit model. Equal trace constants, efficacy bounds, gain and 50 ms weight filter require calibration."
+    },
+    "rule_sha256": "3c80680450c3b73042e332bd7ce8289d7d74d8695c60e7ac19eefd9759d95c44",
+    "tonic": "59bc68b376b730245aa0a6187794bf1b8bb5cf893925f731adc6d454c4034d10",
+    "dan_baseline_hz": "b707241545a346265aab1ffb32ff64b55bf8f8dc1b56a46ef33ce3d15db11d33",
+    "rest": "275bd935e4f1a56cbc2ca22b8f258f1cef511894f42f531e9a52476dd7b02946",
+    "adaptation_jump": 8.0,
+    "adaptation_tau": 200.0,
+    "retina": "5ec145156d998f582e5d8f08c4174e10f7f853d34745118adab8589f192d04b4",
+    "uv": "51f7dafd4355a06176418e22373ffcdf5bc066f75050da6dcbaaaccbad55a714",
+    "lamina": "22d6fa8ac7aa40700d09394aea1cf35226711d2efc78bc716882920ba180e47e",
+    "sugar": "89b057c7b57d5e783f608815b4219b17b54c812c3fa229bcb78b1cafa30d37a1",
+    "pre": "9e364eea0c28019aff530a75fe8d8638ad2ff248da95dfb9f33ba949d96b3f6e",
+    "gain": "8812f77147564eed2e911bb15cf1eb63834874ef1f2472bfbc3d7fd6dcfe14f1",
+    "kc_mask": "43e6ed840af2d547a3ae5848155e639f6e2abf60d5b7caa83c4298a3fb64c617",
+    "dan_index": "8a5540030b37fb7abfd3217a1713964e7f5b1e25604252b0f8849d27852f0c83",
+    "r8": "27c803c738f86c0509cabc57269e265bac832d8b4477773688e59a14d671f0ff",
+    "r8_uv": "e567b93a289fa467ec1096295c4682dce0dfd4f7d92844159f7eb4a380e22719",
+    "r8_channel": "350fc24c7884470b78254805a557e57bf12b89b71ea8a32af2f4929e951555ae",
+    "corrected_edges": "64916a520f2d1e7daf30bfd027a67d53ceb0f8270097b17c0635572ce2db658d"
+  },
+  "kernel": {
+    "model": "stonkfly-dual-compartment-v1",
+    "source_sha256": "e2d4d584f4633613277bb1bf6ea7ba20855c01a332ae2e9344ed7782604c8509",
+    "binary_sha256": "fdf8e98ec7d2e9eb4c1dfb3f8e349f0086bd3de1b73f3ca4977abdca375d3f0b",
+    "flags": [
+      "-O3",
+      "-std=c++17",
+      "-shared",
+      "-fPIC"
+    ]
+  },
+  "circuit": {
+    "release": "MaleCNS v1.0",
+    "neurons": 166700,
+    "directed_edges": 25582938,
+    "plastic_edges": 7835,
+    "plastic_edges_sha256": "153a1a6192bc7056b90bbfc757b56cb9580ca786a187583cc2cc652e1e3abe8f",
+    "reward_cells": [
+      {
+        "index": 86107,
+        "id": "114661",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 89566,
+        "id": "119763",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 100417,
+        "id": "137539",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 101105,
+        "id": "138822",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 101542,
+        "id": "139706",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 104512,
+        "id": "145749",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 105465,
+        "id": "147857",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 109038,
+        "id": "157016",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 119647,
+        "id": "204930",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 121077,
+        "id": "215931",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 121901,
+        "id": "224500",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 122768,
+        "id": "238644",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 123824,
+        "id": "273182",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 124499,
+        "id": "319321",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 130852,
+        "id": "520616",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      }
+    ],
+    "aversive_cells": [
+      {
+        "index": 1235,
+        "id": "11327",
+        "type": "PPL101",
+        "instance": "PPL101(y1ped)_R"
+      },
+      {
+        "index": 1774,
+        "id": "11900",
+        "type": "PPL101",
+        "instance": "PPL101(y1ped)_L"
+      }
+    ],
+    "memory_outputs": [
+      {
+        "index": 2675,
+        "id": "12859",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_R"
+      },
+      {
+        "index": 5174,
+        "id": "15626",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_L"
+      },
+      {
+        "index": 7840,
+        "id": "18603",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_L"
+      },
+      {
+        "index": 127736,
+        "id": "515338",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_R"
+      },
+      {
+        "index": 655,
+        "id": "10704",
+        "type": "MBON11",
+        "instance": "MBON11(y1pedc>a/B)_L"
+      },
+      {
+        "index": 1306,
+        "id": "11402",
+        "type": "MBON11",
+        "instance": "MBON11(y1pedc>a/B)_R"
+      }
+    ],
+    "selection": "All existing KC-to-MBON07/11 connections; no graph cropping or added edges.",
+    "gain": "Within-compartment DAN-to-MBON contact fractions; not measured receptor/dopamine kinetics.",
+    "validated": false
+  },
+  "visual": {
+    "model": "r8-rgb-ame12-v1",
+    "mapped_R8p": 330,
+    "mapped_R8y": 481,
+    "known_unmapped": 0,
+    "projection_confidence_median": 1.0,
+    "projection_below_80_percent": 22,
+    "corrected_existing_edges": 390,
+    "corrected_edge_sha256": "64916a520f2d1e7daf30bfd027a67d53ceb0f8270097b17c0635572ce2db658d",
+    "coordinate_inference": "Modal column of all outgoing contacts to any column-annotated target; same viewport transform as R1-R6.",
+    "spectrum": "Linear sRGB B for R8p; G for R8y. Display proxy, not calibrated photon flux or spectral sensitivity. R7, dorsal and untyped R8 receive no invented optical drive.",
+    "physiology": "R8 to aMe12 net sign positive; original contact magnitudes retained. Other R8 targets retain baseline sign. Photoreceptors still use a LIF rate proxy, not graded in-vivo dynamics.",
+    "evidence": [
+      "https://doi.org/10.1038/s41586-023-06681-6",
+      "https://doi.org/10.1038/s41467-024-49616-z",
+      "https://doi.org/10.7554/eLife.71858"
+    ],
+    "validated": false
+  },
+  "sensory": {
+    "vertical": {
+      "RGB_sha256": "2e0498628536a7b56caf918efdaa79c34cf8c361bc7e2d7e77d367fce308ddc9",
+      "RGB_mean": 222.34,
+      "retinal_mean": 0.7748443484306335,
+      "retinal_min": 0.009134056977927685,
+      "retinal_max": 0.830769956111908,
+      "retinal_sha256": "7966014c934d066dcedc702dedf026fafb1941234844a5eadfba9f1997940b5a"
+    },
+    "horizontal": {
+      "RGB_sha256": "ee47668be08300eccb9c204a61f413ed85f2321062b8a1ec1705a0b900a0c8cf",
+      "RGB_mean": 222.34,
+      "retinal_mean": 0.7765690088272095,
+      "retinal_min": 0.009134056977927685,
+      "retinal_max": 0.830769956111908,
+      "retinal_sha256": "2b357d16815bb4b81863fadd7af43cb6d4cb0e0a11d0e79f4b4092e639477dd8"
+    }
+  },
+  "decoder": {
+    "rule": "Mean DNp20 right minus left Hz; >=threshold accept, <=-threshold reject, otherwise timeout. No DNpe017 gating.",
+    "cell_ids": {
+      "left": [
+        10162
+      ],
+      "right": [
+        10059
+      ]
+    },
+    "trained": false
+  },
+  "reset": "Reset electrical states, queues, adaptation and KC/DAN traces between trials; preserve u/w and plastic weights during an arm.",
+  "evaluation": "weights_frozen=True; no teaching pulses; each cue repeated from identical reset state. Repeats are determinism checks, not independent samples.",
+  "controls": "Same cue schedule for learned/frozen/shuffled; frozen receives learned-arm pulses; shuffled receives a seeded permutation of those exact pulses; erase weights and u/w after learned evaluation.",
+  "progression_criterion": "Both opposite mappings: post balanced accuracy >=0.75, gain over initial >=0.25, gain over frozen and shuffled >=0.25; distinct shuffled pulse sequence; exact frozen and erased baseline recovery. An exploratory gate, not statistical validation.",
+  "claim_boundary": "Two artificial cues; no Sudoku reasoning, biological replication, or connectome advantage established."
+}
