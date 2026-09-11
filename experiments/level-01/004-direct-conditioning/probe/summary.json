@@ -1,0 +1,15 @@
+{
+  "decoder_offset_hz": 0.0,
+  "untrained_raw_scores_hz": {
+    "A": 0.0,
+    "B": 0.0
+  },
+  "no_learning_performed": true,
+  "visual_level_1_passed": false,
+  "elapsed_seconds": 1.1648949580267072,
+  "recorded_phases": 9,
+  "files_sha256": {
+    "protocol.json": "a40cc12a2d68955d944c36b040f6233d2502eb9a6dff6207042f9510aef86717",
+    "trials.jsonl": "ae2a0101d62cd66b9debc9a8e29c25a0443bd01cdaac87c68aaa98f8172437f4"
+  }
+}
