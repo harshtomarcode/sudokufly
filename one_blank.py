@@ -9,6 +9,7 @@ import itertools
 import json
 import os
 from pathlib import Path
+import random
 import subprocess
 import sys
 import time
@@ -228,12 +229,27 @@ def main():
     parser.add_argument("--per-pair", type=int, choices=(4, 6, 8), default=8)
     parser.add_argument("--timing", choices=("simultaneous", "staggered"), default="simultaneous")
     parser.add_argument("--mbon-current", type=float)
+    parser.add_argument("--train-epochs", type=int, default=0)
+    parser.add_argument("--conditioning-source", type=Path)
     parser.add_argument("--memory-source", type=Path,
                         default=ROOT / "experiments/level-02/005-controlled-replication/train")
     args = parser.parse_args()
+    if args.train_epochs < 0 or (args.train_epochs and
+            (args.split != "development" or args.timing != "simultaneous" or args.conditioning_source)):
+        parser.error("Conditioning uses development boards, simultaneous inputs, and no conditioned source")
     source = args.memory_source.resolve()
     prior = json.loads((source / "summary.json").read_text())
     source_protocol = json.loads((source / "protocol.json").read_text())
+    conditioned = None
+    if args.conditioning_source:
+        args.conditioning_source = args.conditioning_source.resolve()
+        conditioned = json.loads((args.conditioning_source / "summary.json").read_text())
+        cp = json.loads((args.conditioning_source / "protocol.json").read_text())
+        if not conditioned["gate_passed"] or not cp["training_epochs"] or cp["split"] != "development":
+            raise RuntimeError("Confirmation requires passing development conditioning")
+        for name, digest in conditioned["files_sha256"].items():
+            if hashlib.sha256((args.conditioning_source / name).read_bytes()).hexdigest() != digest:
+                raise RuntimeError(f"Conditioned artifact changed: {name}")
     if not prior["gate_passed"]:
         raise RuntimeError("Transfer requires a completed, passing source experiment")
     for name, digest in prior["files_sha256"].items():
@@ -276,6 +292,14 @@ def main():
     templates = np.array(source_protocol["templates"], dtype=np.float64)
     offset = source_protocol["decoder"]["offset_hz"]
     threshold = source_protocol["decoder"]["threshold_hz"]
+    if conditioned and (cp["sensory_KCs_per_pair"] != args.per_pair or cp["timing"] != args.timing
+                        or cp["inference_mbon_current"] != mbon_current
+                        or cp["memory_summary_sha256"] != hashlib.sha256((source / "summary.json").read_bytes()).hexdigest()
+                        or cp["decoder"] != {"offset_hz": offset, "threshold_hz": threshold}):
+        raise RuntimeError("Confirmation parameters differ from frozen conditioning protocol")
+    if conditioned and any(hashlib.sha256((ROOT / name).read_bytes()).hexdigest() != digest
+                           for name, digest in cp["source_sha256"].items()):
+        raise RuntimeError("Confirmation code differs from frozen conditioning source")
     inputs, presentations = {}, []
     views = ("base", "shift", "small")
     with (args.out / "presentations.jsonl").open("x") as manifest:
@@ -318,19 +342,23 @@ def main():
         "memory_protocol_sha256": hashlib.sha256((source / "protocol.json").read_bytes()).hexdigest(),
         "source_parameters": parameters, "decoder": {"offset_hz": offset, "threshold_hz": threshold},
         "inference_mbon_current": mbon_current,
+        "training_epochs": args.train_epochs,
+        "conditioning_source": str(args.conditioning_source.relative_to(ROOT)) if conditioned else None,
+        "conditioning_summary_sha256": hashlib.sha256((args.conditioning_source / "summary.json").read_bytes()).hexdigest() if conditioned else None,
+        "conditioning": "When enabled, every arm starts from the same paired Step2 memory. Balanced24-trial epochs use the16 development inputs: each accept input3times, reject once. Paired teaches only wrong/time-out decisions using the unchanged bidirectional rule; frozen/no-feedback replay its teaching schedule. Inconsistent permutes teaching/no-teaching events across the same cue schedule, preserving dose. Correct/no-teaching trials remain frozen. Stage erasure restores inherited weights and latent memory. No training on heldout boards.",
         "sensory_KCs_per_pair": args.per_pair, "total_sensory_KCs": 3 * args.per_pair,
         "timing": args.timing,
         "onsets_ms": "Simultaneous: all zero. Staggered: 4*(SHA256(decimal neuron ID).first_byte % 8); current stays on from onset to 500ms. Fixed per-neuron delays, no direct symbol or label lookup; exposure472-500ms.",
         "dataset": dataset, "selected_grids": [g["id"] for g in selected], "views": views,
         "rendered_presentations": len(presentations), "distinct_neural_inputs": len(inputs),
         "encoding": "Full masked board pixels plus candidate. Fixed cell crops locate sole blank; fixed target-row attention and existing template banks route three independent candidate/peer pairs. Each pair gets the same preset number of representatives, equally divided between hemispheres, from the saved Step2 group ordering. No solution, equality, legal-candidate flag or label enters encoder. Off-row information is intentionally excluded after blank detection.",
-        "inference": "500ms from reset, all memory updates and passive relaxation frozen, retinal and lamina drive zero. Saved Step2 weights, KC current and readout unchanged. Uniform output current and timing are explicitly recorded. No dopamine teaching and no new training in this assay.",
+        "inference": "500ms from reset, all memory updates and passive relaxation frozen, retinal and lamina drive zero. KC current and readout unchanged. Uniform output current and timing are explicitly recorded. No dopamine teaching during inference; any separate development conditioning is explicitly recorded.",
         "scan": "Replay candidates1,2,3,4 in that fixed order using the frozen responses; place first semantically accepted digit without filtering, retries or oracle correction. Grade the resulting complete board afterward.",
         "gates": {"balanced_accuracy": .90, "minimum_class_recall": .85,
                   "minimum_group_balanced_accuracy": .85, "minimum_precision": .90,
                   "minimum_completion_rate": .90, "minimum_control_gain": .25,
                   "exact_erasure": True, "nonplastic_preservation": True},
-        "limits": "Four familiar symbols, one blank in a valid board. Template recognition and target-row attention/pooling engineered. Row/column/box/global-count shortcuts cannot be distinguished. Many boards/views alias the same16 neural inputs. This is transfer of prior learning, not new board-specific training or general Sudoku solving.",
+        "limits": "Four familiar symbols, one blank in a valid board. Template recognition and target-row attention/pooling engineered. Row/column/box/global-count shortcuts cannot be distinguished. Many boards/views alias the same16 neural inputs, including across structural splits. Conditioning, when enabled, sees all16 representations. This is not general Sudoku solving or an independent neural generalization test.",
     }
     (args.out / "protocol.json").write_text(json.dumps(protocol, indent=2) + "\n")
     print(json.dumps({"environment_ready": True, "grids": len(selected),
@@ -338,6 +366,26 @@ def main():
     dark = np.zeros(len(brain.retina), dtype=np.float32)
     log = (args.out / "neural.jsonl").open("x")
     measured = 0
+    training_log = (args.out / "training.jsonl").open("x") if args.train_epochs else None
+
+    def training_segment(indices=None, duration=500, pulse=None, learning=False, frozen=True):
+        brain.weights_frozen = frozen
+        before = memory_state(brain)
+        stimulation = [] if indices is None else [(indices, parameters["kc_current"])]
+        if pulse is not None:
+            stimulation.append((c[pulse], 20))
+        counts, _ = brain.step(dark, duration, stimulation=stimulation, learning=learning, lamina_bias=0)
+        hz = {name: float(counts[ix].mean() * 1000 / duration) for name, ix in outputs.items()}
+        score = hz["MBON11"] - hz["MBON07"] - offset
+        after = memory_state(brain)
+        if frozen and before != after:
+            raise RuntimeError("Frozen conditioning phase changed memory")
+        return {"duration_ms": duration, "pulse": pulse, "learning": learning, "frozen": frozen,
+                "score_hz": score, "action": 1 if score >= threshold else 0 if score <= -threshold else -1,
+                "spikes_sha256": hashlib.sha256(counts.tobytes()).hexdigest(),
+                "selected_KC_spikes": int(counts[indices].sum()) if indices is not None else 0,
+                "DAN_spikes": {p: int(counts[c[p]].sum()) for p in ("reward", "aversive")},
+                "memory_before": before, "memory_after": after}
 
     def evaluate_neural(context):
         nonlocal measured
@@ -418,8 +466,28 @@ def main():
     for source_run in prior["runs"]:
         seed, mapping = source_run["seed"], source_run["mapping"]
         arms = {}
+        inherited = None
+        if args.train_epochs or conditioned:
+            inherited_path = source / f"{seed}-{mapping}-paired-memory.npz"
+            with np.load(inherited_path, allow_pickle=False) as saved:
+                inherited = {k: saved[k].copy() for k in ("weights", "u", "w")}
+            brain.reset(keep_memory=False)
+            brain.weight[c["edges"]] = inherited["weights"]
+            brain.memory_u[:] = inherited["u"]
+            brain.memory_w[:] = inherited["w"]
+            inherited_state = memory_state(brain)
+            inherited_responses = evaluate_neural({"seed": seed, "mapping": mapping, "phase": "inherited"})
+        if args.train_epochs:
+            representatives = {key: next(r for r in presentations if r["input"] == key) for key in inputs}
+            schedule = []
+            for epoch in range(args.train_epochs):
+                chunk = [key for key in sorted(inputs) for _ in range(3 if representatives[key]["label"] else 1)]
+                random.Random(seed + 1000 + epoch * 100).shuffle(chunk)
+                schedule.extend(chunk)
+            paired_events = []
         for arm in ("paired", "frozen", "no_feedback", "inconsistent"):
-            path = source / f"{seed}-{mapping}-{arm}-memory.npz"
+            path = ((args.conditioning_source / f"{seed}-{mapping}-{arm}-memory.npz") if conditioned
+                    else source / f"{seed}-{mapping}-{'paired' if args.train_epochs else arm}-memory.npz")
             with np.load(path, allow_pickle=False) as saved:
                 if not np.array_equal(saved["edge_indices"], c["edges"]):
                     raise RuntimeError("Saved plastic edge selection differs")
@@ -428,21 +496,71 @@ def main():
                 brain.memory_u[:] = saved["u"]
                 brain.memory_w[:] = saved["w"]
             state = memory_state(brain)
-            if state != source_run["arms"][arm]["memory"]:
+            expected = (next(r for r in conditioned["runs"] if r["seed"] == seed and r["mapping"] == mapping)["arms"][arm]["memory"]
+                        if conditioned else source_run["arms"]["paired" if args.train_epochs else arm]["memory"])
+            if state != expected:
                 raise RuntimeError("Restored memory differs from trained source")
+            if args.train_epochs:
+                events = list(paired_events)
+                if arm == "inconsistent":
+                    random.Random(seed + 2000 + mapping).shuffle(events)
+                    if events == paired_events:
+                        raise RuntimeError("Inconsistent teaching schedule did not change")
+                for trial, key in enumerate(schedule):
+                    brain.reset(keep_memory=True)
+                    decision = training_segment(inputs[key])
+                    target = representatives[key]["label"] ^ mapping
+                    if arm == "paired":
+                        pulse = ("reward" if target else "aversive") if decision["action"] != target else None
+                        paired_events.append(pulse)
+                    else:
+                        pulse = events[trial]
+                    phases = []
+                    if pulse is not None:
+                        actual = None if arm == "no_feedback" else pulse
+                        phases.append(training_segment(duration=200, pulse=actual, learning=arm != "frozen", frozen=arm == "frozen"))
+                        phases.append(training_segment(duration=250, frozen=arm == "frozen"))
+                        brain.reset(keep_memory=True)
+                        opposite = None if actual is None else "aversive" if actual == "reward" else "reward"
+                        phases.append(training_segment(duration=200, pulse=opposite))
+                        phases.append(training_segment(inputs[key], learning=arm != "frozen", frozen=arm == "frozen"))
+                        phases.append(training_segment(duration=250, frozen=arm == "frozen"))
+                    training_log.write(json.dumps({"seed": seed, "mapping": mapping, "arm": arm,
+                        "trial": trial, "input": key, "presentation": representatives[key], "target": target,
+                        "scheduled_pulse": pulse, "decision": decision, "phases": phases}) + "\n")
+                training_log.flush()
+                state = memory_state(brain)
+                np.savez_compressed(args.out / f"{seed}-{mapping}-{arm}-memory.npz",
+                                    edge_indices=c["edges"], weights=brain.weight[c["edges"]],
+                                    u=brain.memory_u, w=brain.memory_w)
             responses = evaluate_neural({"seed": seed, "mapping": mapping, "arm": arm, "phase": "recall"})
             scored = score_responses(responses, mapping)
+            stage_changed_edges = int(np.count_nonzero(brain.weight[c["edges"]] != inherited["weights"])) if inherited is not None else None
+            if inherited is not None:
+                brain.reset(keep_memory=False)
+                brain.weight[c["edges"]] = inherited["weights"]
+                brain.memory_u[:] = inherited["u"]
+                brain.memory_w[:] = inherited["w"]
+                if memory_state(brain) != inherited_state:
+                    raise RuntimeError("Stage erasure changed inherited memory")
+                stage_erased = evaluate_neural({"seed": seed, "mapping": mapping, "arm": arm, "phase": "stage_erased"})
+                if any(stage_erased[k]["spikes_sha256"] != inherited_responses[k]["spikes_sha256"] for k in inputs):
+                    raise RuntimeError("Stage erasure failed")
+                if arm == "frozen" and any(responses[k]["spikes_sha256"] != inherited_responses[k]["spikes_sha256"] for k in inputs):
+                    raise RuntimeError("Frozen inherited control changed")
             brain.reset(keep_memory=False)
             if hashlib.sha256(brain.weight.tobytes()).hexdigest() != initial_hash:
                 raise RuntimeError("Nonplastic weights changed")
             erased = evaluate_neural({"seed": seed, "mapping": mapping, "arm": arm, "phase": "erased"})
             if any(erased[key]["spikes_sha256"] != baseline[key]["spikes_sha256"] for key in inputs):
                 raise RuntimeError("Exact memory erasure failed")
-            if arm in ("frozen", "no_feedback") and any(
+            if inherited is None and arm in ("frozen", "no_feedback") and any(
                     responses[key]["spikes_sha256"] != baseline[key]["spikes_sha256"] for key in inputs):
                 raise RuntimeError("Unlearned source control differs from baseline")
             arms[arm] = {"evaluation": scored, "memory": state, "erasure_exact": True,
-                         "nonplastic_unchanged": True}
+                         "nonplastic_unchanged": True,
+                         "stage_erasure_exact": True if inherited is not None else None,
+                         "changed_from_inherited": stage_changed_edges}
             references.append({"path": str(path.relative_to(ROOT)), "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
             print(json.dumps({"seed": seed, "mapping": mapping, "arm": arm,
                               "balanced_accuracy": scored["balanced_accuracy"], "raw_accuracy": scored["accuracy"],
@@ -457,9 +575,11 @@ def main():
         results.append({"seed": seed, "mapping": mapping, "arms": arms, "gate_passed": passed})
         (args.out / "partial-results.json").write_text(json.dumps(results, indent=2) + "\n")
     log.close()
+    if training_log:
+        training_log.close()
     (args.out / "memory-references.json").write_text(json.dumps(references, indent=2) + "\n")
     summary = {"gate_passed": all(r["gate_passed"] for r in results), "split": args.split,
-               "no_new_learning": True, "runs": results, "measured_neural_evaluations": measured,
+               "no_new_learning": not bool(args.train_epochs), "runs": results, "measured_neural_evaluations": measured,
                "rendered_presentations": len(presentations), "distinct_neural_inputs": len(inputs),
                "baseline": {str(mapping): score_responses(baseline, mapping) for mapping in (0, 1)},
                "analytic_controls": {"always_reject": {"accuracy": .75, "balanced_accuracy": .5, "completion_rate": 0},
