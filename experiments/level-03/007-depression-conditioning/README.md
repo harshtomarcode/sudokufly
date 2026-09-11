@@ -32,3 +32,20 @@ the same 16 neural inputs, so confirmation cannot establish neural generalizatio
 ```sh
 .venv/bin/python one_blank.py --split development --per-pair 8 --timing simultaneous --train-epochs 8 --teaching depression --out experiments/level-03/007-depression-conditioning/development
 ```
+
+## Outcome: perfect judgments, failed added-learning control gate
+
+All four paired conditions reach 100% balanced accuracy, class and subgroup
+recall, precision, and scan completion. Frozen/no-feedback controls remain at
+62.5% / 50% for mappings 0 / 1. However, inconsistent feedback reaches 87.50%,
+83.33%, 91.67%, and 87.50% across the four conditions. The paired advantage is
+only 8.33–16.67 percentage points, below the unchanged 25-point requirement.
+Therefore the overall gate remains failed. This result cannot establish that
+correct Step 3 teaching associations are necessary for the improvement.
+
+All arms inherited correct Step 2 associations, so generic weakening may help
+make that existing knowledge readable. The next experiment tests that separate
+question using identical label-blind calibration of all ORIGINAL Step 2 arms.
+It does not reinterpret this failed incremental-learning gate as a pass.
+Runtime was 282.81 seconds; erasures and preservation checks pass. The held-out
+family remains reserved.
