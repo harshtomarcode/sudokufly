@@ -68,10 +68,24 @@ def patch_pixels(frame):
     return pixels / max(np.linalg.norm(pixels), 1e-12)
 
 
-def encode(frame, task, pool, filters, active, pixel_mean=None):
+def encode(frame, task, pool, filters, active, pixel_mean=None, templates=None, groups=None):
     """Label-blind random pixel features; all cross-role products treated alike."""
     if task == "cues":
         score = filters[0] @ patch_pixels(frame)
+    elif templates is not None:
+        # Each role has an independently permuted template bank. All Cartesian
+        # pairs receive identical routing; neither identity equality nor labels
+        # are computed here. Symbol recognition is explicitly template-based.
+        candidate = np.argmin(np.linalg.norm(templates[0] - patch_pixels(frame[:, 128:192]), axis=1))
+        codes = []
+        for i in (0, 64):
+            pixels = patch_pixels(frame[:, i:i + 64])
+            if np.any(pixels):
+                row = np.argmin(np.linalg.norm(templates[1] - pixels, axis=1))
+                codes.append(int(candidate * len(templates[1]) + row))
+        # Constant total input: 16 KCs for one pair, 8 from each of two pairs.
+        count = active // (2 * len(codes))
+        return np.sort(np.concatenate([groups[code, :, :count].ravel() for code in codes]))
     else:
         candidate = np.maximum(filters[0] @ (patch_pixels(frame[:, 128:192]) - pixel_mean), 0)
         row = []
@@ -91,24 +105,31 @@ def encode(frame, task, pool, filters, active, pixel_mean=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=("probe", "train"))
+    parser.add_argument("mode", choices=("probe", "pilot", "train"))
     parser.add_argument("--task", choices=("cues", "symbols"), required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--reference", type=Path)
     parser.add_argument("--pool", type=int, default=256)
     parser.add_argument("--active", type=int, default=16)
     parser.add_argument("--encoder-seed", type=int, default=20260911)
+    parser.add_argument("--encoder", choices=("random", "templates"), default="random")
+    parser.add_argument("--training-seed", type=int, default=20260911)
+    parser.add_argument("--threshold-hz", type=float)
     parser.add_argument("--kc-current", type=float, default=30)
     parser.add_argument("--mbon-current", type=float, default=5.5)
     parser.add_argument("--eta", type=float, default=0.001)
     parser.add_argument("--epochs", type=int, default=8)
     args = parser.parse_args()
-    if args.mode == "train" and args.reference is None:
+    if args.mode != "probe" and args.reference is None:
         parser.error("Training needs a completed untrained reference")
     if args.pool < args.active or args.pool % 2 or args.active < 1 or args.epochs < 2 or args.epochs % 2 or (args.task == "symbols" and args.active % 2):
         parser.error("Invalid pool, active count, or epochs")
     if any(not np.isfinite(v) or v <= 0 for v in (args.kc_current, args.mbon_current, args.eta)):
         parser.error("Positive finite current and eta required")
+    if args.threshold_hz is not None and (not np.isfinite(args.threshold_hz) or args.threshold_hz <= 0):
+        parser.error("Positive finite threshold required")
+    if args.encoder == "templates" and (args.task != "symbols" or args.active % 4):
+        parser.error("Template encoder requires symbols and active divisible by four")
     upstream = subprocess.check_output(["git", "-C", str(UPSTREAM), "rev-parse", "HEAD"], text=True).strip()
     dirty = subprocess.check_output(["git", "-C", str(UPSTREAM), "status", "--porcelain", "--untracked-files=no"], text=True).strip()
     if upstream != UPSTREAM_COMMIT or dirty:
@@ -160,9 +181,24 @@ def main():
         testing = [{"task": "symbols", "row": list(row), "candidate": q, "label": int(q not in row)}
                    for row in itertools.permutations(range(4), 2) for q in range(4)]
         views = ("base", "shift", "small", "bold")
-    training_views = ("base",) if args.task == "cues" else ("base", "bold")
+    training_views = ("base",) if args.task == "cues" or args.encoder == "templates" else ("base", "bold")
     pixel_mean = None if args.task == "cues" else np.mean([
         patch_pixels(render(case, view)[:, 128:192]) for case in training for view in training_views], axis=0)
+    templates, groups = None, None
+    if args.encoder == "templates":
+        unique = {hashlib.sha256(p.tobytes()).hexdigest(): p for p in
+                  [patch_pixels(render(case, "base")[:, 128:192]) for case in training]}
+        bank = np.array([unique[key] for key in sorted(unique)])
+        templates = np.array([bank[rng.permutation(len(bank))] for _ in range(2)])
+        n_codes = len(bank) ** 2
+        if args.pool != n_codes * args.active:
+            raise RuntimeError("Template groups require pool == prototypes^2 * active")
+        groups = np.empty((n_codes, 2, args.active // 2), dtype=np.int32)
+        for side in range(2):
+            for rank in range(args.active // 2):
+                block = pool[side * (args.pool // 2) + rank * n_codes:side * (args.pool // 2) + (rank + 1) * n_codes]
+                groups[:, side, rank] = block if rank % 2 == 0 else block[::-1]
+        groups = groups[rng.permutation(n_codes)]
     encoded = {}
     manifest = []
     for split, cases, variants in (("train", training, training_views), ("test", testing, views)):
@@ -170,7 +206,7 @@ def main():
             for view in variants:
                 key = f"{split}-{index}-{view}"
                 frame = render(case, view)
-                indices = encode(frame, args.task, pool, filters, args.active, pixel_mean)
+                indices = encode(frame, args.task, pool, filters, args.active, pixel_mean, templates, groups)
                 encoded[key] = indices
                 manifest.append({"key": key, "case": case, "view": view,
                                  "image_sha256": hashlib.sha256(frame.tobytes()).hexdigest(),
@@ -185,6 +221,8 @@ def main():
         "parameters": {k: v for k, v in vars(args).items() if k not in ("mode", "out", "reference")},
         "pool_ids": brain.ids[pool].tolist(), "filter_sha256": hashlib.sha256(filters.tobytes()).hexdigest(),
         "pixel_mean": None if pixel_mean is None else pixel_mean.tolist(),
+        "templates": None if templates is None else templates.tolist(),
+        "group_KC_ids": None if groups is None else brain.ids[groups].tolist(),
         "sensory_adapter": "Fixed 8x8 normalized ink pixels, seeded random filters. Symbols subtract the uniform unlabeled training-patch mean, use independent candidate/cell filter products, shared max-pooling over row slots, top-k/2 KCs per hemisphere. No glyph IDs, equality or target labels enter encoding. Layout, translation normalization and row-order invariance are engineered.",
         "teaching": "Supervised valence via DAN pulses, not chosen-action correctness. Cue500ms freezes weights but accumulates traces; cue-offDAN200ms learns;250ms passive consolidation.",
         "decoder": {"score": "meanMBON11Hz-meanMBON07Hz-offset", "offset_hz": offset, "threshold_hz": threshold,
@@ -194,10 +232,12 @@ def main():
                   "symbols": "Every mapping/order: >=0.90 balanced accuracy on unseen two-cell compositions, >=0.85 each class, candidate and view; >=0.25 above controls; exact erasure/nonplastic checks. Rows contain two distinct symbols from fixed alphabet1..4."},
         "limits": "Engineered visual representation and MBON readout; no claim of native fly vision, novel-symbol transfer, or Sudoku solving.",
     }
-    if args.mode == "train":
+    if templates is not None:
+        protocol["sensory_adapter"] = "Fixed nearest-template parsing of normalized 8x8 pixels. Templates are deduplicated unlabeled base training patches ordered by pixel hash and independently permuted by role. Every Cartesian template pair gets an identically sized disjoint KC group, stratified by anatomical strength without labels. A single pair drives16 KCs; each of two pairs drives8 (4/hemisphere). Recognition and equal row pooling are engineered; pair valence is learned only in KC-to-MBON synapses. No equality branch, membership flag, labels or trained decision head in encoding."
+    if args.mode != "probe":
         reference = json.loads((args.reference / "summary.json").read_text())
         rp = json.loads((args.reference / "protocol.json").read_text())
-        for key in ("source_sha256", "imported_source_sha256", "parameters", "pool_ids", "filter_sha256", "pixel_mean", "initial_weights_sha256"):
+        for key in ("source_sha256", "imported_source_sha256", "parameters", "pool_ids", "filter_sha256", "pixel_mean", "templates", "group_KC_ids", "initial_weights_sha256"):
             if rp[key] != protocol[key]:
                 raise RuntimeError(f"Reference differs: {key}")
         for name, sha in reference["files_sha256"].items():
@@ -268,11 +308,11 @@ def main():
                 baseline.append(row["raw_score_hz"])
                 print(json.dumps({"case": index, "view": view, "raw_score": row["raw_score_hz"], "output": row["output_hz"], "KCs": row["active_KCs"]}), flush=True)
         result = {"decoder_offset_hz": float(np.mean(baseline)),
-                  "decoder_threshold_hz": float(max(2, max(abs(x - np.mean(baseline)) for x in baseline) + 1)),
+                  "decoder_threshold_hz": float(args.threshold_hz if args.threshold_hz is not None else max(2, max(abs(x - np.mean(baseline)) for x in baseline) + 1)),
                   "untrained_scores_hz": baseline, "no_learning_performed": True}
     else:
         results = []
-        for seed in (20260911, 20260912):
+        for seed in range(args.training_seed, args.training_seed + (1 if args.mode == "pilot" else 2)):
             schedule = []
             for epoch in range(args.epochs):
                 chunk = [(i, view) for i, case in enumerate(training) for view in training_views
@@ -289,7 +329,7 @@ def main():
                 brain.reset(keep_memory=False)
                 baseline = evaluate({"seed": seed, "mapping": mapping, "arm": "baseline"}, mapping)
                 arms = {}
-                for arm in ("paired", "frozen", "no_feedback", "inconsistent"):
+                for arm in (("paired",) if args.mode == "pilot" else ("paired", "frozen", "no_feedback", "inconsistent")):
                     brain.reset(keep_memory=False)
                     for trial, (index, view) in enumerate(schedule):
                         brain.reset(keep_memory=True)
@@ -319,7 +359,7 @@ def main():
                                       "accuracy": evaluation["accuracy"], "by_view": evaluation["by_view"],
                                       "changed_edges": state["changed_edges"]}), flush=True)
                 paired = arms["paired"]["evaluation"]
-                passed = paired["balanced_accuracy"] >= .90 and min(paired["by_class"].values()) >= .85 and all(x >= .85 for x in paired["by_candidate"].values()) and min(paired["by_view"].values()) >= .85 and all(paired["balanced_accuracy"] >= arms[a]["evaluation"]["balanced_accuracy"] + .25 for a in ("frozen", "no_feedback", "inconsistent"))
+                passed = args.mode == "train" and paired["balanced_accuracy"] >= .90 and min(paired["by_class"].values()) >= .85 and all(x >= .85 for x in paired["by_candidate"].values()) and min(paired["by_view"].values()) >= .85 and all(paired["balanced_accuracy"] >= arms[a]["evaluation"]["balanced_accuracy"] + .25 for a in ("frozen", "no_feedback", "inconsistent"))
                 results.append({"seed": seed, "mapping": mapping, "schedule": schedule, "arms": arms, "gate_passed": passed})
                 (args.out / "partial-results.json").write_text(json.dumps(results, indent=2) + "\n")
         result = {"runs": results, "gate_passed": all(r["gate_passed"] for r in results)}
