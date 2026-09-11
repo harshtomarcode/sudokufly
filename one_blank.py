@@ -168,14 +168,14 @@ def render_board(board, candidate, view="base"):
     return np.asarray(image)
 
 
-def encode_board(frame, templates, groups):
-    """Locate the blank from pixels and route its three row peers to 24 KCs.
+def encode_board(frame, templates, groups, per_pair=8):
+    """Locate the blank from pixels and route its three row peers to KCs.
 
     The fixed crop/layout and target-row attention are engineered. Grid and
     highlight borders lie outside every crop. `templates` has shape (2,4,64),
     using Step 2's independently permuted candidate/row roles. `groups` has
-    shape (16,2,8); the original first four KCs per hemisphere are retained for
-    each pair. No template equality test, candidate filtering, or solver runs.
+    shape (16,2,8); use a fixed equal number per hemisphere and constituent pair.
+    No template equality test, candidate filtering, or solver runs.
     """
     pixels = []
     for row in range(4):
@@ -195,7 +195,7 @@ def encode_board(frame, templates, groups):
         if cell != blank:
             peer = int(np.argmin(np.linalg.norm(templates[1] - pixels[cell], axis=1)))
             codes.append(candidate * len(templates[1]) + peer)
-    indices = np.sort(np.concatenate([groups[code, :, :4].ravel() for code in codes]))
+    indices = np.sort(np.concatenate([groups[code, :, :per_pair // 2].ravel() for code in codes]))
     return indices, {"blank_position": [blank // 4, blank % 4], "pair_codes": codes}
 
 
@@ -225,6 +225,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--split", choices=("development", "heldout", "all"), required=True)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--per-pair", type=int, choices=(4, 6, 8), default=8)
     parser.add_argument("--memory-source", type=Path,
                         default=ROOT / "experiments/level-02/005-controlled-replication/train")
     args = parser.parse_args()
@@ -282,11 +283,11 @@ def main():
                 for view in views:
                     for candidate in (1, 2, 3, 4):
                         frame = render_board(board, candidate, view)
-                        indices, diagnostic = encode_board(frame, templates, groups)
+                        indices, diagnostic = encode_board(frame, templates, groups, args.per_pair)
                         if diagnostic["blank_position"] != [blank // 4, blank % 4]:
                             raise RuntimeError("Pixel-derived blank position is incorrect")
-                        if len(indices) != 24 or len(np.unique(indices)) != 24:
-                            raise RuntimeError("Expected 24 distinct existing sensory KCs")
+                        if len(indices) != 3 * args.per_pair or len(np.unique(indices)) != 3 * args.per_pair:
+                            raise RuntimeError("Unexpected number of distinct existing sensory KCs")
                         key = hashlib.sha256(indices.tobytes()).hexdigest()
                         inputs.setdefault(key, indices)
                         row = {"grid_id": grid["id"], "blank": blank, "candidate": candidate,
@@ -311,9 +312,10 @@ def main():
         "memory_summary_sha256": hashlib.sha256((source / "summary.json").read_bytes()).hexdigest(),
         "memory_protocol_sha256": hashlib.sha256((source / "protocol.json").read_bytes()).hexdigest(),
         "source_parameters": parameters, "decoder": {"offset_hz": offset, "threshold_hz": threshold},
+        "sensory_KCs_per_pair": args.per_pair, "total_sensory_KCs": 3 * args.per_pair,
         "dataset": dataset, "selected_grids": [g["id"] for g in selected], "views": views,
         "rendered_presentations": len(presentations), "distinct_neural_inputs": len(inputs),
-        "encoding": "Full masked board pixels plus candidate. Fixed cell crops locate sole blank; fixed target-row attention and existing template banks route three independent candidate/peer pairs. Eight existing representatives per pair yield24 KCs. No solution, equality, legal-candidate flag or label enters encoder. Off-row information is intentionally excluded after blank detection.",
+        "encoding": "Full masked board pixels plus candidate. Fixed cell crops locate sole blank; fixed target-row attention and existing template banks route three independent candidate/peer pairs. Each pair gets the same preset number of representatives, equally divided between hemispheres, from the saved Step2 group ordering. No solution, equality, legal-candidate flag or label enters encoder. Off-row information is intentionally excluded after blank detection.",
         "inference": "500ms from reset, all memory updates and passive relaxation frozen, retinal and lamina drive zero. Saved Step2 weights/current/readout unchanged. No dopamine teaching and no new training in this assay.",
         "scan": "Replay candidates1,2,3,4 in that fixed order using the frozen responses; place first semantically accepted digit without filtering, retries or oracle correction. Grade the resulting complete board afterward.",
         "gates": {"balanced_accuracy": .90, "minimum_class_recall": .85,
