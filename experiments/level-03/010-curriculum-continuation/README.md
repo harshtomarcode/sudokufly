@@ -40,3 +40,27 @@ learned Sudoku rule or that correct extra board-labelled feedback was necessary.
 # Only after all development gates pass and snapshots/source are committed:
 .venv/bin/python one_blank.py --split heldout --per-pair 8 --timing simultaneous --teaching depression --control-history curriculum --conditioning-source experiments/level-03/010-curriculum-continuation/development --out experiments/level-03/010-curriculum-continuation/heldout
 ```
+
+## Development outcome: every gate passes
+
+| Source order | Mapping | Paired balanced accuracy / completion | Frozen / no feedback | Inconsistent |
+| --- | --- | --- | --- | --- |
+| 20260919 | 0 | 100% / 100% | 0% / 0% | 12.50% |
+| 20260919 | 1 | 100% / 100% | 0% / 0% | 16.67% |
+| 20260920 | 0 | 100% / 100% | 0% / 0% | 0.00% |
+| 20260920 | 1 | 100% / 100% | 0% / 0% | 4.17% |
+
+Control values are balanced judgment accuracy. All control scans complete 0%
+of boards. Paired raw accuracy, both class recalls, precision, every candidate,
+blank and view subgroup, and both ascending/descending scans are 100%.
+All 768 paired training records, 64 paired recall records, and all four final
+W/u/w snapshots reproduce 007 exactly. The changed control comparison therefore
+does not alter the successful agent. The new full-history gate passes without
+reinterpreting 007's failed incremental-learning gate.
+
+The development assay evaluates 18,432 rendered judgments over 96 grids and
+1,536 distinct one-blank boards, using 16 unique neural inputs. It records
+1,040 physical frozen evaluations plus 3,072 training judgments. Every own-source
+and full erasure check passes, and nonplastic weights remain unchanged. Runtime
+was 300.13 seconds. Confirmation remains pending until these states and source
+are committed and the reserved family is evaluated without learning.

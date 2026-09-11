@@ -79,3 +79,11 @@ board-labelled learning. Mapping 0 passes at 100%, but mapping 1 reaches only
 54.17%, so the experiment still fails. Experiment
 [009](009-three-round-calibration/README.md) tests three fixed rounds of the
 same calibration with unchanged performance and control thresholds.
+It also fails (91.67% / 58.33%), including two newly lost rejections in mapping 0.
+
+Experiment [010](010-curriculum-continuation/README.md) continues each original
+Step 2 arm's own learning history using 007's successful paired protocol.
+Its causal comparison concerns learning across the curriculum. Experiment 007
+remains the direct, failed test of whether correct extra Step 3 feedback is
+necessary beyond an already learned Step 2 memory. These claims are distinct;
+the numeric behavioral gates and reserved-board confirmation remain unchanged.
