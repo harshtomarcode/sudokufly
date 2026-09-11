@@ -1,4 +1,4 @@
-"""One-blank 4x4 Sudoku transfer using saved internal fly memories.
+"""One-blank 4x4 Sudoku using learning inside existing fly synapses.
 
 The grader owns solutions; the encoder receives only rendered masked boards.
 """
@@ -230,6 +230,7 @@ def main():
     parser.add_argument("--timing", choices=("simultaneous", "staggered"), default="simultaneous")
     parser.add_argument("--mbon-current", type=float)
     parser.add_argument("--train-epochs", type=int, default=0)
+    parser.add_argument("--teaching", choices=("bidirectional", "depression"), default="bidirectional")
     parser.add_argument("--conditioning-source", type=Path)
     parser.add_argument("--memory-source", type=Path,
                         default=ROOT / "experiments/level-02/005-controlled-replication/train")
@@ -343,9 +344,10 @@ def main():
         "source_parameters": parameters, "decoder": {"offset_hz": offset, "threshold_hz": threshold},
         "inference_mbon_current": mbon_current,
         "training_epochs": args.train_epochs,
+        "teaching": args.teaching,
         "conditioning_source": str(args.conditioning_source.relative_to(ROOT)) if conditioned else None,
         "conditioning_summary_sha256": hashlib.sha256((args.conditioning_source / "summary.json").read_bytes()).hexdigest() if conditioned else None,
-        "conditioning": "When enabled, every arm starts from the same paired Step2 memory. Balanced24-trial epochs use the16 development inputs: each accept input3times, reject once. Paired teaches only wrong/time-out decisions using the unchanged bidirectional rule; frozen/no-feedback replay its teaching schedule. Inconsistent permutes teaching/no-teaching events across the same cue schedule, preserving dose. Correct/no-teaching trials remain frozen. Stage erasure restores inherited weights and latent memory. No training on heldout boards.",
+        "conditioning": "When enabled, every arm starts from the same paired Step2 memory. Balanced 24-trial epochs use the 16 development inputs: each accept input 3 times, reject once. Paired teaches only wrong/time-out decisions using the unchanged local rule. Depression: cue500, target DAN200 learning, passive250ms. Bidirectional additionally resets electrical state, gives opposite DAN200 frozen, same cue500 learning, passive250ms. Frozen/no-feedback replay the teaching schedule. Inconsistent permutes teaching/no-teaching events across the same cue schedule, preserving dose but changing active windows. Correct/no-teaching trials remain frozen. Stage erasure restores inherited weights and latent memory. No training on heldout boards.",
         "sensory_KCs_per_pair": args.per_pair, "total_sensory_KCs": 3 * args.per_pair,
         "timing": args.timing,
         "onsets_ms": "Simultaneous: all zero. Staggered: 4*(SHA256(decimal neuron ID).first_byte % 8); current stays on from onset to 500ms. Fixed per-neuron delays, no direct symbol or label lookup; exposure472-500ms.",
@@ -383,6 +385,7 @@ def main():
         return {"duration_ms": duration, "pulse": pulse, "learning": learning, "frozen": frozen,
                 "score_hz": score, "action": 1 if score >= threshold else 0 if score <= -threshold else -1,
                 "spikes_sha256": hashlib.sha256(counts.tobytes()).hexdigest(),
+                "KC_spikes": int(counts[c["kc"]].sum()),
                 "selected_KC_spikes": int(counts[indices].sum()) if indices is not None else 0,
                 "DAN_spikes": {p: int(counts[c[p]].sum()) for p in ("reward", "aversive")},
                 "memory_before": before, "memory_after": after}
@@ -520,11 +523,12 @@ def main():
                         actual = None if arm == "no_feedback" else pulse
                         phases.append(training_segment(duration=200, pulse=actual, learning=arm != "frozen", frozen=arm == "frozen"))
                         phases.append(training_segment(duration=250, frozen=arm == "frozen"))
-                        brain.reset(keep_memory=True)
-                        opposite = None if actual is None else "aversive" if actual == "reward" else "reward"
-                        phases.append(training_segment(duration=200, pulse=opposite))
-                        phases.append(training_segment(inputs[key], learning=arm != "frozen", frozen=arm == "frozen"))
-                        phases.append(training_segment(duration=250, frozen=arm == "frozen"))
+                        if args.teaching == "bidirectional":
+                            brain.reset(keep_memory=True)
+                            opposite = None if actual is None else "aversive" if actual == "reward" else "reward"
+                            phases.append(training_segment(duration=200, pulse=opposite))
+                            phases.append(training_segment(inputs[key], learning=arm != "frozen", frozen=arm == "frozen"))
+                            phases.append(training_segment(duration=250, frozen=arm == "frozen"))
                     training_log.write(json.dumps({"seed": seed, "mapping": mapping, "arm": arm,
                         "trial": trial, "input": key, "presentation": representatives[key], "target": target,
                         "scheduled_pulse": pulse, "decision": decision, "phases": phases}) + "\n")
