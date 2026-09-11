@@ -15,9 +15,14 @@ No new training occurs and the held-out family remains reserved.
 
 Both source orders reach 100% on mapping 1, but only 54.17% balanced accuracy
 on mapping 0, with 8.33% rejection recall and 57.14% acceptance precision.
-Mapping 0 falsely accepts candidate 4 on all boards; ascending scans still
+Mapping 0 accepts candidate 4 on all boards, including when invalid; ascending scans still
 complete every board because a correct earlier acceptance stops the scan.
 This illustrates why scan completion alone is insufficient. All memory and
 erasure checks pass. Runtime was 71.44 seconds. The gate remains failed and
 the held-out family remains reserved. Population size alone is not a robust
 solution under both action assignments.
+
+An independent audit finds four correct acceptances, one correct rejection,
+three false acceptances, and eight timeouts among the 16 unique inputs in
+mapping 0. Replaying the same responses in descending candidate order would
+complete only 25% of boards (diagnostic only; the declared scan stays ascending).

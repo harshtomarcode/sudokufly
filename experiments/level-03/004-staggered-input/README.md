@@ -13,7 +13,23 @@ simultaneous control under identical segmentation and confirm it reproduces
 experiment 001. Then run staggering. The held-out family remains reserved.
 This tests a timing intervention, not new training or an intrinsic firing ceiling.
 
+The delays are fixed per neuron, with no direct symbol or label lookup. Different
+symbol-selected groups can nevertheless have different delay distributions.
+Delayed cells also receive slightly less total current exposure (472–500 ms),
+so the intervention changes both timing and exposure.
+
 ```sh
 .venv/bin/python one_blank.py --split development --per-pair 8 --timing simultaneous --out experiments/level-03/004-staggered-input/simultaneous
 .venv/bin/python one_blank.py --split development --per-pair 8 --timing staggered --out experiments/level-03/004-staggered-input/development
 ```
+
+## Outcome: failed
+
+The segmented simultaneous control reproduces every one of experiment 001's
+528 full-network spike-count hashes and scores exactly. In its first 100 ms,
+all 24 selected KCs fire together in each of three 4 ms bins.
+Staggering gives 66.67% / 79.17% balanced accuracy, 75% / 100% scan completion,
+and still fails the unchanged gates in both source orders. All frozen-memory,
+nonplastic, and erasure checks pass. Runtimes were 80.12 / 80.46 seconds.
+Synchrony is present in the original stimulation, but this intervention does
+not establish that it is the sole cause of failed transfer.

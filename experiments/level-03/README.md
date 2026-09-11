@@ -41,3 +41,19 @@ shortcuts. The 18,432 judgments collapse to 16 unordered row/candidate neural
 inputs under this interface. Report that dependence explicitly, and do not
 claim all-rule Sudoku reasoning, abstract symbol equality, or general puzzle
 solving from this milestone.
+
+## Development history
+
+All listed assays transfer the same four saved Step 2 memories without new
+training. Accuracy below is balanced candidate accuracy for mappings 0 / 1;
+both source orders give the same aggregate values.
+
+| Experiment | Input | Balanced accuracy | Result |
+| --- | --- | --- | --- |
+| [001](001-zero-shot/README.md) | 24 simultaneous KCs | 62.50% / 50.00% | Rejection timeouts; failed |
+| [002](002-smaller-input/README.md) | 18 simultaneous KCs | 79.17% / 91.67% | Rejection recall below floor; failed |
+| [003](003-twelve-cells/README.md) | 12 simultaneous KCs | 54.17% / 100.00% | Mapping 0 timeouts and false acceptances; failed |
+
+Every variant above completes 100% of boards under the fixed ascending scan,
+but none meets the explicit accept/reject gate in all conditions. This is why
+scan completion cannot replace candidate-level evaluation.

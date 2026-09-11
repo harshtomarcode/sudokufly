@@ -10,8 +10,9 @@ cue learning (Step 1) and familiar-symbol comparison (Step 2). The latter uses
 fixed template recognition and sensory pooling, with learned responses stored
 in existing fly synapses through the unchanged local rule. The
 [controlled result and its limits](experiments/level-02/005-controlled-replication/README.md)
-are recorded separately from this historical source audit. Sudoku solving
-remains a later stage.
+are recorded separately from this historical source audit. Project Step 3 now
+tests one-blank 4×4 boards in a [separate experiment record](experiments/level-03/README.md).
+General Sudoku solving remains a later stage.
 
 ## What the examples actually demonstrate
 
@@ -149,7 +150,8 @@ fit the readout to the final Sudoku test set.
 
 Numbering note: this original table starts after cue calibration. The implemented
 project calls cue learning **Step 1** and the first row below, symbol comparison,
-**Step 2**. The following one-blank Sudoku task is not the current Step 2 goal.
+**Step 2**. The following one-blank Sudoku task is project **Step 3**; the
+subsequent isolated-constraint task is project Step 4.
 
 | Stage | Task | What passing it would establish |
 | --- | --- | --- |
