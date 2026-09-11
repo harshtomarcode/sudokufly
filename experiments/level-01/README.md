@@ -1,9 +1,9 @@
 # Level 1 — visual cue conditioning
 
-Status: two controlled pilots and a causal diagnostic study recorded; the overall
-learning gate has not passed. Experiment 002 passes one original mapping, but
-experiment 003 finds that success depends on training order and exact input/state.
-Later levels have not started and will remain blocked until Level 1 passes.
+Status: direct neural association calibration passes in experiment 004; the
+visual learning gate remains unpassed. Experiments 001/002 are visual pilots,
+and experiment 003 diagnoses their limitations. Later levels have not started
+and will remain blocked until visual Level 1 passes.
 
 ## Experiment 001: fixed visual interface
 
@@ -121,14 +121,30 @@ warmup. Restoring the weak-DAN-support group removes that success. Exact
 nominal snapshot responses and original training conditions reproduce, so
 these findings are not explained by a broken memory restore or evaluation path.
 
+## Experiment 004: direct neural conditioning
+
+The [direct conditioning calibration](004-direct-conditioning/README.md) passes
+its declared mechanism and fixed-readout gates for both opposite assignments
+under both tested orders. Each cue stimulates a disjoint, anatomically selected
+16-KC group with access to both original memory compartments. Equal constant
+background current makes the output cells responsive; the learning rule remains
+unchanged. Feedback is paired with cue valence, independent of any chosen action.
+
+All eight distinct trained cue decisions are correct. Frozen, no-feedback,
+inconsistent-pairing, and erasure controls produce timeouts. Each paired state
+changes exactly 58 appropriate KC→MBON connections, with approximately 34%
+depression; other connections remain unchanged. The positive output lies only
+0.5 Hz beyond the fixed threshold. This demonstrates a small internal association
+under direct stimulation, not robustness, visual recognition, or action learning.
+
 ## Decision and next experiment
 
-Preserve all three records. Expansion establishes that the permitted memory
-changes can influence the fixed motor readout. Diagnosis identifies unreinforced
-plasticity and sensitivity to cue presentation, neural state, and training order.
-The next Level 1 variant should validate cue-specific eligibility, separate
-feedback from intertrial dynamics, and establish predictable compartment-to-choice
-effects. More connections alone have not completed the task.
+Preserve all four records. Direct conditioning establishes a working internal
+association mechanism with distinct inputs and controlled learning windows.
+The next visual Level 1 variant must connect image-derived activity to a stable
+memory representation and validate its input/output timing. The successful
+synthetic calibration uses a different readout and explicit background current;
+it cannot be counted as passing the original visual task.
 
 Any changed input mapping, readout, neuron parameters, or learning rule belongs
 in a new numbered experiment with its own committed protocol. Progress to symbol

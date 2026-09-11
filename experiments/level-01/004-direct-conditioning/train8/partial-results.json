@@ -1,0 +1,974 @@
+[
+  {
+    "order": 0,
+    "mapping": 0,
+    "arms": {
+      "paired": {
+        "accuracy": 1.0,
+        "scores_hz": {
+          "A": 5.5,
+          "B": -8.0
+        },
+        "memory": {
+          "weight_sha256": "8f6589cd48b2874fbecdda1741d36302b757f87ed46d84b2a42e5c5c7b4f6f6b",
+          "u_sha256": "8bb5654076fe9cecc7badc9bcc6f5b168b636a5ad52bb8ad754418d421758d7e",
+          "w_sha256": "1f7eb7946abce5c8ecceead0fb5aef2752294ebd228e9a5473c5f1955052b36f",
+          "changed_edges": 58,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.6598717570304871,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.6601866483688354,
+                "changed_edges": 26
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.34012824296951294,
+          "B": 0.33981335163116455
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "frozen": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "no_feedback": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "inconsistent": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": -2.5,
+          "B": -1.0
+        },
+        "memory": {
+          "weight_sha256": "5d2af247d0a1b59e994d37bd895be97e7e903fa85ab398f78699c4d00698e057",
+          "u_sha256": "4c0f7725ac38006a6e99bfc5f9e9fc4b05301e24a4f814bb201326da9bdd4e06",
+          "w_sha256": "f9542073a78d87b3fc4ac58a9499cd74f490814f01973121c14e40d49ba211fc",
+          "changed_edges": 116,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8299055695533752,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.830109715461731,
+                "changed_edges": 26
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8299358487129211,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.8301727771759033,
+                "changed_edges": 26
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0002041459083557129,
+          "B": -0.00023692846298217773
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      }
+    },
+    "calibration_gate_passed": true
+  },
+  {
+    "order": 0,
+    "mapping": 1,
+    "arms": {
+      "paired": {
+        "accuracy": 1.0,
+        "scores_hz": {
+          "A": -10.0,
+          "B": 5.5
+        },
+        "memory": {
+          "weight_sha256": "90d61822961189459552e8afb4bdf4c196cfaf431cc67be532e7e45ac5ab137e",
+          "u_sha256": "fd7fc5d6cdfa2d6dbdb35c34dca726830f59cd5243ae9da1d53f30d511434458",
+          "w_sha256": "c07aae405e310a891e541e900b3b9420b195565aa7044eb5e540dabbf77c1a61",
+          "changed_edges": 58,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.6600959897041321,
+                "changed_edges": 26
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.6599597930908203,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.3399040102958679,
+          "B": 0.3400402069091797
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "frozen": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "no_feedback": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "inconsistent": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": -2.5,
+          "B": -1.0
+        },
+        "memory": {
+          "weight_sha256": "5d2af247d0a1b59e994d37bd895be97e7e903fa85ab398f78699c4d00698e057",
+          "u_sha256": "4c0f7725ac38006a6e99bfc5f9e9fc4b05301e24a4f814bb201326da9bdd4e06",
+          "w_sha256": "f9542073a78d87b3fc4ac58a9499cd74f490814f01973121c14e40d49ba211fc",
+          "changed_edges": 116,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8299055695533752,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.830109715461731,
+                "changed_edges": 26
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8299358487129211,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.8301727771759033,
+                "changed_edges": 26
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": -0.0002041459083557129,
+          "B": 0.00023692846298217773
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      }
+    },
+    "calibration_gate_passed": true
+  },
+  {
+    "order": 1,
+    "mapping": 0,
+    "arms": {
+      "paired": {
+        "accuracy": 1.0,
+        "scores_hz": {
+          "A": 5.5,
+          "B": -8.0
+        },
+        "memory": {
+          "weight_sha256": "a3c9e63d73fe14637285af40eefbe7ccfbb654f023fad0236ca3c7b392cc7ad2",
+          "u_sha256": "22d901f8bd2ac3a83cff32952a440526185f9c324998b933a5d0b68ee31ac5fd",
+          "w_sha256": "35f704deaca4801af593d6c2dcbb27562a3b5ac05175d32dcd8c114d178daaaa",
+          "changed_edges": 58,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.6600465774536133,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.6600068807601929,
+                "changed_edges": 26
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.3399534225463867,
+          "B": 0.33999311923980713
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "frozen": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "no_feedback": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "inconsistent": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": -2.5,
+          "B": -1.0
+        },
+        "memory": {
+          "weight_sha256": "5ffc3c20b7daf632203b075c5685c8aa013aa9f9ee0e9f61197c1164ab81922a",
+          "u_sha256": "512eac6fe7f7b9063719a26cca2afb55c7d24ace699061c9f9cf135e4f214144",
+          "w_sha256": "da45c58639c86d07023fd53705d889d4d182c5cea426488cd1300b2e8e8920e3",
+          "changed_edges": 116,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8299168348312378,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.8301946520805359,
+                "changed_edges": 26
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8298934102058411,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.8300377726554871,
+                "changed_edges": 26
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0002778172492980957,
+          "B": -0.0001443624496459961
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      }
+    },
+    "calibration_gate_passed": true
+  },
+  {
+    "order": 1,
+    "mapping": 1,
+    "arms": {
+      "paired": {
+        "accuracy": 1.0,
+        "scores_hz": {
+          "A": -10.0,
+          "B": 5.5
+        },
+        "memory": {
+          "weight_sha256": "638a360707f17930af66b1f4c80286b8e977cdcfc9ec5520fb9d7274249c9d97",
+          "u_sha256": "31c0a0587552e97116adbd8ef3d34a520894bf5cca9b2f49a560b9a0b8b1ed37",
+          "w_sha256": "48203ea6bee7c250e46f5c1183550603f0de60257e8979f47f29e7e886db07f4",
+          "changed_edges": 58,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.6602747440338135,
+                "changed_edges": 26
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.6597850322723389,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.3397252559661865,
+          "B": 0.34021496772766113
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "frozen": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "no_feedback": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "memory": {
+          "weight_sha256": "9f9c000fb9819eb99c214cc1da747d44e13f009bc4c3454f6b7dfe4ee669acf7",
+          "u_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "w_sha256": "9cf5a5bbc54b97f49e0c591d653fd61cadc8b2d88dbc2fde77c0035b7c42055d",
+          "changed_edges": 0,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": 0.0,
+          "B": 0.0
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      },
+      "inconsistent": {
+        "accuracy": 0.0,
+        "scores_hz": {
+          "A": -2.5,
+          "B": -1.0
+        },
+        "memory": {
+          "weight_sha256": "5ffc3c20b7daf632203b075c5685c8aa013aa9f9ee0e9f61197c1164ab81922a",
+          "u_sha256": "512eac6fe7f7b9063719a26cca2afb55c7d24ace699061c9f9cf135e4f214144",
+          "w_sha256": "da45c58639c86d07023fd53705d889d4d182c5cea426488cd1300b2e8e8920e3",
+          "changed_edges": 116,
+          "at_lower_bound": 0,
+          "at_upper_bound": 0,
+          "by_input": {
+            "A": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8299168348312378,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.8301946520805359,
+                "changed_edges": 26
+              }
+            },
+            "B": {
+              "MBON07": {
+                "edges": 32,
+                "weighted_efficacy": 0.8298934102058411,
+                "changed_edges": 32
+              },
+              "MBON11": {
+                "edges": 26,
+                "weighted_efficacy": 0.8300377726554871,
+                "changed_edges": 26
+              }
+            },
+            "unstimulated": {
+              "MBON07": {
+                "edges": 3587,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              },
+              "MBON11": {
+                "edges": 4132,
+                "weighted_efficacy": 1.0,
+                "changed_edges": 0
+              }
+            }
+          }
+        },
+        "paired_depression_margin": {
+          "A": -0.0002778172492980957,
+          "B": 0.0001443624496459961
+        },
+        "nonplastic_unchanged": true,
+        "erasure_recovers_baseline": true
+      }
+    },
+    "calibration_gate_passed": true
+  }
+]

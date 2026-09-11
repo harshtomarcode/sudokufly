@@ -72,10 +72,13 @@ def main():
     parser.add_argument("--reference", type=Path, help="Completed label-blind probe directory; required for training")
     parser.add_argument("--cue-current", type=float, default=30)
     parser.add_argument("--pulse-current", type=float, default=20)
+    parser.add_argument("--mbon-current", type=float, default=0, help="Constant output-cell background current; calibrated without labels")
     parser.add_argument("--eta", type=float, default=0.001)
     args = parser.parse_args()
     if any(not np.isfinite(x) or x <= 0 for x in (args.cue_current, args.pulse_current, args.eta)):
         parser.error("Currents and eta must be finite and positive")
+    if not np.isfinite(args.mbon_current) or args.mbon_current < 0:
+        parser.error("Output background current must be finite and nonnegative")
     if args.mode == "train" and args.reference is None:
         parser.error("Training requires a completed label-blind probe")
     head = subprocess.check_output(["git", "-C", str(UPSTREAM), "rev-parse", "HEAD"], text=True).strip()
@@ -96,6 +99,8 @@ def main():
     annotation = annotations(brain.ids)
     groups, group_report = select_cues(brain, annotation)
     outputs = {t: np.flatnonzero(annotation.type.eq(t)) for t in ("MBON07", "MBON11")}
+    for ix in outputs.values():
+        brain.tonic[ix] = args.mbon_current
     dark = np.zeros(len(brain.retina), dtype=np.float32)
     initial_all_weights = hashlib.sha256(brain.weight.tobytes()).hexdigest()
     offset = 0.0
@@ -121,9 +126,9 @@ def main():
         "dependencies": {p: importlib.metadata.version(p) for p in ("numpy", "pandas", "pyarrow", "Pillow")},
         "circuit": brain.circuit["report"], "cue_groups": group_report,
         "selection": "Within each hemisphere rank shared KC inputs by descending minimum compartment contacts, then total contacts, then body ID; alternate first16 into A/B.",
-        "cue_current": args.cue_current, "pulse_current": args.pulse_current, "eta": args.eta,
+        "cue_current": args.cue_current, "pulse_current": args.pulse_current, "mbon_current": args.mbon_current, "eta": args.eta,
         "rule": brain.rule_parameters,
-        "sensory": "No retinal input, zero lamina bias, no additional tonic drive. Whole original MemoryBrain graph retained.",
+        "sensory": "No retinal input, zero lamina bias. A declared equal constant background current is supplied to all six MBON07/11 output cells; no other tonic drive. Whole original MemoryBrain graph retained.",
         "timing_ms": {"cue": 500, "cue_off_feedback": 200, "passive_consolidation": 250},
         "learning": "Cue: freeze weights, accumulate traces. Feedback: remove imposed KC current, stimulate assigned DANs, enable local rule. Consolidation: disable associative drive, permit passive u/w relaxation. Reset electrical state/traces between trials; retain weights/u/w.",
         "pairing": "Pavlovian: assigned valence determines pulse, independent of decoded response. Reverse assignments in separate baseline-start runs.",
@@ -132,17 +137,24 @@ def main():
                     "threshold_hz": 5.0, "positive": "accept/reward", "negative": "reject/aversive",
                     "calibration": "One global offset from pooled untrained A/B raw scores; no labels or trained outputs. All coefficients, offset and threshold frozen before training."},
         "gates": {"all_four_mapping_order_runs": "100% paired evaluation, above frozen/no-feedback/inconsistent controls in each run",
-                  "mechanism": "Each cue has >=0.02 greater weighted efficacy depression in its paired compartment than in the other compartment",
+                  "mechanism": "Each paired-compartment efficacy <=0.98 and at least0.02 below the other compartment's efficacy",
                   "controls": "Exact frozen and erasure recovery; unchanged nonplastic weights; repeated frozen evaluations identical",
                   "visual_level_1_passed": False},
     }
     if args.mode == "train":
         reference = json.loads((args.reference / "summary.json").read_text())
         previous = json.loads((args.reference / "protocol.json").read_text())
-        for key in ("source_sha256", "imported_source_sha256", "cue_groups", "cue_current", "pulse_current", "eta", "initial_weights_sha256"):
+        if previous["mode"] != "probe" or reference.get("no_learning_performed") is not True:
+            raise RuntimeError("Reference must be a completed untrained probe")
+        for name, sha in reference["files_sha256"].items():
+            if hashlib.sha256((args.reference / name).read_bytes()).hexdigest() != sha:
+                raise RuntimeError(f"Probe artifact hash mismatch: {name}")
+        for key in ("source_sha256", "imported_source_sha256", "cue_groups", "cue_current", "pulse_current", "mbon_current", "eta", "initial_weights_sha256"):
             if previous[key] != protocol[key]:
                 raise RuntimeError(f"Probe protocol differs: {key}")
         offset = float(reference["decoder_offset_hz"])
+        if any(abs(x - offset) >= 5 for x in reference["untrained_raw_scores_hz"].values()):
+            raise RuntimeError("Probe responses exceed the declared baseline deadband; this calibration gate is inapplicable")
         protocol["decoder"]["offset_hz"] = offset
         protocol["reference"] = {"path": os.path.relpath(args.reference.resolve(), args.out),
                                  "summary_sha256": hashlib.sha256((args.reference / "summary.json").read_bytes()).hexdigest()}
@@ -258,7 +270,8 @@ def main():
                                  "scores_hz": {r["cue"]: r["score_hz"] for r in evaluations},
                                  "memory": memory, "paired_depression_margin": margins,
                                  "nonplastic_unchanged": nonplastic_unchanged, "erasure_recovers_baseline": recovery}
-                passed = arms["paired"]["accuracy"] == 1 and all(arms["paired"]["accuracy"] > arms[x]["accuracy"] for x in ("frozen", "no_feedback", "inconsistent")) and all(x >= 0.02 for x in arms["paired"]["paired_depression_margin"].values())
+                depressed = all(arms["paired"]["memory"]["by_input"][cue]["MBON07" if pulse == "reward" else "MBON11"]["weighted_efficacy"] <= 0.98 for cue, pulse in valence.items())
+                passed = arms["paired"]["accuracy"] == 1 and all(arms["paired"]["accuracy"] > arms[x]["accuracy"] for x in ("frozen", "no_feedback", "inconsistent")) and all(x >= 0.02 for x in arms["paired"]["paired_depression_margin"].values()) and depressed
                 results.append({"order": order_id, "mapping": mapping, "arms": arms, "calibration_gate_passed": passed})
                 (args.out / "partial-results.json").write_text(json.dumps(results, indent=2) + "\n")
         result = {"runs": results, "calibration_gate_passed": all(r["calibration_gate_passed"] for r in results)}

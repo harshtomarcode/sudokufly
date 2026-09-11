@@ -120,6 +120,15 @@ Removing external feedback still changes thousands of weights; freezing the
 blank interval alone leaves all conditions at 50%. Memory storage works, but
 reliable task learning has not been established.
 
+Experiment 004 [demonstrates direct neural association learning](experiments/level-01/004-direct-conditioning/README.md):
+two disjoint KC stimulation patterns acquire opposite valences in both tested
+training orders. The fixed MBON comparator correctly decodes all eight distinct
+trained cue decisions. Frozen, no-feedback, inconsistent-pairing, and erased
+controls time out. Exactly 58 appropriate existing connections change per paired
+run, with their efficacies reduced by about 34%. This uses direct stimulation,
+an explicitly calibrated constant output current, and Pavlovian pairing;
+**visual Level 1 remains incomplete**.
+
 See the [Level 1 experiment record](experiments/level-01/README.md) for the command,
 evidence, interpretation, and next experiment. Preserve each experiment in its
 own numbered directory; commit its code and results together.
