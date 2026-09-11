@@ -1,0 +1,386 @@
+{
+  "experiment": "004-direct-conditioning",
+  "mode": "probe",
+  "claim_scope": "Synthetic KC-to-valence conditioning, not visual cue learning, chosen-action reinforcement, or Sudoku.",
+  "source_sha256": "e3fe5296cf653e01a45053118bc58912f51c4c5c16e0552fabdb80c5eb8c8962",
+  "imported_source_sha256": "51306bd4e143e31318a3853c9858289a6d696162d98693815efeab9400552122",
+  "git_head": "0bb4f5132b094c3786f1ca9a81fcd8de72b162ec",
+  "upstream_head": "78ef3e05ab0fa086032098558d893667068944a0",
+  "graph": {
+    "release": "MaleCNS v1.0",
+    "neurons": 166700,
+    "directed_edges": 25582938,
+    "arrays_verified": true
+  },
+  "initial_weights_sha256": "d95171c2d59cfe3ebef2e5bd52be779b8f74754d718fc8941a93b8f2921c632b",
+  "dependencies": {
+    "numpy": "2.4.6",
+    "pandas": "3.0.5",
+    "pyarrow": "25.0.1",
+    "Pillow": "12.3.0"
+  },
+  "circuit": {
+    "release": "MaleCNS v1.0",
+    "neurons": 166700,
+    "directed_edges": 25582938,
+    "plastic_edges": 7835,
+    "plastic_edges_sha256": "153a1a6192bc7056b90bbfc757b56cb9580ca786a187583cc2cc652e1e3abe8f",
+    "reward_cells": [
+      {
+        "index": 86107,
+        "id": "114661",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 89566,
+        "id": "119763",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 100417,
+        "id": "137539",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 101105,
+        "id": "138822",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 101542,
+        "id": "139706",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 104512,
+        "id": "145749",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 105465,
+        "id": "147857",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 109038,
+        "id": "157016",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 119647,
+        "id": "204930",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 121077,
+        "id": "215931",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 121901,
+        "id": "224500",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 122768,
+        "id": "238644",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 123824,
+        "id": "273182",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      },
+      {
+        "index": 124499,
+        "id": "319321",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_R"
+      },
+      {
+        "index": 130852,
+        "id": "520616",
+        "type": "PAM11",
+        "instance": "PAM11(a1)_L"
+      }
+    ],
+    "aversive_cells": [
+      {
+        "index": 1235,
+        "id": "11327",
+        "type": "PPL101",
+        "instance": "PPL101(y1ped)_R"
+      },
+      {
+        "index": 1774,
+        "id": "11900",
+        "type": "PPL101",
+        "instance": "PPL101(y1ped)_L"
+      }
+    ],
+    "memory_outputs": [
+      {
+        "index": 2675,
+        "id": "12859",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_R"
+      },
+      {
+        "index": 5174,
+        "id": "15626",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_L"
+      },
+      {
+        "index": 7840,
+        "id": "18603",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_L"
+      },
+      {
+        "index": 127736,
+        "id": "515338",
+        "type": "MBON07",
+        "instance": "MBON07(a1)_R"
+      },
+      {
+        "index": 655,
+        "id": "10704",
+        "type": "MBON11",
+        "instance": "MBON11(y1pedc>a/B)_L"
+      },
+      {
+        "index": 1306,
+        "id": "11402",
+        "type": "MBON11",
+        "instance": "MBON11(y1pedc>a/B)_R"
+      }
+    ],
+    "selection": "All existing KC-to-MBON07/11 connections; no graph cropping or added edges.",
+    "gain": "Within-compartment DAN-to-MBON contact fractions; not measured receptor/dopamine kinetics.",
+    "validated": false
+  },
+  "cue_groups": {
+    "A": {
+      "ids": [
+        98318,
+        102719,
+        71326,
+        69611,
+        210806,
+        99150,
+        89323,
+        179669,
+        81207,
+        63156,
+        133250,
+        81141,
+        71088,
+        37720,
+        80172,
+        69308
+      ],
+      "indices": [
+        74303,
+        77514,
+        53388,
+        51996,
+        120444,
+        74893,
+        67597,
+        115131,
+        61313,
+        46709,
+        98062,
+        61252,
+        53200,
+        24822,
+        60469,
+        51747
+      ],
+      "types": [
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-m",
+        "KCab-m",
+        "KCab-m",
+        "KCab-s",
+        "KCab-m",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s"
+      ],
+      "contacts": {
+        "MBON07": 287,
+        "MBON11": 252
+      },
+      "plastic_edges": 58
+    },
+    "B": {
+      "ids": [
+        105935,
+        75155,
+        69538,
+        111260,
+        63483,
+        104545,
+        126057,
+        78261,
+        266449,
+        76750,
+        157166,
+        85391,
+        96711,
+        88407,
+        500143,
+        156598
+      ],
+      "indices": [
+        79886,
+        56456,
+        51933,
+        83684,
+        46972,
+        78862,
+        93681,
+        58962,
+        123688,
+        57774,
+        109088,
+        64636,
+        73122,
+        66910,
+        125599,
+        108888
+      ],
+      "types": [
+        "KCab-s",
+        "KCab-m",
+        "KCab-m",
+        "KCab-m",
+        "KCab-s",
+        "KCab-m",
+        "KCab-m",
+        "KCab-m",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s",
+        "KCab-s"
+      ],
+      "contacts": {
+        "MBON07": 277,
+        "MBON11": 253
+      },
+      "plastic_edges": 58
+    }
+  },
+  "selection": "Within each hemisphere rank shared KC inputs by descending minimum compartment contacts, then total contacts, then body ID; alternate first16 into A/B.",
+  "cue_current": 30,
+  "pulse_current": 20,
+  "mbon_current": 5.0,
+  "eta": 0.001,
+  "rule": {
+    "trace_kc_seconds": 1.0,
+    "trace_dan_seconds": 1.0,
+    "memory_decay_seconds": 1800.0,
+    "weight_filter_seconds": 0.05,
+    "minimum_fraction": 0.1,
+    "maximum_fraction": 2.0,
+    "maximum_rate_bin_ms": 10.0,
+    "source": "https://doi.org/10.1038/s41586-024-07819-w",
+    "interpretation": "Centered rate-rule adaptation on existing individual edges, not an exact reproduction of the published nine-unit model. Equal trace constants, efficacy bounds, gain and 50 ms weight filter require calibration."
+  },
+  "sensory": "No retinal input, zero lamina bias. A declared equal constant background current is supplied to all six MBON07/11 output cells; no other tonic drive. Whole original MemoryBrain graph retained.",
+  "timing_ms": {
+    "cue": 500,
+    "cue_off_feedback": 200,
+    "passive_consolidation": 250
+  },
+  "learning": "Cue: freeze weights, accumulate traces. Feedback: remove imposed KC current, stimulate assigned DANs, enable local rule. Consolidation: disable associative drive, permit passive u/w relaxation. Reset electrical state/traces between trials; retain weights/u/w.",
+  "pairing": "Pavlovian: assigned valence determines pulse, independent of decoded response. Reverse assignments in separate baseline-start runs.",
+  "orders": [
+    {
+      "seed": 20260911,
+      "cues": [
+        "A",
+        "B",
+        "A",
+        "B",
+        "A",
+        "B",
+        "A",
+        "B"
+      ],
+      "inconsistent_pulses": [
+        "aversive",
+        "reward",
+        "reward",
+        "aversive",
+        "reward",
+        "reward",
+        "aversive",
+        "aversive"
+      ]
+    },
+    {
+      "seed": 20260912,
+      "cues": [
+        "A",
+        "A",
+        "A",
+        "B",
+        "B",
+        "B",
+        "B",
+        "A"
+      ],
+      "inconsistent_pulses": [
+        "aversive",
+        "reward",
+        "aversive",
+        "reward",
+        "aversive",
+        "reward",
+        "aversive",
+        "reward"
+      ]
+    }
+  ],
+  "decoder": {
+    "raw": "mean MBON11 Hz minus mean MBON07 Hz",
+    "offset_hz": 0.0,
+    "threshold_hz": 5.0,
+    "positive": "accept/reward",
+    "negative": "reject/aversive",
+    "calibration": "One global offset from pooled untrained A/B raw scores; no labels or trained outputs. All coefficients, offset and threshold frozen before training."
+  },
+  "gates": {
+    "all_four_mapping_order_runs": "100% paired evaluation, above frozen/no-feedback/inconsistent controls in each run",
+    "mechanism": "Each paired-compartment efficacy <=0.98 and at least0.02 below the other compartment's efficacy",
+    "controls": "Exact frozen and erasure recovery; unchanged nonplastic weights; repeated frozen evaluations identical",
+    "visual_level_1_passed": false
+  }
+}

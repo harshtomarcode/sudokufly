@@ -1,0 +1,4022 @@
+{
+  "experiment": "003-diagnosis",
+  "level": 1,
+  "status": "incomplete; diagnosis does not pass the learning gate",
+  "post_hoc": true,
+  "exact_initial_diagnostic_source_commit": "e8df3db",
+  "training_summary": [
+    {
+      "order": 0,
+      "mapping": 0,
+      "condition": "normal",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 2.0,
+        "horizontal": 2.0
+      },
+      "changed_edges": 14800
+    },
+    {
+      "order": 0,
+      "mapping": 0,
+      "condition": "no_external_feedback",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 4.0,
+        "horizontal": 10.0
+      },
+      "changed_edges": 14027
+    },
+    {
+      "order": 0,
+      "mapping": 0,
+      "condition": "freeze_settle",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 8.0,
+        "horizontal": 6.0
+      },
+      "changed_edges": 14490
+    },
+    {
+      "order": 0,
+      "mapping": 1,
+      "condition": "normal",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 2.0,
+        "horizontal": 10.0
+      },
+      "changed_edges": 14931
+    },
+    {
+      "order": 0,
+      "mapping": 1,
+      "condition": "no_external_feedback",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 4.0,
+        "horizontal": 10.0
+      },
+      "changed_edges": 14027
+    },
+    {
+      "order": 0,
+      "mapping": 1,
+      "condition": "freeze_settle",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 10.0,
+        "horizontal": 8.0
+      },
+      "changed_edges": 14485
+    },
+    {
+      "order": 1,
+      "mapping": 0,
+      "condition": "normal",
+      "accuracy": 0.0,
+      "difference_hz": {
+        "vertical": 0.0,
+        "horizontal": 4.0
+      },
+      "changed_edges": 14739
+    },
+    {
+      "order": 1,
+      "mapping": 0,
+      "condition": "no_external_feedback",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 10.0,
+        "horizontal": 8.0
+      },
+      "changed_edges": 14677
+    },
+    {
+      "order": 1,
+      "mapping": 0,
+      "condition": "freeze_settle",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 6.0,
+        "horizontal": 6.0
+      },
+      "changed_edges": 14198
+    },
+    {
+      "order": 1,
+      "mapping": 1,
+      "condition": "normal",
+      "accuracy": 1.0,
+      "difference_hz": {
+        "vertical": -4.0,
+        "horizontal": 8.0
+      },
+      "changed_edges": 15065
+    },
+    {
+      "order": 1,
+      "mapping": 1,
+      "condition": "no_external_feedback",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 10.0,
+        "horizontal": 8.0
+      },
+      "changed_edges": 14677
+    },
+    {
+      "order": 1,
+      "mapping": 1,
+      "condition": "freeze_settle",
+      "accuracy": 0.5,
+      "difference_hz": {
+        "vertical": 8.0,
+        "horizontal": 8.0
+      },
+      "changed_edges": 14209
+    }
+  ],
+  "suite_elapsed_seconds": {
+    "phases": 33.63627504199394,
+    "snapshots": 71.86232758301776,
+    "training": 279.6944577920076,
+    "transition": 19.44107649999205
+  },
+  "checks": [
+    {
+      "check": "phases: record count",
+      "passed": true
+    },
+    {
+      "check": "phases: progress agrees",
+      "passed": true
+    },
+    {
+      "check": "phases: exact source",
+      "passed": true
+    },
+    {
+      "check": "phases: unchanged pilot source",
+      "passed": true
+    },
+    {
+      "check": "phases: verified graph",
+      "passed": true
+    },
+    {
+      "check": "phases: pinned upstream",
+      "passed": true
+    },
+    {
+      "check": "phases/0: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/0: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/0: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/0: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/0: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/0: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/1: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/1: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/1: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/1: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/1: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/1: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/2: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/2: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/2: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/2: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/2: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/2: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/3: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/3: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/3: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/3: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/3: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/3: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/4: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/4: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/4: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/4: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/4: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/4: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/5: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/5: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/5: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/5: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/5: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/5: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/6: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/6: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/6: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/6: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/6: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/6: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/7: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/7: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/7: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/7: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/7: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/7: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/8: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/8: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/8: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/8: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/8: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/8: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/9: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/9: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/9: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/9: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/9: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/9: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/10: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/10: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/10: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/10: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/10: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/10: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/11: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/11: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/11: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/11: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/11: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/11: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/12: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/12: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/12: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/12: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/12: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/12: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/13: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/13: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/13: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/13: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/13: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/13: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/14: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/14: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/14: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/14: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/14: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/14: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/15: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/15: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/15: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/15: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/15: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/15: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/16: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/16: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/16: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/16: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/16: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/16: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/17: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/17: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/17: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/17: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/17: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/17: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/18: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/18: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/18: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/18: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/18: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/18: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/19: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/19: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/19: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/19: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/19: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/19: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/20: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/20: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/20: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/20: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/20: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/20: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/21: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/21: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/21: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/21: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/21: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/21: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/22: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/22: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/22: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/22: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/22: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/22: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/23: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/23: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/23: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/23: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/23: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/23: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/24: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/24: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/24: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/24: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/24: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/24: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/25: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/25: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/25: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/25: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/25: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/25: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/26: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/26: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/26: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/26: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/26: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/26: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/27: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/27: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/27: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/27: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/27: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/27: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/28: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/28: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/28: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/28: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/28: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/28: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/29: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/29: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/29: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/29: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/29: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/29: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/30: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/30: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/30: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/30: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/30: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/30: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/31: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/31: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/31: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/31: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/31: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/31: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/32: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/32: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/32: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/32: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/32: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/32: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/33: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/33: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/33: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/33: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/33: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/33: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/34: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/34: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/34: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/34: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/34: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/34: decoder",
+      "passed": true
+    },
+    {
+      "check": "phases/35: bin count",
+      "passed": true
+    },
+    {
+      "check": "phases/35: KC counts",
+      "passed": true
+    },
+    {
+      "check": "phases/35: KC identities",
+      "passed": true
+    },
+    {
+      "check": "phases/35: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "phases/35: motor rates",
+      "passed": true
+    },
+    {
+      "check": "phases/35: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots: record count",
+      "passed": true
+    },
+    {
+      "check": "snapshots: progress agrees",
+      "passed": true
+    },
+    {
+      "check": "snapshots: exact source",
+      "passed": true
+    },
+    {
+      "check": "snapshots: unchanged pilot source",
+      "passed": true
+    },
+    {
+      "check": "snapshots: verified graph",
+      "passed": true
+    },
+    {
+      "check": "snapshots: pinned upstream",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/0: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/1: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/2: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/3: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/4: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/5: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/6: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/7: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/8: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/9: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/10: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/11: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/12: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/13: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/14: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/15: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/16: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/17: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/18: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/19: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/20: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/21: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/22: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/23: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/24: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/25: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/26: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/27: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/28: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/29: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/30: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/31: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/32: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/33: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/34: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/35: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/36: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/37: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/38: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/39: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/40: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/41: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/42: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/43: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/44: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/45: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/46: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: bin count",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: KC counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: KC identities",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: motor rates",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: decoder",
+      "passed": true
+    },
+    {
+      "check": "snapshots/47: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training: record count",
+      "passed": true
+    },
+    {
+      "check": "training: progress agrees",
+      "passed": true
+    },
+    {
+      "check": "training: exact source",
+      "passed": true
+    },
+    {
+      "check": "training: unchanged pilot source",
+      "passed": true
+    },
+    {
+      "check": "training: verified graph",
+      "passed": true
+    },
+    {
+      "check": "training: pinned upstream",
+      "passed": true
+    },
+    {
+      "check": "training/8: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/8: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/8: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/8: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/8: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/8: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/8: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/9: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/9: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/9: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/9: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/9: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/9: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/9: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/18: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/18: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/18: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/18: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/18: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/18: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/18: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/19: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/19: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/19: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/19: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/19: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/19: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/19: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/28: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/28: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/28: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/28: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/28: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/28: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/28: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/29: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/29: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/29: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/29: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/29: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/29: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/29: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/38: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/38: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/38: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/38: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/38: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/38: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/38: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/39: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/39: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/39: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/39: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/39: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/39: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/39: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/48: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/48: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/48: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/48: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/48: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/48: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/48: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/49: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/49: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/49: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/49: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/49: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/49: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/49: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/58: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/58: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/58: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/58: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/58: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/58: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/58: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/59: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/59: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/59: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/59: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/59: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/59: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/59: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/68: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/68: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/68: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/68: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/68: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/68: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/68: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/69: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/69: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/69: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/69: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/69: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/69: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/69: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/78: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/78: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/78: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/78: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/78: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/78: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/78: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/79: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/79: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/79: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/79: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/79: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/79: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/79: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/88: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/88: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/88: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/88: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/88: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/88: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/88: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/89: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/89: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/89: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/89: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/89: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/89: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/89: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/98: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/98: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/98: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/98: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/98: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/98: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/98: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/99: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/99: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/99: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/99: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/99: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/99: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/99: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/108: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/108: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/108: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/108: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/108: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/108: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/108: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/109: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/109: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/109: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/109: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/109: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/109: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/109: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/118: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/118: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/118: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/118: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/118: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/118: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/118: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "training/119: bin count",
+      "passed": true
+    },
+    {
+      "check": "training/119: KC counts",
+      "passed": true
+    },
+    {
+      "check": "training/119: KC identities",
+      "passed": true
+    },
+    {
+      "check": "training/119: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "training/119: motor rates",
+      "passed": true
+    },
+    {
+      "check": "training/119: decoder",
+      "passed": true
+    },
+    {
+      "check": "training/119: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition: record count",
+      "passed": true
+    },
+    {
+      "check": "transition: progress agrees",
+      "passed": true
+    },
+    {
+      "check": "transition: exact source",
+      "passed": true
+    },
+    {
+      "check": "transition: unchanged pilot source",
+      "passed": true
+    },
+    {
+      "check": "transition: verified graph",
+      "passed": true
+    },
+    {
+      "check": "transition: pinned upstream",
+      "passed": true
+    },
+    {
+      "check": "transition/0: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/0: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/0: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/0: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/0: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/0: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/1: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/1: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/1: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/1: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/1: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/1: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/2: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/2: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/2: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/2: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/2: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/2: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/3: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/3: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/3: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/3: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/3: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/3: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/4: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/4: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/4: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/4: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/4: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/4: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/5: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/5: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/5: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/5: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/5: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/5: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/6: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/6: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/6: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/6: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/6: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/6: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/6: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/7: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/7: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/7: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/7: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/7: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/7: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/7: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/8: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/8: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/8: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/8: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/8: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/8: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/8: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/9: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/9: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/9: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/9: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/9: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/9: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/9: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/10: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/10: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/10: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/10: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/10: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/10: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/10: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/11: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/11: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/11: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/11: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/11: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/11: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/11: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/12: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/12: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/12: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/12: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/12: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/12: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/13: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/13: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/13: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/13: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/13: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/13: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/14: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/14: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/14: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/14: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/14: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/14: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/15: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/15: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/15: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/15: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/15: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/15: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/16: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/16: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/16: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/16: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/16: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/16: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/17: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/17: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/17: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/17: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/17: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/17: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/18: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/18: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/18: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/18: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/18: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/18: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/18: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/19: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/19: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/19: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/19: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/19: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/19: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/19: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/20: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/20: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/20: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/20: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/20: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/20: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/20: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/21: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/21: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/21: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/21: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/21: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/21: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/21: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/22: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/22: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/22: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/22: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/22: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/22: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/22: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "transition/23: bin count",
+      "passed": true
+    },
+    {
+      "check": "transition/23: KC counts",
+      "passed": true
+    },
+    {
+      "check": "transition/23: KC identities",
+      "passed": true
+    },
+    {
+      "check": "transition/23: dopamine counts",
+      "passed": true
+    },
+    {
+      "check": "transition/23: motor rates",
+      "passed": true
+    },
+    {
+      "check": "transition/23: decoder",
+      "passed": true
+    },
+    {
+      "check": "transition/23: frozen weights",
+      "passed": true
+    },
+    {
+      "check": "snapshot/0: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/1: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/9: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/10: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/18: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/19: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/27: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "snapshot/28: reproduces both original evaluations",
+      "passed": true
+    },
+    {
+      "check": "training/0/0/normal: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/0/0: original train actions",
+      "passed": true
+    },
+    {
+      "check": "training/0/0/vertical: original eval hashes",
+      "passed": true
+    },
+    {
+      "check": "training/0/0/horizontal: original eval hashes",
+      "passed": true
+    },
+    {
+      "check": "training/0/0/no_external_feedback: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/0/0: no imposed pulses",
+      "passed": true
+    },
+    {
+      "check": "training/0/0/freeze_settle: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/0/1/normal: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/0/1/no_external_feedback: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/0/1: no imposed pulses",
+      "passed": true
+    },
+    {
+      "check": "training/0/1/freeze_settle: schedule",
+      "passed": true
+    },
+    {
+      "check": "no-feedback/0/vertical: label independent",
+      "passed": true
+    },
+    {
+      "check": "no-feedback/0/horizontal: label independent",
+      "passed": true
+    },
+    {
+      "check": "training/1/0/normal: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/1/0/no_external_feedback: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/1/0: no imposed pulses",
+      "passed": true
+    },
+    {
+      "check": "training/1/0/freeze_settle: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/1/1/normal: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/1/1: original train actions",
+      "passed": true
+    },
+    {
+      "check": "training/1/1/vertical: original eval hashes",
+      "passed": true
+    },
+    {
+      "check": "training/1/1/horizontal: original eval hashes",
+      "passed": true
+    },
+    {
+      "check": "training/1/1/no_external_feedback: schedule",
+      "passed": true
+    },
+    {
+      "check": "training/1/1: no imposed pulses",
+      "passed": true
+    },
+    {
+      "check": "training/1/1/freeze_settle: schedule",
+      "passed": true
+    },
+    {
+      "check": "no-feedback/1/vertical: label independent",
+      "passed": true
+    },
+    {
+      "check": "no-feedback/1/horizontal: label independent",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/cue-horizontal.png: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/cue-vertical.png: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/mapping-0-frozen-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/mapping-0-learned-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/mapping-0-shuffled-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/mapping-1-frozen-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/mapping-1-learned-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/mapping-1-shuffled-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/partial-results.json: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/protocol.json: preserved",
+      "passed": true
+    },
+    {
+      "check": "001-visual-cues/trials.jsonl: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/cue-horizontal.png: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/cue-vertical.png: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/mapping-0-frozen-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/mapping-0-learned-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/mapping-0-shuffled-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/mapping-1-frozen-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/mapping-1-learned-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/mapping-1-shuffled-memory.npz: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/partial-results.json: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/protocol.json: preserved",
+      "passed": true
+    },
+    {
+      "check": "002-expanded-memory/trials.jsonl: preserved",
+      "passed": true
+    },
+    {
+      "check": "transition/vertical/normal/observation: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/vertical/normal/feedback_without_pulse: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/vertical/frozen/observation: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/vertical/frozen/feedback_without_pulse: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/horizontal/normal/observation: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/horizontal/normal/feedback_without_pulse: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/horizontal/frozen/observation: matched prehistory",
+      "passed": true
+    },
+    {
+      "check": "transition/horizontal/frozen/feedback_without_pulse: matched prehistory",
+      "passed": true
+    }
+  ],
+  "all_checks_passed": true,
+  "files_sha256": {
+    "README.md": "3ab8250cd155679c7c590e05af41858ac6823a1f582d3450789f893fe7c5cd67",
+    "audit.py": "a03aba56ee180d986a22ab3efc62e1129989fe92c5e9f6a8d72162d0f63b0289",
+    "circuit-audit.md": "6f1c7f135ad37993d9ba83e38dd1a592b71f3d8d8845059f959d887d06c78b22",
+    "intervention-audit.md": "046def2c6422ce2a41688081fee9a22a4e27671ab1ddeac5e9ce0c11076743f1",
+    "model-audit.md": "f6d9899d59046294b459566e521543a0faf03718227c48beaacd93bc903f92e9",
+    "phases-progress.jsonl": "0cce4546148fec62c842570f58599a4db1b74961c40111eff0b3a3df6db4cc0b",
+    "phases.json": "9777ef26538c237818f48393490881e080192846897b093dffc96f3b6f683d60",
+    "snapshots-progress.jsonl": "df2f41b5f6bf22408e1ceccc8001dc99550ee7503917c8b1b53fd88fe5869a27",
+    "snapshots.json": "0cd813d1c66396a349f7e0540c95d354253939c7950057247273146d00c1c7c8",
+    "training-progress.jsonl": "7b0a99d2fe0324c6436e00b2f5d632b3e21ee889373b1dbf8ecd61decd56c861",
+    "training.json": "e376145a5b8739c189a71383a69bbf0401898ce68cf86efdeea31fe21034a931",
+    "transition-progress.jsonl": "f518fd83eddf3a823c36b1ecc8fd722d6c9142a455b07e38a69cb56b243a7555",
+    "transition.json": "2ba74d02912970d7255947f06c937f52db4267c8b613f1309a77d989c9ebcbef"
+  },
+  "diagnostic_source_sha256": "eaed8d77025fbf785c710ff88f8e7f926d8d7cc762f467fe19a8d964a5b9d753"
+}

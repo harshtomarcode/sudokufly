@@ -1,0 +1,468 @@
+"""Image-derived cue learning and four-symbol comparison with local fly plasticity.
+
+Fixed random-feature or template sensory adapters; no equality flag or labels in encoding.
+See each recorded protocol for the changed sensory/readout assumptions.
+"""
+
+import argparse
+import hashlib
+import itertools
+import json
+import os
+from pathlib import Path
+import random
+import subprocess
+import sys
+import time
+
+import numpy as np
+from PIL import Image, ImageDraw, ImageFont
+
+from sudokufly import ROOT, UPSTREAM, UPSTREAM_COMMIT, cue_frame, memory_state
+
+
+def render(case, view):
+    """Environment renderer only: target labels are not arguments."""
+    if case["task"] == "cues":
+        frame = cue_frame(case["cue"])
+        if view in ("thin", "thick"):
+            width = 10 if view == "thin" else 14
+            frame.fill(235)
+            if case["cue"] == "vertical":
+                for x in (116, 154, 192):
+                    frame[42:138, x:x + width] = 24
+            else:
+                for y in (46, 84, 122):
+                    frame[y:y + width, 112:208] = 24
+        if view == "shift":
+            frame = np.roll(np.roll(frame, 3, axis=1), -2, axis=0)
+        return frame
+    frame = Image.new("RGB", (192, 64), "white")
+    draw = ImageDraw.Draw(frame)
+    font = ImageFont.load_default(size=32 if view != "small" else 28)
+    glyphs = [*case["row"], *([None] * (2 - len(case["row"]))), case["candidate"]]
+    for slot, glyph in enumerate(glyphs):
+        if glyph is None:
+            continue
+        text = str(glyph + 1)
+        box = draw.textbbox((0, 0), text, font=font, stroke_width=0)
+        x = slot * 64 + (64 - (box[2] - box[0])) // 2 - box[0]
+        y = (64 - (box[3] - box[1])) // 2 - box[1]
+        if view == "shift":
+            x += 3
+            y -= 2
+        draw.text((x, y), text, fill="black", font=font, stroke_width=1 if view == "bold" else 0)
+    return np.asarray(frame)
+
+
+def patch_pixels(frame):
+    """Fixed geometric normalization; neither glyph identity nor comparison."""
+    gray = np.asarray(Image.fromarray(frame).convert("L"))
+    yy, xx = np.nonzero(gray < 128)
+    if not len(xx):
+        return np.zeros(64, dtype=np.float64)
+    crop = gray[yy.min():yy.max() + 1, xx.min():xx.max() + 1]
+    resized = np.asarray(Image.fromarray(crop).resize((8, 8), Image.Resampling.BOX), dtype=np.float64)
+    pixels = 1 - resized.ravel() / 255
+    pixels -= pixels.mean()
+    return pixels / max(np.linalg.norm(pixels), 1e-12)
+
+
+def encode(frame, task, pool, filters, active, pixel_mean=None, templates=None, groups=None):
+    """Label-blind pixel routing; every cross-role pair receives the same treatment."""
+    if task == "cues":
+        score = filters[0] @ patch_pixels(frame)
+    elif templates is not None:
+        # Each role has an independently permuted template bank. All Cartesian
+        # pairs receive identical routing; neither identity equality nor labels
+        # are computed here. Symbol recognition is explicitly template-based.
+        candidate = np.argmin(np.linalg.norm(templates[0] - patch_pixels(frame[:, 128:192]), axis=1))
+        codes = []
+        for i in (0, 64):
+            pixels = patch_pixels(frame[:, i:i + 64])
+            if np.any(pixels):
+                row = np.argmin(np.linalg.norm(templates[1] - pixels, axis=1))
+                codes.append(int(candidate * len(templates[1]) + row))
+        # Constant total input: 16 KCs for one pair, 8 from each of two pairs.
+        count = active // (2 * len(codes))
+        return np.sort(np.concatenate([groups[code, :, :count].ravel() for code in codes]))
+    else:
+        candidate = np.maximum(filters[0] @ (patch_pixels(frame[:, 128:192]) - pixel_mean), 0)
+        row = []
+        for i in (0, 64):
+            pixels = patch_pixels(frame[:, i:i + 64])
+            row.append(np.maximum(filters[1] @ (pixels - pixel_mean), 0) if np.any(pixels) else np.zeros(len(pool)))
+        score = np.maximum(candidate * row[0], candidate * row[1])
+    # Fixed tie-breaking and cardinality; no outcome enters current or selection.
+    if task == "symbols":
+        half = len(pool) // 2
+        selected = np.concatenate([start + np.lexsort((np.arange(half), -score[start:start + half]))[:active // 2]
+                                   for start in (0, half)])
+    else:
+        selected = np.lexsort((np.arange(len(pool)), -score))[:active]
+    return np.sort(pool[selected])
+
+
+def balanced_groups(brain, pool, output_indices):
+    """Return 16 disjoint 16-cell groups and their 8-cell recall subsets.
+
+    `pool` must contain the ranked 128 left KCs followed by the ranked 128
+    right KCs. `output_indices` contains all six MBON07/11 cells. Call before
+    learning; no image, symbol identity, task label, or training result enters.
+    """
+    pool = np.asarray(pool, dtype=np.int32)
+    output_indices = np.sort(np.asarray(output_indices, dtype=np.int32))
+    if pool.shape != (256,) or output_indices.shape != (6,):
+        raise ValueError("Expected 256 ranked KCs and six output cells")
+    if not np.array_equal(brain.weight[brain.circuit["edges"]], brain.baseline_plastic):
+        raise ValueError("Anatomy calibration requires original plastic weights")
+    contacts = np.zeros((256, 6), dtype=np.int64)
+    for row, cell in enumerate(pool):
+        edges = slice(brain.ptr[cell], brain.ptr[cell + 1])
+        destination = brain.post[edges]
+        edge_contacts = np.rint(brain.weight[edges] / 0.275).astype(np.int64)
+        for col, target in enumerate(output_indices):
+            contacts[row, col] = edge_contacts[destination == target].sum()
+
+    assignments, iterations = [], []
+    i, j = np.triu_indices(128, 1)
+    gi, gj, hi, hj = i // 8, j // 8, i // 4, j // 4
+    for side in range(2):
+        # Seed-independent rank interleaving. The first four strata span
+        # strong and weak ranks; each full group retains eight cells/side.
+        assigned = np.arange(128).reshape(8, 16)[[0, 3, 4, 7, 1, 2, 5, 6]].T.ravel() + 128 * side
+        for iteration in range(2000):
+            cells = contacts[assigned]
+            full = cells.reshape(16, 8, 6).sum(axis=1)
+            halves = cells.reshape(32, 4, 6).sum(axis=1)
+            delta = cells[j] - cells[i]
+            squared = np.sum(delta * delta, axis=1)
+            full_change = 2 * np.sum(delta * (full[gi] - full[gj]), axis=1) + 2 * squared
+            half_change = 2 * np.sum(delta * (halves[hi] - halves[hj]), axis=1) + 2 * squared
+            full_change[gi == gj] = 0
+            half_change[hi == hj] = 0
+            change = full_change + 2 * half_change
+            best = int(np.argmin(change))
+            if change[best] >= 0:
+                break
+            assigned[i[best]], assigned[j[best]] = assigned[j[best]], assigned[i[best]]
+        else:
+            raise RuntimeError("Anatomy partition did not reach its deterministic local minimum")
+        assignments.append(assigned.reshape(16, 8))
+        iterations.append(iteration)
+
+    positions = np.stack(assignments, axis=1)
+    full_positions = positions.reshape(16, 16)
+    representative_positions = positions[:, :, :4].reshape(16, 8)
+    report = {
+        "objective": "Sum of squared per-output full-group deviations plus twice the squared half-group deviations, optimized independently within each hemisphere.",
+        "initialization": "Rank strata [0,3,4,7,1,2,5,6], interleaved over all sixteen groups.",
+        "selection": "Best strictly improving within-hemisphere pair swap; lexicographic position order breaks ties. First four cells per hemisphere are recall representatives.",
+        "iterations": iterations,
+        "output_indices": output_indices.tolist(),
+        "pool_contacts": contacts.tolist(),
+        "full_contact_sums": contacts[full_positions].sum(axis=1).tolist(),
+        "representative_contact_sums": contacts[representative_positions].sum(axis=1).tolist(),
+    }
+    return pool[full_positions], pool[representative_positions], report
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("mode", choices=("probe", "pilot", "train"))
+    parser.add_argument("--task", choices=("cues", "symbols"), required=True)
+    parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--reference", type=Path)
+    parser.add_argument("--pool", type=int, default=256)
+    parser.add_argument("--active", type=int, default=16)
+    parser.add_argument("--encoder-seed", type=int, default=20260911)
+    parser.add_argument("--encoder", choices=("random", "templates"), default="random")
+    parser.add_argument("--training-seed", type=int, default=20260911)
+    parser.add_argument("--threshold-hz", type=float)
+    parser.add_argument("--teaching", choices=("depression", "bidirectional"), default="depression")
+    parser.add_argument("--kc-current", type=float, default=30)
+    parser.add_argument("--mbon-current", type=float, default=5.5)
+    parser.add_argument("--eta", type=float, default=0.001)
+    parser.add_argument("--epochs", type=int, default=8)
+    args = parser.parse_args()
+    if args.mode != "probe" and args.reference is None:
+        parser.error("Training needs a completed untrained reference")
+    if args.pool < args.active or args.pool % 2 or args.active < 1 or args.epochs < 2 or args.epochs % 2 or (args.task == "symbols" and args.active % 2):
+        parser.error("Invalid pool, active count, or epochs")
+    if any(not np.isfinite(v) or v <= 0 for v in (args.kc_current, args.mbon_current, args.eta)):
+        parser.error("Positive finite current and eta required")
+    if args.threshold_hz is not None and (not np.isfinite(args.threshold_hz) or args.threshold_hz <= 0):
+        parser.error("Positive finite threshold required")
+    if args.encoder == "templates" and (args.task != "symbols" or args.active % 4):
+        parser.error("Template encoder requires symbols and active divisible by four")
+    upstream = subprocess.check_output(["git", "-C", str(UPSTREAM), "rev-parse", "HEAD"], text=True).strip()
+    dirty = subprocess.check_output(["git", "-C", str(UPSTREAM), "status", "--porcelain", "--untracked-files=no"], text=True).strip()
+    if upstream != UPSTREAM_COMMIT or dirty:
+        parser.error("Upstream must be clean and pinned")
+    args.out = args.out.resolve()
+    args.out.mkdir(parents=True, exist_ok=False)
+    os.environ["STONKFLY_DATA"] = str(ROOT / "data")
+    sys.path.insert(0, str(UPSTREAM))
+    from stonkfly.data import verify
+    from stonkfly.neural.brain import MemoryBrain
+    from stonkfly.neural.common import annotations
+
+    graph = verify()
+    started = time.perf_counter()
+    brain = MemoryBrain(eta=args.eta)
+    annotation = annotations(brain.ids)
+    c = brain.circuit
+    outputs = {t: np.flatnonzero(annotation.type.eq(t)) for t in ("MBON07", "MBON11")}
+    for indices in outputs.values():
+        brain.tonic[indices] = args.mbon_current
+    contacts = np.rint(brain.baseline_plastic / 0.275).astype(np.int64)
+    mass = {}
+    for name, indices in outputs.items():
+        keep = np.isin(brain.post[c["edges"]], indices)
+        mass[name] = np.bincount(c["pre"][keep], weights=contacts[keep], minlength=brain.n)
+    both = np.flatnonzero((mass["MBON07"] > 0) & (mass["MBON11"] > 0))
+    pool = []
+    for side in ("L", "R"):
+        choices = [int(i) for i in both if str(annotation.instance.iloc[i]).endswith("_" + side)]
+        choices.sort(key=lambda i: (-min(mass["MBON07"][i], mass["MBON11"][i]),
+                                    -(mass["MBON07"][i] + mass["MBON11"][i]), int(brain.ids[i])))
+        pool.extend(choices[:args.pool // 2])
+    pool = np.asarray(pool, dtype=np.int32)
+    if len(pool) != args.pool:
+        raise RuntimeError("Insufficient anatomically supported KCs")
+    rng = np.random.default_rng(args.encoder_seed)
+    filters = rng.normal(size=(2, len(pool), 64))
+    filters /= np.linalg.norm(filters, axis=2, keepdims=True)
+    initial_hash = hashlib.sha256(brain.weight.tobytes()).hexdigest()
+    dark = np.zeros(len(brain.retina), dtype=np.float32)
+    offset, threshold = 0.0, 2.0
+    if args.task == "cues":
+        training = [{"task": "cues", "cue": x, "label": int(i == 0)} for i, x in enumerate(("vertical", "horizontal"))]
+        testing = training
+        views = ("base", "shift", "thin", "thick")
+    else:
+        training = [{"task": "symbols", "row": [r], "candidate": q, "label": int(q != r)}
+                    for r in range(4) for q in range(4)]
+        testing = [{"task": "symbols", "row": list(row), "candidate": q, "label": int(q not in row)}
+                   for row in itertools.permutations(range(4), 2) for q in range(4)]
+        views = ("base", "shift", "small", "bold")
+    training_views = ("base",) if args.task == "cues" or args.encoder == "templates" else ("base", "bold")
+    pixel_mean = None if args.task == "cues" else np.mean([
+        patch_pixels(render(case, view)[:, 128:192]) for case in training for view in training_views], axis=0)
+    templates, groups, anatomy_report = None, None, None
+    if args.encoder == "templates":
+        unique = {hashlib.sha256(p.tobytes()).hexdigest(): p for p in
+                  [patch_pixels(render(case, "base")[:, 128:192]) for case in training]}
+        bank = np.array([unique[key] for key in sorted(unique)])
+        templates = np.array([bank[rng.permutation(len(bank))] for _ in range(2)])
+        n_codes = len(bank) ** 2
+        if n_codes != 16 or args.pool != 256 or args.active != 16:
+            raise RuntimeError("Template anatomy calibration requires 16 pair codes, 256 KCs, 16 active")
+        full_groups, _, anatomy_report = balanced_groups(brain, pool, np.concatenate(list(outputs.values())))
+        groups = full_groups.reshape(16, 2, 8)[rng.permutation(n_codes)]
+    encoded = {}
+    manifest = []
+    for split, cases, variants in (("train", training, training_views), ("test", testing, views)):
+        for index, case in enumerate(cases):
+            for view in variants:
+                key = f"{split}-{index}-{view}"
+                frame = render(case, view)
+                indices = encode(frame, args.task, pool, filters, args.active, pixel_mean, templates, groups)
+                encoded[key] = indices
+                manifest.append({"key": key, "case": case, "view": view,
+                                 "image_sha256": hashlib.sha256(frame.tobytes()).hexdigest(),
+                                 "KC_ids": brain.ids[indices].tolist()})
+                if split == "train" or index < 2:
+                    Image.fromarray(frame).save(args.out / f"{key}.png")
+    protocol = {
+        "task": args.task, "mode": args.mode, "source_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+        "imported_source_sha256": hashlib.sha256((ROOT / "sudokufly.py").read_bytes()).hexdigest(),
+        "git_head": subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
+        "upstream": upstream, "graph": graph, "initial_weights_sha256": initial_hash,
+        "parameters": {k: v for k, v in vars(args).items() if k not in ("mode", "out", "reference")},
+        "pool_ids": brain.ids[pool].tolist(), "filter_sha256": hashlib.sha256(filters.tobytes()).hexdigest(),
+        "pixel_mean": None if pixel_mean is None else pixel_mean.tolist(),
+        "templates": None if templates is None else templates.tolist(),
+        "group_KC_ids": None if groups is None else brain.ids[groups].tolist(),
+        "anatomy_partition": anatomy_report,
+        "sensory_adapter": "Fixed 8x8 normalized ink pixels, seeded random filters. Symbols subtract the uniform unlabeled training-patch mean, use independent candidate/cell filter products, shared max-pooling over row slots, top-k/2 KCs per hemisphere. No glyph IDs, equality or target labels enter encoding. Layout, translation normalization and row-order invariance are engineered.",
+        "teaching": "Supervised valence via DAN pulses, not chosen-action correctness. Cue500ms freezes weights but accumulates traces; cue-offDAN200ms learns;250ms passive consolidation.",
+        "decoder": {"score": "meanMBON11Hz-meanMBON07Hz-offset", "offset_hz": offset, "threshold_hz": threshold,
+                    "calibration": "Global unlabeled training-image offset. Deadband fixed by --threshold-hz when supplied; otherwise covers untrained scores plus1Hz. No per-image output correction."},
+        "training_cases": training, "training_views": training_views, "test_cases": testing, "views": views,
+        "evaluation": "Within each frozen evaluation, simulate every distinct exact KC input once from reset. Repeated image views/row orders with identical inputs are aliases, explicitly marked simulated=false and linked to their measured case/view. They are not independent neural observations. No reuse across memories, arms, mappings, erasure, or training.",
+        "gates": {"cues": "Every mapping/order: >=0.90 test accuracy, >=0.25 above frozen/no-feedback/inconsistent controls; exact memory erasure and nonplastic preservation.",
+                  "symbols": "Every mapping/order: >=0.90 balanced accuracy on unseen two-cell compositions, >=0.85 each class, candidate and view; >=0.25 above controls; exact erasure/nonplastic checks. Rows contain two distinct symbols from fixed alphabet1..4."},
+        "limits": "Engineered visual representation and MBON readout; no claim of native fly vision, novel-symbol transfer, or Sudoku solving.",
+    }
+    if templates is not None:
+        protocol["sensory_adapter"] = "Fixed nearest-template parsing of normalized 8x8 pixels. Templates are deduplicated unlabeled base training patches ordered by pixel hash and independently permuted by role. Every Cartesian template pair gets an identically sized disjoint KC group, stratified by anatomical strength without labels. A single pair drives16 KCs; each of two pairs drives8 (4/hemisphere). Recognition and equal row pooling are engineered; pair valence is learned only in KC-to-MBON synapses. No equality branch, membership flag, labels or trained decision head in encoding."
+    if args.teaching == "bidirectional":
+        protocol["teaching"] += " Then reset electrical/traces while keeping memory; opposite-compartment DAN200ms with frozen weights precedes the same cue500ms with local learning enabled, followed by250ms passive consolidation. This uses the existing rule's potentiating time order. Each labeled trial supplies one pulse to each compartment; valence selects their timing, not dose. Frozen and no-feedback controls apply to both halves; inconsistent timing is balanced within each image."
+    if args.mode != "probe":
+        reference = json.loads((args.reference / "summary.json").read_text())
+        rp = json.loads((args.reference / "protocol.json").read_text())
+        for key in ("source_sha256", "imported_source_sha256", "parameters", "pool_ids", "filter_sha256", "pixel_mean", "templates", "group_KC_ids", "initial_weights_sha256"):
+            if rp[key] != protocol[key]:
+                raise RuntimeError(f"Reference differs: {key}")
+        for name, sha in reference["files_sha256"].items():
+            if hashlib.sha256((args.reference / name).read_bytes()).hexdigest() != sha:
+                raise RuntimeError(f"Reference artifact changed: {name}")
+        if rp["mode"] != "probe":
+            raise RuntimeError("Reference must be an untrained probe")
+        offset, threshold = reference["decoder_offset_hz"], reference["decoder_threshold_hz"]
+        protocol["decoder"].update(offset_hz=offset, threshold_hz=threshold)
+        protocol["reference_sha256"] = hashlib.sha256((args.reference / "summary.json").read_bytes()).hexdigest()
+    (args.out / "protocol.json").write_text(json.dumps(protocol, indent=2) + "\n")
+    (args.out / "inputs.json").write_text(json.dumps(manifest, indent=2) + "\n")
+    log = (args.out / "trials.jsonl").open("x")
+    records = []
+
+    def measure(indices=None, duration=500, pulse=None, learn=False, frozen=True):
+        brain.weights_frozen = frozen
+        before = memory_state(brain)
+        stimulation = []
+        if indices is not None:
+            stimulation.append((indices, args.kc_current))
+        if pulse is not None:
+            stimulation.append((c[pulse], 20))
+        counts, _ = brain.step(dark, duration, stimulation=stimulation, learning=learn, lamina_bias=0)
+        hz = {name: float(counts[ix].mean() * 1000 / duration) for name, ix in outputs.items()}
+        raw = hz["MBON11"] - hz["MBON07"]
+        score = raw - offset
+        after = memory_state(brain)
+        if frozen and before != after:
+            raise RuntimeError("Frozen phase changed memory")
+        return {"output_hz": hz, "raw_score_hz": raw, "score_hz": score,
+                "action": 1 if score >= threshold else 0 if score <= -threshold else -1,
+                "KC_spikes": int(counts[c["kc"]].sum()), "active_KCs": int(np.count_nonzero(counts[c["kc"]])),
+                "selected_KC_spikes": int(counts[indices].sum()) if indices is not None else 0,
+                "DAN_spikes": {p: int(counts[c[p]].sum()) for p in ("reward", "aversive")},
+                "spikes_sha256": hashlib.sha256(counts.tobytes()).hexdigest(),
+                "frozen": frozen, "learning": learn, "memory_before": before, "memory_after": after}
+
+    def record(context, row):
+        row = {**context, **row}
+        log.write(json.dumps(row, allow_nan=False) + "\n")
+        log.flush()
+        records.append(row)
+        return row
+
+    def evaluate(context, mapping, split="test"):
+        rows = []
+        responses = {}
+        cases = testing if split == "test" else training
+        variants = views if split == "test" else training_views
+        for index, case in enumerate(cases):
+            for view in variants:
+                indices = encoded[f"{split}-{index}-{view}"]
+                key = tuple(indices.tolist())
+                simulated = key not in responses
+                if simulated:
+                    brain.reset(keep_memory=True)
+                    responses[key] = (measure(indices), {"case": index, "view": view})
+                row, measured_at = responses[key]
+                target = case["label"] if mapping == 0 else 1 - case["label"]
+                position = -1
+                if args.task == "symbols" and case["candidate"] in case["row"]:
+                    position = case["row"].index(case["candidate"])
+                rows.append(record({**context, "phase": "eval", "split": split, "case": index, "view": view,
+                                    "simulated": simulated, "measured_at": measured_at,
+                                    "target": target, "match_position": position, "correct": row["action"] == target}, row))
+        by_class = {str(t): float(np.mean([r["correct"] for r in rows if r["target"] == t])) for t in (0, 1)}
+        by_candidate = {} if args.task == "cues" else {str(q): float(np.mean([r["correct"] for r in rows if cases[r["case"]]["candidate"] == q])) for q in range(4)}
+        by_position = {} if args.task == "cues" else {
+            str(position): float(np.mean([r["correct"] for r in rows if r["match_position"] == position]))
+            for position in range(-1, len(cases[0]["row"]))}
+        return {"accuracy": float(np.mean([r["correct"] for r in rows])), "balanced_accuracy": float(np.mean(list(by_class.values()))),
+                "distinct_neural_inputs": len(responses), "rendered_presentations": len(rows),
+                "by_class": by_class, "by_candidate": by_candidate, "by_match_position": by_position,
+                "by_view": {v: float(np.mean([r["correct"] for r in rows if r["view"] == v])) for v in variants},
+                "minimum_target_margin_hz": min((1 if r["target"] else -1) * r["score_hz"] - threshold for r in rows),
+                "timeouts": sum(r["action"] == -1 for r in rows), "spike_hashes": [r["spikes_sha256"] for r in rows]}
+
+    if args.mode == "probe":
+        baseline = []
+        for index in range(len(training)):
+            for view in training_views:
+                brain.reset(keep_memory=False)
+                row = record({"phase": "probe", "case": index, "view": view}, measure(encoded[f"train-{index}-{view}"]))
+                baseline.append(row["raw_score_hz"])
+                print(json.dumps({"case": index, "view": view, "raw_score": row["raw_score_hz"], "output": row["output_hz"], "KCs": row["active_KCs"]}), flush=True)
+        result = {"decoder_offset_hz": float(np.mean(baseline)),
+                  "decoder_threshold_hz": float(args.threshold_hz if args.threshold_hz is not None else max(2, max(abs(x - np.mean(baseline)) for x in baseline) + 1)),
+                  "untrained_scores_hz": baseline, "no_learning_performed": True}
+    else:
+        results = []
+        for seed in range(args.training_seed, args.training_seed + (1 if args.mode == "pilot" else 2)):
+            schedule = []
+            for epoch in range(args.epochs):
+                chunk = [(i, view) for i, case in enumerate(training) for view in training_views
+                         for _ in range(3 if args.task == "symbols" and case["label"] == 0 else 1)]
+                random.Random(seed + epoch * 100).shuffle(chunk)
+                schedule.extend(chunk)
+            inconsistent = {}
+            for i, key in enumerate(itertools.product(range(len(training)), training_views)):
+                positions = [j for j, case_view in enumerate(schedule) if case_view == key]
+                pulses = ["reward" if j % 2 else "aversive" for j in range(len(positions))]
+                random.Random(seed + i).shuffle(pulses)
+                inconsistent.update(zip(positions, pulses))
+            for mapping in (0, 1):
+                brain.reset(keep_memory=False)
+                baseline = evaluate({"seed": seed, "mapping": mapping, "arm": "baseline"}, mapping)
+                arms = {}
+                for arm in (("paired",) if args.mode == "pilot" else ("paired", "frozen", "no_feedback", "inconsistent")):
+                    brain.reset(keep_memory=False)
+                    for trial, (index, view) in enumerate(schedule):
+                        brain.reset(keep_memory=True)
+                        row = measure(encoded[f"train-{index}-{view}"])
+                        label = training[index]["label"] if mapping == 0 else 1 - training[index]["label"]
+                        pulse = None if arm == "no_feedback" else inconsistent[trial] if arm == "inconsistent" else "reward" if label else "aversive"
+                        feedback = measure(duration=200, pulse=pulse, learn=arm != "frozen", frozen=arm == "frozen")
+                        consolidation = measure(duration=250, frozen=arm == "frozen")
+                        potentiation = None
+                        if args.teaching == "bidirectional":
+                            brain.reset(keep_memory=True)
+                            opposite = None if pulse is None else "aversive" if pulse == "reward" else "reward"
+                            before_cue = measure(duration=200, pulse=opposite)
+                            during_cue = measure(encoded[f"train-{index}-{view}"], learn=arm != "frozen", frozen=arm == "frozen")
+                            after_cue = measure(duration=250, frozen=arm == "frozen")
+                            potentiation = {"pulse": opposite, "before_cue": before_cue, "during_cue": during_cue, "after_cue": after_cue}
+                        record({"seed": seed, "mapping": mapping, "arm": arm, "phase": "train", "trial": trial,
+                                "case": index, "view": view, "pulse": pulse, "feedback": feedback, "consolidation": consolidation,
+                                "potentiation": potentiation}, row)
+                    saved = brain.weight[c["edges"]].copy()
+                    state = memory_state(brain)
+                    np.savez_compressed(args.out / f"{seed}-{mapping}-{arm}-memory.npz", edge_indices=c["edges"], weights=saved, u=brain.memory_u, w=brain.memory_w)
+                    trained_images = evaluate({"seed": seed, "mapping": mapping, "arm": arm}, mapping, "train")
+                    evaluation = evaluate({"seed": seed, "mapping": mapping, "arm": arm}, mapping)
+                    brain.weight[c["edges"]] = brain.baseline_plastic
+                    if hashlib.sha256(brain.weight.tobytes()).hexdigest() != initial_hash:
+                        raise RuntimeError("Nonplastic weights changed")
+                    brain.weight[c["edges"]] = saved
+                    brain.reset(keep_memory=False)
+                    erased = evaluate({"seed": seed, "mapping": mapping, "arm": arm + "_erased"}, mapping)
+                    if erased["spike_hashes"] != baseline["spike_hashes"]:
+                        raise RuntimeError("Erasure failed")
+                    if arm == "frozen" and evaluation["spike_hashes"] != baseline["spike_hashes"]:
+                        raise RuntimeError("Frozen control failed")
+                    arms[arm] = {"evaluation": evaluation, "training_evaluation": trained_images, "memory": state, "erasure_exact": True, "nonplastic_unchanged": True}
+                    print(json.dumps({"seed": seed, "mapping": mapping, "arm": arm,
+                                      "accuracy": evaluation["accuracy"], "by_view": evaluation["by_view"],
+                                      "changed_edges": state["changed_edges"]}), flush=True)
+                paired = arms["paired"]["evaluation"]
+                passed = args.mode == "train" and paired["balanced_accuracy"] >= .90 and min(paired["by_class"].values()) >= .85 and all(x >= .85 for x in paired["by_candidate"].values()) and min(paired["by_view"].values()) >= .85 and all(paired["balanced_accuracy"] >= arms[a]["evaluation"]["balanced_accuracy"] + .25 for a in ("frozen", "no_feedback", "inconsistent"))
+                results.append({"seed": seed, "mapping": mapping, "schedule": schedule, "arms": arms, "gate_passed": passed})
+                (args.out / "partial-results.json").write_text(json.dumps(results, indent=2) + "\n")
+        result = {"runs": results, "gate_passed": all(r["gate_passed"] for r in results)}
+    log.close()
+    result.update(elapsed_seconds=time.perf_counter() - started, recorded_trials=len(records),
+                  simulated_evaluations=sum(r["phase"] == "eval" and r["simulated"] for r in records),
+                  aliased_evaluations=sum(r["phase"] == "eval" and not r["simulated"] for r in records),
+                  files_sha256={p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(args.out.iterdir()) if p.is_file()})
+    (args.out / "summary.json").write_text(json.dumps(result, indent=2) + "\n")
+    print(json.dumps({"complete": str(args.out), "gate_passed": result.get("gate_passed"), "seconds": result["elapsed_seconds"]}), flush=True)
+
+
+if __name__ == "__main__":
+    main()
