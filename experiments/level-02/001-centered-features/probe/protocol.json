@@ -1,0 +1,937 @@
+{
+  "task": "symbols",
+  "mode": "probe",
+  "source_sha256": "e436cbbdfd2719d8895320058c71bdb41061d2ab24e2e256524c9f6246b91597",
+  "imported_source_sha256": "51306bd4e143e31318a3853c9858289a6d696162d98693815efeab9400552122",
+  "git_head": "530c0be4e39a8b651de78c7d95ed6c21ec41b0df",
+  "upstream": "78ef3e05ab0fa086032098558d893667068944a0",
+  "graph": {
+    "release": "MaleCNS v1.0",
+    "neurons": 166700,
+    "directed_edges": 25582938,
+    "arrays_verified": true
+  },
+  "initial_weights_sha256": "d95171c2d59cfe3ebef2e5bd52be779b8f74754d718fc8941a93b8f2921c632b",
+  "parameters": {
+    "task": "symbols",
+    "pool": 256,
+    "active": 16,
+    "encoder_seed": 20260911,
+    "kc_current": 30,
+    "mbon_current": 5.5,
+    "eta": 0.00025,
+    "epochs": 8
+  },
+  "pool_ids": [
+    98318,
+    105935,
+    102719,
+    75155,
+    71326,
+    69538,
+    69611,
+    111260,
+    210806,
+    63483,
+    99150,
+    104545,
+    89323,
+    126057,
+    179669,
+    78261,
+    104743,
+    158368,
+    159665,
+    161163,
+    128075,
+    193963,
+    103423,
+    117038,
+    83089,
+    120894,
+    575369,
+    174029,
+    80076,
+    98107,
+    137866,
+    174181,
+    117108,
+    118841,
+    172379,
+    136461,
+    101596,
+    133873,
+    114865,
+    157389,
+    86878,
+    114889,
+    132539,
+    139662,
+    151833,
+    159685,
+    71907,
+    109108,
+    113252,
+    118007,
+    119532,
+    80309,
+    119055,
+    159286,
+    198145,
+    58662,
+    67282,
+    85403,
+    108640,
+    109758,
+    69709,
+    69758,
+    75428,
+    98714,
+    112329,
+    166289,
+    86850,
+    133281,
+    166049,
+    120291,
+    169420,
+    63814,
+    64378,
+    120202,
+    121122,
+    132800,
+    168771,
+    66179,
+    104462,
+    127326,
+    142270,
+    165176,
+    180876,
+    122226,
+    131495,
+    158470,
+    191728,
+    122463,
+    131765,
+    123107,
+    123775,
+    131539,
+    544813,
+    70690,
+    109382,
+    120660,
+    133864,
+    141809,
+    205250,
+    11862,
+    66238,
+    110689,
+    111033,
+    124807,
+    130531,
+    141914,
+    180859,
+    945591,
+    63345,
+    165359,
+    166876,
+    206188,
+    61517,
+    65347,
+    66458,
+    75181,
+    131359,
+    153703,
+    158876,
+    163500,
+    169369,
+    186170,
+    89338,
+    91287,
+    94845,
+    176147,
+    915829,
+    52704,
+    81207,
+    266449,
+    63156,
+    76750,
+    133250,
+    157166,
+    81141,
+    85391,
+    71088,
+    96711,
+    37720,
+    88407,
+    80172,
+    500143,
+    69308,
+    156598,
+    178476,
+    76660,
+    80082,
+    90098,
+    93464,
+    100497,
+    107453,
+    67686,
+    69694,
+    94050,
+    179219,
+    90181,
+    165180,
+    84334,
+    93288,
+    133727,
+    157588,
+    89862,
+    95585,
+    102457,
+    550950,
+    78013,
+    104232,
+    79536,
+    85017,
+    107041,
+    69507,
+    83557,
+    90459,
+    101802,
+    117243,
+    69472,
+    69664,
+    92952,
+    104117,
+    242401,
+    57219,
+    79203,
+    89658,
+    90944,
+    96977,
+    529041,
+    93837,
+    76523,
+    67919,
+    69973,
+    77390,
+    86758,
+    68737,
+    78097,
+    80013,
+    80131,
+    86768,
+    75300,
+    83684,
+    64794,
+    84641,
+    72299,
+    73645,
+    77760,
+    86639,
+    91544,
+    100544,
+    57879,
+    90672,
+    109988,
+    56274,
+    84991,
+    110674,
+    114209,
+    122137,
+    145497,
+    157037,
+    500003,
+    75507,
+    76265,
+    89384,
+    105807,
+    84811,
+    129330,
+    72538,
+    90473,
+    167780,
+    171306,
+    75882,
+    119852,
+    96383,
+    71676,
+    72438,
+    87728,
+    104723,
+    73306,
+    73508,
+    82635,
+    105676,
+    62840,
+    69987,
+    75050,
+    80155,
+    83961,
+    537061,
+    81700,
+    82789,
+    87946,
+    88023,
+    104086,
+    104149,
+    118041,
+    167708,
+    50776,
+    73191,
+    78959
+  ],
+  "filter_sha256": "e8f6d8235d11be1f7edce2401f63e875c7e67bf978cc159bf803d6e36db7f9bb",
+  "pixel_mean": [
+    -0.14371114838891305,
+    -0.07988106581599475,
+    0.006080730137866718,
+    0.0394205934965007,
+    0.07744599913742647,
+    0.12992378211575012,
+    0.08283620842112031,
+    -0.07060074861772239,
+    -0.03564787748363892,
+    0.0807114570774165,
+    0.000609806155152783,
+    -0.03602272362122361,
+    0.001646749465351649,
+    0.07308196086513176,
+    0.15454951540534595,
+    0.018647339381009372,
+    -0.041489685526137465,
+    -0.020385573557437257,
+    -0.07021265451536321,
+    -0.06907579012720988,
+    -0.061969818959003664,
+    0.04436722838322764,
+    0.1484928530006092,
+    0.03239468077119383,
+    -0.14138664356124447,
+    -0.1167698158995489,
+    -0.06443431916033909,
+    -0.0434710092874023,
+    -0.013752064079413009,
+    0.11335189118725222,
+    0.12563548686920262,
+    -0.041116841165075295,
+    -0.1258488068656262,
+    -0.07146762711035717,
+    -0.0917614810040591,
+    -0.09039326417269382,
+    -0.009506542276492197,
+    0.10888372462388388,
+    0.10847262903681379,
+    -0.027835174755550335,
+    -0.018774866349664195,
+    -0.02548639035057814,
+    -0.044757339301531654,
+    -0.006160167575528993,
+    0.013214775135477873,
+    0.02243766794883156,
+    0.06450290431510242,
+    0.06359946915628885,
+    -0.06256000791414115,
+    -0.007609662443909596,
+    -0.028695150689477332,
+    -0.07360419116180107,
+    -0.06932448499420642,
+    0.03349121150810301,
+    0.08941945653196433,
+    -0.000816657264236268,
+    -0.06549494786179824,
+    -0.010615732053203202,
+    0.004611633308897593,
+    0.002257759966258227,
+    0.031742728135187304,
+    0.11430018856762406,
+    0.10293821385873742,
+    -0.008428370052205501
+  ],
+  "sensory_adapter": "Fixed 8x8 normalized ink pixels, seeded random filters. Symbols subtract the uniform unlabeled training-patch mean, use independent candidate/cell filter products, shared max-pooling over row slots, top-k/2 KCs per hemisphere. No glyph IDs, equality or target labels enter encoding. Layout, translation normalization and row-order invariance are engineered.",
+  "teaching": "Supervised valence via DAN pulses, not chosen-action correctness. Cue500ms freezes weights but accumulates traces; cue-offDAN200ms learns;250ms passive consolidation.",
+  "decoder": {
+    "score": "meanMBON11Hz-meanMBON07Hz-offset",
+    "offset_hz": 0.0,
+    "threshold_hz": 2.0,
+    "calibration": "Global unlabeled training-image offset and deadband. No per-image output correction."
+  },
+  "training_cases": [
+    {
+      "task": "symbols",
+      "row": [
+        0
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3
+      ],
+      "candidate": 3,
+      "label": 0
+    }
+  ],
+  "training_views": [
+    "base",
+    "bold"
+  ],
+  "test_cases": [
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        1
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        1
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        1
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        1
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        2
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        2
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        2
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        2
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        3
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        3
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        3
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        0,
+        3
+      ],
+      "candidate": 3,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        0
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        0
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        0
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        0
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        2
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        2
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        2
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        2
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        3
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        3
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        3
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        1,
+        3
+      ],
+      "candidate": 3,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        0
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        0
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        0
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        0
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        1
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        1
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        1
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        1
+      ],
+      "candidate": 3,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        3
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        3
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        3
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        2,
+        3
+      ],
+      "candidate": 3,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        0
+      ],
+      "candidate": 0,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        0
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        0
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        0
+      ],
+      "candidate": 3,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        1
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        1
+      ],
+      "candidate": 1,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        1
+      ],
+      "candidate": 2,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        1
+      ],
+      "candidate": 3,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        2
+      ],
+      "candidate": 0,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        2
+      ],
+      "candidate": 1,
+      "label": 1
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        2
+      ],
+      "candidate": 2,
+      "label": 0
+    },
+    {
+      "task": "symbols",
+      "row": [
+        3,
+        2
+      ],
+      "candidate": 3,
+      "label": 0
+    }
+  ],
+  "views": [
+    "base",
+    "shift",
+    "small",
+    "bold"
+  ],
+  "gates": {
+    "cues": "Every mapping/order: >=0.90 test accuracy, >=0.25 above frozen/no-feedback/inconsistent controls; exact memory erasure and nonplastic preservation.",
+    "symbols": "Every mapping/order: >=0.90 balanced accuracy on unseen two-cell compositions, >=0.85 each class, candidate and view; >=0.25 above controls; exact erasure/nonplastic checks. Rows contain two distinct symbols from fixed alphabet1..4."
+  },
+  "limits": "Engineered visual representation and MBON readout; no claim of native fly vision, novel-symbol transfer, or Sudoku solving."
+}
