@@ -21,3 +21,18 @@ Preserve any failed result as development evidence before changing the method.
 ```sh
 .venv/bin/python one_blank.py --split development --out experiments/level-03/001-zero-shot/development
 ```
+
+## Outcome: candidate-judgment gate failed
+
+Both training orders score 62.5% balanced accuracy in mapping 0 and 50% in
+mapping 1. Acceptance recall, acceptance precision, and fixed-scan board
+completion are 100%, but rejection recall is only 25% / 0%. Incorrect
+candidates mostly produce timeouts. Counting successful board completion alone
+would hide this failure of the declared acceptance/rejection task.
+
+All 16 untrained neural inputs produce the same output rates at 24 active KCs.
+The expanded stimulus therefore introduces an output response plateau. The
+subsequent experiment will reduce the number of stimulated representatives,
+without silently changing this assay's weights or decoder. All controls and
+exact-erasure checks completed. The assay recorded 18,432 rendered judgments,
+16 distinct neural inputs, and 528 actual neural evaluations in 70.87 seconds.
