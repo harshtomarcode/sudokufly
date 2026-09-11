@@ -87,7 +87,9 @@ and shuffled controls, and satisfy the control checks. Repeated deterministic
 trials are not independent training replicates. Even passing this gate would
 establish only a small cue-conditioning result; Sudoku, generalization to unseen
 stimuli, and an advantage from fly wiring require later experiments.
-Work stays at Level 1 until its gate passes; Level 2 has not started.
+Later model variants are evaluated separately; the original retinal/DNp20 gate
+above remains failed. Experiment 005 passes cue learning under an explicitly
+engineered visual adapter, allowing Step 2 symbol comparison to begin.
 
 ## Results
 
@@ -128,6 +130,14 @@ controls time out. Exactly 58 appropriate existing connections change per paired
 run, with their efficacies reduced by about 34%. This uses direct stimulation,
 an explicitly calibrated constant output current, and Pavlovian pairing;
 **visual Level 1 remains incomplete**.
+
+Experiment 005 [passes image-derived cue learning](experiments/level-01/005-image-adapter/README.md)
+using a fixed random pixel-to-KC adapter and the calibrated MBON readout. Both
+opposite assignments score 100% under both orders, including withheld thinner
+and thicker bars. Controls do not reproduce the result; erasure restores exact
+baseline activity. **Step 1 is complete for this assisted visual variant.**
+This does not validate native retinal processing; the earlier failures remain
+preserved. The next task is Step 2, symbol comparison over four familiar symbols.
 
 See the [Level 1 experiment record](experiments/level-01/README.md) for the command,
 evidence, interpretation, and next experiment. Preserve each experiment in its

@@ -1,0 +1,26 @@
+{
+  "decoder_offset_hz": 1.0,
+  "decoder_threshold_hz": 3.5,
+  "untrained_scores_hz": [
+    3.5,
+    -1.5
+  ],
+  "no_learning_performed": true,
+  "elapsed_seconds": 0.6355351249803789,
+  "recorded_trials": 2,
+  "files_sha256": {
+    "inputs.json": "53ea2e0f946fc762b6c0f53c6ff89e779306faee7d66005a1461a10fa5f22005",
+    "protocol.json": "f31af953cfb6f872889a2d159bcbad7cf5df85ec522bbb16cd6a6de4378f3b89",
+    "test-0-base.png": "3dd54d3afb95bfd1046cd2833ccc68b29966176413b0d4eb71c5e2d392e4d4b6",
+    "test-0-shift.png": "1e61612a25e8b25fa052a65f2b90d2d29ed6c00a0fef710e499a7905dc42b8f1",
+    "test-0-thick.png": "24f082bc777254e7af95d8885ead8a8f1f561e9ee341d722ab984ddebbff8c2d",
+    "test-0-thin.png": "7c31247004ebe7f0151c0f71a488edac8fb38542e893bae7f519587e441ecf8b",
+    "test-1-base.png": "0070e3f20d7149748c7ae5c6b71e38e5f14b9f99be22c572fc4086fddee2c332",
+    "test-1-shift.png": "ac56339f2d044b508f6d2704794bbd0f5a3e575940f3ebe70acb9a91d7d4b9f7",
+    "test-1-thick.png": "f5f62664665d8c601ba36f71616acf2241c4de531015bffb9e21518f8dd10a66",
+    "test-1-thin.png": "f964fbc3c61d280042a409053562427932e5ccf0b4421c7d6c67fae8004d0d81",
+    "train-0-base.png": "3dd54d3afb95bfd1046cd2833ccc68b29966176413b0d4eb71c5e2d392e4d4b6",
+    "train-1-base.png": "0070e3f20d7149748c7ae5c6b71e38e5f14b9f99be22c572fc4086fddee2c332",
+    "trials.jsonl": "e809db88dfeba190439b3281e0407423fc7d0030edecd14a061a255bb614db1b"
+  }
+}

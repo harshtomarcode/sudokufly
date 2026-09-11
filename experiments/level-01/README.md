@@ -1,9 +1,9 @@
 # Level 1 — visual cue conditioning
 
-Status: direct neural association calibration passes in experiment 004; the
-visual learning gate remains unpassed. Experiments 001/002 are visual pilots,
-and experiment 003 diagnoses their limitations. Later levels have not started
-and will remain blocked until visual Level 1 passes.
+Status: **visual Step 1 passes in experiment 005 under an engineered image
+adapter and MBON readout**. The original retinal/DNp20 pilots remain failed;
+their results are preserved. Experiment 004 supplies the direct neural
+calibration. Step 2 can now test symbol comparison as a separate experiment.
 
 ## Experiment 001: fixed visual interface
 
@@ -139,12 +139,17 @@ under direct stimulation, not robustness, visual recognition, or action learning
 
 ## Decision and next experiment
 
-Preserve all four records. Direct conditioning establishes a working internal
-association mechanism with distinct inputs and controlled learning windows.
-The next visual Level 1 variant must connect image-derived activity to a stable
-memory representation and validate its input/output timing. The successful
-synthetic calibration uses a different readout and explicit background current;
-it cannot be counted as passing the original visual task.
+Experiment 005 [passes image-derived cue association](005-image-adapter/README.md)
+with 100% paired accuracy in each mapping/order, including thinner and thicker
+bars with changed KC codes. Controls do not reproduce the learned result, and
+erasure restores exact baseline responses. Its fixed random pixel-to-KC adapter
+is an explicit replacement for native retinal processing. The initial failure
+and the successful assisted visual variant are different claims.
+
+Preserve all five records. Proceed to Step 2 symbol comparison, requiring novel
+row compositions and no comparison result or legality information in the sensory
+adapter. The new task must retain a fixed readout and learning within the fly
+connections; full Sudoku remains beyond this milestone.
 
 Any changed input mapping, readout, neuron parameters, or learning rule belongs
 in a new numbered experiment with its own committed protocol. Progress to symbol

@@ -139,6 +139,10 @@ fit the readout to the final Sudoku test set.
 
 ### Progress from symbols to puzzles
 
+Numbering note: this original table starts after cue calibration. The implemented
+project calls cue learning **Step 1** and the first row below, symbol comparison,
+**Step 2**. The following one-blank Sudoku task is not the current Step 2 goal.
+
 | Stage | Task | What passing it would establish |
 | --- | --- | --- |
 | 1 | A short row using four symbols, plus a proposed symbol: does it repeat one already present? | Learned symbol comparison on new arrangements. |
