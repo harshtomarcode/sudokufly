@@ -53,7 +53,15 @@ both source orders give the same aggregate values.
 | [001](001-zero-shot/README.md) | 24 simultaneous KCs | 62.50% / 50.00% | Rejection timeouts; failed |
 | [002](002-smaller-input/README.md) | 18 simultaneous KCs | 79.17% / 91.67% | Rejection recall below floor; failed |
 | [003](003-twelve-cells/README.md) | 12 simultaneous KCs | 54.17% / 100.00% | Mapping 0 timeouts and false acceptances; failed |
+| [004](004-staggered-input/README.md) | 24 KCs, fixed per-neuron onset delays | 66.67% / 79.17% | Timeouts and false acceptances; failed |
+| [005](005-output-current/README.md) | 24 simultaneous KCs, output current 5.0 | 91.67% / 58.33% | Rejection recall below floor; failed |
 
-Every variant above completes 100% of boards under the fixed ascending scan,
-but none meets the explicit accept/reject gate in all conditions. This is why
-scan completion cannot replace candidate-level evaluation.
+Experiments 001–003 and 005 complete 100% of boards under the fixed ascending
+scan; 004 completes 75% / 100%. None meets the explicit accept/reject gate in all
+conditions. Scan completion cannot replace candidate-level evaluation.
+
+Experiment [006](006-error-conditioning/README.md) begins task-specific training:
+the paired arm receives bidirectional teaching only after wrong or undecided
+judgments. Every arm starts from the same learned Step 2 memory within each
+condition. It restores the original 24-cell, current 5.5 operating point and
+retains the full task gate. This experiment is separate from zero-shot transfer.
