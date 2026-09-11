@@ -226,6 +226,7 @@ def main():
     parser.add_argument("--split", choices=("development", "heldout", "all"), required=True)
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--per-pair", type=int, choices=(4, 6, 8), default=8)
+    parser.add_argument("--timing", choices=("simultaneous", "staggered"), default="simultaneous")
     parser.add_argument("--memory-source", type=Path,
                         default=ROOT / "experiments/level-02/005-controlled-replication/train")
     args = parser.parse_args()
@@ -313,6 +314,8 @@ def main():
         "memory_protocol_sha256": hashlib.sha256((source / "protocol.json").read_bytes()).hexdigest(),
         "source_parameters": parameters, "decoder": {"offset_hz": offset, "threshold_hz": threshold},
         "sensory_KCs_per_pair": args.per_pair, "total_sensory_KCs": 3 * args.per_pair,
+        "timing": args.timing,
+        "onsets_ms": "Simultaneous: all zero. Staggered: 4*(SHA256(decimal neuron ID).first_byte % 8); current stays on from onset to 500ms. No label or symbol-dependent timing.",
         "dataset": dataset, "selected_grids": [g["id"] for g in selected], "views": views,
         "rendered_presentations": len(presentations), "distinct_neural_inputs": len(inputs),
         "encoding": "Full masked board pixels plus candidate. Fixed cell crops locate sole blank; fixed target-row attention and existing template banks route three independent candidate/peer pairs. Each pair gets the same preset number of representatives, equally divided between hemispheres, from the saved Step2 group ordering. No solution, equality, legal-candidate flag or label enters encoder. Off-row information is intentionally excluded after blank detection.",
@@ -338,8 +341,22 @@ def main():
             brain.reset(keep_memory=True)
             brain.weights_frozen = True
             before = memory_state(brain)
-            counts, _ = brain.step(dark, 500, stimulation=[(indices, parameters["kc_current"])],
-                                   learning=False, lamina_bias=0)
+            onsets = np.array([4 * (hashlib.sha256(str(int(brain.ids[ix])).encode()).digest()[0] % 8)
+                               if args.timing == "staggered" else 0 for ix in indices])
+            counts = np.zeros(brain.n, dtype=np.int32)
+            trace = []
+            # Record 4ms bins for the first 100ms, then 10ms bins. The same
+            # boundaries apply to both timing conditions; sum before decoding.
+            boundaries = list(range(0, 101, 4)) + list(range(110, 501, 10))
+            for start, end in zip(boundaries, boundaries[1:]):
+                active = indices[onsets <= start]
+                chunk, _ = brain.step(dark, end - start,
+                                      stimulation=[(active, parameters["kc_current"])],
+                                      learning=False, lamina_bias=0)
+                counts += chunk
+                trace.append({"start_ms": start, "end_ms": end,
+                              "selected_KC_counts": chunk[indices].tolist(),
+                              "output_counts": {name: chunk[ix].tolist() for name, ix in outputs.items()}})
             hz = {name: float(counts[ix].mean() * 2) for name, ix in outputs.items()}
             score = hz["MBON11"] - hz["MBON07"] - offset
             after = memory_state(brain)
@@ -352,6 +369,7 @@ def main():
                    "KC_spikes": int(counts[c["kc"]].sum()),
                    "DAN_spikes": {p: int(counts[c[p]].sum()) for p in ("reward", "aversive")},
                    "memory_before": before, "memory_after": after}
+            row.update(onsets_ms=onsets.tolist(), trace=trace)
             log.write(json.dumps(row, allow_nan=False) + "\n")
             log.flush()
             responses[key] = row
