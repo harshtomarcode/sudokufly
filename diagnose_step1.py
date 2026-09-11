@@ -74,7 +74,7 @@ def restore_memory(brain, path=None, erase=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("suite", choices=("phases", "snapshots", "training"))
+    parser.add_argument("suite", choices=("phases", "snapshots", "training", "transition"))
     parser.add_argument("--out", type=Path, default=ROOT / "experiments/level-01/003-diagnosis")
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
@@ -122,6 +122,21 @@ def main():
                         ):
                             row = measure(brain, frame, duration, motors, learn=True, stimulus=stimulus)
                             record({"scope": scope, "cue": cue, "pulse": pulse, "phase": phase, **row})
+            elif args.suite == "transition":
+                # Matched prehistory isolates cue offset from elapsed time, and
+                # full weight freezing tests whether the burst needs plasticity.
+                for cue in CUES:
+                    for plasticity in ("normal", "frozen"):
+                        for interval in ("blank", "continue_cue"):
+                            restore_memory(brain)
+                            for phase, frame, duration in (
+                                ("observation", frames[cue], 500),
+                                ("feedback_without_pulse", frames[cue], 200),
+                                ("settle", cue_frame("blank") if interval == "blank" else frames[cue], 250),
+                            ):
+                                row = measure(brain, frame, duration, motors, learn=plasticity == "normal")
+                                record({"cue": cue, "plasticity": plasticity, "interval": interval,
+                                        "phase": phase, **row})
             elif args.suite == "snapshots":
                 saved_root = ROOT / "experiments/level-01/002-expanded-memory"
                 profiles = {

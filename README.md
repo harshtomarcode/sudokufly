@@ -111,8 +111,17 @@ erased controls stayed at 50% in both. One mapping passes the exploratory gate,
 but **Level 1 remains unpassed** because both mappings must pass. Experiment 001
 above remains the preserved baseline result.
 
+Experiment 003 [diagnoses the failure](experiments/level-01/003-diagnosis/README.md).
+The horizontal cue drives a delayed firing burst even without feedback, a blank
+transition, or plasticity. Decisions sample the first 500 ms while learning
+continues through the much stronger late response. The original 100% result
+falls to 50% under the other training order or either tested small image shift.
+Removing external feedback still changes thousands of weights; freezing the
+blank interval alone leaves all conditions at 50%. Memory storage works, but
+reliable task learning has not been established.
+
 See the [Level 1 experiment record](experiments/level-01/README.md) for the command,
-evidence, interpretation, and next diagnostic. Preserve each experiment in its
+evidence, interpretation, and next experiment. Preserve each experiment in its
 own numbered directory; commit its code and results together.
 
 ## Sources

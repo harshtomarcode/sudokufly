@@ -1,8 +1,9 @@
 # Level 1 — visual cue conditioning
 
-Status: two controlled pilots recorded; the overall learning gate has not passed.
-Experiment 002 passes one of the two opposite mappings. Later levels have not
-started and will remain blocked until Level 1 passes.
+Status: two controlled pilots and a causal diagnostic study recorded; the overall
+learning gate has not passed. Experiment 002 passes one original mapping, but
+experiment 003 finds that success depends on training order and exact input/state.
+Later levels have not started and will remain blocked until Level 1 passes.
 
 ## Experiment 001: fixed visual interface
 
@@ -95,13 +96,39 @@ better learning. One learned and one shuffled training trial timed out; all fina
 evaluations produced actions. These are tiny deterministic cue assays, not a
 generalization or statistical validation study.
 
+## Experiment 003: causal diagnosis
+
+See the [full diagnosis](003-diagnosis/README.md), raw measurements, and source,
+circuit, and intervention audits in [003-diagnosis](003-diagnosis/).
+
+The same four KCs initially respond to both cues with nearly identical total
+counts; their spike timing and dopamine activity differ. Their five eligible
+baseline outputs all target MBON11 and have zero PAM reward gain. Expansion
+opens some reward-modulated routes for these cells. In the horizontal
+sequence, almost all measured phase endpoint weight movement occurs during
+the post-feedback blank, including when no external feedback is supplied.
+Eight-trial training without feedback still changes 14,027–14,677 edges.
+The burst also occurs when the horizontal cue remains on screen and all weights
+are frozen: it is a delayed response, not a necessary effect of switching to
+blank. Decisions sample the first 500 ms, while learning includes the stronger
+700–950 ms response.
+
+Crossing both original orders with both target mappings reproduces the one
+100% case but yields 50% or 0% in the other original-training conditions.
+Freezing the blank interval alone leaves all four conditions at 50%. The saved
+100% case also falls to 50% with either tested small image shift or a blank
+warmup. Restoring the weak-DAN-support group removes that success. Exact
+nominal snapshot responses and original training conditions reproduce, so
+these findings are not explained by a broken memory restore or evaluation path.
+
 ## Decision and next experiment
 
-Preserve both pilots. Expansion establishes that the permitted memory changes
-can influence the fixed motor readout in this setup. The next Level 1 experiment
-should investigate why the opposite target mapping fails, test repeatability
-under new training orders, and examine the large changes in firing activity.
-More connections alone have not completed the task.
+Preserve all three records. Expansion establishes that the permitted memory
+changes can influence the fixed motor readout. Diagnosis identifies unreinforced
+plasticity and sensitivity to cue presentation, neural state, and training order.
+The next Level 1 variant should validate cue-specific eligibility, separate
+feedback from intertrial dynamics, and establish predictable compartment-to-choice
+effects. More connections alone have not completed the task.
 
 Any changed input mapping, readout, neuron parameters, or learning rule belongs
 in a new numbered experiment with its own committed protocol. Progress to symbol
