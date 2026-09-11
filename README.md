@@ -1,9 +1,17 @@
 # sudokufly
 
 Learn inside a simulated fruit-fly connectome, with Sudoku as the eventual goal.
-Level 1 implements a visual cue conditioning experiment using the full retained
-MaleCNS graph: 166,700 neurons and 25,582,938 directed connections. The action
-decoder is fixed; there is no external trained output layer or policy.
+Experiments use the full retained MaleCNS graph: 166,700 neurons and 25,582,938
+directed connections. The action decoder is fixed; there is no external trained
+decision head or policy. The assisted visual cue experiment completes Step 1.
+Step 2 evaluates comparison of four familiar symbols with explicit template
+recognition and sensory pooling, while learning remains inside existing fly
+synapses.
+
+**Step 2 is complete for this assisted comparison task:** all 24 distinct
+unseen two-row compositions are answered correctly under both answer mappings
+and both fresh training orders. Controls score 0–8.33%, and erasing memory
+restores baseline responses. See the [controlled results and audit](experiments/level-02/005-controlled-replication/README.md).
 
 ## Setup
 
@@ -110,7 +118,7 @@ loop, not learned cue discrimination. Sudoku levels have not started.
 Experiment 002 expanded the plastic set to 34,249 connections. The learned arm
 scored **50% / 100%** across the two opposite mappings; frozen, shuffled, and
 erased controls stayed at 50% in both. One mapping passes the exploratory gate,
-but **Level 1 remains unpassed** because both mappings must pass. Experiment 001
+but **the original retinal variant remains unpassed** because both mappings must pass. Experiment 001
 above remains the preserved baseline result.
 
 Experiment 003 [diagnoses the failure](experiments/level-01/003-diagnosis/README.md).
@@ -129,7 +137,7 @@ trained cue decisions. Frozen, no-feedback, inconsistent-pairing, and erased
 controls time out. Exactly 58 appropriate existing connections change per paired
 run, with their efficacies reduced by about 34%. This uses direct stimulation,
 an explicitly calibrated constant output current, and Pavlovian pairing;
-**visual Level 1 remains incomplete**.
+**that experiment did not complete visual Level 1**.
 
 Experiment 005 [passes image-derived cue learning](experiments/level-01/005-image-adapter/README.md)
 using a fixed random pixel-to-KC adapter and the calibrated MBON readout. Both
@@ -137,11 +145,50 @@ opposite assignments score 100% under both orders, including withheld thinner
 and thicker bars. Controls do not reproduce the result; erasure restores exact
 baseline activity. **Step 1 is complete for this assisted visual variant.**
 This does not validate native retinal processing; the earlier failures remain
-preserved. The next task is Step 2, symbol comparison over four familiar symbols.
+preserved. Step 2 follows in the [symbol-comparison experiment record](experiments/level-02/README.md).
 
 See the [Level 1 experiment record](experiments/level-01/README.md) for the command,
 evidence, interpretation, and next experiment. Preserve each experiment in its
 own numbered directory; commit its code and results together.
+
+## Run Step 2
+
+```sh
+.venv/bin/python compare_symbols.py probe --task symbols --encoder templates --teaching bidirectional --eta 0.00075 --epochs 4 --threshold-hz 2 --encoder-seed 20260917 --training-seed 20260919 --out runs/step2-probe
+.venv/bin/python compare_symbols.py train --task symbols --encoder templates --teaching bidirectional --eta 0.00075 --epochs 4 --threshold-hz 2 --encoder-seed 20260917 --training-seed 20260919 --reference runs/step2-probe --out runs/step2-train
+```
+
+Use new output directories for each run. The probe must use the same source
+and parameters as training. `pilot` replaces `train` for a development run
+with one order and only paired teaching; a pilot cannot pass the controlled gate.
+The exact recorded Step 2 experiment used commit `5aa3db1`. Current code has
+equivalent execution with clarified docstrings; its byte hash differs, so use
+a newly generated probe with current code rather than the archived reference.
+
+Training presents one row symbol and a candidate. Recall presents two distinct
+row symbols and a candidate; the fly must indicate whether it repeats one
+already present. All 16 atomic pairs are taught, but the 24 unordered two-row
+compositions are withheld from reinforcement. Both opposite answer mappings
+and two training orders are tested. The fixed template parser supplies symbol
+recognition and row pooling; the learned valences reside in existing KC→MBON
+connections. No equality flag or solution enters the sensory encoder.
+
+Teaching uses both timing directions of the unchanged upstream local rule:
+cue-before-dopamine weakens one compartment, and dopamine-before-cue strengthens
+the other. Every trial gives one pulse to each compartment; the target label
+determines their timing. This is supervised neural conditioning with an
+engineered interface, not natural fly training or Sudoku solving.
+
+The completed replication changes 909 existing synapses per learned state.
+Both weakening and strengthening matter: earlier random features failed, and
+template routing with weakening alone reached 79.17% in one mapping. The
+bidirectional timing protocol reaches 100% in all four fresh conditions with
+at least 3.125 Hz of margin beyond the unchanged decision threshold.
+
+Repeated renderings and row reversals that produce identical KC inputs are
+recorded as explicit aliases of one measured frozen response. Reports separate
+distinct neural inputs from rendered presentations. Source hashes, protocols,
+raw records, control results, and memory snapshots accompany every experiment.
 
 ## Sources
 

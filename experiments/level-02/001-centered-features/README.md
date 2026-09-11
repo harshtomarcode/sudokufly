@@ -20,9 +20,9 @@ otherwise receive many more dopamine pairings than the Step 1 cue patterns.
 The untrained probe fixes one global output offset and deadband. No readout
 parameter is fitted using reinforced responses.
 
-Before training, the gate is fixed at >=90% balanced accuracy in both opposite
-valence mappings and both orders; >=85% for each class, candidate, and view;
->=25 percentage points above frozen, no-feedback, and inconsistent controls.
+Before training, the gate is fixed at ≥90% balanced accuracy in both opposite
+valence mappings and both orders; ≥85% for each class, candidate, and view;
+≥25 percentage points above frozen, no-feedback, and inconsistent controls.
 Each inconsistent case/style receives equal reward and aversive pulses.
 Erasure must recover every baseline spike-count hash exactly and all
 nonplastic weights must remain unchanged.

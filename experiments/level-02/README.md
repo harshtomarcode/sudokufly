@@ -1,5 +1,10 @@
 # Step 2: symbol comparison
 
+**Complete for four familiar symbols under the engineered sensory interface.**
+The [controlled replication](005-controlled-replication/README.md) scores 100%
+in both answer mappings under both fresh training orders. All controls and
+memory-erasure checks pass; see the exact scope and evidence below.
+
 Step 1's assisted visual cue-learning gate was completed in
 [`level-01/005-image-adapter`](../level-01/005-image-adapter/README.md), commit
 `530c0be`, before any Step 2 neural experiment began.
@@ -13,14 +18,15 @@ assignments are trained separately from baseline.
 
 | Experiment | Status | Evidence |
 | --- | --- | --- |
-| [001: centered random features](001-centered-features/README.md) | Failed; stopped after the first completed paired condition |31.25%,132/192 timeouts; zero-deadband diagnostic only76.04%; near-saturated shared synapses. Commit3dfebbf. |
-| [002: template routing](002-template-pilot/README.md) | Untrained calibration only | Fixed image parsing; between-group output variation motivated anatomy-only balancing. Commit30d0c7f. |
-| [003: balanced templates](003-balanced-templates/README.md) | Completed development pilot; comparison gate failed | Atomic recall100% both mappings; novel compositions79.17%/100%. Commit9db2804. |
-| [004: bidirectional timing](004-bidirectional-pilot/README.md) | Completed accuracy pilot; controls pending |100% both mappings with the same local rule, using both cue-before-dopamine and dopamine-before-cue teaching. |
+| [001: centered random features](001-centered-features/README.md) | Failed; stopped after the first completed paired condition | 31.25%, 132/192 timeouts; zero-deadband diagnostic only 76.04%; near-saturated shared synapses. Commit `3dfebbf`. |
+| [002: template routing](002-template-pilot/README.md) | Untrained calibration only | Fixed image parsing; between-group output variation motivated anatomy-only balancing. Commit `30d0c7f`. |
+| [003: balanced templates](003-balanced-templates/README.md) | Completed development pilot; comparison gate failed | Atomic recall 100% both mappings; novel compositions 79.17%/100%. Commit `9db2804`. |
+| [004: bidirectional timing](004-bidirectional-pilot/README.md) | Completed accuracy pilot; controls evaluated separately in 005 | 100% both mappings with the same local rule, using both cue-before-dopamine and dopamine-before-cue teaching. |
+| [005: controlled replication](005-controlled-replication/README.md) | **Passed all gates** | Four learned states each score 24/24 on novel two-row compositions; controls score 0–8.33%. Exact erasure and nonplastic preservation pass. Protocol frozen in `5aa3db1`. |
 
 Adequate Step 2 performance requires every mapping under both training orders
-to achieve at least90% balanced accuracy, at least85% per class/candidate/view,
-and at least25 percentage points above frozen, absent-feedback, and inconsistent
+to achieve at least 90% balanced accuracy, at least 85% per class/candidate/view,
+and at least 25 percentage points above frozen, absent-feedback, and inconsistent
 teaching controls. Erasure must restore baseline spike counts exactly, and no
 nonplastic weights may change. Pilot modes lack the full controls and cannot
 pass this gate.

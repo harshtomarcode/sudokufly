@@ -35,7 +35,7 @@ not independent examples of fly visual generalization.
 
 The pilot has both mappings, one order, and erasure checks. It cannot pass the
 full Step 2 gate, which additionally requires two orders, all three controls,
->=90% balanced accuracy per run, >=85% each class/candidate/view, and >=25 points
+≥90% balanced accuracy per run, ≥85% each class/candidate/view, and ≥25 points
 over every control. Development outcomes must be retained; a fixed protocol
 with fresh routing/training seeds will be required after development succeeds.
 
@@ -47,7 +47,7 @@ under the two mappings. The first mapping had 40/192 timeouts and no opposite
 answers; all its signed scores pointed in the correct direction but ten ordered
 rows fell inside the fixed 2 Hz deadband. This is a failed adequate-performance
 pilot, not a full controlled Step 2 success. Both exact-erasure checks and
-nonplastic preservation checks passed. Minimum efficacy was approximately0.24,
+nonplastic preservation checks passed. Minimum efficacy was approximately 0.24,
 so saturation did not explain the remaining failures.
 
 ```sh

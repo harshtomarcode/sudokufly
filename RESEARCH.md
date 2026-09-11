@@ -5,6 +5,14 @@ with a fixed action decoder. This document records a code audit and a proposed
 experiment, not training results. Upstream full-network experiments were not
 rerun during this review.
 
+Implementation update: subsequent local experiments completed assisted visual
+cue learning (Step 1) and familiar-symbol comparison (Step 2). The latter uses
+fixed template recognition and sensory pooling, with learned responses stored
+in existing fly synapses through the unchanged local rule. The
+[controlled result and its limits](experiments/level-02/005-controlled-replication/README.md)
+are recorded separately from this historical source audit. Sudoku solving
+remains a later stage.
+
 ## What the examples actually demonstrate
 
 | Project | Mechanism | Evidence boundary |

@@ -1,6 +1,6 @@
 """Image-derived cue learning and four-symbol comparison with local fly plasticity.
 
-One fixed random sensory adapter; no equality operation or labels in encoding.
+Fixed random-feature or template sensory adapters; no equality flag or labels in encoding.
 See each recorded protocol for the changed sensory/readout assumptions.
 """
 
@@ -69,7 +69,7 @@ def patch_pixels(frame):
 
 
 def encode(frame, task, pool, filters, active, pixel_mean=None, templates=None, groups=None):
-    """Label-blind random pixel features; all cross-role products treated alike."""
+    """Label-blind pixel routing; every cross-role pair receives the same treatment."""
     if task == "cues":
         score = filters[0] @ patch_pixels(frame)
     elif templates is not None:
