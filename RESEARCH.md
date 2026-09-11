@@ -10,9 +10,13 @@ cue learning (Step 1) and familiar-symbol comparison (Step 2). The latter uses
 fixed template recognition and sensory pooling, with learned responses stored
 in existing fly synapses through the unchanged local rule. The
 [controlled result and its limits](experiments/level-02/005-controlled-replication/README.md)
-are recorded separately from this historical source audit. Project Step 3 now
-tests one-blank 4×4 boards in a [separate experiment record](experiments/level-03/README.md).
-General Sudoku solving remains a later stage.
+are recorded separately from this historical source audit. Project Step 3 also
+completes the assisted one-blank 4×4 behavioral milestone: development and frozen
+reserved-family confirmation both pass, covering all 4,608 one-blank boards.
+The [separate experiment record](experiments/level-03/010-curriculum-continuation/README.md)
+preserves the limits: all boards share 16 neural representations, template vision
+and target-row attention are engineered, and correct extra Step 3 feedback has
+not been shown necessary. General Sudoku solving remains a later stage.
 
 ## What the examples actually demonstrate
 

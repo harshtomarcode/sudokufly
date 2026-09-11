@@ -62,5 +62,35 @@ The development assay evaluates 18,432 rendered judgments over 96 grids and
 1,536 distinct one-blank boards, using 16 unique neural inputs. It records
 1,040 physical frozen evaluations plus 3,072 training judgments. Every own-source
 and full erasure check passes, and nonplastic weights remain unchanged. Runtime
-was 300.13 seconds. Confirmation remains pending until these states and source
-are committed and the reserved family is evaluated without learning.
+was 300.13 seconds. Executed source was frozen at `b165e38`; development results
+and memory snapshots were committed in `1bfb1e6` before confirmation.
+
+## Frozen confirmation: every gate passes
+
+The 192 reserved grids produce 3,072 distinct one-blank boards and 36,864
+candidate presentations across three views. All four learned conditions achieve
+100% raw and balanced accuracy, both class recalls, precision, every candidate,
+blank and view subgroup, and ascending/descending scan completion. Control
+accuracies exactly match the development table, and all control scans complete
+0% of boards. Runtime was 164.10 seconds.
+
+Confirmation loads the committed development snapshots, runs zero training or
+calibration epochs, and preserves weights and latent memory during inference.
+All 1,040 physical neural evaluations reproduce their development records
+exactly, including full spike hashes. Own-source and full erasures pass; source,
+artifact and memory hashes verify. See the [independent audit](audit.md).
+
+Together the two splits cover all 288 solved grids, 4,608 distinct one-blank
+boards, 13,824 board renderings and 55,296 candidate presentations per condition.
+The board and full-image sets are disjoint across splits, but both reduce to
+the same **16 neural inputs**. These are coverage counts, not independent neural
+generalization trials or fresh replications of Step 2 learning.
+
+**Step 3 is complete for the assisted one-blank behavioral milestone.** Learning
+remains inside existing fly synapses with a fixed decoder, while template vision
+and target-row attention are supplied by the interface. The row alone suffices
+on this domain. Experiment 007's warm-start shuffled controls still reach
+83–92%, so correct additional Step 3 feedback has not been shown necessary.
+This result does not establish a newly learned Sudoku rule or general puzzle
+solving. The narrowest decision margin is 0.125 Hz, and transient clipping
+occurred during development; perturbation or physiological robustness is untested.

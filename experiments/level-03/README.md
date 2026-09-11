@@ -4,6 +4,16 @@ Step 2 completed in `10b67e5` before this stage began. Project Step 3 is the
 one-blank candidate task in the original research plan, not the later task
 that isolates row, column, and box conflicts.
 
+**Completed for the assisted one-blank behavioral milestone.** Experiment
+[010](010-curriculum-continuation/README.md) passes every development and frozen
+confirmation gate under both mappings and both saved source learning histories.
+All 4,608 one-blank boards and three views receive 100% correct candidate
+judgments and completion; curriculum controls score 0–16.67%. This measures
+overall learning history. Experiment 007 still fails to establish that correct
+extra Step 3 feedback is necessary. Both board families share the same 16 neural
+representations, so the confirmation establishes board coverage rather than
+novel neural generalization. See the [independent audit](010-curriculum-continuation/audit.md).
+
 Present a full, valid 4×4 board with exactly one blank and a separate candidate
 digit. Offer all four digits at every blank position. The fly must accept the
 unique completing digit and reject the other three. A fixed ascending candidate
@@ -44,7 +54,7 @@ solving from this milestone.
 
 ## Development history
 
-All listed assays transfer the same four saved Step 2 memories without new
+The five assays in the table transfer the same four saved Step 2 memories without new
 training. Accuracy below is balanced candidate accuracy for mappings 0 / 1;
 both source orders give the same aggregate values.
 
@@ -87,3 +97,4 @@ Its causal comparison concerns learning across the curriculum. Experiment 007
 remains the direct, failed test of whether correct extra Step 3 feedback is
 necessary beyond an already learned Step 2 memory. These claims are distinct;
 the numeric behavioral gates and reserved-board confirmation remain unchanged.
+All four development and all four frozen confirmation conditions pass in 010.

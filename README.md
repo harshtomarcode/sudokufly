@@ -13,6 +13,14 @@ unseen two-row compositions are answered correctly under both answer mappings
 and both fresh training orders. Controls score 0–8.33%, and erasing memory
 restores baseline responses. See the [controlled results and audit](experiments/level-02/005-controlled-replication/README.md).
 
+**Step 3 is complete for assisted one-blank 4×4 boards:** all 4,608 distinct
+boards, four candidates and three renderings receive correct judgments under
+both answer mappings and both saved Step 2 training histories. The frozen
+reserved-family confirmation passes every gate; curriculum controls score
+0–16.67%. These presentations share only 16 neural inputs. Correct additional
+Step 3 feedback has not been shown necessary, and this does not establish
+general Sudoku reasoning. See the [results and audit](experiments/level-03/010-curriculum-continuation/README.md).
+
 ## Setup
 
 Requires Python 3.11+ and a C++17 compiler available as `c++` (Apple Command Line
@@ -112,8 +120,8 @@ All 88 neural trials completed, including both target mappings and controls.
 
 Training changed 2,919 and 2,963 of the 7,835 eligible connections, but the
 fixed decoder continued to accept both cues. Frozen and erased weights recovered
-the baseline spike traces exactly. This establishes an operating experimental
-loop, not learned cue discrimination. Sudoku levels have not started.
+the baseline spike traces exactly. This established an operating experimental
+loop, not learned cue discrimination; Sudoku levels had not started at that point.
 
 Experiment 002 expanded the plastic set to 34,249 connections. The learned arm
 scored **50% / 100%** across the two opposite mappings; frozen, shuffled, and
@@ -236,4 +244,4 @@ under CC BY 4.0; its attribution and publication citation requirements remain.
 
 [RESEARCH.md](RESEARCH.md) preserves the historical source audit and proposed
 progression toward Sudoku. Its initial research-only status describes the audit
-date; this README and recorded runs describe the implemented Level 1 experiment.
+date; this README and recorded runs describe the implemented assisted curriculum.
