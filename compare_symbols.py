@@ -179,6 +179,7 @@ def main():
     parser.add_argument("--encoder", choices=("random", "templates"), default="random")
     parser.add_argument("--training-seed", type=int, default=20260911)
     parser.add_argument("--threshold-hz", type=float)
+    parser.add_argument("--teaching", choices=("depression", "bidirectional"), default="depression")
     parser.add_argument("--kc-current", type=float, default=30)
     parser.add_argument("--mbon-current", type=float, default=5.5)
     parser.add_argument("--eta", type=float, default=0.001)
@@ -295,6 +296,8 @@ def main():
     }
     if templates is not None:
         protocol["sensory_adapter"] = "Fixed nearest-template parsing of normalized 8x8 pixels. Templates are deduplicated unlabeled base training patches ordered by pixel hash and independently permuted by role. Every Cartesian template pair gets an identically sized disjoint KC group, stratified by anatomical strength without labels. A single pair drives16 KCs; each of two pairs drives8 (4/hemisphere). Recognition and equal row pooling are engineered; pair valence is learned only in KC-to-MBON synapses. No equality branch, membership flag, labels or trained decision head in encoding."
+    if args.teaching == "bidirectional":
+        protocol["teaching"] += " Then reset electrical/traces while keeping memory; opposite-compartment DAN200ms with frozen weights precedes the same cue500ms with local learning enabled, followed by250ms passive consolidation. This uses the existing rule's potentiating time order. Each labeled trial supplies one pulse to each compartment; valence selects their timing, not dose. Frozen and no-feedback controls apply to both halves; inconsistent timing is balanced within each image."
     if args.mode != "probe":
         reference = json.loads((args.reference / "summary.json").read_text())
         rp = json.loads((args.reference / "protocol.json").read_text())
@@ -408,8 +411,17 @@ def main():
                         pulse = None if arm == "no_feedback" else inconsistent[trial] if arm == "inconsistent" else "reward" if label else "aversive"
                         feedback = measure(duration=200, pulse=pulse, learn=arm != "frozen", frozen=arm == "frozen")
                         consolidation = measure(duration=250, frozen=arm == "frozen")
+                        potentiation = None
+                        if args.teaching == "bidirectional":
+                            brain.reset(keep_memory=True)
+                            opposite = None if pulse is None else "aversive" if pulse == "reward" else "reward"
+                            before_cue = measure(duration=200, pulse=opposite)
+                            during_cue = measure(encoded[f"train-{index}-{view}"], learn=arm != "frozen", frozen=arm == "frozen")
+                            after_cue = measure(duration=250, frozen=arm == "frozen")
+                            potentiation = {"pulse": opposite, "before_cue": before_cue, "during_cue": during_cue, "after_cue": after_cue}
                         record({"seed": seed, "mapping": mapping, "arm": arm, "phase": "train", "trial": trial,
-                                "case": index, "view": view, "pulse": pulse, "feedback": feedback, "consolidation": consolidation}, row)
+                                "case": index, "view": view, "pulse": pulse, "feedback": feedback, "consolidation": consolidation,
+                                "potentiation": potentiation}, row)
                     saved = brain.weight[c["edges"]].copy()
                     state = memory_state(brain)
                     np.savez_compressed(args.out / f"{seed}-{mapping}-{arm}-memory.npz", edge_indices=c["edges"], weights=saved, u=brain.memory_u, w=brain.memory_w)
