@@ -25,3 +25,17 @@ still alias the same 16 neural representations.
 # Only after development passes:
 .venv/bin/python one_blank.py --split heldout --per-pair 8 --timing simultaneous --teaching depression --conditioning-source experiments/level-03/009-three-round-calibration/development --out experiments/level-03/009-three-round-calibration/heldout
 ```
+
+## Outcome: both mappings fail
+
+Both source orders give paired balanced accuracy 91.67% / 58.33% for mappings
+0 / 1. Accept recall, precision and scan completion remain 100%, but rejection
+recall is only 83.33% / 16.67%. Calibrated original controls score 20.83% / 25%.
+The unchanged class/subgroup gates correctly fail. In mapping 0, two candidate-3
+invalid inputs now have MBON07 and MBON11 both at 11 Hz, producing -1.625 Hz
+and a timeout: extra weakening damaged their prior negative decision.
+
+The first two calibration rounds reproduce 008's records exactly. The third
+round reaches the latent lower clamp at some phase endpoints. Both erasures
+and preservation checks pass. Runtime was 208.30 seconds. The held-out family
+remains reserved; this dose does not complete Step 3.
