@@ -232,6 +232,7 @@ def main():
     parser.add_argument("--train-epochs", type=int, default=0)
     parser.add_argument("--calibration-epochs", type=int, default=0)
     parser.add_argument("--teaching", choices=("bidirectional", "depression"), default="bidirectional")
+    parser.add_argument("--control-history", choices=("warm", "curriculum"), default="warm")
     parser.add_argument("--conditioning-source", type=Path)
     parser.add_argument("--memory-source", type=Path,
                         default=ROOT / "experiments/level-02/005-controlled-replication/train")
@@ -256,6 +257,7 @@ def main():
             if hashlib.sha256((args.conditioning_source / name).read_bytes()).hexdigest() != digest:
                 raise RuntimeError(f"Conditioned artifact changed: {name}")
     calibration_transfer = bool(args.calibration_epochs or (conditioned and cp.get("calibration_epochs")))
+    own_source_history = calibration_transfer or args.control_history == "curriculum"
     if not prior["gate_passed"]:
         raise RuntimeError("Transfer requires a completed, passing source experiment")
     for name, digest in prior["files_sha256"].items():
@@ -299,6 +301,7 @@ def main():
     offset = source_protocol["decoder"]["offset_hz"]
     threshold = source_protocol["decoder"]["threshold_hz"]
     if conditioned and (cp["sensory_KCs_per_pair"] != args.per_pair or cp["timing"] != args.timing
+                        or cp.get("control_history", "warm") != args.control_history
                         or cp["inference_mbon_current"] != mbon_current
                         or cp["memory_summary_sha256"] != hashlib.sha256((source / "summary.json").read_bytes()).hexdigest()
                         or cp["decoder"] != {"offset_hz": offset, "threshold_hz": threshold}):
@@ -349,13 +352,15 @@ def main():
         "source_parameters": parameters, "decoder": {"offset_hz": offset, "threshold_hz": threshold},
         "inference_mbon_current": mbon_current,
         "training_epochs": args.train_epochs,
+        "control_history": args.control_history,
+        "control_question": "Curriculum: each arm continues its own original Step2 history; controls test the whole learned curriculum. Warm: all arms inherit the paired Step2 memory; controls isolate added stage-specific teaching. Calibration instead always uses original source arms. Neither a curriculum nor calibration pass establishes that correct extra board-labelled feedback was necessary; preserve experiment007 as the failed test of that stronger claim.",
         "calibration_epochs": args.calibration_epochs,
         "calibration_transfer": calibration_transfer,
         "calibration": "If enabled, each ORIGINAL Step2 arm receives the same fixed label-blind schedule: for each round and pair group0..15, reset electrical state retaining memory, stimulate its preset representatives500ms frozen, BOTH DAN compartments200ms learning, passive250ms. No board, label, decision or target mapping selects calibration events. All source arms undergo plastic calibration, including the formerly frozen source arm. Stage erasure restores each arm's OWN source W/u/w. This tests transfer of prior learning, not acquisition of board-labelled knowledge.",
         "teaching": args.teaching,
         "conditioning_source": str(args.conditioning_source.relative_to(ROOT)) if conditioned else None,
         "conditioning_summary_sha256": hashlib.sha256((args.conditioning_source / "summary.json").read_bytes()).hexdigest() if conditioned else None,
-        "conditioning": "When enabled, every arm starts from the same paired Step2 memory. Balanced 24-trial epochs use the 16 development inputs: each accept input 3 times, reject once. Paired teaches only wrong/time-out decisions using the unchanged local rule. Depression: cue500, target DAN200 learning, passive250ms. Bidirectional additionally resets electrical state, gives opposite DAN200 frozen, same cue500 learning, passive250ms. Frozen/no-feedback replay the teaching schedule. Inconsistent permutes teaching/no-teaching events across the same cue schedule, preserving dose but changing active windows. Correct/no-teaching trials remain frozen. Stage erasure restores inherited weights and latent memory. No training on heldout boards.",
+        "conditioning": "Starting memory follows the explicit control_history. Balanced 24-trial epochs use the 16 development inputs: each accept input 3 times, reject once. Paired teaches only wrong/time-out decisions using the unchanged local rule. Depression: cue500, target DAN200 learning, passive250ms. Bidirectional additionally resets electrical state, gives opposite DAN200 frozen, same cue500 learning, passive250ms. Frozen/no-feedback replay the teaching schedule. Inconsistent permutes teaching/no-teaching events across the same cue schedule, preserving dose but changing active windows. Correct/no-teaching trials remain frozen. Stage erasure restores inherited weights and latent memory. No training on heldout boards.",
         "sensory_KCs_per_pair": args.per_pair, "total_sensory_KCs": 3 * args.per_pair,
         "timing": args.timing,
         "onsets_ms": "Simultaneous: all zero. Staggered: 4*(SHA256(decimal neuron ID).first_byte % 8); current stays on from onset to 500ms. Fixed per-neuron delays, no direct symbol or label lookup; exposure472-500ms.",
@@ -478,7 +483,7 @@ def main():
         seed, mapping = source_run["seed"], source_run["mapping"]
         arms = {}
         inherited = None
-        if (args.train_epochs or conditioned) and not calibration_transfer:
+        if (args.train_epochs or conditioned) and not own_source_history:
             inherited_path = source / f"{seed}-{mapping}-paired-memory.npz"
             with np.load(inherited_path, allow_pickle=False) as saved:
                 inherited = {k: saved[k].copy() for k in ("weights", "u", "w")}
@@ -497,7 +502,7 @@ def main():
                 schedule.extend(chunk)
             paired_events = []
         for arm in ("paired", "frozen", "no_feedback", "inconsistent"):
-            if calibration_transfer:
+            if own_source_history:
                 inherited_path = source / f"{seed}-{mapping}-{arm}-memory.npz"
                 with np.load(inherited_path, allow_pickle=False) as saved:
                     inherited = {k: saved[k].copy() for k in ("weights", "u", "w")}
@@ -508,7 +513,7 @@ def main():
                 inherited_state = memory_state(brain)
                 inherited_responses = evaluate_neural({"seed": seed, "mapping": mapping, "arm": arm, "phase": "inherited"})
             path = ((args.conditioning_source / f"{seed}-{mapping}-{arm}-memory.npz") if conditioned
-                    else source / f"{seed}-{mapping}-{'paired' if args.train_epochs else arm}-memory.npz")
+                    else source / f"{seed}-{mapping}-{'paired' if args.train_epochs and not own_source_history else arm}-memory.npz")
             with np.load(path, allow_pickle=False) as saved:
                 if not np.array_equal(saved["edge_indices"], c["edges"]):
                     raise RuntimeError("Saved plastic edge selection differs")
@@ -518,7 +523,7 @@ def main():
                 brain.memory_w[:] = saved["w"]
             state = memory_state(brain)
             expected = (next(r for r in conditioned["runs"] if r["seed"] == seed and r["mapping"] == mapping)["arms"][arm]["memory"]
-                        if conditioned else source_run["arms"]["paired" if args.train_epochs else arm]["memory"])
+                        if conditioned else source_run["arms"]["paired" if args.train_epochs and not own_source_history else arm]["memory"])
             if state != expected:
                 raise RuntimeError("Restored memory differs from trained source")
             if args.calibration_epochs:
