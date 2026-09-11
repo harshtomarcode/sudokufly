@@ -13,6 +13,14 @@ unseen two-row compositions are answered correctly under both answer mappings
 and both fresh training orders. Controls score 0–8.33%, and erasing memory
 restores baseline responses. See the [controlled results and audit](experiments/level-02/005-controlled-replication/README.md).
 
+**Step 3 is complete for assisted one-blank 4×4 boards:** all 4,608 distinct
+boards, four candidates and three renderings receive correct judgments under
+both answer mappings and both saved Step 2 training histories. The frozen
+reserved-family confirmation passes every gate; curriculum controls score
+0–16.67%. These presentations share only 16 neural inputs. Correct additional
+Step 3 feedback has not been shown necessary, and this does not establish
+general Sudoku reasoning. See the [results and audit](experiments/level-03/010-curriculum-continuation/README.md).
+
 ## Setup
 
 Requires Python 3.11+ and a C++17 compiler available as `c++` (Apple Command Line
@@ -112,8 +120,8 @@ All 88 neural trials completed, including both target mappings and controls.
 
 Training changed 2,919 and 2,963 of the 7,835 eligible connections, but the
 fixed decoder continued to accept both cues. Frozen and erased weights recovered
-the baseline spike traces exactly. This establishes an operating experimental
-loop, not learned cue discrimination. Sudoku levels have not started.
+the baseline spike traces exactly. This established an operating experimental
+loop, not learned cue discrimination; Sudoku levels had not started at that point.
 
 Experiment 002 expanded the plastic set to 34,249 connections. The learned arm
 scored **50% / 100%** across the two opposite mappings; frozen, shuffled, and
@@ -190,6 +198,41 @@ recorded as explicit aliases of one measured frozen response. Reports separate
 distinct neural inputs from rendered presentations. Source hashes, protocols,
 raw records, control results, and memory snapshots accompany every experiment.
 
+## Run Step 3
+
+The assisted one-blank task presents a full valid 4×4 board, a highlighted
+blank, and each candidate digit in turn. The fixed template interface reads
+the blank's row and drives three familiar symbol-pair populations. The neural
+readout must explicitly accept the completing digit and reject the other three;
+timeouts are incorrect. A fixed first-accept scan separately measures completion.
+
+```sh
+.venv/bin/python one_blank.py --split development --per-pair 8 --timing simultaneous --train-epochs 8 --teaching depression --control-history curriculum --out runs/step3-development
+# Run only after every development gate passes; loading enforces that condition.
+.venv/bin/python one_blank.py --split heldout --per-pair 8 --timing simultaneous --teaching depression --control-history curriculum --conditioning-source runs/step3-development --out runs/step3-heldout
+```
+
+Each original Step 2 arm continues its own saved learning history. Paired
+training gives a post-cue dopamine pulse only after an incorrect or undecided
+judgment; the existing local rule weakens recently active synapses. Every
+evaluation freezes weights and latent memory. Both stage-specific and full
+erasure must restore the corresponding earlier responses exactly.
+
+The [Step 3 record](experiments/level-03/README.md) preserves every failed
+variant and the [curriculum continuation](experiments/level-03/010-curriculum-continuation/README.md).
+The task's 288 solved grids yield 4,608 one-blank boards. Development uses one
+96-grid symmetry family, and confirmation reserves the other 192 grids.
+All positions, all four candidates, and three renderings are covered. These
+images collapse to only 16 neural inputs, including across the family split;
+confirmation tests board coverage rather than new neural representations.
+
+The stronger claim that correct additional Step 3 feedback is necessary remains
+unsupported: [warm-start shuffled feedback](experiments/level-03/007-depression-conditioning/audit.md)
+already reaches 83–92% when every control inherits the correct Step 2 memory.
+Whole-curriculum controls test overall learning history. Template recognition
+and target-row attention are engineered; this task cannot establish separate
+row, column, and box reasoning or general Sudoku solving.
+
 ## Sources
 
 The neural runtime is the pinned [Stonkfly implementation](https://github.com/nftechie/stonkfly/tree/78ef3e05ab0fa086032098558d893667068944a0),
@@ -201,4 +244,4 @@ under CC BY 4.0; its attribution and publication citation requirements remain.
 
 [RESEARCH.md](RESEARCH.md) preserves the historical source audit and proposed
 progression toward Sudoku. Its initial research-only status describes the audit
-date; this README and recorded runs describe the implemented Level 1 experiment.
+date; this README and recorded runs describe the implemented assisted curriculum.

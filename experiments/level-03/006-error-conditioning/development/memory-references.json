@@ -1,0 +1,66 @@
+[
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-0-paired-memory.npz",
+    "sha256": "eb00adb4572b8b0d2de9c19293be6f366fd2bfcf070847879125488142f888d7"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-0-paired-memory.npz",
+    "sha256": "eb00adb4572b8b0d2de9c19293be6f366fd2bfcf070847879125488142f888d7"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-0-paired-memory.npz",
+    "sha256": "eb00adb4572b8b0d2de9c19293be6f366fd2bfcf070847879125488142f888d7"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-0-paired-memory.npz",
+    "sha256": "eb00adb4572b8b0d2de9c19293be6f366fd2bfcf070847879125488142f888d7"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-1-paired-memory.npz",
+    "sha256": "93063e894564982b0aa5713f301d764e75f1d52af68a61e8289e44856fbe7d5f"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-1-paired-memory.npz",
+    "sha256": "93063e894564982b0aa5713f301d764e75f1d52af68a61e8289e44856fbe7d5f"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-1-paired-memory.npz",
+    "sha256": "93063e894564982b0aa5713f301d764e75f1d52af68a61e8289e44856fbe7d5f"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260919-1-paired-memory.npz",
+    "sha256": "93063e894564982b0aa5713f301d764e75f1d52af68a61e8289e44856fbe7d5f"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-0-paired-memory.npz",
+    "sha256": "ddd4a1a0235077effc0e5b37d232d1388deb7c30832e4635908dcf9b2e838b77"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-0-paired-memory.npz",
+    "sha256": "ddd4a1a0235077effc0e5b37d232d1388deb7c30832e4635908dcf9b2e838b77"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-0-paired-memory.npz",
+    "sha256": "ddd4a1a0235077effc0e5b37d232d1388deb7c30832e4635908dcf9b2e838b77"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-0-paired-memory.npz",
+    "sha256": "ddd4a1a0235077effc0e5b37d232d1388deb7c30832e4635908dcf9b2e838b77"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-1-paired-memory.npz",
+    "sha256": "96c3ea7947969a95e68677ddeec93fbd8f280e6dbefd3d337989de127783bd42"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-1-paired-memory.npz",
+    "sha256": "96c3ea7947969a95e68677ddeec93fbd8f280e6dbefd3d337989de127783bd42"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-1-paired-memory.npz",
+    "sha256": "96c3ea7947969a95e68677ddeec93fbd8f280e6dbefd3d337989de127783bd42"
+  },
+  {
+    "path": "experiments/level-02/005-controlled-replication/train/20260920-1-paired-memory.npz",
+    "sha256": "96c3ea7947969a95e68677ddeec93fbd8f280e6dbefd3d337989de127783bd42"
+  }
+]
