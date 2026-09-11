@@ -44,3 +44,18 @@ neural representations.
 # Only after development passes:
 .venv/bin/python one_blank.py --split heldout --per-pair 8 --timing simultaneous --teaching depression --conditioning-source experiments/level-03/008-common-weakening/development --out experiments/level-03/008-common-weakening/heldout
 ```
+
+## Outcome: mapping 0 passes, mapping 1 still times out
+
+Both source orders give paired balanced accuracy 100% / 54.17% for mappings
+0 / 1. Both accept every valid candidate and complete every ascending scan,
+but mapping 1 explicitly rejects only 1 of 12 distinct invalid inputs. Its
+MBON11 response is 14 Hz for all 12 invalid inputs; MBON07 is 10.5–11 Hz for
+the 11 failures, giving scores 1.375 or 1.875 Hz below the unchanged +2 Hz
+threshold. This does not support a cancellation explanation.
+
+Calibrated frozen/no-feedback source controls score 16.67% / 25.00%; calibrated
+inconsistent source controls score 4.17% / 12.50%. All memory, stage/full erasure,
+and nonplastic checks pass. Runtime was 177.29 seconds. The overall gate fails;
+the held-out family remains reserved. A third fixed calibration round is a
+separate development dose test, not a selected checkpoint from this run.
