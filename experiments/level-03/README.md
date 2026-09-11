@@ -65,3 +65,6 @@ the paired arm receives bidirectional teaching only after wrong or undecided
 judgments. Every arm starts from the same learned Step 2 memory within each
 condition. It restores the original 24-cell, current 5.5 operating point and
 retains the full task gate. This experiment is separate from zero-shot transfer.
+Only one of its four conditions converges; the other three fail, so it does
+not complete Step 3. Experiment [007](007-depression-conditioning/README.md)
+tests error-contingent weakening without the additional potentiation phase.
