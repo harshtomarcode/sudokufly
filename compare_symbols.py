@@ -103,6 +103,70 @@ def encode(frame, task, pool, filters, active, pixel_mean=None, templates=None, 
     return np.sort(pool[selected])
 
 
+def balanced_groups(brain, pool, output_indices):
+    """Return 16 disjoint 16-cell groups and their 8-cell recall subsets.
+
+    `pool` must contain the ranked 128 left KCs followed by the ranked 128
+    right KCs. `output_indices` contains all six MBON07/11 cells. Call before
+    learning; no image, symbol identity, task label, or training result enters.
+    """
+    pool = np.asarray(pool, dtype=np.int32)
+    output_indices = np.sort(np.asarray(output_indices, dtype=np.int32))
+    if pool.shape != (256,) or output_indices.shape != (6,):
+        raise ValueError("Expected 256 ranked KCs and six output cells")
+    if not np.array_equal(brain.weight[brain.circuit["edges"]], brain.baseline_plastic):
+        raise ValueError("Anatomy calibration requires original plastic weights")
+    contacts = np.zeros((256, 6), dtype=np.int64)
+    for row, cell in enumerate(pool):
+        edges = slice(brain.ptr[cell], brain.ptr[cell + 1])
+        destination = brain.post[edges]
+        edge_contacts = np.rint(brain.weight[edges] / 0.275).astype(np.int64)
+        for col, target in enumerate(output_indices):
+            contacts[row, col] = edge_contacts[destination == target].sum()
+
+    assignments, iterations = [], []
+    i, j = np.triu_indices(128, 1)
+    gi, gj, hi, hj = i // 8, j // 8, i // 4, j // 4
+    for side in range(2):
+        # Seed-independent rank interleaving. The first four strata span
+        # strong and weak ranks; each full group retains eight cells/side.
+        assigned = np.arange(128).reshape(8, 16)[[0, 3, 4, 7, 1, 2, 5, 6]].T.ravel() + 128 * side
+        for iteration in range(2000):
+            cells = contacts[assigned]
+            full = cells.reshape(16, 8, 6).sum(axis=1)
+            halves = cells.reshape(32, 4, 6).sum(axis=1)
+            delta = cells[j] - cells[i]
+            squared = np.sum(delta * delta, axis=1)
+            full_change = 2 * np.sum(delta * (full[gi] - full[gj]), axis=1) + 2 * squared
+            half_change = 2 * np.sum(delta * (halves[hi] - halves[hj]), axis=1) + 2 * squared
+            full_change[gi == gj] = 0
+            half_change[hi == hj] = 0
+            change = full_change + 2 * half_change
+            best = int(np.argmin(change))
+            if change[best] >= 0:
+                break
+            assigned[i[best]], assigned[j[best]] = assigned[j[best]], assigned[i[best]]
+        else:
+            raise RuntimeError("Anatomy partition did not reach its deterministic local minimum")
+        assignments.append(assigned.reshape(16, 8))
+        iterations.append(iteration)
+
+    positions = np.stack(assignments, axis=1)
+    full_positions = positions.reshape(16, 16)
+    representative_positions = positions[:, :, :4].reshape(16, 8)
+    report = {
+        "objective": "Sum of squared per-output full-group deviations plus twice the squared half-group deviations, optimized independently within each hemisphere.",
+        "initialization": "Rank strata [0,3,4,7,1,2,5,6], interleaved over all sixteen groups.",
+        "selection": "Best strictly improving within-hemisphere pair swap; lexicographic position order breaks ties. First four cells per hemisphere are recall representatives.",
+        "iterations": iterations,
+        "output_indices": output_indices.tolist(),
+        "pool_contacts": contacts.tolist(),
+        "full_contact_sums": contacts[full_positions].sum(axis=1).tolist(),
+        "representative_contact_sums": contacts[representative_positions].sum(axis=1).tolist(),
+    }
+    return pool[full_positions], pool[representative_positions], report
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("mode", choices=("probe", "pilot", "train"))
@@ -184,21 +248,17 @@ def main():
     training_views = ("base",) if args.task == "cues" or args.encoder == "templates" else ("base", "bold")
     pixel_mean = None if args.task == "cues" else np.mean([
         patch_pixels(render(case, view)[:, 128:192]) for case in training for view in training_views], axis=0)
-    templates, groups = None, None
+    templates, groups, anatomy_report = None, None, None
     if args.encoder == "templates":
         unique = {hashlib.sha256(p.tobytes()).hexdigest(): p for p in
                   [patch_pixels(render(case, "base")[:, 128:192]) for case in training]}
         bank = np.array([unique[key] for key in sorted(unique)])
         templates = np.array([bank[rng.permutation(len(bank))] for _ in range(2)])
         n_codes = len(bank) ** 2
-        if args.pool != n_codes * args.active:
-            raise RuntimeError("Template groups require pool == prototypes^2 * active")
-        groups = np.empty((n_codes, 2, args.active // 2), dtype=np.int32)
-        for side in range(2):
-            for rank in range(args.active // 2):
-                block = pool[side * (args.pool // 2) + rank * n_codes:side * (args.pool // 2) + (rank + 1) * n_codes]
-                groups[:, side, rank] = block if rank % 2 == 0 else block[::-1]
-        groups = groups[rng.permutation(n_codes)]
+        if n_codes != 16 or args.pool != 256 or args.active != 16:
+            raise RuntimeError("Template anatomy calibration requires 16 pair codes, 256 KCs, 16 active")
+        full_groups, _, anatomy_report = balanced_groups(brain, pool, np.concatenate(list(outputs.values())))
+        groups = full_groups.reshape(16, 2, 8)[rng.permutation(n_codes)]
     encoded = {}
     manifest = []
     for split, cases, variants in (("train", training, training_views), ("test", testing, views)):
@@ -223,10 +283,11 @@ def main():
         "pixel_mean": None if pixel_mean is None else pixel_mean.tolist(),
         "templates": None if templates is None else templates.tolist(),
         "group_KC_ids": None if groups is None else brain.ids[groups].tolist(),
+        "anatomy_partition": anatomy_report,
         "sensory_adapter": "Fixed 8x8 normalized ink pixels, seeded random filters. Symbols subtract the uniform unlabeled training-patch mean, use independent candidate/cell filter products, shared max-pooling over row slots, top-k/2 KCs per hemisphere. No glyph IDs, equality or target labels enter encoding. Layout, translation normalization and row-order invariance are engineered.",
         "teaching": "Supervised valence via DAN pulses, not chosen-action correctness. Cue500ms freezes weights but accumulates traces; cue-offDAN200ms learns;250ms passive consolidation.",
         "decoder": {"score": "meanMBON11Hz-meanMBON07Hz-offset", "offset_hz": offset, "threshold_hz": threshold,
-                    "calibration": "Global unlabeled training-image offset and deadband. No per-image output correction."},
+                    "calibration": "Global unlabeled training-image offset. Deadband fixed by --threshold-hz when supplied; otherwise covers untrained scores plus1Hz. No per-image output correction."},
         "training_cases": training, "training_views": training_views, "test_cases": testing, "views": views,
         "gates": {"cues": "Every mapping/order: >=0.90 test accuracy, >=0.25 above frozen/no-feedback/inconsistent controls; exact memory erasure and nonplastic preservation.",
                   "symbols": "Every mapping/order: >=0.90 balanced accuracy on unseen two-cell compositions, >=0.85 each class, candidate and view; >=0.25 above controls; exact erasure/nonplastic checks. Rows contain two distinct symbols from fixed alphabet1..4."},
@@ -283,20 +344,29 @@ def main():
         records.append(row)
         return row
 
-    def evaluate(context, mapping):
+    def evaluate(context, mapping, split="test"):
         rows = []
-        for index, case in enumerate(testing):
-            for view in views:
+        cases = testing if split == "test" else training
+        variants = views if split == "test" else training_views
+        for index, case in enumerate(cases):
+            for view in variants:
                 brain.reset(keep_memory=True)
-                row = measure(encoded[f"test-{index}-{view}"])
+                row = measure(encoded[f"{split}-{index}-{view}"])
                 target = case["label"] if mapping == 0 else 1 - case["label"]
-                rows.append(record({**context, "phase": "eval", "case": index, "view": view,
-                                    "target": target, "correct": row["action"] == target}, row))
+                position = -1
+                if args.task == "symbols" and case["candidate"] in case["row"]:
+                    position = case["row"].index(case["candidate"])
+                rows.append(record({**context, "phase": "eval", "split": split, "case": index, "view": view,
+                                    "target": target, "match_position": position, "correct": row["action"] == target}, row))
         by_class = {str(t): float(np.mean([r["correct"] for r in rows if r["target"] == t])) for t in (0, 1)}
-        by_candidate = {} if args.task == "cues" else {str(q): float(np.mean([r["correct"] for r in rows if testing[r["case"]]["candidate"] == q])) for q in range(4)}
+        by_candidate = {} if args.task == "cues" else {str(q): float(np.mean([r["correct"] for r in rows if cases[r["case"]]["candidate"] == q])) for q in range(4)}
+        by_position = {} if args.task == "cues" else {
+            str(position): float(np.mean([r["correct"] for r in rows if r["match_position"] == position]))
+            for position in range(-1, len(cases[0]["row"]))}
         return {"accuracy": float(np.mean([r["correct"] for r in rows])), "balanced_accuracy": float(np.mean(list(by_class.values()))),
-                "by_class": by_class, "by_candidate": by_candidate,
-                "by_view": {v: float(np.mean([r["correct"] for r in rows if r["view"] == v])) for v in views},
+                "by_class": by_class, "by_candidate": by_candidate, "by_match_position": by_position,
+                "by_view": {v: float(np.mean([r["correct"] for r in rows if r["view"] == v])) for v in variants},
+                "minimum_target_margin_hz": min((1 if r["target"] else -1) * r["score_hz"] - threshold for r in rows),
                 "timeouts": sum(r["action"] == -1 for r in rows), "spike_hashes": [r["spikes_sha256"] for r in rows]}
 
     if args.mode == "probe":
@@ -343,6 +413,7 @@ def main():
                     saved = brain.weight[c["edges"]].copy()
                     state = memory_state(brain)
                     np.savez_compressed(args.out / f"{seed}-{mapping}-{arm}-memory.npz", edge_indices=c["edges"], weights=saved, u=brain.memory_u, w=brain.memory_w)
+                    trained_images = evaluate({"seed": seed, "mapping": mapping, "arm": arm}, mapping, "train")
                     evaluation = evaluate({"seed": seed, "mapping": mapping, "arm": arm}, mapping)
                     brain.weight[c["edges"]] = brain.baseline_plastic
                     if hashlib.sha256(brain.weight.tobytes()).hexdigest() != initial_hash:
@@ -354,7 +425,7 @@ def main():
                         raise RuntimeError("Erasure failed")
                     if arm == "frozen" and evaluation["spike_hashes"] != baseline["spike_hashes"]:
                         raise RuntimeError("Frozen control failed")
-                    arms[arm] = {"evaluation": evaluation, "memory": state, "erasure_exact": True, "nonplastic_unchanged": True}
+                    arms[arm] = {"evaluation": evaluation, "training_evaluation": trained_images, "memory": state, "erasure_exact": True, "nonplastic_unchanged": True}
                     print(json.dumps({"seed": seed, "mapping": mapping, "arm": arm,
                                       "accuracy": evaluation["accuracy"], "by_view": evaluation["by_view"],
                                       "changed_edges": state["changed_edges"]}), flush=True)
