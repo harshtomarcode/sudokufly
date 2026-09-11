@@ -290,6 +290,7 @@ def main():
         "decoder": {"score": "meanMBON11Hz-meanMBON07Hz-offset", "offset_hz": offset, "threshold_hz": threshold,
                     "calibration": "Global unlabeled training-image offset. Deadband fixed by --threshold-hz when supplied; otherwise covers untrained scores plus1Hz. No per-image output correction."},
         "training_cases": training, "training_views": training_views, "test_cases": testing, "views": views,
+        "evaluation": "Within each frozen evaluation, simulate every distinct exact KC input once from reset. Repeated image views/row orders with identical inputs are aliases, explicitly marked simulated=false and linked to their measured case/view. They are not independent neural observations. No reuse across memories, arms, mappings, erasure, or training.",
         "gates": {"cues": "Every mapping/order: >=0.90 test accuracy, >=0.25 above frozen/no-feedback/inconsistent controls; exact memory erasure and nonplastic preservation.",
                   "symbols": "Every mapping/order: >=0.90 balanced accuracy on unseen two-cell compositions, >=0.85 each class, candidate and view; >=0.25 above controls; exact erasure/nonplastic checks. Rows contain two distinct symbols from fixed alphabet1..4."},
         "limits": "Engineered visual representation and MBON readout; no claim of native fly vision, novel-symbol transfer, or Sudoku solving.",
@@ -349,17 +350,24 @@ def main():
 
     def evaluate(context, mapping, split="test"):
         rows = []
+        responses = {}
         cases = testing if split == "test" else training
         variants = views if split == "test" else training_views
         for index, case in enumerate(cases):
             for view in variants:
-                brain.reset(keep_memory=True)
-                row = measure(encoded[f"{split}-{index}-{view}"])
+                indices = encoded[f"{split}-{index}-{view}"]
+                key = tuple(indices.tolist())
+                simulated = key not in responses
+                if simulated:
+                    brain.reset(keep_memory=True)
+                    responses[key] = (measure(indices), {"case": index, "view": view})
+                row, measured_at = responses[key]
                 target = case["label"] if mapping == 0 else 1 - case["label"]
                 position = -1
                 if args.task == "symbols" and case["candidate"] in case["row"]:
                     position = case["row"].index(case["candidate"])
                 rows.append(record({**context, "phase": "eval", "split": split, "case": index, "view": view,
+                                    "simulated": simulated, "measured_at": measured_at,
                                     "target": target, "match_position": position, "correct": row["action"] == target}, row))
         by_class = {str(t): float(np.mean([r["correct"] for r in rows if r["target"] == t])) for t in (0, 1)}
         by_candidate = {} if args.task == "cues" else {str(q): float(np.mean([r["correct"] for r in rows if cases[r["case"]]["candidate"] == q])) for q in range(4)}
@@ -367,6 +375,7 @@ def main():
             str(position): float(np.mean([r["correct"] for r in rows if r["match_position"] == position]))
             for position in range(-1, len(cases[0]["row"]))}
         return {"accuracy": float(np.mean([r["correct"] for r in rows])), "balanced_accuracy": float(np.mean(list(by_class.values()))),
+                "distinct_neural_inputs": len(responses), "rendered_presentations": len(rows),
                 "by_class": by_class, "by_candidate": by_candidate, "by_match_position": by_position,
                 "by_view": {v: float(np.mean([r["correct"] for r in rows if r["view"] == v])) for v in variants},
                 "minimum_target_margin_hz": min((1 if r["target"] else -1) * r["score_hz"] - threshold for r in rows),
@@ -448,6 +457,8 @@ def main():
         result = {"runs": results, "gate_passed": all(r["gate_passed"] for r in results)}
     log.close()
     result.update(elapsed_seconds=time.perf_counter() - started, recorded_trials=len(records),
+                  simulated_evaluations=sum(r["phase"] == "eval" and r["simulated"] for r in records),
+                  aliased_evaluations=sum(r["phase"] == "eval" and not r["simulated"] for r in records),
                   files_sha256={p.name: hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(args.out.iterdir()) if p.is_file()})
     (args.out / "summary.json").write_text(json.dumps(result, indent=2) + "\n")
     print(json.dumps({"complete": str(args.out), "gate_passed": result.get("gate_passed"), "seconds": result["elapsed_seconds"]}), flush=True)
