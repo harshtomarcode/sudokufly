@@ -227,6 +227,7 @@ def main():
     parser.add_argument("--out", type=Path, required=True)
     parser.add_argument("--per-pair", type=int, choices=(4, 6, 8), default=8)
     parser.add_argument("--timing", choices=("simultaneous", "staggered"), default="simultaneous")
+    parser.add_argument("--mbon-current", type=float)
     parser.add_argument("--memory-source", type=Path,
                         default=ROOT / "experiments/level-02/005-controlled-replication/train")
     args = parser.parse_args()
@@ -257,12 +258,15 @@ def main():
 
     graph = verify()
     parameters = source_protocol["parameters"]
+    mbon_current = parameters["mbon_current"] if args.mbon_current is None else args.mbon_current
+    if not np.isfinite(mbon_current) or mbon_current <= 0:
+        raise ValueError("Positive finite output current required")
     brain = MemoryBrain(eta=parameters["eta"])
     c = brain.circuit
     annotation = annotations(brain.ids)
     outputs = {name: np.flatnonzero(annotation.type.eq(name)) for name in ("MBON07", "MBON11")}
     for indices in outputs.values():
-        brain.tonic[indices] = parameters["mbon_current"]
+        brain.tonic[indices] = mbon_current
     initial_hash = hashlib.sha256(brain.weight.tobytes()).hexdigest()
     if initial_hash != source_protocol["initial_weights_sha256"]:
         raise RuntimeError("Graph initial weights differ from trained source")
@@ -313,13 +317,14 @@ def main():
         "memory_summary_sha256": hashlib.sha256((source / "summary.json").read_bytes()).hexdigest(),
         "memory_protocol_sha256": hashlib.sha256((source / "protocol.json").read_bytes()).hexdigest(),
         "source_parameters": parameters, "decoder": {"offset_hz": offset, "threshold_hz": threshold},
+        "inference_mbon_current": mbon_current,
         "sensory_KCs_per_pair": args.per_pair, "total_sensory_KCs": 3 * args.per_pair,
         "timing": args.timing,
-        "onsets_ms": "Simultaneous: all zero. Staggered: 4*(SHA256(decimal neuron ID).first_byte % 8); current stays on from onset to 500ms. No label or symbol-dependent timing.",
+        "onsets_ms": "Simultaneous: all zero. Staggered: 4*(SHA256(decimal neuron ID).first_byte % 8); current stays on from onset to 500ms. Fixed per-neuron delays, no direct symbol or label lookup; exposure472-500ms.",
         "dataset": dataset, "selected_grids": [g["id"] for g in selected], "views": views,
         "rendered_presentations": len(presentations), "distinct_neural_inputs": len(inputs),
         "encoding": "Full masked board pixels plus candidate. Fixed cell crops locate sole blank; fixed target-row attention and existing template banks route three independent candidate/peer pairs. Each pair gets the same preset number of representatives, equally divided between hemispheres, from the saved Step2 group ordering. No solution, equality, legal-candidate flag or label enters encoder. Off-row information is intentionally excluded after blank detection.",
-        "inference": "500ms from reset, all memory updates and passive relaxation frozen, retinal and lamina drive zero. Saved Step2 weights/current/readout unchanged. No dopamine teaching and no new training in this assay.",
+        "inference": "500ms from reset, all memory updates and passive relaxation frozen, retinal and lamina drive zero. Saved Step2 weights, KC current and readout unchanged. Uniform output current and timing are explicitly recorded. No dopamine teaching and no new training in this assay.",
         "scan": "Replay candidates1,2,3,4 in that fixed order using the frozen responses; place first semantically accepted digit without filtering, retries or oracle correction. Grade the resulting complete board afterward.",
         "gates": {"balanced_accuracy": .90, "minimum_class_recall": .85,
                   "minimum_group_balanced_accuracy": .85, "minimum_precision": .90,
