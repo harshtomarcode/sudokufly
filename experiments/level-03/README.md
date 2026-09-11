@@ -68,3 +68,14 @@ retains the full task gate. This experiment is separate from zero-shot transfer.
 Only one of its four conditions converges; the other three fail, so it does
 not complete Step 3. Experiment [007](007-depression-conditioning/README.md)
 tests error-contingent weakening without the additional potentiation phase.
+It reaches 100% paired performance in every condition, but inconsistent
+feedback also reaches 83–92%; all four added-learning gates therefore fail.
+
+Experiment [008](008-common-weakening/README.md) asks whether existing Step 2
+associations remain necessary after a shared, label-blind calibration. Every
+ORIGINAL source arm receives the same two rounds of both-compartment weakening;
+the controls therefore test prior association learning rather than newly added
+board-labelled learning. Mapping 0 passes at 100%, but mapping 1 reaches only
+54.17%, so the experiment still fails. Experiment
+[009](009-three-round-calibration/README.md) tests three fixed rounds of the
+same calibration with unchanged performance and control thresholds.
