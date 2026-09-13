@@ -17,3 +17,10 @@ must not filter illegal candidates, repair choices, automatically invoke undo,
 or restore per-branch retry cursors that silently supply a search algorithm.
 Future undo learning needs its own visible operation/context representation
 and controlled neural conditioning, followed by a separate recovery gate.
+
+The baseline is complete: paired memories solved all sampled easy cases and
+none of the traps, and both occupancy policies failed their gates. The next
+[controlled Undo experiment](002-learned-undo/README.md) trains new associations
+from the same learned starting memory in every control arm, and tests retention
+and recovery separately. Its 16 context codes are explicitly engineered;
+successful recall would not establish a learned general search algorithm.
