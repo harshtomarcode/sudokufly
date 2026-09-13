@@ -83,3 +83,28 @@ from easy successes. No new learning or newly learned spatial rules are claimed.
 
 The output directory must be new. Freeze this source and protocol in Git before
 running, and preserve all results before changing a policy or teaching rule.
+
+## Result
+
+Source frozen at `b24cba9`; the completed development run took 405.15 seconds.
+Both input policies failed the predeclared nonempty gate in all four saved
+history/mapping conditions. In particular, none correctly rejected the
+all-four-peer contexts, and empty contexts were never accepted. The broad
+balanced accuracies below therefore do not establish occupancy robustness.
+
+| Mapping | Eight-per-pair balanced accuracy, nonempty | Capped-24 balanced accuracy, nonempty |
+| --- | ---: | ---: |
+| 0, either history | 93.75% | 91.96% |
+| 1, either history | 75.89% | 93.75% |
+
+Across both policies and all four paired conditions, **768/768 easy episodes
+solved and 0/512 trap episodes solved**. Every original-history control solved
+zero puzzles. These are replays on the same 160 development puzzles, using
+measured deterministic responses; they are not independent puzzle samples.
+
+Independent audit verified all 14 artifact hashes, 16 memory references, 33
+full-network weight checks, 3,465 neural records, 528 exact familiar Step 3
+replications, 32 arm/policy summaries and 5,120 episode transition histories.
+The failure is substantive, with no scoring or routing discrepancy found.
+No new training occurred. The next experiment must test a learned Undo action
+and retain these failed placement prerequisites in its interpretation.
