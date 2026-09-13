@@ -1,0 +1,9730 @@
+[
+  {
+    "id": "layout-000",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-001",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-002",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-003",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-004",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-005",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-006",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-007",
+    "target": 0,
+    "occupied": [
+      2,
+      8,
+      5,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-008",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-009",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-010",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-011",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-012",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-013",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-014",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-015",
+    "target": 0,
+    "occupied": [
+      2,
+      12,
+      5,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-016",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-017",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-018",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-019",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-020",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-021",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-022",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-023",
+    "target": 0,
+    "occupied": [
+      3,
+      8,
+      5,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-024",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-025",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-026",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-027",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-028",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-029",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-030",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-031",
+    "target": 0,
+    "occupied": [
+      3,
+      12,
+      5,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-032",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-033",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-034",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-035",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-036",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-037",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-038",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-039",
+    "target": 1,
+    "occupied": [
+      2,
+      9,
+      4,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-040",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-041",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-042",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-043",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-044",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-045",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-046",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-047",
+    "target": 1,
+    "occupied": [
+      2,
+      13,
+      4,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-048",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-049",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-050",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-051",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-052",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-053",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-054",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-055",
+    "target": 1,
+    "occupied": [
+      3,
+      9,
+      4,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-056",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-057",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-058",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-059",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-060",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-061",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-062",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-063",
+    "target": 1,
+    "occupied": [
+      3,
+      13,
+      4,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-064",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-065",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-066",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-067",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-068",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-069",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-070",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-071",
+    "target": 2,
+    "occupied": [
+      0,
+      10,
+      7,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-072",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-073",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-074",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-075",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-076",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-077",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-078",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-079",
+    "target": 2,
+    "occupied": [
+      0,
+      14,
+      7,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-080",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-081",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-082",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-083",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-084",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-085",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-086",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-087",
+    "target": 2,
+    "occupied": [
+      1,
+      10,
+      7,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-088",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-089",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-090",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-091",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-092",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-093",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-094",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-095",
+    "target": 2,
+    "occupied": [
+      1,
+      14,
+      7,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-096",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-097",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-098",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-099",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-100",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-101",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-102",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-103",
+    "target": 3,
+    "occupied": [
+      0,
+      11,
+      6,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-104",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-105",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-106",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-107",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-108",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-109",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-110",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-111",
+    "target": 3,
+    "occupied": [
+      0,
+      15,
+      6,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-112",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-113",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-114",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-115",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-116",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-117",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-118",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-119",
+    "target": 3,
+    "occupied": [
+      1,
+      11,
+      6,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-120",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-121",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-122",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-123",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-124",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-125",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-126",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-127",
+    "target": 3,
+    "occupied": [
+      1,
+      15,
+      6,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-128",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-129",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-130",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-131",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-132",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-133",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-134",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-135",
+    "target": 4,
+    "occupied": [
+      6,
+      8,
+      1,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-136",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-137",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-138",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-139",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-140",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-141",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-142",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-143",
+    "target": 4,
+    "occupied": [
+      6,
+      12,
+      1,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-144",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-145",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-146",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-147",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-148",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-149",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-150",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-151",
+    "target": 4,
+    "occupied": [
+      7,
+      8,
+      1,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-152",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-153",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-154",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-155",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-156",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-157",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-158",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-159",
+    "target": 4,
+    "occupied": [
+      7,
+      12,
+      1,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-160",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-161",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-162",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-163",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-164",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-165",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-166",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-167",
+    "target": 5,
+    "occupied": [
+      6,
+      9,
+      0,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-168",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-169",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-170",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-171",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-172",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-173",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-174",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-175",
+    "target": 5,
+    "occupied": [
+      6,
+      13,
+      0,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-176",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-177",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-178",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-179",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-180",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-181",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-182",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-183",
+    "target": 5,
+    "occupied": [
+      7,
+      9,
+      0,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-184",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-185",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-186",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-187",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-188",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-189",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-190",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-191",
+    "target": 5,
+    "occupied": [
+      7,
+      13,
+      0,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-192",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-193",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-194",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-195",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-196",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-197",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-198",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-199",
+    "target": 6,
+    "occupied": [
+      4,
+      10,
+      3,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-200",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-201",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-202",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-203",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-204",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-205",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-206",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-207",
+    "target": 6,
+    "occupied": [
+      4,
+      14,
+      3,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-208",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-209",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-210",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-211",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-212",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-213",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-214",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-215",
+    "target": 6,
+    "occupied": [
+      5,
+      10,
+      3,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-216",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-217",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-218",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-219",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-220",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-221",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-222",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-223",
+    "target": 6,
+    "occupied": [
+      5,
+      14,
+      3,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-224",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-225",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-226",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-227",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-228",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-229",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-230",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-231",
+    "target": 7,
+    "occupied": [
+      4,
+      11,
+      2,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-232",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-233",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-234",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-235",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-236",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-237",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-238",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-239",
+    "target": 7,
+    "occupied": [
+      4,
+      15,
+      2,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-240",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-241",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-242",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-243",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-244",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-245",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-246",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-247",
+    "target": 7,
+    "occupied": [
+      5,
+      11,
+      2,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-248",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-249",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-250",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-251",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-252",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-253",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-254",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-255",
+    "target": 7,
+    "occupied": [
+      5,
+      15,
+      2,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-256",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-257",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-258",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-259",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-260",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-261",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-262",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-263",
+    "target": 8,
+    "occupied": [
+      10,
+      0,
+      13,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-264",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-265",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-266",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-267",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-268",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-269",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-270",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-271",
+    "target": 8,
+    "occupied": [
+      10,
+      4,
+      13,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-272",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-273",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-274",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-275",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-276",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-277",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-278",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-279",
+    "target": 8,
+    "occupied": [
+      11,
+      0,
+      13,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-280",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-281",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-282",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-283",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-284",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-285",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-286",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-287",
+    "target": 8,
+    "occupied": [
+      11,
+      4,
+      13,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-288",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-289",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-290",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-291",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-292",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-293",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-294",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-295",
+    "target": 9,
+    "occupied": [
+      10,
+      1,
+      12,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-296",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-297",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-298",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-299",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-300",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-301",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-302",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-303",
+    "target": 9,
+    "occupied": [
+      10,
+      5,
+      12,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-304",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-305",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-306",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-307",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-308",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-309",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-310",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-311",
+    "target": 9,
+    "occupied": [
+      11,
+      1,
+      12,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-312",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-313",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-314",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-315",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-316",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-317",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-318",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      14
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-319",
+    "target": 9,
+    "occupied": [
+      11,
+      5,
+      12,
+      15
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-320",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-321",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-322",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-323",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-324",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-325",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-326",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-327",
+    "target": 10,
+    "occupied": [
+      8,
+      2,
+      15,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-328",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-329",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-330",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-331",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-332",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-333",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-334",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-335",
+    "target": 10,
+    "occupied": [
+      8,
+      6,
+      15,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-336",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-337",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-338",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-339",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-340",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-341",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-342",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-343",
+    "target": 10,
+    "occupied": [
+      9,
+      2,
+      15,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-344",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-345",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-346",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-347",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-348",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-349",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-350",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-351",
+    "target": 10,
+    "occupied": [
+      9,
+      6,
+      15,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-352",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-353",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-354",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-355",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-356",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-357",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-358",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-359",
+    "target": 11,
+    "occupied": [
+      8,
+      3,
+      14,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-360",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-361",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-362",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-363",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-364",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-365",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-366",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-367",
+    "target": 11,
+    "occupied": [
+      8,
+      7,
+      14,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-368",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-369",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-370",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-371",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-372",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-373",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-374",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-375",
+    "target": 11,
+    "occupied": [
+      9,
+      3,
+      14,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-376",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-377",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-378",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-379",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-380",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-381",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-382",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      12
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-383",
+    "target": 11,
+    "occupied": [
+      9,
+      7,
+      14,
+      13
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-384",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-385",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-386",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-387",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-388",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-389",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-390",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-391",
+    "target": 12,
+    "occupied": [
+      14,
+      0,
+      9,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-392",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-393",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-394",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-395",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-396",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-397",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-398",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-399",
+    "target": 12,
+    "occupied": [
+      14,
+      4,
+      9,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-400",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-401",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-402",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-403",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-404",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-405",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-406",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-407",
+    "target": 12,
+    "occupied": [
+      15,
+      0,
+      9,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-408",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-409",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-410",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-411",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-412",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-413",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-414",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-415",
+    "target": 12,
+    "occupied": [
+      15,
+      4,
+      9,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-416",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-417",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-418",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-419",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-420",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-421",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-422",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-423",
+    "target": 13,
+    "occupied": [
+      14,
+      1,
+      8,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-424",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-425",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-426",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-427",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-428",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-429",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-430",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-431",
+    "target": 13,
+    "occupied": [
+      14,
+      5,
+      8,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-432",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-433",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-434",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-435",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-436",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-437",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-438",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-439",
+    "target": 13,
+    "occupied": [
+      15,
+      1,
+      8,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-440",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-441",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-442",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-443",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-444",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-445",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-446",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      10
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-447",
+    "target": 13,
+    "occupied": [
+      15,
+      5,
+      8,
+      11
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-448",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-449",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-450",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-451",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-452",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-453",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-454",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-455",
+    "target": 14,
+    "occupied": [
+      12,
+      2,
+      11,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-456",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-457",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-458",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-459",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-460",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-461",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-462",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-463",
+    "target": 14,
+    "occupied": [
+      12,
+      6,
+      11,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-464",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-465",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-466",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-467",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-468",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-469",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-470",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-471",
+    "target": 14,
+    "occupied": [
+      13,
+      2,
+      11,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-472",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-473",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-474",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      3
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-475",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-476",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-477",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      7
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-478",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-479",
+    "target": 14,
+    "occupied": [
+      13,
+      6,
+      11,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-480",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-481",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-482",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-483",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-484",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-485",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-486",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-487",
+    "target": 15,
+    "occupied": [
+      12,
+      3,
+      10,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-488",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-489",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-490",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-491",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-492",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-493",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-494",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-495",
+    "target": 15,
+    "occupied": [
+      12,
+      7,
+      10,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-496",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-497",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-498",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-499",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-500",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-501",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-502",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-503",
+    "target": 15,
+    "occupied": [
+      13,
+      3,
+      10,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-504",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      0
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      15
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-505",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      1
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-506",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      2
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-507",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      4
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      11
+    ],
+    "completions_per_assignment": 1,
+    "split": "heldout"
+  },
+  {
+    "id": "layout-508",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      5
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      8,
+      10
+    ],
+    "completions_per_assignment": 0,
+    "split": "excluded"
+  },
+  {
+    "id": "layout-509",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      6
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  },
+  {
+    "id": "layout-510",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      8
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      7,
+      8
+    ],
+    "completions_per_assignment": 1,
+    "split": "development"
+  },
+  {
+    "id": "layout-511",
+    "target": 15,
+    "occupied": [
+      13,
+      7,
+      10,
+      9
+    ],
+    "orbit": [
+      0,
+      2,
+      5,
+      6,
+      8
+    ],
+    "completions_per_assignment": 2,
+    "split": "development"
+  }
+]

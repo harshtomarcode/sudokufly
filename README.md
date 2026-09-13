@@ -233,6 +233,28 @@ Whole-curriculum controls test overall learning history. Template recognition
 and target-row attention are engineered; this task cannot establish separate
 row, column, and box reasoning or general Sudoku solving.
 
+## Run Step 4
+
+The isolated-constraint experiment presents a partial 4×4 board, a highlighted
+empty target, and every candidate digit. It tests row-only, column-only and
+box-only violations against legal cases with the same candidate elsewhere on
+the board. Fixed geometric attention selects the target's row, column and box;
+learned candidate judgments transfer from the frozen Step 3 memories.
+
+```sh
+.venv/bin/python constraint_transfer.py --split development --out runs/step4-development
+# Only after all development gates pass and the source/results are committed:
+.venv/bin/python constraint_transfer.py --split heldout --reference runs/step4-development --out runs/step4-heldout
+```
+
+Use new output directories. The [Step 4 record](experiments/level-04/README.md)
+defines the restricted four-clue domain, structural split, matched controls,
+and [protocol](experiments/level-04/001-frozen-transfer/README.md). All learning
+is inherited; no new Step 4 training runs. Spatial relevance is engineered and
+both splits share the same 16 familiar neural inputs. The outside-clue shortcut
+also solves this restricted dataset, but that clue is excluded from the
+implemented agent's input. Sequential puzzle solving remains a later task.
+
 ## Sources
 
 The neural runtime is the pinned [Stonkfly implementation](https://github.com/nftechie/stonkfly/tree/78ef3e05ab0fa086032098558d893667068944a0),

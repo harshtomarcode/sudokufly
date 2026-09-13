@@ -95,3 +95,29 @@ layouts using the same code and memories, with no tuning or new teaching.
 These output directories must not exist before a run. Use new paths to repeat
 the experiment. Passing would establish assisted constraint coverage with
 existing memories, not newly learned spatial rules or neural generalization.
+
+## Development result
+
+Executed source was frozen at `0bd3d45`. All four source-history/mapping
+conditions pass every gate. Raw and balanced accuracy, precision, legal recall,
+each isolated constraint's recall, all candidate/target/view subgroups, and
+matched swap-pair success are 100%.
+
+| Source order | Mapping | Paired balanced accuracy | Frozen / no feedback | Inconsistent |
+| --- | --- | --- | --- | --- |
+| 20260919 | 0 | 100% | 0% / 0% | 12.50% |
+| 20260919 | 1 | 100% | 0% / 0% | 16.67% |
+| 20260920 | 0 | 100% | 0% / 0% | 0.00% |
+| 20260920 | 1 | 100% | 0% / 0% | 4.17% |
+
+All 528 physical evaluations preserve memory and exactly reproduce the
+corresponding Step 3 spike traces, rates and actions. Full erasure restores
+baseline memory and responses; nonplastic weights remain unchanged. The
+73,728 presentation images cover 6,144 marked boards and three views using
+16 shared neural inputs. Runtime was 155.91 seconds, with no learning.
+
+Analytic row-only, column-only and box-only detectors each score 66.67%
+balanced accuracy; global duplicate detection scores 50%. The outside-clue
+shortcut scores 100%, but that clue is absent from the agent's input.
+Reserved-layout confirmation remains pending until this development result
+is committed. See the [independent audit](audit.md).
