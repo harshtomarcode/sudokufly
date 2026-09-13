@@ -18,6 +18,15 @@ preserves the limits: all boards share 16 neural representations, template visio
 and target-row attention are engineered, and correct extra Step 3 feedback has
 not been shown necessary. General Sudoku solving remains a later stage.
 
+Project Step 4 subsequently passes a restricted [assisted constraint-transfer
+assay](experiments/level-04/001-frozen-transfer/README.md): four-clue partial
+boards isolate row, column and box conflicts, with exact matched legal cases.
+All development and reserved-layout gates pass using frozen Step 3 memories.
+The interface supplies target-unit attention and the same 16 learned neural
+representations. No new spatial rule learning or sequential puzzle solving
+is established; the documented outside-clue shortcut is excluded from the
+implemented encoder but remains a limitation of this dataset.
+
 ## What the examples actually demonstrate
 
 | Project | Mechanism | Evidence boundary |

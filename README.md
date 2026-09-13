@@ -21,6 +21,13 @@ reserved-family confirmation passes every gate; curriculum controls score
 Step 3 feedback has not been shown necessary, and this does not establish
 general Sudoku reasoning. See the [results and audit](experiments/level-03/010-curriculum-continuation/README.md).
 
+**Step 4 passes the restricted assisted constraint-transfer test:** legal
+judgments and isolated row, column and box conflicts are all answered correctly
+under both mappings and both saved histories, including the reserved layouts.
+The 10,752 highlighted board/target cases share 16 familiar neural inputs.
+No new learning occurs; spatial relevance is supplied by the interface.
+See the [results and limits](experiments/level-04/001-frozen-transfer/README.md).
+
 ## Setup
 
 Requires Python 3.11+ and a C++17 compiler available as `c++` (Apple Command Line
@@ -232,6 +239,28 @@ already reaches 83–92% when every control inherits the correct Step 2 memory.
 Whole-curriculum controls test overall learning history. Template recognition
 and target-row attention are engineered; this task cannot establish separate
 row, column, and box reasoning or general Sudoku solving.
+
+## Run Step 4
+
+The isolated-constraint experiment presents a partial 4×4 board, a highlighted
+empty target, and every candidate digit. It tests row-only, column-only and
+box-only violations against legal cases with the same candidate elsewhere on
+the board. Fixed geometric attention selects the target's row, column and box;
+learned candidate judgments transfer from the frozen Step 3 memories.
+
+```sh
+.venv/bin/python constraint_transfer.py --split development --out runs/step4-development
+# Only after all development gates pass and the source/results are committed:
+.venv/bin/python constraint_transfer.py --split heldout --reference runs/step4-development --out runs/step4-heldout
+```
+
+Use new output directories. The [Step 4 record](experiments/level-04/README.md)
+defines the restricted four-clue domain, structural split, matched controls,
+and [protocol](experiments/level-04/001-frozen-transfer/README.md). All learning
+is inherited; no new Step 4 training runs. Spatial relevance is engineered and
+both splits share the same 16 familiar neural inputs. The outside-clue shortcut
+also solves this restricted dataset, but that clue is excluded from the
+implemented agent's input. Sequential puzzle solving remains a later task.
 
 ## Sources
 
