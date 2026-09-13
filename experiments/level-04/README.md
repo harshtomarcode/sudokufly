@@ -5,6 +5,13 @@ Step 4 asks whether assisted candidate judgments respond to each Sudoku
 constraint separately, including legal candidates that appear elsewhere on
 the board. Sequential puzzle completion remains Step 5.
 
+**The restricted frozen-transfer assay passes every development and confirmation
+gate.** Both mappings and both saved learning histories achieve 100% accuracy,
+legal recall, each isolated-constraint recall, and matched-pair success. The
+original-history controls score 0–16.67% balanced accuracy. All neural responses
+exactly reproduce Step 3; no new training occurs. See the [results and independent
+audit](001-frozen-transfer/README.md).
+
 The first [experiment](001-frozen-transfer/README.md) transfers the original
 Step 3 learned and control memories without additional teaching. It extends
 engineered visual attention from the target row to the union of the target's
@@ -24,6 +31,6 @@ clue is excluded from this agent's neural input; report the shortcut anyway.
 
 This is an assisted spatial-interface transfer experiment. Relevant geometry
 is selected by code; it is not learned inside the fly. The same 16 neural
-representations recur across stages and structural splits. A pass would support
+representations recur across stages and structural splits. The pass supports
 this restricted four-clue task, without establishing new Step 4 learning,
 variable occupancy, repeated peer symbols, or general Sudoku solving.

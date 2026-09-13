@@ -21,6 +21,13 @@ reserved-family confirmation passes every gate; curriculum controls score
 Step 3 feedback has not been shown necessary, and this does not establish
 general Sudoku reasoning. See the [results and audit](experiments/level-03/010-curriculum-continuation/README.md).
 
+**Step 4 passes the restricted assisted constraint-transfer test:** legal
+judgments and isolated row, column and box conflicts are all answered correctly
+under both mappings and both saved histories, including the reserved layouts.
+The 10,752 highlighted board/target cases share 16 familiar neural inputs.
+No new learning occurs; spatial relevance is supplied by the interface.
+See the [results and limits](experiments/level-04/001-frozen-transfer/README.md).
+
 ## Setup
 
 Requires Python 3.11+ and a C++17 compiler available as `c++` (Apple Command Line

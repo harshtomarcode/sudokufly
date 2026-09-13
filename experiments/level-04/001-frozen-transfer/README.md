@@ -119,5 +119,37 @@ baseline memory and responses; nonplastic weights remain unchanged. The
 Analytic row-only, column-only and box-only detectors each score 66.67%
 balanced accuracy; global duplicate detection scores 50%. The outside-clue
 shortcut scores 100%, but that clue is absent from the agent's input.
-Reserved-layout confirmation remains pending until this development result
-is committed. See the [independent audit](audit.md).
+Development results and audit were committed at `616b27a` before reserved-layout
+confirmation. See the [independent audit](audit.md).
+
+## Frozen confirmation result
+
+All four learned conditions pass every unchanged gate on the reserved layouts.
+Raw and balanced accuracy, precision, both classes, all three isolated
+constraints, every candidate/target/view subgroup and all matched swap pairs
+score 100%. Control accuracies exactly match the development table. The run
+records 55,296 candidate presentations over 4,608 highlighted board/target cases
+and three views. Runtime was 130.52 seconds.
+
+All 528 physical confirmation records exactly match development by source
+state, arm, phase and input, including full-network spike hashes, complete
+traces and effective/latent memory. All source/artifact/memory hashes and
+erasure checks pass. Confirmation binds the committed development summary and
+unchanged source, currents, timing and decoder. No training log or new memory
+snapshot is generated because no learning occurs.
+
+Together the splits cover 448 target/occupied layouts, 10,752 highlighted
+board/target cases, 8,064 distinct underlying partial boards, and 129,024
+candidate presentations per condition. Exact underlying grids, marked cases,
+image hashes and geometric families are disjoint across splits, while their
+16 KC input mappings are identical to each other and Step 3.
+
+**The restricted assisted Step 4 transfer task passes.** Existing learned
+comparisons respond correctly when the interface selects peers from the row,
+column or box. Spatial selection is engineered; no new spatial rule learning
+is demonstrated. The perfect outside-clue shortcut is excluded from the neural
+input, but the restricted dataset does not eliminate every possible shortcut.
+Variable clue counts, repeated peer symbols, overlaps between conflict types,
+and sequential puzzle solving remain outside this assay. The inherited minimum
+decision margin is only 0.125 Hz; physiological and perturbation robustness
+remain untested.

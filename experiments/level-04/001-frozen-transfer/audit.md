@@ -3,8 +3,9 @@
 This review independently checked dataset construction, geometric symmetries,
 pixel routing and scoring for the frozen source at `0bd3d45`. The reviewer ran
 data-only calculations and image encoding; no additional neural simulation or
-training was performed. Development artifacts have passed the independent
-checks below. Reserved-layout confirmation remains pending.
+training was performed. Development and frozen reserved-layout confirmation
+both passed the independent checks below. No unresolved implementation or
+artifact discrepancy was found within this assisted transfer assay.
 
 ## Dataset and independence of the split
 
@@ -174,4 +175,50 @@ constitute additional independent training replicates.
 
 ## Reserved-layout confirmation
 
-Pending the frozen confirmation run and independent artifact checks.
+The reserved-layout run completed in 130.5162 seconds and passed every gate
+under all four saved-memory conditions. Its protocol identifies development
+freeze commit `616b27a9707293f8810c2566653928f6a30e1776`; the reference summary
+hash matches both the current development artifact and the exact artifact
+stored in that commit. All four executed source hashes still match frozen
+source commit `0bd3d45`. No source tuning, new training or memory substitution
+occurred between the runs.
+
+Independently verified all 19 confirmation artifact hashes, rechecked all 19
+development artifact hashes, and verified all source-memory snapshot hashes.
+The two splits reference identical memory snapshots. Every confirmation
+presentation was independently regraded from its board and target, matching
+all 55,296 stored labels and conflict kinds. Recomputed balanced accuracies,
+each kind recall, candidate/target/view balanced accuracies and every matched
+pair result from the frozen neural actions; every summary agrees.
+
+Confirmation reproduces the development table exactly: paired memories
+achieve 100% accuracy, balanced accuracy, legal/row/column/box recalls,
+precision and matched-pair success. Original frozen and no-feedback histories
+score 0%; inconsistent histories score 12.5%, 16.67%, 0% and 4.17% in the
+listed order. All paired candidate, target and view groups score 100%, with
+no timeouts. These gates concern candidate judgments, not full-puzzle
+completion.
+
+All **528 complete confirmation neural records**, keyed by phase, source
+order, mapping, arm and input, are exactly equal to their development
+counterparts, including every trace and full-network spike hash. Thus the
+source-response, erasure and frozen-memory checks already independently
+verified for development hold identically in confirmation. All memory
+before/after states match, and no DAN spikes occur. Across both runs, there
+are 1,056 physically measured evaluations; board/view aliases do not add
+independent neural measurements or training histories.
+
+The saved manifests contain 73,728 distinct development images and 55,296
+distinct confirmation images, with no cross-split image-hash overlap. Directly
+reconstructed underlying-board sets contain 6,144 and 1,920 distinct grids,
+respectively, with no intersection. Marked board–target sets contain 6,144
+and 4,608 cases. Both splits have the same exact 16 KC input mappings, also
+identical to Step 3, as declared. The combined scope is therefore 129,024
+presentations covering 10,752 marked cases and 8,064 underlying partial grids.
+
+This completes the predeclared **frozen assisted constraint-transfer** test.
+The evidence demonstrates that the supplied target-unit interface can reuse
+existing learned fly-synapse responses for isolated row, column and box
+judgments. It does not demonstrate newly learned spatial constraints,
+necessity of additional feedback, general Sudoku reasoning, or robustness
+beyond the stated deterministic protocol.

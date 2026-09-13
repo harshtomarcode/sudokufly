@@ -1,0 +1,142 @@
+{
+  "task": "Step4: assisted isolated row/column/box constraint transfer",
+  "split": "heldout",
+  "git_head": "616b27a9707293f8810c2566653928f6a30e1776",
+  "source_sha256": {
+    "constraint_transfer.py": "38ecb300c96733c0f9e0f00cc67fb7240f4119d4452011732e3a89106df3bd38",
+    "one_blank.py": "f3b1b52c3c0ff0a5c0f19fe7449f218fb5d0f4c3dc1b639071a73eacf6cd4611",
+    "compare_symbols.py": "c2539e26e258e94e88a6531313bfbac0bd5c214a23a4c285bf5f75698b397c16",
+    "sudokufly.py": "51306bd4e143e31318a3853c9858289a6d696162d98693815efeab9400552122"
+  },
+  "upstream": "78ef3e05ab0fa086032098558d893667068944a0",
+  "graph": {
+    "neurons": 166700,
+    "directed_edges": 25582938,
+    "arrays_verified": true
+  },
+  "initial_weights_sha256": "d95171c2d59cfe3ebef2e5bd52be779b8f74754d718fc8941a93b8f2921c632b",
+  "memory_source": "experiments/level-03/010-curriculum-continuation/development",
+  "memory_summary_sha256": "2c7c3756e1b7641771f8e3426c367b1c5649bb97faa7d6b8f97fb2be429bc5f3",
+  "source_confirmation_sha256": "710d6f722d119db9adf987ad7b5d4ef3941dc4cb480a4356c42f6be3d3eb92e7",
+  "reference": "experiments/level-04/001-frozen-transfer/development",
+  "reference_summary_sha256": "0b03b6f14b4e96bdbe7a32c88d32c5c9fec6cc12198666a23ebb28488b1437dd",
+  "parameters": {
+    "KC_current": 30,
+    "MBON_current": 5.5,
+    "duration_ms": 500,
+    "sensory_KCs": 24,
+    "per_pair": 8,
+    "timing": "simultaneous"
+  },
+  "decoder": {
+    "offset_hz": 1.625,
+    "threshold_hz": 2.0
+  },
+  "training_epochs": 0,
+  "control_question": "Frozen transfer of each original Step3 arm's own history; no new Step4 learning.",
+  "dataset": {
+    "total_layouts": 512,
+    "eligible_layouts": 448,
+    "excluded_uncompletable_layouts": 64,
+    "selected_layouts": 192,
+    "orbits": [
+      {
+        "key": [
+          0,
+          2,
+          5,
+          6,
+          8
+        ],
+        "layouts": 128,
+        "split": "development",
+        "completions_per_assignment": 2
+      },
+      {
+        "key": [
+          0,
+          2,
+          5,
+          7,
+          8
+        ],
+        "layouts": 128,
+        "split": "development",
+        "completions_per_assignment": 1
+      },
+      {
+        "key": [
+          0,
+          2,
+          5,
+          8,
+          10
+        ],
+        "layouts": 64,
+        "split": "excluded",
+        "completions_per_assignment": 0
+      },
+      {
+        "key": [
+          0,
+          2,
+          5,
+          8,
+          11
+        ],
+        "layouts": 128,
+        "split": "heldout",
+        "completions_per_assignment": 1
+      },
+      {
+        "key": [
+          0,
+          2,
+          5,
+          8,
+          15
+        ],
+        "layouts": 64,
+        "split": "heldout",
+        "completions_per_assignment": 1
+      }
+    ],
+    "split_rule": "First two sorted geometry orbit keys for development; remaining completable keys heldout. Exclude the zero-completion orbit before evaluation. All digit relabelings/candidates/views stay with geometry.",
+    "all_digit_permutations": 24,
+    "all_candidates": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "views": [
+      "base",
+      "shift",
+      "small"
+    ],
+    "kind_counts": {
+      "row": 13824,
+      "column": 13824,
+      "box": 13824,
+      "legal": 13824
+    },
+    "labels": "Immediate rule legality, independently graded. Each clue digit occurs once globally. Legal candidate appears only outside target units; conflicts are isolated.",
+    "matching": "Swap outside candidate with one target peer, preserving geometry, candidate and full glyph histogram.",
+    "scope": "Four distinct clues: one row-only, column-only, box-only, and outside. Twelve blanks. Every included board has at least one completion, verified against all288 grids. Labels remain immediate legality. No full-puzzle or unique-completion claim."
+  },
+  "encoding": "Pixels only. Fixed highlight detector, templates and union-of-units attention. Three independently routed candidate/peer pairs, eight existing KCs each. No equality or legality flag.",
+  "rendered_presentations": 55296,
+  "distinct_neural_inputs": 16,
+  "gates": {
+    "balanced_accuracy": 0.9,
+    "minimum_kind_recall": 0.85,
+    "minimum_group_balanced_accuracy": 0.85,
+    "minimum_precision": 0.9,
+    "minimum_matched_pair_success": 0.85,
+    "minimum_control_gain": 0.25,
+    "exact_full_erasure": true,
+    "frozen_memory": true,
+    "nonplastic_preservation": true
+  },
+  "limits": "Spatial relevance is supplied by the interface, not learned by the fly. Same 16 representations as Step3. This is frozen assisted transfer, not new learning, novel neural generalization, variable-occupancy support, or sequential Sudoku solving."
+}
