@@ -109,7 +109,7 @@ def encode_undo(frame, templates, undo_groups):
 
 
 def play_with_undo(case, responses, templates, groups, undo_groups, policy, mapping,
-                   max_sweeps=16, decision_budget=1024, view="base"):
+                   max_sweeps=16, decision_budget=1024, view="base", placement_encoder=None):
     """Replay a fixed menu with neural placement and explicit neural Undo.
 
     At each currently empty row-major target, try digits 1..4 until accepted or
@@ -122,6 +122,7 @@ def play_with_undo(case, responses, templates, groups, undo_groups, policy, mapp
     """
     if mapping not in (0, 1) or max_sweeps < 1 or decision_budget < 1:
         raise ValueError("Invalid mapping or episode budget")
+    encode_place = encode_sequence if placement_encoder is None else placement_encoder
     initial = list(case["board"])
     board, stack, events = list(initial), [], []
     given_positions = [i for i, digit in enumerate(initial) if digit]
@@ -147,7 +148,7 @@ def play_with_undo(case, responses, templates, groups, undo_groups, policy, mapp
                     budget_hit = True
                     break
                 frame = render_partial(board, target, candidate, view)
-                indices, diagnostic = encode_sequence(frame, templates, groups, policy)
+                indices, diagnostic = encode_place(frame, templates, groups, policy)
                 key = hashlib.sha256(indices.tobytes()).hexdigest()
                 raw = responses[key]["action"]
                 if raw not in (-1, 0, 1):
