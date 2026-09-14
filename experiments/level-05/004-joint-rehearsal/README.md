@@ -52,3 +52,24 @@ The empty-peer input stays silent and outside the explicit nonempty gate.
 
 Freeze source and protocol in Git before running. Keep experiments 001–003 and
 their original source commits available; no thresholds change after results.
+
+## Result
+
+Source frozen at `f92c8da`; runtime 693.72 seconds. None of the four conditions
+passed within eight epochs. Final familiar retention was 12/16, 13/16, 10/16
+and 13/16 (seed, then mapping order), despite Undo remaining 100% in all four.
+Final capped placement balanced accuracy was 86.61%, 94.64%, 85.04% and 91.29%.
+The actual menu solved 0, 4, 0 and 4 of 160 development puzzles respectively.
+The thresholds require every component, not just overall placement accuracy.
+
+The run records 2,432 observations, 576 teaching events, 5,445 frozen neural
+evaluations and all 32 checkpoints. Shared input rehearsal did not repair the
+count-dependent responses while retaining familiar judgments. This does not
+prove that the circuit cannot learn; it rejects this particular curriculum
+within its fixed budget. The next pilot separates generic count-dependent
+sensory routes without adding edges or changing the decoder or learning rule.
+No controls or reserved-family results are claimed for this failed pilot.
+
+The independent [audit](audit.json) verifies all source/artifact hashes,
+45 frozen full-weight checks, exact erasures and all 640 episodes (10,921
+actions). It is [bound to the raw summary](audit-files-sha256.json).
