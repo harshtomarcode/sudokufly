@@ -1,0 +1,50 @@
+[
+  {
+    "path": "experiments/level-05/007-controlled-recovery/development/20260919-0-paired-memory.npz",
+    "sha256": "3442bf31e28122ab877504cf47203960ca474eb2344aca07eba25c298cf6e661"
+  },
+  {
+    "path": "experiments/level-03/010-curriculum-continuation/development/20260919-0-paired-memory.npz",
+    "sha256": "4b5cae2c75acabaf52bacb89fc30055e41ac65b1c705c21a8b8bf37f31ece7d0"
+  },
+  {
+    "path": "experiments/level-05/008-selective-undo-erasure/development/20260919-0-undo-erased-memory.npz",
+    "sha256": "c02cdbe9483b470453ab4bcdbc22dd9b12747512b989c951eb9dc96434b7bde1"
+  },
+  {
+    "path": "experiments/level-05/007-controlled-recovery/development/20260919-1-paired-memory.npz",
+    "sha256": "9f39626dc106ee58c34ad7899490aa628bfbaa1697a87213492b0a9d0f0c91f2"
+  },
+  {
+    "path": "experiments/level-03/010-curriculum-continuation/development/20260919-1-paired-memory.npz",
+    "sha256": "d5ca2193ef7685cf7060190fccc7f7988b98565a7074231f8f166a1ed00a8666"
+  },
+  {
+    "path": "experiments/level-05/008-selective-undo-erasure/development/20260919-1-undo-erased-memory.npz",
+    "sha256": "9435b1bf811113069402fccaf3969da2cb9ca6e246f2b1fcaa80ffabacb9745e"
+  },
+  {
+    "path": "experiments/level-05/007-controlled-recovery/development/20260920-0-paired-memory.npz",
+    "sha256": "8b07145f470aa65dc14424441e0741d28fc9f88038b8496db65c6b391136c32b"
+  },
+  {
+    "path": "experiments/level-03/010-curriculum-continuation/development/20260920-0-paired-memory.npz",
+    "sha256": "b449b00a71b3996e24a407f15e3bba565e71116518f138230c9358f4dc581a02"
+  },
+  {
+    "path": "experiments/level-05/008-selective-undo-erasure/development/20260920-0-undo-erased-memory.npz",
+    "sha256": "dd231d17cd8796833a96d99bafdb2ab9d01993bb6ac7dd83b8a3e44bc4b49394"
+  },
+  {
+    "path": "experiments/level-05/007-controlled-recovery/development/20260920-1-paired-memory.npz",
+    "sha256": "b7fca4965d8cc662e284638342b466b3b02932b5c591cc2d982a4ce0c11beb27"
+  },
+  {
+    "path": "experiments/level-03/010-curriculum-continuation/development/20260920-1-paired-memory.npz",
+    "sha256": "838133b5fd03f966bf0f34f18fb31084bb994722fec3631e2853d6b50c4d579b"
+  },
+  {
+    "path": "experiments/level-05/008-selective-undo-erasure/development/20260920-1-undo-erased-memory.npz",
+    "sha256": "17541428e6f26a3b29df39f38ada698e4faee0c0f481a6e70858c0a7dc7074b7"
+  }
+]

@@ -28,13 +28,19 @@ The 10,752 highlighted board/target cases share 16 familiar neural inputs.
 No new learning occurs; spatial relevance is supplied by the interface.
 See the [results and limits](experiments/level-04/001-frozen-transfer/README.md).
 
-**Step 5 has learned Undo and assisted recovery, but is incomplete:** the new
-Undo associations score 100% under both mappings and histories, versus 0–23.33%
-balanced accuracy in controls starting with the same placement memory. Both
-placement policies solve 159/160 development puzzles, including 63/64 traps.
-Old conflict judgments become timeouts through passive memory decay, failing
-retention; broader placement prerequisites and reserved-family confirmation
-remain open. See the [results, audit and recovery example](experiments/level-05/002-learned-undo/README.md).
+**Step 5 is complete for assisted sequential 4×4 puzzles with 2–4 blanks:**
+all 60 nonempty placement and 16 Undo judgments are correct, all 16 familiar
+judgments are retained, and every condition solves 158/160 reserved puzzles
+(62/64 traps) in all three views. Training occurs only in existing fly synapses;
+reserved evaluation uses frozen memories. Selectively restoring only Undo
+synapses to their pretraining state reduces reserved trap recovery by
+73.44–96.88 percentage points while leaving placement responses unchanged.
+This establishes Undo's contribution within the trained placement policy.
+Favorable warm controls still solve 160/160 without Undo by postponing ambiguous
+placements, so the trained policy does not outperform every control. Two
+reserved boards loop. Recognition, sensory routing and action mechanics remain
+engineered; this is not general Sudoku search. See the
+[complete experiment history and scope](experiments/level-05/README.md).
 
 ## Setup
 

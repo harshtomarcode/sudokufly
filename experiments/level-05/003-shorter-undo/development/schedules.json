@@ -1,0 +1,606 @@
+{
+  "20260919": [
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 14,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 7,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 6,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 9,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 5,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 0,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 13,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 2,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 1,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 8,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 12,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 10,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 4,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 11,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 3,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 7,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 2,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 12,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 13,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 1,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 5,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 14,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 4,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 11,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 0,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 8,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 9,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 6,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 3,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 10,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    }
+  ],
+  "20260920": [
+    {
+      "epoch": 0,
+      "context": 2,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 5,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 10,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 12,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 3,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 1,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 6,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 9,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 0,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 7,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 11,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 13,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 14,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 4,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 8,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 0,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 7,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 12,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 5,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 0,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 11,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 9,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 13,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 8,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 3,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 4,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 2,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 1,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 6,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 10,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 0
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 14,
+      "inconsistent_label": 1
+    },
+    {
+      "epoch": 1,
+      "context": 15,
+      "inconsistent_label": 1
+    }
+  ]
+}

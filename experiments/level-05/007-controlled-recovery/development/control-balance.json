@@ -1,0 +1,1522 @@
+{
+  "20260919-0": {
+    "01195094c386aab12468aa507bf51778f21e2ed86f39b46ff7a8ce39b45e32f2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 3997954932639745776
+    },
+    "074299cc0f8604fc8678f6c66e69e24a4a7a39c8c66967b7a09eabba079d260c": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 5209195477614854692
+    },
+    "076155ff5918ead17f2d7e2b969749f003c7076d39ec7546f1605b5600e84093": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 14051859131016399042
+    },
+    "0b7a30412a4c6d032493bf62a9460b9aa06bda5a34884752b419958a52dae281": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 11966066830161251322
+    },
+    "0e48e2512c86449accff26d57762c158296a8b0ca208f397becd72c4cce00ee6": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 12867016250663401256
+    },
+    "11bfdc1393e9631b99abb5c564918204d0ac58469ad832ac2539ea0eee3740dc": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 4717487028636137973
+    },
+    "185ac7c929da25ac498f93cc104a5c18ed6661927d7ade1648c010155d18cc74": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 14334628264047321942
+    },
+    "1b08e2e100be1c84e761be5fd19bce7b1e8406e6b4a91ed76725f8701a7fde47": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 6144122319295324794
+    },
+    "1e4dd3eafedbf852c018f19c716443b6bc3c4c5b7d730ac3e0e831d531aad41f": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 10650600923430999820
+    },
+    "22a1aef22cca02fe5648649c3dc5f21d4d3b6290c73af87cec4bafc08c5f6df2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 13235044367381584563
+    },
+    "2424c29ac6306e777d92a4b0086514d177557a45f50901613fba5672f5a30464": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 4651484263577366868
+    },
+    "2d3e59b096168c6f772d2d5c1ff981a657ae18ee515e0292361ad0e1564104ed": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 33630922793345599
+    },
+    "3834967174d73b3d7cf019decdbcfa762654885276c8481bf581a9c544856970": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4792744396657122143
+    },
+    "391f87332c7ea23efa4027a6eaf24cc83fc02156a682ed48f7b2df90a2dbf02e": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 13231728583876998637
+    },
+    "4d3064c727c86e4e75af25446acbc604a54e7f42bf30e357e60ca876ff540cb3": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 2720105997723151897
+    },
+    "4f536ae92ffabdb707b6d2d06cde816f1f64114ff6feb3f48d572d69e078baa0": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 9514391448263502488
+    },
+    "50a406d5731c2c7e066bef6677178304f1047a8b39253b43e7d4bb0b1c782846": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 2031859767571755398
+    },
+    "5c7f9a4ab49b5ee3ce0379d74e07458ee7b89552f64db127a54ce3160be1a654": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 12856421575742249767
+    },
+    "5d2e99a49b7d69658855c7e1384763b0ab54d4037dd8831cbca8339699fc3c0b": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 15465223659409442989
+    },
+    "652f7e4cf56050bf0e6ad62e279823a4c851abfe85944441dc2b42cb7b665b09": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 14545368577709538943
+    },
+    "6a229cecdaaa7a255fca8a6a17be9d407ff38778dea841344e344907ea70f2d7": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 6836338535023629908
+    },
+    "717da4260994b04f36ab37c26693ebb11605d578a5614b8c7a6bd14c2bab22da": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7833074026820340533
+    },
+    "757d715446fb4c4e26964c4f5a0ea6b805fddcaf5c44408ec92235d8dec278ee": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 10734977307822782148
+    },
+    "7ab70c7c665cb3b7b13084fd4612c0f2a81ba90cf8302ead7950210094171bb7": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10882123065227028762
+    },
+    "7b7dbf6d946da255124fc1b5e9614c8a915b375c770b8a8a7de5607747c1dab5": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 11715669959795770723
+    },
+    "7b880439587e348e58f3110e6e67af8e638708ae72060d7c04dbb626383c7cb7": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 4632738269196379074
+    },
+    "8341f5d4764d1dd1cd250f46ca42bead988d0d99233730de38fbe96124251e6e": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 15784370078852466512
+    },
+    "862c2282d0d811ddeead596424a3a9b90940f46012b8c9152d10cac4e87c4a5e": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 1380745869816559588
+    },
+    "903f2003b346a89dccba180d4a669fac58b2fc933eb92556dbb64a552329f68b": {
+      "teaching_events": 30,
+      "zero_targets": 15,
+      "one_targets": 15,
+      "odd_extra": null,
+      "seed": 17925577131691257803
+    },
+    "93ec9846e65678366e83659d7c44d50c3b8f9de4f3aa77979b7ff1d9950e4d6a": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 12462071368264610118
+    },
+    "94dad054661610f2604280dc02eb1e7be08ec777f1bc0876dabf5687ef56c97a": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 6464961989862367423
+    },
+    "a76e1a369aac1c541caf3c3c88c79c3f07c8b4983b2756c23ad893d0776610c4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10098925451129697824
+    },
+    "b143f6d93444681f30811b8ec66d29c7d3bbb17fe79a57ddd82f0b3551141d67": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 5294292555045946264
+    },
+    "b88b89830c16498fc9e13dae6c1258b567a69ef45b4cf6d546233ae69d8674a4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 18278995169918650561
+    },
+    "bf46681aaa78d882f32922c2bb4233e67a7d22b643649b757cdff6c492499da5": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 1462985260970388526
+    },
+    "c1a958ee30cf47c3e685864ae6bb8b49fb328d36a2f9bdf35983087d2ec48531": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 9246541254974860542
+    },
+    "c9bb06c584c6e698d59adff9b4a201cc97f334a39f56b8006b723d2734c59a17": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 2778998419240762880
+    },
+    "cbdae79651a52d29a3069192909ebd37f65cee03b9b8d385b6a7ede5f42449fc": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 2714843875340504764
+    },
+    "d9a73e102511b368034db7f549c68aad4332e77ab269871c301eb70fedcf0557": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4784636188272115101
+    },
+    "def273f983ccf9004366452da1adf82f27529776393a54f6d813582ebfb9ba9c": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 14142120015430743523
+    },
+    "e071b4065c2a3d39bffbc73f4ccdd898fa3ede711e3c4a6b2941f5a9a195dc47": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17982330583418788859
+    },
+    "e1049ee027b7d49f40696d0ab9ddc29d9d3e583678be46147c7ffab3265a01a1": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 11871111150294679448
+    },
+    "e50892e939189277180d17c35bb95e1924113f75d4f51a7f009401a6fbd2426a": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 8463722555446738856
+    },
+    "e5e2954961734513c454fffd0ce85ea061e619ab134489a8931406e564fce8d2": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 17666566318975940455
+    },
+    "e7535a60426b758b4163b88fd7b72221ba33f71622116a13640fca9657f35a56": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4139119131253090175
+    },
+    "e8564ee8bddd6e49dc33c6030cf97ead36d658fd9359cc509675e97d8979f855": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 15601656632993709523
+    },
+    "ea8c76271bb11aa46ac7411abbad803d3bf0ccfa18e89852f2ffd66c21931c4f": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 13621374177669487290
+    },
+    "ec48ef400506dc6143997217feba72352e759588515fdc95bc8fca0398941add": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 16664102586730127984
+    },
+    "f1fbccc9ff8b4cee5f6692a740601ba24bd66d6f0ebc8c90b8db1a230694d215": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17301103892297898244
+    },
+    "f82500de8cd188ac2f48377d638c8e8e102cffacd432238715354711ba03612e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 15885998034202162954
+    }
+  },
+  "20260919-1": {
+    "01195094c386aab12468aa507bf51778f21e2ed86f39b46ff7a8ce39b45e32f2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 3997954932639745776
+    },
+    "074299cc0f8604fc8678f6c66e69e24a4a7a39c8c66967b7a09eabba079d260c": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 5209195477614854692
+    },
+    "076155ff5918ead17f2d7e2b969749f003c7076d39ec7546f1605b5600e84093": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 14051859131016399042
+    },
+    "0b7a30412a4c6d032493bf62a9460b9aa06bda5a34884752b419958a52dae281": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 11966066830161251322
+    },
+    "0e48e2512c86449accff26d57762c158296a8b0ca208f397becd72c4cce00ee6": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 12867016250663401256
+    },
+    "11bfdc1393e9631b99abb5c564918204d0ac58469ad832ac2539ea0eee3740dc": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 4717487028636137973
+    },
+    "185ac7c929da25ac498f93cc104a5c18ed6661927d7ade1648c010155d18cc74": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 14334628264047321942
+    },
+    "1b08e2e100be1c84e761be5fd19bce7b1e8406e6b4a91ed76725f8701a7fde47": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 6144122319295324794
+    },
+    "1e4dd3eafedbf852c018f19c716443b6bc3c4c5b7d730ac3e0e831d531aad41f": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 10650600923430999820
+    },
+    "1eecde84b60538d3aeca5a7d3439fbf4b80f5ad3875ce263823146a6c1bdbfd9": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 6142627299423540184
+    },
+    "20be616a82ddc17afb6154c486c3e6728112fda32a058b0584d1d09bd4e25336": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 14339624394223957057
+    },
+    "22436a2c9007171413f45387831967c463e4efcda61437007ccb7aeebf4b9cdc": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 16337688269922772274
+    },
+    "22a1aef22cca02fe5648649c3dc5f21d4d3b6290c73af87cec4bafc08c5f6df2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 13235044367381584563
+    },
+    "2424c29ac6306e777d92a4b0086514d177557a45f50901613fba5672f5a30464": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 4651484263577366868
+    },
+    "2d3e59b096168c6f772d2d5c1ff981a657ae18ee515e0292361ad0e1564104ed": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 33630922793345599
+    },
+    "3834967174d73b3d7cf019decdbcfa762654885276c8481bf581a9c544856970": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4792744396657122143
+    },
+    "391f87332c7ea23efa4027a6eaf24cc83fc02156a682ed48f7b2df90a2dbf02e": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 13231728583876998637
+    },
+    "3a4544c91d22076d73b78a22fbc4c94fea7ff90ec133485c4fbeea30f3396ae1": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 8831767087529074446
+    },
+    "3aa472ebf9af5c6dcc3efa848dc451168ed03c765b9cf8cf92396723872db804": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 5972155640508291012
+    },
+    "3ef7882a939366badedea79ca46cd169d8cb67edaf05abd056c868e62f817afc": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 3547433832441884804
+    },
+    "4d3064c727c86e4e75af25446acbc604a54e7f42bf30e357e60ca876ff540cb3": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 2720105997723151897
+    },
+    "4f536ae92ffabdb707b6d2d06cde816f1f64114ff6feb3f48d572d69e078baa0": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 9514391448263502488
+    },
+    "50a406d5731c2c7e066bef6677178304f1047a8b39253b43e7d4bb0b1c782846": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 2031859767571755398
+    },
+    "5c7f9a4ab49b5ee3ce0379d74e07458ee7b89552f64db127a54ce3160be1a654": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 12856421575742249767
+    },
+    "63f4eb4cddadd5667d8d51a4c7eafd84a2381b95388ce6711e1e27aaf38d85ac": {
+      "teaching_events": 5,
+      "zero_targets": 3,
+      "one_targets": 2,
+      "odd_extra": 0,
+      "seed": 11358101826390209749
+    },
+    "652f7e4cf56050bf0e6ad62e279823a4c851abfe85944441dc2b42cb7b665b09": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 14545368577709538943
+    },
+    "717da4260994b04f36ab37c26693ebb11605d578a5614b8c7a6bd14c2bab22da": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7833074026820340533
+    },
+    "757d715446fb4c4e26964c4f5a0ea6b805fddcaf5c44408ec92235d8dec278ee": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 10734977307822782148
+    },
+    "7ab70c7c665cb3b7b13084fd4612c0f2a81ba90cf8302ead7950210094171bb7": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10882123065227028762
+    },
+    "7b7dbf6d946da255124fc1b5e9614c8a915b375c770b8a8a7de5607747c1dab5": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 11715669959795770723
+    },
+    "7b880439587e348e58f3110e6e67af8e638708ae72060d7c04dbb626383c7cb7": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 4632738269196379074
+    },
+    "8341f5d4764d1dd1cd250f46ca42bead988d0d99233730de38fbe96124251e6e": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 15784370078852466512
+    },
+    "862c2282d0d811ddeead596424a3a9b90940f46012b8c9152d10cac4e87c4a5e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 1380745869816559588
+    },
+    "903f2003b346a89dccba180d4a669fac58b2fc933eb92556dbb64a552329f68b": {
+      "teaching_events": 30,
+      "zero_targets": 15,
+      "one_targets": 15,
+      "odd_extra": null,
+      "seed": 17925577131691257803
+    },
+    "93ec9846e65678366e83659d7c44d50c3b8f9de4f3aa77979b7ff1d9950e4d6a": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 12462071368264610118
+    },
+    "9b34bc1303535f3611498d98d8f0f7d2a5da5642a832ad1377b6f93a6ebad398": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 12160240452040474596
+    },
+    "a76e1a369aac1c541caf3c3c88c79c3f07c8b4983b2756c23ad893d0776610c4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10098925451129697824
+    },
+    "b143f6d93444681f30811b8ec66d29c7d3bbb17fe79a57ddd82f0b3551141d67": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 5294292555045946264
+    },
+    "b88b89830c16498fc9e13dae6c1258b567a69ef45b4cf6d546233ae69d8674a4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 18278995169918650561
+    },
+    "bf46681aaa78d882f32922c2bb4233e67a7d22b643649b757cdff6c492499da5": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 1462985260970388526
+    },
+    "c1a958ee30cf47c3e685864ae6bb8b49fb328d36a2f9bdf35983087d2ec48531": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 9246541254974860542
+    },
+    "c9bb06c584c6e698d59adff9b4a201cc97f334a39f56b8006b723d2734c59a17": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 2778998419240762880
+    },
+    "cbdae79651a52d29a3069192909ebd37f65cee03b9b8d385b6a7ede5f42449fc": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 2714843875340504764
+    },
+    "d76c58de31601b2c123158c94c3875b45ac7a7258fab2dc15767638f23ee8c4f": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 6149708493223465549
+    },
+    "d9a73e102511b368034db7f549c68aad4332e77ab269871c301eb70fedcf0557": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4784636188272115101
+    },
+    "e071b4065c2a3d39bffbc73f4ccdd898fa3ede711e3c4a6b2941f5a9a195dc47": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 17982330583418788859
+    },
+    "e1049ee027b7d49f40696d0ab9ddc29d9d3e583678be46147c7ffab3265a01a1": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 11871111150294679448
+    },
+    "e70d88b6f6943a2fa44f0e97112acda1aac45876fe65dbd58b7d567618f25960": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 408383177728844060
+    },
+    "e7535a60426b758b4163b88fd7b72221ba33f71622116a13640fca9657f35a56": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4139119131253090175
+    },
+    "e8564ee8bddd6e49dc33c6030cf97ead36d658fd9359cc509675e97d8979f855": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 15601656632993709523
+    },
+    "ea8c76271bb11aa46ac7411abbad803d3bf0ccfa18e89852f2ffd66c21931c4f": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 13621374177669487290
+    },
+    "ec48ef400506dc6143997217feba72352e759588515fdc95bc8fca0398941add": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 16664102586730127984
+    },
+    "ed6db9dc42c2562dc1dd519a6d6eecc92e302ae9581e84fce53201c0d1d412ab": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 2788152736360722512
+    },
+    "f1b8bb2226d0854327ec2be3e4b7f87f89b81fbca40724a4badb01d967e6353c": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 8945443222815211789
+    },
+    "f1fbccc9ff8b4cee5f6692a740601ba24bd66d6f0ebc8c90b8db1a230694d215": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17301103892297898244
+    },
+    "f57c690437dd0e44dc90ba74531c37344f2ea70987e342014404d5c45784aa8e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 1451592221930507042
+    },
+    "f82500de8cd188ac2f48377d638c8e8e102cffacd432238715354711ba03612e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 15885998034202162954
+    }
+  },
+  "20260920-0": {
+    "01195094c386aab12468aa507bf51778f21e2ed86f39b46ff7a8ce39b45e32f2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 8878162690008546588
+    },
+    "074299cc0f8604fc8678f6c66e69e24a4a7a39c8c66967b7a09eabba079d260c": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 7128491539807054822
+    },
+    "076155ff5918ead17f2d7e2b969749f003c7076d39ec7546f1605b5600e84093": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 2737188969715975773
+    },
+    "0b7a30412a4c6d032493bf62a9460b9aa06bda5a34884752b419958a52dae281": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 9528821862453242378
+    },
+    "0e48e2512c86449accff26d57762c158296a8b0ca208f397becd72c4cce00ee6": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 3837248662118900218
+    },
+    "11bfdc1393e9631b99abb5c564918204d0ac58469ad832ac2539ea0eee3740dc": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4455314862237702283
+    },
+    "185ac7c929da25ac498f93cc104a5c18ed6661927d7ade1648c010155d18cc74": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 9615087036492843524
+    },
+    "1b08e2e100be1c84e761be5fd19bce7b1e8406e6b4a91ed76725f8701a7fde47": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 17324678202552461294
+    },
+    "1e4dd3eafedbf852c018f19c716443b6bc3c4c5b7d730ac3e0e831d531aad41f": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 8665210834335955416
+    },
+    "22a1aef22cca02fe5648649c3dc5f21d4d3b6290c73af87cec4bafc08c5f6df2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 16280550888675655997
+    },
+    "2424c29ac6306e777d92a4b0086514d177557a45f50901613fba5672f5a30464": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 5413658076428844907
+    },
+    "2d3e59b096168c6f772d2d5c1ff981a657ae18ee515e0292361ad0e1564104ed": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 13359088041663462981
+    },
+    "3834967174d73b3d7cf019decdbcfa762654885276c8481bf581a9c544856970": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7663581540078376604
+    },
+    "391f87332c7ea23efa4027a6eaf24cc83fc02156a682ed48f7b2df90a2dbf02e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 18065727019377280363
+    },
+    "3a4544c91d22076d73b78a22fbc4c94fea7ff90ec133485c4fbeea30f3396ae1": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 11094192127857943432
+    },
+    "4d3064c727c86e4e75af25446acbc604a54e7f42bf30e357e60ca876ff540cb3": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 9133243856232306421
+    },
+    "4f536ae92ffabdb707b6d2d06cde816f1f64114ff6feb3f48d572d69e078baa0": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 16098579246512823680
+    },
+    "50a406d5731c2c7e066bef6677178304f1047a8b39253b43e7d4bb0b1c782846": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 16246995467681216818
+    },
+    "5c7f9a4ab49b5ee3ce0379d74e07458ee7b89552f64db127a54ce3160be1a654": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17183198377792039091
+    },
+    "5d2e99a49b7d69658855c7e1384763b0ab54d4037dd8831cbca8339699fc3c0b": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 6532623311310899542
+    },
+    "652f7e4cf56050bf0e6ad62e279823a4c851abfe85944441dc2b42cb7b665b09": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 1009026463818376038
+    },
+    "655e288141aeceaa8b690d58860647ce6fbeb1310ba8588aac358bd68b3b5e67": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 11786222796883556638
+    },
+    "6a229cecdaaa7a255fca8a6a17be9d407ff38778dea841344e344907ea70f2d7": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 643160109395926044
+    },
+    "717da4260994b04f36ab37c26693ebb11605d578a5614b8c7a6bd14c2bab22da": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4741979850867847027
+    },
+    "757d715446fb4c4e26964c4f5a0ea6b805fddcaf5c44408ec92235d8dec278ee": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 14790352887142590219
+    },
+    "7ab70c7c665cb3b7b13084fd4612c0f2a81ba90cf8302ead7950210094171bb7": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10185801291369233720
+    },
+    "7b7dbf6d946da255124fc1b5e9614c8a915b375c770b8a8a7de5607747c1dab5": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 8234277041443001128
+    },
+    "7b880439587e348e58f3110e6e67af8e638708ae72060d7c04dbb626383c7cb7": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 9653886119602986888
+    },
+    "8341f5d4764d1dd1cd250f46ca42bead988d0d99233730de38fbe96124251e6e": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7189996600672551464
+    },
+    "862c2282d0d811ddeead596424a3a9b90940f46012b8c9152d10cac4e87c4a5e": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 6515136822464927971
+    },
+    "903f2003b346a89dccba180d4a669fac58b2fc933eb92556dbb64a552329f68b": {
+      "teaching_events": 30,
+      "zero_targets": 15,
+      "one_targets": 15,
+      "odd_extra": null,
+      "seed": 15894652974088669974
+    },
+    "94dad054661610f2604280dc02eb1e7be08ec777f1bc0876dabf5687ef56c97a": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 8400874921809817099
+    },
+    "a76e1a369aac1c541caf3c3c88c79c3f07c8b4983b2756c23ad893d0776610c4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7421066977260295047
+    },
+    "b143f6d93444681f30811b8ec66d29c7d3bbb17fe79a57ddd82f0b3551141d67": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7595769059108801473
+    },
+    "b88b89830c16498fc9e13dae6c1258b567a69ef45b4cf6d546233ae69d8674a4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 6831521727595367466
+    },
+    "bf46681aaa78d882f32922c2bb4233e67a7d22b643649b757cdff6c492499da5": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 1656141774100169843
+    },
+    "c1a958ee30cf47c3e685864ae6bb8b49fb328d36a2f9bdf35983087d2ec48531": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 6692189640350118640
+    },
+    "c9bb06c584c6e698d59adff9b4a201cc97f334a39f56b8006b723d2734c59a17": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 9841648554199273154
+    },
+    "cbdae79651a52d29a3069192909ebd37f65cee03b9b8d385b6a7ede5f42449fc": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17412954562681961657
+    },
+    "d9a73e102511b368034db7f549c68aad4332e77ab269871c301eb70fedcf0557": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 15196648499407164649
+    },
+    "def273f983ccf9004366452da1adf82f27529776393a54f6d813582ebfb9ba9c": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 14393828445232039732
+    },
+    "e071b4065c2a3d39bffbc73f4ccdd898fa3ede711e3c4a6b2941f5a9a195dc47": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 14988783678569561386
+    },
+    "e1049ee027b7d49f40696d0ab9ddc29d9d3e583678be46147c7ffab3265a01a1": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10662648122755233904
+    },
+    "e50892e939189277180d17c35bb95e1924113f75d4f51a7f009401a6fbd2426a": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 9138062389403052016
+    },
+    "e5e2954961734513c454fffd0ce85ea061e619ab134489a8931406e564fce8d2": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 10428330135051951966
+    },
+    "e7535a60426b758b4163b88fd7b72221ba33f71622116a13640fca9657f35a56": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 8837270323858921491
+    },
+    "e8564ee8bddd6e49dc33c6030cf97ead36d658fd9359cc509675e97d8979f855": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 5088959050563081474
+    },
+    "ea8c76271bb11aa46ac7411abbad803d3bf0ccfa18e89852f2ffd66c21931c4f": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 11997816544988307113
+    },
+    "f1fbccc9ff8b4cee5f6692a740601ba24bd66d6f0ebc8c90b8db1a230694d215": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 3278245561471996943
+    },
+    "f82500de8cd188ac2f48377d638c8e8e102cffacd432238715354711ba03612e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 17647415945300872395
+    }
+  },
+  "20260920-1": {
+    "01195094c386aab12468aa507bf51778f21e2ed86f39b46ff7a8ce39b45e32f2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 8878162690008546588
+    },
+    "074299cc0f8604fc8678f6c66e69e24a4a7a39c8c66967b7a09eabba079d260c": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7128491539807054822
+    },
+    "076155ff5918ead17f2d7e2b969749f003c7076d39ec7546f1605b5600e84093": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 2737188969715975773
+    },
+    "0b7a30412a4c6d032493bf62a9460b9aa06bda5a34884752b419958a52dae281": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 9528821862453242378
+    },
+    "0e48e2512c86449accff26d57762c158296a8b0ca208f397becd72c4cce00ee6": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 3837248662118900218
+    },
+    "11bfdc1393e9631b99abb5c564918204d0ac58469ad832ac2539ea0eee3740dc": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 4455314862237702283
+    },
+    "185ac7c929da25ac498f93cc104a5c18ed6661927d7ade1648c010155d18cc74": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 9615087036492843524
+    },
+    "1b08e2e100be1c84e761be5fd19bce7b1e8406e6b4a91ed76725f8701a7fde47": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 17324678202552461294
+    },
+    "1e4dd3eafedbf852c018f19c716443b6bc3c4c5b7d730ac3e0e831d531aad41f": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 8665210834335955416
+    },
+    "1eecde84b60538d3aeca5a7d3439fbf4b80f5ad3875ce263823146a6c1bdbfd9": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 1552064059955513862
+    },
+    "22436a2c9007171413f45387831967c463e4efcda61437007ccb7aeebf4b9cdc": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 16552593718280510508
+    },
+    "22a1aef22cca02fe5648649c3dc5f21d4d3b6290c73af87cec4bafc08c5f6df2": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 16280550888675655997
+    },
+    "2424c29ac6306e777d92a4b0086514d177557a45f50901613fba5672f5a30464": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 5413658076428844907
+    },
+    "2d3e59b096168c6f772d2d5c1ff981a657ae18ee515e0292361ad0e1564104ed": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 13359088041663462981
+    },
+    "3834967174d73b3d7cf019decdbcfa762654885276c8481bf581a9c544856970": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7663581540078376604
+    },
+    "391f87332c7ea23efa4027a6eaf24cc83fc02156a682ed48f7b2df90a2dbf02e": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 18065727019377280363
+    },
+    "3a4544c91d22076d73b78a22fbc4c94fea7ff90ec133485c4fbeea30f3396ae1": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 11094192127857943432
+    },
+    "3aa472ebf9af5c6dcc3efa848dc451168ed03c765b9cf8cf92396723872db804": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 2670546850540381714
+    },
+    "3ef7882a939366badedea79ca46cd169d8cb67edaf05abd056c868e62f817afc": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 3071231666027606714
+    },
+    "4d3064c727c86e4e75af25446acbc604a54e7f42bf30e357e60ca876ff540cb3": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 9133243856232306421
+    },
+    "4f536ae92ffabdb707b6d2d06cde816f1f64114ff6feb3f48d572d69e078baa0": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 16098579246512823680
+    },
+    "50a406d5731c2c7e066bef6677178304f1047a8b39253b43e7d4bb0b1c782846": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 16246995467681216818
+    },
+    "512dfaddbf8fb08060568407ce30cedac6483310254fac7ce7948a9ca0831a25": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 7623826062752941354
+    },
+    "5c7f9a4ab49b5ee3ce0379d74e07458ee7b89552f64db127a54ce3160be1a654": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17183198377792039091
+    },
+    "5d2e99a49b7d69658855c7e1384763b0ab54d4037dd8831cbca8339699fc3c0b": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 6532623311310899542
+    },
+    "63f4eb4cddadd5667d8d51a4c7eafd84a2381b95388ce6711e1e27aaf38d85ac": {
+      "teaching_events": 5,
+      "zero_targets": 2,
+      "one_targets": 3,
+      "odd_extra": 1,
+      "seed": 2724824733784894316
+    },
+    "652f7e4cf56050bf0e6ad62e279823a4c851abfe85944441dc2b42cb7b665b09": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 1009026463818376038
+    },
+    "6a229cecdaaa7a255fca8a6a17be9d407ff38778dea841344e344907ea70f2d7": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 643160109395926044
+    },
+    "717da4260994b04f36ab37c26693ebb11605d578a5614b8c7a6bd14c2bab22da": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 4741979850867847027
+    },
+    "757d715446fb4c4e26964c4f5a0ea6b805fddcaf5c44408ec92235d8dec278ee": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 14790352887142590219
+    },
+    "7ab70c7c665cb3b7b13084fd4612c0f2a81ba90cf8302ead7950210094171bb7": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 10185801291369233720
+    },
+    "7b7dbf6d946da255124fc1b5e9614c8a915b375c770b8a8a7de5607747c1dab5": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 8234277041443001128
+    },
+    "7b880439587e348e58f3110e6e67af8e638708ae72060d7c04dbb626383c7cb7": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 9653886119602986888
+    },
+    "862c2282d0d811ddeead596424a3a9b90940f46012b8c9152d10cac4e87c4a5e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 6515136822464927971
+    },
+    "903f2003b346a89dccba180d4a669fac58b2fc933eb92556dbb64a552329f68b": {
+      "teaching_events": 30,
+      "zero_targets": 15,
+      "one_targets": 15,
+      "odd_extra": null,
+      "seed": 15894652974088669974
+    },
+    "93ec9846e65678366e83659d7c44d50c3b8f9de4f3aa77979b7ff1d9950e4d6a": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 15699029781818332616
+    },
+    "9b34bc1303535f3611498d98d8f0f7d2a5da5642a832ad1377b6f93a6ebad398": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 10679009177303533408
+    },
+    "a76e1a369aac1c541caf3c3c88c79c3f07c8b4983b2756c23ad893d0776610c4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7421066977260295047
+    },
+    "b143f6d93444681f30811b8ec66d29c7d3bbb17fe79a57ddd82f0b3551141d67": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 7595769059108801473
+    },
+    "b88b89830c16498fc9e13dae6c1258b567a69ef45b4cf6d546233ae69d8674a4": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 6831521727595367466
+    },
+    "bf46681aaa78d882f32922c2bb4233e67a7d22b643649b757cdff6c492499da5": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 1656141774100169843
+    },
+    "c1a958ee30cf47c3e685864ae6bb8b49fb328d36a2f9bdf35983087d2ec48531": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 6692189640350118640
+    },
+    "c9bb06c584c6e698d59adff9b4a201cc97f334a39f56b8006b723d2734c59a17": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 9841648554199273154
+    },
+    "cbdae79651a52d29a3069192909ebd37f65cee03b9b8d385b6a7ede5f42449fc": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 17412954562681961657
+    },
+    "d76c58de31601b2c123158c94c3875b45ac7a7258fab2dc15767638f23ee8c4f": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 4938341971054145035
+    },
+    "d9a73e102511b368034db7f549c68aad4332e77ab269871c301eb70fedcf0557": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 15196648499407164649
+    },
+    "e071b4065c2a3d39bffbc73f4ccdd898fa3ede711e3c4a6b2941f5a9a195dc47": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 14988783678569561386
+    },
+    "e1049ee027b7d49f40696d0ab9ddc29d9d3e583678be46147c7ffab3265a01a1": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 10662648122755233904
+    },
+    "e50892e939189277180d17c35bb95e1924113f75d4f51a7f009401a6fbd2426a": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 9138062389403052016
+    },
+    "e70d88b6f6943a2fa44f0e97112acda1aac45876fe65dbd58b7d567618f25960": {
+      "teaching_events": 3,
+      "zero_targets": 2,
+      "one_targets": 1,
+      "odd_extra": 0,
+      "seed": 1336144657055592570
+    },
+    "e7535a60426b758b4163b88fd7b72221ba33f71622116a13640fca9657f35a56": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 8837270323858921491
+    },
+    "e8564ee8bddd6e49dc33c6030cf97ead36d658fd9359cc509675e97d8979f855": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 5088959050563081474
+    },
+    "ea8c76271bb11aa46ac7411abbad803d3bf0ccfa18e89852f2ffd66c21931c4f": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 11997816544988307113
+    },
+    "ec48ef400506dc6143997217feba72352e759588515fdc95bc8fca0398941add": {
+      "teaching_events": 3,
+      "zero_targets": 1,
+      "one_targets": 2,
+      "odd_extra": 1,
+      "seed": 8689047015889469158
+    },
+    "ed6db9dc42c2562dc1dd519a6d6eecc92e302ae9581e84fce53201c0d1d412ab": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 1409540337247919353
+    },
+    "f1b8bb2226d0854327ec2be3e4b7f87f89b81fbca40724a4badb01d967e6353c": {
+      "teaching_events": 4,
+      "zero_targets": 2,
+      "one_targets": 2,
+      "odd_extra": null,
+      "seed": 3409706875561370609
+    },
+    "f1fbccc9ff8b4cee5f6692a740601ba24bd66d6f0ebc8c90b8db1a230694d215": {
+      "teaching_events": 2,
+      "zero_targets": 1,
+      "one_targets": 1,
+      "odd_extra": null,
+      "seed": 3278245561471996943
+    },
+    "f57c690437dd0e44dc90ba74531c37344f2ea70987e342014404d5c45784aa8e": {
+      "teaching_events": 1,
+      "zero_targets": 1,
+      "one_targets": 0,
+      "odd_extra": 0,
+      "seed": 18045135002663683777
+    },
+    "f82500de8cd188ac2f48377d638c8e8e102cffacd432238715354711ba03612e": {
+      "teaching_events": 1,
+      "zero_targets": 0,
+      "one_targets": 1,
+      "odd_extra": 1,
+      "seed": 17647415945300872395
+    }
+  }
+}

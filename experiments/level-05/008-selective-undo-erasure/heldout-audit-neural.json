@@ -1,0 +1,66 @@
+{
+  "audit_passed": true,
+  "episodes_and_task_metrics_audited_here": false,
+  "split": "heldout",
+  "source_commit": "e017e0ea1e966c53b5c7ef90376a8880174fd7a7",
+  "artifact_hashes": 14,
+  "anatomical_undo_mask_edges": 892,
+  "outside_mask_plastic_edges_exact": 6943,
+  "training_trials": 0,
+  "input_hashes": 165,
+  "frozen_evaluations": 1980,
+  "full_weight_batches": 12,
+  "intact_and_restored_007_responses_exact": 1320,
+  "heldout008_development_responses_exact": 1980,
+  "memory_references": 12,
+  "conditions": [
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "placement_inputs_exact": 149,
+      "erased_undo_inputs_matching_original": 16,
+      "restored_inputs_exact": 165,
+      "changed_entries": {
+        "weights": 892,
+        "u": 892,
+        "w": 892
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "placement_inputs_exact": 149,
+      "erased_undo_inputs_matching_original": 16,
+      "restored_inputs_exact": 165,
+      "changed_entries": {
+        "weights": 892,
+        "u": 892,
+        "w": 892
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "placement_inputs_exact": 149,
+      "erased_undo_inputs_matching_original": 16,
+      "restored_inputs_exact": 165,
+      "changed_entries": {
+        "weights": 892,
+        "u": 892,
+        "w": 892
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "placement_inputs_exact": 149,
+      "erased_undo_inputs_matching_original": 16,
+      "restored_inputs_exact": 165,
+      "changed_entries": {
+        "weights": 892,
+        "u": 892,
+        "w": 892
+      }
+    }
+  ]
+}

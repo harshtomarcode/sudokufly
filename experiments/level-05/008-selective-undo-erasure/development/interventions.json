@@ -1,0 +1,258 @@
+[
+  {
+    "seed": 20260919,
+    "mapping": 0,
+    "intact_full_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1",
+    "erased_full_sha256": "1ae8f0396d56b0d6e0c389c9a4c6a2ed9ec4576f6aaa1a244e0e9afdbe1e041e",
+    "restored_full_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1",
+    "intact_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3272,
+      "mean_efficacy": 1.0004615783691406,
+      "minimum_efficacy": 0.13689732551574707,
+      "sha256": "d6198e87263a651e790d26798cb47fe2a3a2aa0e30edf5ad176f0e558b0148c0",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.9593760967254639,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8630786948205021,
+      "u_max": 0.9593493353414205,
+      "u_sha256": "1dadc7307deefb1ed9e8ba689e1ae7512beea16c3cc9c38e3177a38524c77733",
+      "w_sha256": "2175d18af3f8d491e9e87c49f8c5868cc0e6d3af42110bc897fb683a139e1f95"
+    },
+    "erased_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 2380,
+      "mean_efficacy": 0.9982906579971313,
+      "minimum_efficacy": 0.19967764616012573,
+      "sha256": "02a7f51985e7d3a915ffb588afe787273475987ebda187ad91b86698ebbfa4e1",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.7641912698745728,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.800300123304545,
+      "u_max": 0.7641701429627795,
+      "u_sha256": "696bf7041b175465d87785d64dd1250c275f59284183430b7f9737f88cc0bfb0",
+      "w_sha256": "3818adbee6d6451cd4819e44441a9e7d6e4186b7dddffdf52434e37e63e00507"
+    },
+    "restoration_exact": true,
+    "nonplastic_unchanged": true,
+    "outside_mask_exact": true,
+    "selected_equals_original": true,
+    "changed_entries": {
+      "weights": 892,
+      "u": 892,
+      "w": 892
+    },
+    "array_sha256": {
+      "paired": {
+        "weights": "d6198e87263a651e790d26798cb47fe2a3a2aa0e30edf5ad176f0e558b0148c0",
+        "u": "1dadc7307deefb1ed9e8ba689e1ae7512beea16c3cc9c38e3177a38524c77733",
+        "w": "2175d18af3f8d491e9e87c49f8c5868cc0e6d3af42110bc897fb683a139e1f95"
+      },
+      "original": {
+        "weights": "f494f5641d98cd0fe750f17e8ffe10162e000c91e05a05b8f40d62380fd80942",
+        "u": "fce5ed6f966e02cb4332a9e96cb9e57c9392fdb31bad67992abab2500a67e23c",
+        "w": "13abf4048d8ceeab899126ca7f85598d491ef02671f30f9d31a6aca0ad24ab9e"
+      },
+      "erased": {
+        "weights": "02a7f51985e7d3a915ffb588afe787273475987ebda187ad91b86698ebbfa4e1",
+        "u": "696bf7041b175465d87785d64dd1250c275f59284183430b7f9737f88cc0bfb0",
+        "w": "3818adbee6d6451cd4819e44441a9e7d6e4186b7dddffdf52434e37e63e00507"
+      }
+    },
+    "behavior_differences": {}
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "intact_full_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639",
+    "erased_full_sha256": "8ab27c80b06b56e7d3d2ddd2db121e05b8ff9727b062c93616befa38ec2c72a5",
+    "restored_full_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639",
+    "intact_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9921296238899231,
+      "minimum_efficacy": 0.12261111289262772,
+      "sha256": "0602c77c40f2a24a5835794e7abada0a0c5f1e37067309fcb81b6e1af9f61203",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.943440318107605,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8773645119670979,
+      "u_max": 0.9434140644364719,
+      "u_sha256": "d9df626455877e9c39afd0baeb90e9fef14e32f902270f33041eaf1eeeb9eaeb",
+      "w_sha256": "fc9255178ad464342f3c08003d3bb15eafc116c37995274f23cc414fc9de9414"
+    },
+    "erased_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 2688,
+      "mean_efficacy": 0.9921959638595581,
+      "minimum_efficacy": 0.12261111289262772,
+      "sha256": "7673575be379f76d3781124a9f3e811d54d37d73b20c67d68343bbf950fd3ffa",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.7490593194961548,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8773645119670979,
+      "u_max": 0.749038554731948,
+      "u_sha256": "48984077c71cd1be59bbbd4e9cdbc60c90ffceefa325e4bda04c9e1b4a12fe29",
+      "w_sha256": "450cbfa449d0d005196600e1ddfa9464e7d40cadf27f23f16078c261f2eaba06"
+    },
+    "restoration_exact": true,
+    "nonplastic_unchanged": true,
+    "outside_mask_exact": true,
+    "selected_equals_original": true,
+    "changed_entries": {
+      "weights": 892,
+      "u": 892,
+      "w": 892
+    },
+    "array_sha256": {
+      "paired": {
+        "weights": "0602c77c40f2a24a5835794e7abada0a0c5f1e37067309fcb81b6e1af9f61203",
+        "u": "d9df626455877e9c39afd0baeb90e9fef14e32f902270f33041eaf1eeeb9eaeb",
+        "w": "fc9255178ad464342f3c08003d3bb15eafc116c37995274f23cc414fc9de9414"
+      },
+      "original": {
+        "weights": "effdbfa2d2fa497de0c2a3fc3ff05ef31345b58beb2c39954408cce9358d94db",
+        "u": "fc0685e6d05afb2fb65babaf3df419d189a4746add4d98b3d9036cd9d4a2328c",
+        "w": "129ef618ceb96f07b874a76b449964d52ad2a1862443e03795d48425e02db3aa"
+      },
+      "erased": {
+        "weights": "7673575be379f76d3781124a9f3e811d54d37d73b20c67d68343bbf950fd3ffa",
+        "u": "48984077c71cd1be59bbbd4e9cdbc60c90ffceefa325e4bda04c9e1b4a12fe29",
+        "w": "450cbfa449d0d005196600e1ddfa9464e7d40cadf27f23f16078c261f2eaba06"
+      }
+    },
+    "behavior_differences": {}
+  },
+  {
+    "seed": 20260920,
+    "mapping": 0,
+    "intact_full_sha256": "d095a4234de823fe0e7bea89c15cff0ff08f42235504f9c3158b440541a4abf0",
+    "erased_full_sha256": "eff7b28c8f6ed270161bfca1a3126de0f01b53b14b5f7994fabba45d7e35f4a3",
+    "restored_full_sha256": "d095a4234de823fe0e7bea89c15cff0ff08f42235504f9c3158b440541a4abf0",
+    "intact_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3232,
+      "mean_efficacy": 0.9999628067016602,
+      "minimum_efficacy": 0.13653762638568878,
+      "sha256": "e73a46075631378433fa29396c3a20e04bd80fdaff22e6cf153446f12cfaf8f3",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.9597758054733276,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8634383858737766,
+      "u_max": 0.959749147519566,
+      "u_sha256": "d41f3fbcdce09d5bce850bfaa63b300cd636e1e073626bc0e060e73c888d6957",
+      "w_sha256": "738406c60531a54cb06c2a5281bd444feaee9e3b50dd08b523fdd1135f0749ec"
+    },
+    "erased_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 2340,
+      "mean_efficacy": 0.9977945685386658,
+      "minimum_efficacy": 0.13710519671440125,
+      "sha256": "45cf3fc2382136ff639b93387a3d257f6dbd8e51e1aa721c6824faa6b6389e0f",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.7644402980804443,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.86287083242043,
+      "u_max": 0.764419037326197,
+      "u_sha256": "8cf6d35cf3d89d8dcecb7ad6afaae00aeca631d2d5378ae4c0b6c07a6fef621e",
+      "w_sha256": "1fb7640e7a8cfb6cf9e024cf0a27ae35bd3fd37961a99325369accb56112d7d0"
+    },
+    "restoration_exact": true,
+    "nonplastic_unchanged": true,
+    "outside_mask_exact": true,
+    "selected_equals_original": true,
+    "changed_entries": {
+      "weights": 892,
+      "u": 892,
+      "w": 892
+    },
+    "array_sha256": {
+      "paired": {
+        "weights": "e73a46075631378433fa29396c3a20e04bd80fdaff22e6cf153446f12cfaf8f3",
+        "u": "d41f3fbcdce09d5bce850bfaa63b300cd636e1e073626bc0e060e73c888d6957",
+        "w": "738406c60531a54cb06c2a5281bd444feaee9e3b50dd08b523fdd1135f0749ec"
+      },
+      "original": {
+        "weights": "1999e2ce2d6e94ef74cf7dec00008f1f0f13d6ab048ba349f7e5950ceab428bc",
+        "u": "3d2c637537d384ae6bd49fd915688df2b988e1998e814b4f38d7f2e40336b4a5",
+        "w": "184fb460eff5e6a0b1b532223a7e0b1023c5b6f7578b4ea156b190e9655c7d49"
+      },
+      "erased": {
+        "weights": "45cf3fc2382136ff639b93387a3d257f6dbd8e51e1aa721c6824faa6b6389e0f",
+        "u": "8cf6d35cf3d89d8dcecb7ad6afaae00aeca631d2d5378ae4c0b6c07a6fef621e",
+        "w": "1fb7640e7a8cfb6cf9e024cf0a27ae35bd3fd37961a99325369accb56112d7d0"
+      }
+    },
+    "behavior_differences": {}
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "intact_full_sha256": "87b8e50546d82e039d3edbc8554596846e9c091762abf9e36b5a178d16c72568",
+    "erased_full_sha256": "c4f7a16005694768e7edbb764662a3de0d68e26c782c6c36a0ef9e6c76cf25b8",
+    "restored_full_sha256": "87b8e50546d82e039d3edbc8554596846e9c091762abf9e36b5a178d16c72568",
+    "intact_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9923913478851318,
+      "minimum_efficacy": 0.12266963720321655,
+      "sha256": "1d9702a5a6eee74be05a2ca98db0d24c2ed8fdea826391d2b4143adc7551b9b1",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.943440318107605,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8773059926630414,
+      "u_max": 0.9434140644364719,
+      "u_sha256": "a3ece5a03211f3a5cf7c93dc9a4b250e83b6a97d9b9a6817f1f3107e192c9d52",
+      "w_sha256": "aee2ecfcdfd661076d5484f279e2c08049c5e52f432a3bc2b5c6646bde1f609e"
+    },
+    "erased_memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 2688,
+      "mean_efficacy": 0.992455244064331,
+      "minimum_efficacy": 0.12266963720321655,
+      "sha256": "56f788b2cece773bfe3a752975395ba0e2cd1a3563f3ef6b6c610a4678090f1a",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.749178409576416,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8773059926630414,
+      "u_max": 0.7491576478501363,
+      "u_sha256": "45668881c74317b615fe89f6e37225b26ff9f6dc68e377af4a7a8427fc774de5",
+      "w_sha256": "59f7a390688b0fa3620aa018579e495701c66d3b2cdd258938c8b2b46f8ddb90"
+    },
+    "restoration_exact": true,
+    "nonplastic_unchanged": true,
+    "outside_mask_exact": true,
+    "selected_equals_original": true,
+    "changed_entries": {
+      "weights": 892,
+      "u": 892,
+      "w": 892
+    },
+    "array_sha256": {
+      "paired": {
+        "weights": "1d9702a5a6eee74be05a2ca98db0d24c2ed8fdea826391d2b4143adc7551b9b1",
+        "u": "a3ece5a03211f3a5cf7c93dc9a4b250e83b6a97d9b9a6817f1f3107e192c9d52",
+        "w": "aee2ecfcdfd661076d5484f279e2c08049c5e52f432a3bc2b5c6646bde1f609e"
+      },
+      "original": {
+        "weights": "feab6e19d6be9e814ec5eacff87d8b0b112f185228c14555f6703697ceee5f23",
+        "u": "5430ab8b2077f20e3bff75b0d19be8649da46b60ec20d7f63840acaaa9567d45",
+        "w": "a61c501515b45824d467d432c6f9c9e129c01d3378bad677de3744ac15f5afc3"
+      },
+      "erased": {
+        "weights": "56f788b2cece773bfe3a752975395ba0e2cd1a3563f3ef6b6c610a4678090f1a",
+        "u": "45668881c74317b615fe89f6e37225b26ff9f6dc68e377af4a7a8427fc774de5",
+        "w": "59f7a390688b0fa3620aa018579e495701c66d3b2cdd258938c8b2b46f8ddb90"
+      }
+    },
+    "behavior_differences": {}
+  }
+]

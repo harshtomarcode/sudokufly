@@ -1,0 +1,185 @@
+{
+  "audit_passed": true,
+  "episodes_and_task_metrics_audited_here": false,
+  "split": "development",
+  "source_commit": "74a16c2c72d7f7316737416444d3c6c34009c0fc",
+  "artifact_hashes": 29,
+  "conditions": 4,
+  "arms": 16,
+  "input_hashes": 165,
+  "training_trials": 5824,
+  "frozen_evaluations": 8745,
+  "full_weight_batches": 53,
+  "paired_epoch_and_final_reproductions": 24,
+  "paired_final_responses_exact": 660,
+  "heldout_recall_responses_exact": 0,
+  "memory_references": 36,
+  "control_schedule_hash": "cb43bfa35cde82a4f2f3184411b3aedab1ad7bc65322f96bb0b05c60f10fbdd9",
+  "control_balance_hash": "e3e1e18efb018bf9031bd67dd2f5ab3a633111a35a433891b3cfef42f623c73e",
+  "exposure_and_dose": [
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "paired",
+      "trials": 288,
+      "update_window_ms": 146400,
+      "DAN_pulse_duration_ms": {
+        "reward": 24400,
+        "aversive": 24400
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "frozen",
+      "trials": 288,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {
+        "reward": 24400,
+        "aversive": 24400
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "no_feedback",
+      "trials": 288,
+      "update_window_ms": 146400,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "inconsistent",
+      "trials": 288,
+      "update_window_ms": 146400,
+      "DAN_pulse_duration_ms": {
+        "reward": 24400,
+        "aversive": 24400
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "paired",
+      "trials": 440,
+      "update_window_ms": 176550,
+      "DAN_pulse_duration_ms": {
+        "aversive": 29200,
+        "reward": 29800
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "frozen",
+      "trials": 440,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {
+        "aversive": 29200,
+        "reward": 29800
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "no_feedback",
+      "trials": 440,
+      "update_window_ms": 176550,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "inconsistent",
+      "trials": 440,
+      "update_window_ms": 176550,
+      "DAN_pulse_duration_ms": {
+        "aversive": 29600,
+        "reward": 29400
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "paired",
+      "trials": 288,
+      "update_window_ms": 145650,
+      "DAN_pulse_duration_ms": {
+        "aversive": 24400,
+        "reward": 24200
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "frozen",
+      "trials": 288,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {
+        "aversive": 24400,
+        "reward": 24200
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "no_feedback",
+      "trials": 288,
+      "update_window_ms": 145650,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "inconsistent",
+      "trials": 288,
+      "update_window_ms": 145650,
+      "DAN_pulse_duration_ms": {
+        "aversive": 24400,
+        "reward": 24200
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "paired",
+      "trials": 440,
+      "update_window_ms": 176550,
+      "DAN_pulse_duration_ms": {
+        "reward": 29800,
+        "aversive": 29200
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "frozen",
+      "trials": 440,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {
+        "reward": 29800,
+        "aversive": 29200
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "no_feedback",
+      "trials": 440,
+      "update_window_ms": 176550,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "inconsistent",
+      "trials": 440,
+      "update_window_ms": 176550,
+      "DAN_pulse_duration_ms": {
+        "reward": 29400,
+        "aversive": 29600
+      }
+    }
+  ]
+}

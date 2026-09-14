@@ -1,0 +1,1169 @@
+{
+  "stage5_complete": false,
+  "undo_gate": null,
+  "controls_evaluated": false,
+  "undo_recall_gate": true,
+  "current_occupancy_gates": {
+    "eight-per-pair": false,
+    "capped-24": false
+  },
+  "retention_gate": false,
+  "prior_occupancy_gates": {
+    "eight-per-pair": false,
+    "capped-24": false
+  },
+  "sequence_gates": {
+    "eight-per-pair": true,
+    "capped-24": true
+  },
+  "runs": [
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arms": {
+        "paired": {
+          "undo": {
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "precision": 1.0,
+            "timeouts": 0,
+            "presentations": 16,
+            "minimum_target_margin_hz": 1.625
+          },
+          "policies": {
+            "eight-per-pair": {
+              "placement": {
+                "accuracy": 0.875,
+                "balanced_accuracy": 0.875,
+                "class_recall": {
+                  "0": 0.875,
+                  "1": 0.875
+                },
+                "precision": 1.0,
+                "timeouts": 8,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.9333333333333333,
+                  "balanced_accuracy": 0.9375,
+                  "class_recall": {
+                    "0": 0.875,
+                    "1": 1.0
+                  },
+                  "precision": 1.0,
+                  "timeouts": 4,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 128,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 132,
+                  "undo_count": 33
+                }
+              }
+            },
+            "capped-24": {
+              "placement": {
+                "accuracy": 0.84375,
+                "balanced_accuracy": 0.84375,
+                "class_recall": {
+                  "0": 0.875,
+                  "1": 0.8125
+                },
+                "precision": 1.0,
+                "timeouts": 10,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 0.9166666666666666,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 0.8333333333333334
+                    },
+                    "balanced_accuracy": 0.9166666666666667,
+                    "timeouts": 2,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.9,
+                  "balanced_accuracy": 0.9017857142857143,
+                  "class_recall": {
+                    "0": 0.875,
+                    "1": 0.9285714285714286
+                  },
+                  "precision": 1.0,
+                  "timeouts": 6,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 128,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 132,
+                  "undo_count": 33
+                }
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 1801,
+            "mean_efficacy": 1.0033854246139526,
+            "minimum_efficacy": 0.10047487169504166,
+            "sha256": "9b6748a67f5542263d0a81c21ada0e1c7f71277780c69e3fc7c12378a9b65ef9",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9998611211776733,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8995001388631723,
+            "u_max": 0.9998333472214503,
+            "u_sha256": "59a19fdb87f1bf35e4c2cdd966785c118b46730c245ce68be2bd1062b18e6fdd",
+            "w_sha256": "de222b3588f9434e3f44015517ed82a2cef269737c00b54b5b7439f710dff246"
+          },
+          "delta_from_inherited": {
+            "weights": 1801,
+            "u": 1801,
+            "w": 1801
+          },
+          "changed_response_inputs": 39,
+          "familiar_placement_retained": true,
+          "familiar_placement_correct": 16,
+          "stage_erasure_exact": true,
+          "full_erasure_exact": true,
+          "nonplastic_unchanged": true
+        }
+      },
+      "undo_gate": null,
+      "undo_recall_gate": true,
+      "current_occupancy_gates": {
+        "eight-per-pair": false,
+        "capped-24": false
+      },
+      "retention_gate": true,
+      "sequence_gates": {
+        "eight-per-pair": true,
+        "capped-24": true
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arms": {
+        "paired": {
+          "undo": {
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "precision": 1.0,
+            "timeouts": 0,
+            "presentations": 16,
+            "minimum_target_margin_hz": 0.375
+          },
+          "policies": {
+            "eight-per-pair": {
+              "placement": {
+                "accuracy": 0.6875,
+                "balanced_accuracy": 0.6875,
+                "class_recall": {
+                  "0": 0.84375,
+                  "1": 0.53125
+                },
+                "precision": 1.0,
+                "timeouts": 18,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 0.3125,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 0.08333333333333333
+                    },
+                    "balanced_accuracy": 0.5416666666666666,
+                    "timeouts": 9,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 0.9375,
+                    "class_recall": {
+                      "0": 0.9166666666666666,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.7333333333333333,
+                  "balanced_accuracy": 0.7254464285714286,
+                  "class_recall": {
+                    "0": 0.84375,
+                    "1": 0.6071428571428571
+                  },
+                  "precision": 1.0,
+                  "timeouts": 14,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 128,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 132,
+                  "undo_count": 33
+                }
+              }
+            },
+            "capped-24": {
+              "placement": {
+                "accuracy": 0.859375,
+                "balanced_accuracy": 0.859375,
+                "class_recall": {
+                  "0": 0.84375,
+                  "1": 0.875
+                },
+                "precision": 1.0,
+                "timeouts": 9,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 0.9375,
+                    "class_recall": {
+                      "0": 0.9166666666666666,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.9166666666666666,
+                  "balanced_accuracy": 0.921875,
+                  "class_recall": {
+                    "0": 0.84375,
+                    "1": 1.0
+                  },
+                  "precision": 1.0,
+                  "timeouts": 5,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 128,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 132,
+                  "undo_count": 33
+                }
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 1801,
+            "mean_efficacy": 0.9964627623558044,
+            "minimum_efficacy": 0.10047487169504166,
+            "sha256": "84f9e0492371c382bbe27bb541f9fcf151fd7dee2bc527331f9550ab81133f8e",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9998611211776733,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8995001388631723,
+            "u_max": 0.9998333472214503,
+            "u_sha256": "6e13730e59bea7db1b6d2ac86e0c213a7ab0f0d010bd8cb5b01af1f63f217bed",
+            "w_sha256": "f2eafee548f9e1725539df58d242ac3b949bfa0edfb9e5a5ae7788062e317e33"
+          },
+          "delta_from_inherited": {
+            "weights": 1801,
+            "u": 1801,
+            "w": 1801
+          },
+          "changed_response_inputs": 40,
+          "familiar_placement_retained": false,
+          "familiar_placement_correct": 15,
+          "stage_erasure_exact": true,
+          "full_erasure_exact": true,
+          "nonplastic_unchanged": true
+        }
+      },
+      "undo_gate": null,
+      "undo_recall_gate": true,
+      "current_occupancy_gates": {
+        "eight-per-pair": false,
+        "capped-24": false
+      },
+      "retention_gate": false,
+      "sequence_gates": {
+        "eight-per-pair": true,
+        "capped-24": true
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arms": {
+        "paired": {
+          "undo": {
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "precision": 1.0,
+            "timeouts": 0,
+            "presentations": 16,
+            "minimum_target_margin_hz": 1.625
+          },
+          "policies": {
+            "eight-per-pair": {
+              "placement": {
+                "accuracy": 0.859375,
+                "balanced_accuracy": 0.859375,
+                "class_recall": {
+                  "0": 0.84375,
+                  "1": 0.875
+                },
+                "precision": 1.0,
+                "timeouts": 9,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 0.9375,
+                    "class_recall": {
+                      "0": 0.9166666666666666,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.9166666666666666,
+                  "balanced_accuracy": 0.921875,
+                  "class_recall": {
+                    "0": 0.84375,
+                    "1": 1.0
+                  },
+                  "precision": 1.0,
+                  "timeouts": 5,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 15,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 24,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 138,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 31,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 153,
+                  "undo_count": 33
+                }
+              }
+            },
+            "capped-24": {
+              "placement": {
+                "accuracy": 0.84375,
+                "balanced_accuracy": 0.84375,
+                "class_recall": {
+                  "0": 0.84375,
+                  "1": 0.84375
+                },
+                "precision": 1.0,
+                "timeouts": 10,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 0.9583333333333334,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 0.9166666666666666
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 0.9375,
+                    "class_recall": {
+                      "0": 0.9166666666666666,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.9,
+                  "balanced_accuracy": 0.9040178571428572,
+                  "class_recall": {
+                    "0": 0.84375,
+                    "1": 0.9642857142857143
+                  },
+                  "precision": 1.0,
+                  "timeouts": 6,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 15,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 24,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 138,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 31,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 153,
+                  "undo_count": 33
+                }
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 1801,
+            "mean_efficacy": 1.003354787826538,
+            "minimum_efficacy": 0.10047487169504166,
+            "sha256": "3421a3dc35eebb89aef56f0043aa7731e5e90b70c7359d12a7d9eee97a7fc275",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9998611211776733,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8995001388631723,
+            "u_max": 0.9998333472214503,
+            "u_sha256": "5334d72016039cfbb9fb5b821a1c4ee69b19185c84af768896f0ad0cb278f280",
+            "w_sha256": "5ecc4475c64d46443b5e9e3bd2c2074b094e1ab0fb0d176cb66cd1aa81fad5cf"
+          },
+          "delta_from_inherited": {
+            "weights": 1801,
+            "u": 1801,
+            "w": 1801
+          },
+          "changed_response_inputs": 38,
+          "familiar_placement_retained": false,
+          "familiar_placement_correct": 15,
+          "stage_erasure_exact": true,
+          "full_erasure_exact": true,
+          "nonplastic_unchanged": true
+        }
+      },
+      "undo_gate": null,
+      "undo_recall_gate": true,
+      "current_occupancy_gates": {
+        "eight-per-pair": false,
+        "capped-24": false
+      },
+      "retention_gate": false,
+      "sequence_gates": {
+        "eight-per-pair": true,
+        "capped-24": true
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arms": {
+        "paired": {
+          "undo": {
+            "accuracy": 1.0,
+            "balanced_accuracy": 1.0,
+            "class_recall": {
+              "0": 1.0,
+              "1": 1.0
+            },
+            "precision": 1.0,
+            "timeouts": 0,
+            "presentations": 16,
+            "minimum_target_margin_hz": 0.375
+          },
+          "policies": {
+            "eight-per-pair": {
+              "placement": {
+                "accuracy": 0.6875,
+                "balanced_accuracy": 0.6875,
+                "class_recall": {
+                  "0": 0.84375,
+                  "1": 0.53125
+                },
+                "precision": 1.0,
+                "timeouts": 17,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 0.3125,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 0.08333333333333333
+                    },
+                    "balanced_accuracy": 0.5416666666666666,
+                    "timeouts": 8,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 0.9375,
+                    "class_recall": {
+                      "0": 0.9166666666666666,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.7333333333333333,
+                  "balanced_accuracy": 0.7254464285714286,
+                  "class_recall": {
+                    "0": 0.84375,
+                    "1": 0.6071428571428571
+                  },
+                  "precision": 1.0,
+                  "timeouts": 13,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 128,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 132,
+                  "undo_count": 33
+                }
+              }
+            },
+            "capped-24": {
+              "placement": {
+                "accuracy": 0.859375,
+                "balanced_accuracy": 0.859375,
+                "class_recall": {
+                  "0": 0.84375,
+                  "1": 0.875
+                },
+                "precision": 1.0,
+                "timeouts": 9,
+                "presentations": 64,
+                "by_distinct_peers": {
+                  "0": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "1": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  },
+                  "1": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 16
+                  },
+                  "2": {
+                    "accuracy": 1.0,
+                    "class_recall": {
+                      "0": 1.0,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 1.0,
+                    "timeouts": 0,
+                    "contexts": 24
+                  },
+                  "3": {
+                    "accuracy": 0.9375,
+                    "class_recall": {
+                      "0": 0.9166666666666666,
+                      "1": 1.0
+                    },
+                    "balanced_accuracy": 0.9583333333333333,
+                    "timeouts": 1,
+                    "contexts": 16
+                  },
+                  "4": {
+                    "accuracy": 0.0,
+                    "class_recall": {
+                      "0": 0.0
+                    },
+                    "balanced_accuracy": null,
+                    "timeouts": 4,
+                    "contexts": 4
+                  }
+                },
+                "nonempty": {
+                  "accuracy": 0.9166666666666666,
+                  "balanced_accuracy": 0.921875,
+                  "class_recall": {
+                    "0": 0.84375,
+                    "1": 1.0
+                  },
+                  "precision": 1.0,
+                  "timeouts": 5,
+                  "presentations": 60
+                }
+              },
+              "sequence": {
+                "2-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "3-trap": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 128,
+                  "undo_count": 32
+                },
+                "4-easy": {
+                  "puzzles": 32,
+                  "solved": 32,
+                  "solve_rate": 1.0,
+                  "timeouts": 0,
+                  "undo_count": 0
+                },
+                "4-trap": {
+                  "puzzles": 32,
+                  "solved": 31,
+                  "solve_rate": 0.96875,
+                  "timeouts": 132,
+                  "undo_count": 33
+                }
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 1801,
+            "mean_efficacy": 0.9967154860496521,
+            "minimum_efficacy": 0.10047487169504166,
+            "sha256": "221e043317ae126aaa6da063935e0f4dd60347f94999baffa5c523690d24101c",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9998611211776733,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8995001388631723,
+            "u_max": 0.9998333472214503,
+            "u_sha256": "c35660cea12c676b9333c850337628df820f4a9bd9e903e4025be319542ac7fd",
+            "w_sha256": "5aeebfcfcabd5c970ac01f0ecb9d26bcefb58085705f1bc464cecd865c3d0807"
+          },
+          "delta_from_inherited": {
+            "weights": 1801,
+            "u": 1801,
+            "w": 1801
+          },
+          "changed_response_inputs": 45,
+          "familiar_placement_retained": false,
+          "familiar_placement_correct": 15,
+          "stage_erasure_exact": true,
+          "full_erasure_exact": true,
+          "nonplastic_unchanged": true
+        }
+      },
+      "undo_gate": null,
+      "undo_recall_gate": true,
+      "current_occupancy_gates": {
+        "eight-per-pair": false,
+        "capped-24": false
+      },
+      "retention_gate": false,
+      "sequence_gates": {
+        "eight-per-pair": true,
+        "capped-24": true
+      }
+    }
+  ],
+  "measured_neural_evaluations": 1345,
+  "elapsed_seconds": 201.73203954199562,
+  "files_sha256": {
+    "20260919-0-paired-memory.npz": "20fa0fd3fbf4a50847e9764b5ec718c4382e2e0ce15f94e4f84a3c6dc41278b0",
+    "20260919-1-paired-memory.npz": "d9050c137ae9b33481acc4673074ca038f0ac5aaf27630717f5bf5bc24aefdd8",
+    "20260920-0-paired-memory.npz": "8670629744288c9d7b69ca198a8d38ce09b1752747ce289bdd72f6a33eb6958b",
+    "20260920-1-paired-memory.npz": "0cfbf46d8fbf41488569c09c580cf9549d533050f2e0292f9b1bc6b002309657",
+    "episodes.jsonl.gz": "8ec4a08fa5742d7976287a81e4deaa18a1389a4b637ced896246b58d5fb67ec0",
+    "full-weight-checks.json": "1b115227871b5f86fbd1a26b8d29dea3ba14acb26bcb9a54750abc3e40ba138f",
+    "inputs.json": "ea098776d4479c6c7456c29c1436c4e1f81627a691132f12073e01e448c7c7c3",
+    "memory-references.json": "bb12dc22c6955c6ab22f6be8ff2d82788c8f68329432ef88521488a73dfaf884",
+    "neural.jsonl": "6f32c67942a71315254970a9c73dd423368c457352e4b575020cc8a126e09127",
+    "partial-results.json": "4f9cfa20aae5a15ddc7ba65dae2c6f2e1f1d69e97020a50d55d5e29601396f89",
+    "protocol.json": "a5bb0c5d592b988436056a0066c187736650c14a7f5cc87d4340323ec452ad35",
+    "schedules.json": "89d4730d053bd3f852b1a7d2e450fd1a267438f232e84ebaafb3099cabaa4121",
+    "training.jsonl": "2624b2eafd6717f002e8aa8a0860854a50d632835f837fab8de9eca2c813409b",
+    "undo-contexts.json": "6f655db2b6a607e1ae1e28ac57a3c2c7dc5741d8cc34f6134b5ef11812f7f5b1",
+    "undo-pattern-00.png": "31aff0fc33550230d3c0e6e38f9093029484387a62fdc751aa36bd969a23d177",
+    "undo-pattern-07.png": "ae6b11d4263747c3a5ff3045af1cbcabfbda7e4a909462b10bfb6835bc9dc83e",
+    "undo-pattern-11.png": "143485b9ccadae94fdd6a04ede73757dbc5681c8323f87588a1d4040b9a89e60",
+    "undo-pattern-13.png": "2ccf5e16b9df199cbe4edd258aa3327ee4de995d9cf6ea8f72a9bd5eb0fb2c71",
+    "undo-pattern-14.png": "0b7a63108f996dddf148a8f3860b4f1efaeafaf352c66ce581382407881887c9",
+    "undo-pattern-15.png": "5e70413d3624996061259c7e1da4ed0dfe9e5f32528eb0ed717656c28abb0802"
+  }
+}
