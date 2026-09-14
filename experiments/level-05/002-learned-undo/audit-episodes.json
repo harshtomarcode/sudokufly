@@ -1,0 +1,388 @@
+{
+  "audit_passed": true,
+  "episodes": 5120,
+  "action_events": 79802,
+  "repeated_state_episodes": 2158,
+  "neural_records": 3565,
+  "canonical_pixel_encodings": 432,
+  "episode_image_encodings": 386,
+  "gates": {
+    "undo_gate": true,
+    "retention_gate": false,
+    "sequence_gates": {
+      "eight-per-pair": true,
+      "capped-24": true
+    },
+    "stage5_complete": false
+  },
+  "arms": [
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "paired",
+      "undo_balanced_accuracy": 1.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "frozen",
+      "undo_balanced_accuracy": 0.13333333333333333,
+      "retention": true,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "no_feedback",
+      "undo_balanced_accuracy": 0.13333333333333333,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 8,
+          "4-easy": 32,
+          "4-trap": 5
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "inconsistent",
+      "undo_balanced_accuracy": 0.23333333333333334,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 8,
+          "4-easy": 32,
+          "4-trap": 5
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "paired",
+      "undo_balanced_accuracy": 1.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "frozen",
+      "undo_balanced_accuracy": 0.0,
+      "retention": true,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        },
+        "capped-24": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "no_feedback",
+      "undo_balanced_accuracy": 0.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        },
+        "capped-24": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        }
+      }
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "inconsistent",
+      "undo_balanced_accuracy": 0.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 10,
+          "3-easy": 3,
+          "3-trap": 4,
+          "4-easy": 0,
+          "4-trap": 1
+        },
+        "capped-24": {
+          "2-easy": 10,
+          "3-easy": 3,
+          "3-trap": 4,
+          "4-easy": 0,
+          "4-trap": 1
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "paired",
+      "undo_balanced_accuracy": 1.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "frozen",
+      "undo_balanced_accuracy": 0.13333333333333333,
+      "retention": true,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "no_feedback",
+      "undo_balanced_accuracy": 0.13333333333333333,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 8,
+          "4-easy": 32,
+          "4-trap": 5
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "inconsistent",
+      "undo_balanced_accuracy": 0.23333333333333334,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 0,
+          "4-easy": 32,
+          "4-trap": 0
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 8,
+          "4-easy": 32,
+          "4-trap": 5
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "paired",
+      "undo_balanced_accuracy": 1.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        },
+        "capped-24": {
+          "2-easy": 32,
+          "3-easy": 32,
+          "3-trap": 32,
+          "4-easy": 32,
+          "4-trap": 31
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "frozen",
+      "undo_balanced_accuracy": 0.0,
+      "retention": true,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        },
+        "capped-24": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "no_feedback",
+      "undo_balanced_accuracy": 0.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        },
+        "capped-24": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        }
+      }
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "inconsistent",
+      "undo_balanced_accuracy": 0.0,
+      "retention": false,
+      "sequence_solves": {
+        "eight-per-pair": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        },
+        "capped-24": {
+          "2-easy": 21,
+          "3-easy": 12,
+          "3-trap": 4,
+          "4-easy": 6,
+          "4-trap": 2
+        }
+      }
+    }
+  ]
+}

@@ -28,6 +28,14 @@ The 10,752 highlighted board/target cases share 16 familiar neural inputs.
 No new learning occurs; spatial relevance is supplied by the interface.
 See the [results and limits](experiments/level-04/001-frozen-transfer/README.md).
 
+**Step 5 has learned Undo and assisted recovery, but is incomplete:** the new
+Undo associations score 100% under both mappings and histories, versus 0–23.33%
+balanced accuracy in controls starting with the same placement memory. Both
+placement policies solve 159/160 development puzzles, including 63/64 traps.
+Old conflict judgments become timeouts through passive memory decay, failing
+retention; broader placement prerequisites and reserved-family confirmation
+remain open. See the [results, audit and recovery example](experiments/level-05/002-learned-undo/README.md).
+
 ## Setup
 
 Requires Python 3.11+ and a C++17 compiler available as `c++` (Apple Command Line
@@ -261,6 +269,23 @@ is inherited; no new Step 4 training runs. Spatial relevance is engineered and
 both splits share the same 16 familiar neural inputs. The outside-clue shortcut
 also solves this restricted dataset, but that clue is excluded from the
 implemented agent's input. Sequential puzzle solving remains a later task.
+
+## Run Step 5 development experiments
+
+```sh
+.venv/bin/python sequence_sudoku.py --out runs/step5-variable-peers
+.venv/bin/python learn_undo.py --out runs/step5-learned-undo
+```
+
+Use new output directories. The Undo experiment reads the committed 001
+development baseline and saved paired Step 3 memories; it does not train from
+scratch or use the preceding command's output automatically. It uses existing
+fly synapses and a fixed decoder, with engineered template vision, a visible
+Undo token and 16 generic presence-pattern codes. A fixed candidate menu and
+move stack apply neural choices without filtering or repair. The [Step 5
+record](experiments/level-05/README.md) separates learned association, actual
+recovery, retention and withheld confirmation. Raw episodes are compressed
+JSONL with every neural-action reference and board/stack transition.
 
 ## Sources
 
