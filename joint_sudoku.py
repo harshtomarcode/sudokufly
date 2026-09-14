@@ -53,6 +53,7 @@ def main():
     parser.add_argument("--source", type=Path, default=ROOT / "experiments/level-05/003-shorter-undo/development")
     parser.add_argument("--epochs", type=int, default=8)
     parser.add_argument("--separate-occupancies", action="store_true")
+    parser.add_argument("--old-n3-depression", action="store_true")
     parser.add_argument("--margin-hz", type=float, default=3.0)
     args = parser.parse_args()
     if args.epochs < 1 or not np.isfinite(args.margin_hz) or args.margin_hz < 2:
@@ -65,6 +66,8 @@ def main():
     assert {(r["seed"], r["mapping"]) for r in source_summary["runs"]} == {(seed, mapping) for seed in (20260919, 20260920) for mapping in (0, 1)}
     source_protocol = json.loads((args.source / "protocol.json").read_text())
     config = json.loads((SOURCE / "protocol.json").read_text())
+    if args.old_n3_depression:
+        assert config["teaching"] == "depression" and config["training_epochs"] == 8
     prior_summary = json.loads((prior / "summary.json").read_text())
     for directory, summary in ((args.source, source_summary), (prior, prior_summary)):
         for name, digest in summary["files_sha256"].items():
@@ -207,7 +210,18 @@ def main():
         "sensory_routing": "Separate mode assigns generic observed peer counts1,2,4 to disjoint candidate-by-peer banks. Each256-cell bank uses128 cells per side from consecutive anatomy-ranked unused slices, then the unchanged balanced partition. Count3 retains the original bank; count0 stays silent. No task labels, equality checks or inferred legality enter routing; capped active-cell counts stay0,16,24,24,24. Without separate mode, the original capped24 bank is used at every count.",
         "selection_reason": "Original capped24 was selected using001; separate mode tests whether disjoint generic occupancy routing reduces shared-synapse interference. Both old policies remain diagnostic probe reports. New-policy controls are unassessed in this pilot.",
         "maximum_epochs": args.epochs, "teaching_signed_score_hz": args.margin_hz,
-        "training": "Each epoch presents all60 nonempty primary-policy placement contexts and16 Undo contexts once, in a saved seeded order. Frozen500ms observation; teach iff label-signed fixed-decoder score is below the recorded margin. Existing bidirectional targetDAN200 learning/passive250/reset/oppositeDAN200 frozen/cue500 learning/passive250. Otherwise the trial stays fully frozen. Teaching labels never enter inputs or runtime decisions. Passive decay remains active during every nonfrozen window.",
+        "old_n3_depression": args.old_n3_depression,
+        "old_n3_rehearsal": {
+            "enabled": args.old_n3_depression,
+            "reference_protocol": str((SOURCE / "protocol.json").relative_to(ROOT)),
+            "reference_protocol_sha256": hashlib.sha256((SOURCE / "protocol.json").read_bytes()).hexdigest(),
+            "reference_git_head": config["git_head"],
+            "reference_source": "one_blank.py",
+            "reference_source_sha256": config["source_sha256"]["one_blank.py"],
+            "rule": "For original three-peer placement inputs only, teach iff the frozen decision is wrong or undecided. Apply targetDAN200 learning then passive250; omit reset/oppositeDAN/cue strengthening and its final passive phase. Correct judgments stay fully frozen even below the general3Hz teaching margin.",
+            "scope": "Restore the Step3 correction method only; retain the current once-per-context joint cue schedule. The historical Step3 schedule instead repeated each legal context three times. This is not an exact replay of that complete training protocol.",
+        },
+        "training": "Each epoch presents all60 nonempty primary-policy placement contexts and16 Undo contexts once, in a saved seeded order. Frozen500ms observation; teach iff label-signed fixed-decoder score is below the recorded margin. Existing bidirectional targetDAN200 learning/passive250/reset/oppositeDAN200 frozen/cue500 learning/passive250. Otherwise the trial stays fully frozen. Teaching labels never enter inputs or runtime decisions. Passive decay remains active during every nonfrozen window. The separately recorded old_n3_depression option overrides only original three-peer placement correction with wrong/timeout-triggered depression-only teaching.",
         "evaluation": f"Evaluate{len(inputs)} inputs from reset with W/u/w frozen at inheritance and after each epoch; save every memory. All121 inherited source inputs must exactly reproduce their source responses; new inputs receive measured inherited references. Exact full-weight before/after checks for every frozen batch. No independent-sample claim for response reuse.",
         "stopping": "Stop each condition at its FIRST epoch passing placement, retention, Undo recall AND every development recovery stratum, or at the fixed epoch cap. Preserve every attempted epoch and failed case. This development selection requires subsequent controlled reproduction and reserved-family confirmation.",
         "gates": {"placement_nonempty_balanced_accuracy": .90, "placement_occupancy_class_recall": .85,
@@ -323,21 +337,25 @@ def main():
                     target = item["label"] ^ mapping
                     brain.reset(keep_memory=True)
                     decision = measure(inputs[item["input"]])
-                    teach = (1 if target else -1) * decision["score_hz"] < args.margin_hz
+                    old_n3 = args.old_n3_depression and item["operation"] == "place" and item["distinct_peers"] == 3
+                    teach = (decision["action"] != target if old_n3 else
+                             (1 if target else -1) * decision["score_hz"] < args.margin_hz)
                     phases = []
                     if teach:
                         teaching_events += 1
                         pulse = "reward" if target else "aversive"
                         phases.extend([measure(duration=200, pulse=pulse, learning=True, frozen=False),
                                        measure(duration=250, frozen=False)])
-                        brain.reset(keep_memory=True)
-                        opposite = "aversive" if target else "reward"
-                        phases.extend([measure(duration=200, pulse=opposite),
-                                       measure(inputs[item["input"]], learning=True, frozen=False),
-                                       measure(duration=250, frozen=False)])
+                        if not old_n3:
+                            brain.reset(keep_memory=True)
+                            opposite = "aversive" if target else "reward"
+                            phases.extend([measure(duration=200, pulse=opposite),
+                                           measure(inputs[item["input"]], learning=True, frozen=False),
+                                           measure(duration=250, frozen=False)])
                     training_log.write(json.dumps({"seed": seed, "mapping": mapping, "epoch": epoch, "trial": trial,
                                                    "context": index, "input": item["input"], "target": target,
-                                                   "teach": teach, "decision": decision, "phases": phases}) + "\n")
+                                                   "teach": teach, "teaching_rule": "old-n3-error-depression" if old_n3 else "margin-bidirectional",
+                                                   "decision": decision, "phases": phases}) + "\n")
                 training_log.flush()
                 checkpoint = args.out / f"{seed}-{mapping}-epoch-{epoch:02d}-memory.npz"
                 state = memory_state(brain)
