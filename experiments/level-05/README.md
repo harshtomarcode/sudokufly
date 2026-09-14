@@ -1,73 +1,118 @@
 # Step 5: sequential 4×4 Sudoku
 
-Step 4 merged into main at `c4bbb60`. The next milestone requires the fly to
-complete multi-blank puzzles through a fixed candidate scan and explicitly
-accept an undo action when recovery is needed. Neither one-step judgment nor
-greedy completion of easy cases is sufficient.
+**Complete for the restricted assisted task:** controlled learning, familiar
+memory retention, frozen reserved-family recovery and selective Undo-memory
+erasure all pass. The task uses 4×4 puzzles with 2–4 blanks, a fixed candidate
+scan and an explicitly offered Undo action. Step 6 has not started.
 
-The first [assay](001-variable-peers/README.md) measured two prerequisites:
-transfer to varying numbers of distinct peer symbols, and actual sequential
-placements on easy puzzles versus puzzles where ideal local greedy choices
-lead to a dead end. It uses frozen inherited memories and does not implement
-undo. Its success cannot complete Step 5; its failures locate the next learning
-or representation requirement.
+## Final result
 
-Host mechanics may apply chosen moves and keep a visible action history. They
-must not filter illegal candidates, repair choices, automatically invoke undo,
-or restore per-branch retry cursors that silently supply a search algorithm.
-Undo learning uses its own visible operation/context representation and
-controlled neural conditioning, followed by a separate recovery gate.
+Each result holds for both saved training histories, both answer mappings and
+all three renderings. There are 160 distinct development puzzles and 160 distinct
+reserved puzzles; repeated histories, arms and views are not independent boards.
 
-The baseline is complete: paired memories solved all sampled easy cases and
-none of the traps, and both occupancy policies failed their gates. The
-[controlled Undo experiment](002-learned-undo/README.md) trained new associations
-from the same learned starting memory in every control arm, and tested retention
-and recovery separately. Its 16 context codes are explicitly engineered;
-successful recall does not establish a learned general search algorithm.
+| Measurement | Development | Reserved, no new learning |
+| --- | --- | --- |
+| Nonempty placement judgments | 60/60 correct | 60/60 correct |
+| Newly routed placement judgments | 44/44 correct | 44/44 correct |
+| Familiar three-peer judgments | 16/16 retained | 16/16 retained |
+| Undo judgments | 16/16 correct | 16/16 correct |
+| Complete puzzles | 159/160 (99.38%) | 158/160 (98.75%) |
+| Predefined traps | 63/64 (98.44%) | 62/64 (96.88%) |
+| Weakest puzzle stratum, each view | 31/32 (96.88%) | 30/32 (93.75%) |
 
-**New Undo learning passes:** every paired history/mapping scores 100% versus
-0–23.33% balanced accuracy in warm controls. Both placement policies solve
-159/160 development puzzles, including 63/64 traps, in every paired condition.
-The remaining puzzle deterministically loops. This is repeated evaluation of
-the same 160 puzzles, not 1,280 independent test cases.
+The smallest balanced-accuracy gains over any matched warm control are 42.19
+percentage points on the whole nonempty placement task, 51.25 points on the
+44 new contexts and 50 points on Undo. Empty-peer inputs remain silent and
+outside the nonempty gate, as declared before these experiments.
 
-**Step 5 remains incomplete.** Passive decay weakens old memories during new
-training, turning 4–11 familiar conflict rejections into timeouts. All paired
-conditions fail the predeclared retention gate. The broader placement failures
-from 001 remain unresolved and the reserved-family confirmation was not run.
-The complete source, controls, checkpoints, action histories, independent audits
-and a visual recovery example are recorded in experiment 002. No Step 6 work has
-started.
+The [controlled reproduction and confirmation](007-controlled-recovery/README.md)
+replays the selected learning histories exactly, then evaluates committed
+memories on the reserved family with no training or parameter changes. Its
+audits independently verify neural responses, memory preservation, puzzle
+construction, rendered inputs, every recorded action and every declared gate.
+Reserved results are committed at `e017e0e`.
 
-## Retention and placement repair
+## What the controls establish
 
-The [two-epoch dose probe](003-shorter-undo/README.md) preserved perfect Undo
-recall and 159/160 recovery with much less passive decay. It retained all 16
-familiar judgments in only one of four conditions, and every broad placement
-gate still failed. Shortening training alone was insufficient.
+| Answer mapping, both histories | Learned development | Each warm control, development | Learned reserved | Each warm control, reserved |
+| --- | --- | --- | --- | --- |
+| 0 | 159/160 | 160/160 | 158/160 | 160/160 |
+| 1 | 159/160 | 44/160 | 158/160 | 50/160 |
 
-The [joint rehearsal pilot](004-joint-rehearsal/README.md) practiced placement
-and Undo together for eight epochs. All four conditions failed: familiar
-retention ended at 12/16, 13/16, 10/16 and 13/16, while Undo remained perfect.
-Only 8 of 640 development episodes solved. These are repeated runs of the same
-160 puzzles. Its complete failed checkpoints and independent audit are retained.
+The warm controls start with the same learned Step 3 placement memory. Their
+low explicit judgment accuracy does not prevent useful behavior: mapping-0
+controls reject ambiguous offers and revisit cells on later sweeps, solving all
+boards without Undo. The trained policy accepts locally legal ambiguous moves,
+then sometimes needs Undo. A "trap" means a trap for the ascending first-legal
+scan used to define the dataset, not a puzzle proven to require backtracking.
 
-The [sensory routing pilot](005-occupancy-banks/README.md) separated inputs
-for different observed peer counts while leaving familiar three-peer and Undo
-inputs intact. All 44 newly routed judgments became correct in every condition,
-but familiar retention failed and only 13/640 repeated development episodes
-solved. New learning had to coexist with the inherited skill.
+New association learning and robustness across answer mappings are demonstrated.
+Higher puzzle completion than every control, and a general need for new learning
+or Undo to complete these puzzles, are not established.
 
-The [original correction method](006-original-rehearsal/README.md) resolves
-that pilot failure. Correct familiar judgments receive no teaching; errors get
-the original shorter depression-only correction. Every condition first passes
-at epoch 3 or 5, with all 60 nonempty placement judgments correct, 16/16 familiar
-judgments retained, perfect Undo, and 159/160 development puzzles solved.
-Only seven familiar corrections are needed across the four conditions.
+The prospectively added [selective-erasure assay](008-selective-undo-erasure/README.md)
+isolates Undo's contribution **within the trained placement policy**. It restores
+only the 892 anatomically selected Undo-associated edges and their latent memory
+to the original pretraining state. The remaining 6,943 plastic edges, all
+nonplastic weights and all 149 placement responses stay unchanged.
 
-These are development results: neither a selected checkpoint nor a successful
-recovery score alone completes the stage. The [controlled reproduction and
-confirmation](007-controlled-recovery/README.md) must satisfy the prospective
-learning gaps and evaluate the reserved puzzles with committed frozen memories.
-Strict familiar retention, explicit placement accuracy, controlled learning
-and reserved-family confirmation must all pass.
+| Answer mapping, both histories | Intact reserved traps | Undo-erased reserved traps | Solve-rate loss |
+| --- | --- | --- | --- |
+| 0 | 62/64 | 0/64 | 96.88 percentage points |
+| 1 | 62/64 | 15/64 | 73.44 percentage points |
+
+Every view passes the predeclared 25-point effect threshold. Restoring the
+trained memory reproduces all 165 neural responses exactly. The denominator
+includes every predefined trap, including the two original failures. Both
+development and reserved selective-erasure audits pass; the final reserved
+result is committed at `cfabc8c`. This intervention restores old Undo responses;
+it does not simply disable the Undo action or change the placement policy.
+
+## Experiment history
+
+Every failed pilot and its original gates remain recorded in Git.
+
+| Experiment | Finding |
+| --- | --- |
+| [001: variable peers](001-variable-peers/README.md) | Inherited memory solves easy cases but no traps; broader placement judgments fail. |
+| [002: learned Undo](002-learned-undo/README.md) | New Undo learning and 159/160 recovery pass, but passive decay damages familiar memory. |
+| [003: shorter Undo](003-shorter-undo/README.md) | Two epochs preserve perfect Undo with less decay; only one of four conditions retains all familiar judgments. |
+| [004: joint rehearsal](004-joint-rehearsal/README.md) | Shared-input rehearsal fails retention and recovery; only 8/640 repeated episodes solve. |
+| [005: occupancy banks](005-occupancy-banks/README.md) | Separate sensory routes learn all 44 new judgments, but familiar retention still fails; 13/640 repeated episodes solve. |
+| [006: original correction](006-original-rehearsal/README.md) | The original error-triggered correction restores retention; all four pilots pass at epoch 3 or 5. |
+| [007: controlled recovery](007-controlled-recovery/README.md) | Matched controls demonstrate new judgment learning; unchanged memories pass reserved-family confirmation. |
+| [008: selective Undo erasure](008-selective-undo-erasure/README.md) | Removing only Undo memory reduces recovery with placement fixed, in development and reserved families. |
+
+The successful adjustment combines separate sensory routes for peer counts
+1, 2 and 4 with the original correction rule for familiar three-peer judgments.
+Correct familiar judgments receive no teaching; errors receive the shorter
+depression-only correction. Only seven familiar corrections are needed across
+the four selected runs. New placement and Undo associations use bidirectional
+conditioning. Learning remains within the original 7,835 existing KC→MBON07/11
+connections; no trained output layer, new neurons or new connections are added.
+
+## Scope and remaining failure
+
+Template recognition, spatial attention, occupancy routing, the 16 Undo context
+codes, candidate order and the move stack are engineered. The host applies
+neural choices; it does not filter illegal candidates, repair choices,
+automatically trigger Undo or provide a per-branch retry cursor. Electrical
+state resets between observations. Measured frozen responses are reused for
+identical finite neural inputs during episode replay.
+
+The reserved family is disjoint at the completed-board family level, but its
+observations reuse the trained finite representations. This establishes assisted
+board and rendering coverage, not unseen-neural-pattern generalization, native
+vision, an advantage from fly wiring, or general Sudoku search. The two saved
+histories are deterministic continuations, not independent biological replicas.
+
+One development board and two reserved boards deterministically loop. In both
+reserved failures, the policy places 1 then 3, removes both placements through
+Undo, and returns to the initial board and stack. It has no new branch-history
+signal to change the next attempt. The failure records remain intact; the
+predeclared requirement was at least 90% solved in each stratum and view.
+
+Reproduction commands, frozen source hashes, checkpoints, compressed raw
+records, independent audit reports and their checksum manifests are linked in
+the individual experiment records above.

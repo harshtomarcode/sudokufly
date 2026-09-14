@@ -53,7 +53,7 @@ for its already frozen confirmation protocol.
 
 ```sh
 .venv/bin/python ablate_undo.py --source experiments/level-05/007-controlled-recovery/development --out experiments/level-05/008-selective-undo-erasure/development
-# After passing008development is committed and007heldout passes and is committed:
+# After passing 008 development and passing 007 heldout are committed:
 .venv/bin/python ablate_undo.py --source experiments/level-05/007-controlled-recovery/heldout --split heldout --development experiments/level-05/008-selective-undo-erasure/development --out experiments/level-05/008-selective-undo-erasure/heldout
 ```
 
@@ -90,7 +90,8 @@ does not establish superiority over those controls or a general need for Undo.
 The [neural audit](development-audit-neural.json) and
 [episode audit](development-audit-episodes.json) are
 [bound to the raw summary](development-audit-files-sha256.json).
-Reserved confirmation has not yet run; full-stage completion remains pending.
+At this development checkpoint, reserved confirmation had not yet run and
+full-stage completion remained pending.
 
 ## Frozen reserved-family result
 
