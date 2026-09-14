@@ -1,0 +1,22 @@
+{
+  "audit_passed": true,
+  "run": "experiments/level-05/008-selective-undo-erasure/heldout",
+  "split": "heldout",
+  "summary_sha256": "986dd1da16ce92b296ec686fae1c691d602996f5ccfac41ff2d5741b9668f3fb",
+  "source007_summary_sha256": "a92a417f06bd23752d1f66b2406b7189bb64cb538b2ecee230e948c191756ead",
+  "auditor_sha256": "a145800b9233bba10a1255783baf43e5590a38fb1c9c7c1e44602b4517a9e6a3",
+  "independent_helpers_sha256": "507b9d20b3fb7e44d11c3aaa1b89046bcbed3586f36ce4f4d766e6f7f86d946a",
+  "episodes_replayed": 3840,
+  "events_and_frame_references_checked": 57930,
+  "unique_observation_frames_verified": 10461,
+  "intact007_episodes_exact": 1920,
+  "frozen_neural_records": 1980,
+  "placement_inputs_compared_per_condition": 149,
+  "predefined_trap_denominator_per_condition_view": 64,
+  "condition_views": 12,
+  "original_warm_control_tables_preserved": 12,
+  "all_metrics_effects_and_gates_match": true,
+  "experiment_gate_passed": true,
+  "stage5_complete": true,
+  "scope": "Independent event/observation/routing/validity/metric/effect audit with exact original control tables. Neural behavior isolation is checked; edge-mask algebra, hybrid W/u/w and full-network preservation have a separate provenance audit. A passing effect means conditional Undo contribution within this placement policy, never general necessity or superiority over warm controls."
+}

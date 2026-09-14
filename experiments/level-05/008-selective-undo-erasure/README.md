@@ -91,3 +91,44 @@ The [neural audit](development-audit-neural.json) and
 [episode audit](development-audit-episodes.json) are
 [bound to the raw summary](development-audit-files-sha256.json).
 Reserved confirmation has not yet run; full-stage completion remains pending.
+
+## Frozen reserved-family result
+
+Executed from `e017e0e` with the original `d737800` assay and its source
+dependencies unchanged; runtime 277.08 seconds. **Every original 007 gate and
+every added selective-erasure gate passes in all four conditions and all three
+views. Step 5 is complete for the restricted assisted 4×4 task, including the
+conditional Undo-memory contribution.** No new learning or parameter selection
+occurred on the reserved puzzles.
+
+| Answer mapping, both histories | Intact traps | Undo-erased traps | Intact all boards | Undo-erased all boards |
+| --- | --- | --- | --- | --- |
+| 0 | 62/64 | 0/64 | 158/160 | 96/160 |
+| 1 | 62/64 | 15/64 | 158/160 | 50/160 |
+
+Every view gives the same result. Trap solve rate falls by 96.88 and 73.44
+percentage points, respectively. There are 62 or 47 solved-to-failed transitions
+and zero failed-to-solved transitions among the full 64 predefined traps.
+The two original loop failures remain in the denominator. Undo balanced
+accuracy again falls from 100% to 13.33% or 0%, with 12/16 or 16/16 actions
+changed. The hybrid checkpoints and all 1,980 neural responses exactly
+reproduce committed 008 development.
+
+Both independent audits pass. They verify all 892 selected Undo edges, exact
+preservation of the other 6,943 plastic entries and all nonplastic weights,
+149 unchanged placement responses per condition, all 16 erased Undo responses
+against original memory, and exact restoration of all 165 inputs. The episode
+audit replays 57,930 actions in 3,840 episodes, verifies 10,461 distinct displayed
+frames and confirms all 1,920 intact episodes exactly match 007 reserved replay.
+
+The complete original warm-control tables are retained. Mapping-0 controls
+solve 160/160 reserved boards without Undo, and mapping-1 controls solve 50/160.
+Thus the result establishes a contribution from learned Undo associations
+**within the trained placement policy**, not superiority to every control or
+a general requirement for Undo. Erasure restores old neural responses; it does
+not simply disable the Undo action.
+
+The [neural audit](heldout-audit-neural.json) and
+[episode audit](heldout-audit-episodes.json) are
+[bound to the raw summary](heldout-audit-files-sha256.json). See the
+[Step 5 overview](../README.md) for the complete history and scope.
