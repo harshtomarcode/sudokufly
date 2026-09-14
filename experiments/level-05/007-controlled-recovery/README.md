@@ -129,3 +129,47 @@ Raw training, neural and episode logs are losslessly compressed for Git.
 # Only after controlled development passes and its artifacts are committed:
 .venv/bin/python confirm_sudoku.py --pilot experiments/level-05/006-original-rehearsal/development --split heldout --development experiments/level-05/007-controlled-recovery/development --out experiments/level-05/007-controlled-recovery/heldout
 ```
+
+## Controlled development result
+
+Source frozen at `74a16c2`; runtime 1,588.67 seconds. **Every original development
+gate passes in all four conditions.** Paired replay reproduces every recorded
+training response, every saved epoch memory and all 165 final neural responses.
+All learned conditions have 100% nonempty placement accuracy, 100% new-44
+accuracy, 100% Undo accuracy and all 16 familiar judgments retained. Each solves
+159/160 puzzles in every view, including 63/64 predefined traps.
+
+The smallest gains over any matched control are 42.19 percentage points on
+whole-60 placement, 51.25 points on new-44 placement, and 50 points on Undo.
+Control whole-60 accuracy ranges from 44.64% to 57.81%; new-44 from 29.17% to
+48.75%; Undo from 0% to 50%. These are balanced judgment accuracies.
+
+Puzzle completion tells a different story:
+
+| Answer mapping | Learned, each history | Frozen, no feedback and inconsistent, each history |
+| --- | --- | --- |
+| 0 | 159/160 | 160/160 |
+| 1 | 159/160 | 44/160 |
+
+Each count is for the same 160 boards; all three views reproduce the result.
+The favorable mapping-0 control avoids ambiguous choices. In the first frozen
+condition, it makes 512 three-peer placements and rejects all 272 two-peer
+offers, finishing every puzzle without a single Undo. The learned policy makes
+68 two-peer placements and executes 65 Undos; one board loops. A "trap" here
+means a trap for an ascending first-legal choice, not proof that the puzzle
+requires backtracking. New judgment learning is demonstrated, but this result
+does not show that new learning or Undo is necessary for overall completion.
+
+The run records 5,824 training observations, 8,745 frozen neural evaluations,
+53 full-weight batches and 7,680 episodes. The independent episode audit
+replays all 100,470 actions and checks 11,763 distinct displayed frames. This is
+160 distinct development puzzles across repeated histories, arms and views.
+
+Before reserved confirmation, add a separately predeclared selective Undo-memory
+ablation. Preserve the learned placement state and restore only Undo-associated
+synapses to their original values. This tests Undo's contribution within the
+trained policy and does not replace or reinterpret any gate or control above.
+
+The [neural audit](development-audit-neural.json), [episode audit](development-audit-episodes.json)
+and [route analysis](development-route-analysis.json) are
+[bound to the development summary](development-audit-files-sha256.json).

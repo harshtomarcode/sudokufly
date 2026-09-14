@@ -32,10 +32,11 @@ See the [results and limits](experiments/level-04/001-frozen-transfer/README.md)
 002's new Undo associations score 100% under both mappings and histories, versus
 0–23.33% balanced accuracy in controls starting with the same placement memory.
 Both placement policies solve 159/160 development puzzles, including 63/64 traps,
-but passive decay causes familiar judgment failures. Shorter training helps
-without fully repairing retention; joint rehearsal also fails. Separate sensory
-routing is the next recorded pilot. Explicit placement accuracy, retention,
-controlled learning and reserved-family confirmation must all pass. See the
+but passive decay causes familiar judgment failures. Subsequent pilot 006
+combines separate sensory routes with the earlier familiar correction rule:
+all nonempty placement and Undo judgments are correct, all familiar judgments survive,
+and recovery remains 159/160. Controlled reproduction and reserved-family
+confirmation are still required. See the
 [experiment history](experiments/level-05/README.md) and
 [Undo results, audit and recovery example](experiments/level-05/002-learned-undo/README.md).
 

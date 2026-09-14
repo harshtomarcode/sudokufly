@@ -1,0 +1,42 @@
+{
+  "source_summary_sha256": "1800352217ef79490cdf081cb2144670a606b6e019bfe23bffdc844ae222f462",
+  "condition": {
+    "seed": 20260919,
+    "mapping": 0,
+    "view": "base"
+  },
+  "counts": {
+    "paired": {
+      "puzzles": 160,
+      "solved": 159,
+      "Undo_executions": 65,
+      "peer3_offers": 1181,
+      "peer3_accepted": 505,
+      "peer3_rejected": 676,
+      "peer3_timeout": 0,
+      "peer2_offers": 104,
+      "peer2_accepted": 68,
+      "peer2_rejected": 36,
+      "peer2_timeout": 0,
+      "peer4_offers": 260,
+      "peer4_accepted": 0,
+      "peer4_rejected": 260,
+      "peer4_timeout": 0,
+      "deadend_Undo_offers": 65
+    },
+    "frozen": {
+      "puzzles": 160,
+      "solved": 160,
+      "Undo_executions": 0,
+      "peer3_offers": 1192,
+      "peer3_accepted": 512,
+      "peer3_rejected": 680,
+      "peer3_timeout": 0,
+      "peer2_offers": 272,
+      "peer2_accepted": 0,
+      "peer2_rejected": 272,
+      "peer2_timeout": 0
+    }
+  },
+  "interpretation": "The frozen policy solves by accepting only forced three-peer choices and postponing ambiguous two-peer choices. These trap labels describe failure of ascending first-legal guessing; they do not establish that backtracking is necessary."
+}

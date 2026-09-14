@@ -52,9 +52,22 @@ retention ended at 12/16, 13/16, 10/16 and 13/16, while Undo remained perfect.
 Only 8 of 640 development episodes solved. These are repeated runs of the same
 160 puzzles. Its complete failed checkpoints and independent audit are retained.
 
-The next [sensory routing pilot](005-occupancy-banks/README.md) separates inputs
+The [sensory routing pilot](005-occupancy-banks/README.md) separated inputs
 for different observed peer counts while leaving familiar three-peer and Undo
-inputs intact. These are development experiments: neither a selected checkpoint
-nor a successful recovery score alone completes the stage. Controlled learning,
-strict familiar retention, explicit placement accuracy and reserved-family
-confirmation must all pass.
+inputs intact. All 44 newly routed judgments became correct in every condition,
+but familiar retention failed and only 13/640 repeated development episodes
+solved. New learning had to coexist with the inherited skill.
+
+The [original correction method](006-original-rehearsal/README.md) resolves
+that pilot failure. Correct familiar judgments receive no teaching; errors get
+the original shorter depression-only correction. Every condition first passes
+at epoch 3 or 5, with all 60 nonempty placement judgments correct, 16/16 familiar
+judgments retained, perfect Undo, and 159/160 development puzzles solved.
+Only seven familiar corrections are needed across the four conditions.
+
+These are development results: neither a selected checkpoint nor a successful
+recovery score alone completes the stage. The [controlled reproduction and
+confirmation](007-controlled-recovery/README.md) must satisfy the prospective
+learning gaps and evaluate the reserved puzzles with committed frozen memories.
+Strict familiar retention, explicit placement accuracy, controlled learning
+and reserved-family confirmation must all pass.

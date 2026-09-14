@@ -1,0 +1,210 @@
+[
+  {
+    "seed": 20260919,
+    "mapping": 0,
+    "stage": "prefix",
+    "checkpoint": "experiments/level-05/003-shorter-undo/development/20260919-0-paired-memory.npz",
+    "sha256": "20fa0fd3fbf4a50847e9764b5ec718c4382e2e0ce15f94e4f84a3c6dc41278b0",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 0,
+    "stage": "joint",
+    "epoch": 1,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-0-epoch-01-memory.npz",
+    "sha256": "79b5a7b053f4bb02755f4bfd61f4ead7c7581a500b7a6188b704b4727a25846e",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 0,
+    "stage": "joint",
+    "epoch": 2,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-0-epoch-02-memory.npz",
+    "sha256": "f69887aa506015a59398c9cbc47ba8499bb512ab87bfd6a65c51153eab7e54a2",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 0,
+    "stage": "joint",
+    "epoch": 3,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-0-epoch-03-memory.npz",
+    "sha256": "3442bf31e28122ab877504cf47203960ca474eb2344aca07eba25c298cf6e661",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 0,
+    "stage": "selected_final",
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-0-epoch-03-memory.npz",
+    "sha256": "3442bf31e28122ab877504cf47203960ca474eb2344aca07eba25c298cf6e661",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "prefix",
+    "checkpoint": "experiments/level-05/003-shorter-undo/development/20260919-1-paired-memory.npz",
+    "sha256": "d9050c137ae9b33481acc4673074ca038f0ac5aaf27630717f5bf5bc24aefdd8",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 1,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-1-epoch-01-memory.npz",
+    "sha256": "30fca44577d81337c9434a47f5d462739b62b5f54f651e0bd49887a85e60406c",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 2,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-1-epoch-02-memory.npz",
+    "sha256": "c5a8ce7cd5eade7a312f294b71e2bebca4eb02f7230ea7ee3876768a4661841d",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 3,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-1-epoch-03-memory.npz",
+    "sha256": "cf0b64617ab79650565e4ce44e03d1b528a9a65102c8ebb0371941c68de53fe7",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 4,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-1-epoch-04-memory.npz",
+    "sha256": "b4d1ca26c6e89c4176512cd52745cbf50c9c8ba66be314eb8961b2857a91d44d",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 5,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-1-epoch-05-memory.npz",
+    "sha256": "9f39626dc106ee58c34ad7899490aa628bfbaa1697a87213492b0a9d0f0c91f2",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260919,
+    "mapping": 1,
+    "stage": "selected_final",
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260919-1-epoch-05-memory.npz",
+    "sha256": "9f39626dc106ee58c34ad7899490aa628bfbaa1697a87213492b0a9d0f0c91f2",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 0,
+    "stage": "prefix",
+    "checkpoint": "experiments/level-05/003-shorter-undo/development/20260920-0-paired-memory.npz",
+    "sha256": "8670629744288c9d7b69ca198a8d38ce09b1752747ce289bdd72f6a33eb6958b",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 0,
+    "stage": "joint",
+    "epoch": 1,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-0-epoch-01-memory.npz",
+    "sha256": "94cafe110e96b277e38356903eb2066da7180bdfd0ddfad163216d91b565fa9b",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 0,
+    "stage": "joint",
+    "epoch": 2,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-0-epoch-02-memory.npz",
+    "sha256": "80c290881c0e744873d034376095651a950c5e713537dd16247ed2eeb3e67184",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 0,
+    "stage": "joint",
+    "epoch": 3,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-0-epoch-03-memory.npz",
+    "sha256": "8b07145f470aa65dc14424441e0741d28fc9f88038b8496db65c6b391136c32b",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 0,
+    "stage": "selected_final",
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-0-epoch-03-memory.npz",
+    "sha256": "8b07145f470aa65dc14424441e0741d28fc9f88038b8496db65c6b391136c32b",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "prefix",
+    "checkpoint": "experiments/level-05/003-shorter-undo/development/20260920-1-paired-memory.npz",
+    "sha256": "0cfbf46d8fbf41488569c09c580cf9549d533050f2e0292f9b1bc6b002309657",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 1,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-1-epoch-01-memory.npz",
+    "sha256": "6c27fc9141be96b972b6398a2a59c54af825c846fde7dc69d2878742e00d2672",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 2,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-1-epoch-02-memory.npz",
+    "sha256": "fc8ceba5d556f02a3d652571c114b9fcaa7cd6bf5d2b28072d94dd22f9972e01",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 3,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-1-epoch-03-memory.npz",
+    "sha256": "ab7d6503f70d31f9415c54f2de8c08128c080837aaf4264f6e803593c88ead0e",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 4,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-1-epoch-04-memory.npz",
+    "sha256": "7bcf21af8bfb1a3c5c10cae29df181bb6cf3bad9521915695ddade0de1bbed76",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "joint",
+    "epoch": 5,
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-1-epoch-05-memory.npz",
+    "sha256": "b7fca4965d8cc662e284638342b466b3b02932b5c591cc2d982a4ce0c11beb27",
+    "W_u_w_exact": true
+  },
+  {
+    "seed": 20260920,
+    "mapping": 1,
+    "stage": "selected_final",
+    "checkpoint": "experiments/level-05/006-original-rehearsal/development/20260920-1-epoch-05-memory.npz",
+    "sha256": "b7fca4965d8cc662e284638342b466b3b02932b5c591cc2d982a4ce0c11beb27",
+    "W_u_w_exact": true
+  }
+]
