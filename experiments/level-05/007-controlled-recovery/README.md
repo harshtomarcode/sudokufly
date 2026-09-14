@@ -173,3 +173,42 @@ trained policy and does not replace or reinterpret any gate or control above.
 The [neural audit](development-audit-neural.json), [episode audit](development-audit-episodes.json)
 and [route analysis](development-route-analysis.json) are
 [bound to the development summary](development-audit-files-sha256.json).
+
+## Frozen reserved-family result
+
+Executed from `0a9a1da` with the original `74a16c2` runner and all eight source
+files unchanged; runtime 890.43 seconds. **All original confirmation gates pass
+in every history, answer mapping and view.** Training trials and update exposure
+are both zero. All 2,640 arm-specific recall responses exactly reproduce
+controlled development; all 60 nonempty placement judgments, 44 new judgments,
+16 familiar judgments and 16 Undo judgments remain correct in the paired arms.
+The controlled judgment gaps above are unchanged.
+
+| Answer mapping, both histories | Learned reserved boards | Learned reserved traps | Each warm control, reserved boards |
+| --- | --- | --- | --- |
+| 0 | 158/160 | 62/64 | 160/160 |
+| 1 | 158/160 | 62/64 | 50/160 |
+
+Each view gives the same result. The weakest paired stratum is four-blank traps
+at 30/32 (93.75%); each other stratum scores 32/32. Each paired condition executes
+69 Undos per view. The two failures, `b4-000b8f74326fefe3` and
+`b4-00a55b9fb5b34de9`, repeat the initial board/stack after one sweep. They remain
+failures in the raw logs; no retraining or action-rule changes follow inspection.
+
+The mapping-0 controls again finish all 160 boards without Undo. Mapping-1
+controls finish 50, including 15/64 traps. Thus retained new judgment learning
+and robustness across answer mappings pass; superiority to all warm controls
+and general necessity of Undo do not follow from this result.
+
+Independent audits verify 8,745 frozen neural evaluations in 53 full-network
+weight checks and replay all 100,392 actions from 7,680 episodes. They verify
+11,802 distinct displayed frames, all fifteen stratum/view groups per arm,
+unique puzzle completions and development/reserved family disjointness. The
+160 reserved boards reuse the same finite trained neural inputs.
+
+The [neural audit](heldout-audit-neural.json) and
+[episode audit](heldout-audit-episodes.json) are
+[bound to the raw summary](heldout-audit-files-sha256.json).
+The historical 007 completion flag covers its original gates. The additional
+[008 selective-erasure confirmation](../008-selective-undo-erasure/README.md)
+must also pass before claiming completed Step 5 with conditional Undo recovery.

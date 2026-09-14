@@ -1,0 +1,149 @@
+{
+  "audit_passed": true,
+  "episodes_and_task_metrics_audited_here": false,
+  "split": "heldout",
+  "source_commit": "0a9a1dac4acf52cf56d7357890f360ba956ffab3",
+  "artifact_hashes": 13,
+  "conditions": 4,
+  "arms": 16,
+  "input_hashes": 165,
+  "training_trials": 0,
+  "frozen_evaluations": 8745,
+  "full_weight_batches": 53,
+  "paired_epoch_and_final_reproductions": 0,
+  "paired_final_responses_exact": 660,
+  "heldout_recall_responses_exact": 2640,
+  "memory_references": 52,
+  "control_schedule_hash": "cb43bfa35cde82a4f2f3184411b3aedab1ad7bc65322f96bb0b05c60f10fbdd9",
+  "control_balance_hash": "e3e1e18efb018bf9031bd67dd2f5ab3a633111a35a433891b3cfef42f623c73e",
+  "exposure_and_dose": [
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "paired",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "frozen",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "no_feedback",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "inconsistent",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "paired",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "frozen",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "no_feedback",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "inconsistent",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "paired",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "frozen",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "no_feedback",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "inconsistent",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "paired",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "frozen",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "no_feedback",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "inconsistent",
+      "trials": 0,
+      "update_window_ms": 0,
+      "DAN_pulse_duration_ms": {}
+    }
+  ]
+}
