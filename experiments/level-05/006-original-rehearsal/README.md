@@ -99,3 +99,30 @@ source histories remain applicable.
 ```sh
 .venv/bin/python joint_sudoku.py --separate-occupancies --old-n3-depression --source experiments/level-05/003-shorter-undo/development --epochs 8 --margin-hz 3 --out experiments/level-05/006-original-rehearsal/development
 ```
+
+## Development result
+
+Source frozen at `acfc3a6`; runtime 504.40 seconds. **All four pilot conditions
+pass**, first at epochs 3, 5, 3 and 5 in seed/mapping order. Every selected
+checkpoint has 100% nonempty placement accuracy, all 16 familiar judgments
+correct, and 100% Undo recall. Each solves 159/160 development puzzles: all
+32 cases in four strata and 31/32 four-blank traps. The same fixed-menu loop
+remains; it is recorded as a failure.
+
+The run preserves all 16 attempted checkpoints, 1,216 trial observations,
+302 teaching events and 4,785 frozen neural evaluations. Restoring the original
+three-peer correction method resolves the pilot's retention problem without
+changing its action interface, new sensory routes, decoder or thresholds.
+The intervention combines error-only correction and removal of strengthening;
+this experiment does not isolate their individual contributions.
+
+This is checkpoint selection, not a completed Step 5. The next experiment must
+reproduce the complete Undo-plus-joint curriculum from the original paired
+Step 3 memories, satisfy prospectively fixed warm-control gaps, and then pass
+frozen reserved-family confirmation without further training or tuning.
+
+The independent [audit](audit.json) verifies source/artifact hashes, anatomical
+routing, all trials and first-pass stopping, 29 frozen full-weight checks,
+exact erasures and all 640 episodes (8,732 actions). Only seven familiar
+corrections were needed; the other 295 teaching events used the unchanged
+bidirectional rule. The audit is [bound to the raw summary](audit-files-sha256.json).

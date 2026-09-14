@@ -1,0 +1,1433 @@
+[
+  {
+    "epoch": 1,
+    "teaching_events": 34,
+    "memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9953335523605347,
+      "minimum_efficacy": 0.10667511820793152,
+      "sha256": "42078b17c00700bcb5fa63e0efc420778abfc062f99590ce388721cf79cd1c43",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.9778599739074707,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.893300062883219,
+      "u_max": 0.9778327198581374,
+      "u_sha256": "6756c9b2ef96aa78d40ea46cfd92b9d602bcc6c0a0cef28960b4bc5564d9b532",
+      "w_sha256": "51eb93be44532e6a236fc7c77cb953d4041b8b0d7ed221e464ad376d542a9cfa"
+    },
+    "checkpoint": "20260919-1-epoch-01-memory.npz",
+    "scores": {
+      "policies": {
+        "eight-per-pair": {
+          "metrics": {
+            "accuracy": 0.671875,
+            "balanced_accuracy": 0.671875,
+            "class_recall": {
+              "0": 0.84375,
+              "1": 0.5
+            },
+            "precision": 1.0,
+            "timeouts": 17,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "balanced_accuracy": 0.5,
+                "timeouts": 8,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 0.9375,
+                "class_recall": {
+                  "0": 0.9166666666666666,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 0.9583333333333333,
+                "timeouts": 1,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.7166666666666667,
+              "balanced_accuracy": 0.7075892857142857,
+              "class_recall": {
+                "0": 0.84375,
+                "1": 0.5714285714285714
+              },
+              "precision": 1.0,
+              "timeouts": 13,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.6450892857142857,
+            "no_feedback": 0.6450892857142857,
+            "inconsistent": 0.4107142857142857
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "capped-24": {
+          "metrics": {
+            "accuracy": 0.859375,
+            "balanced_accuracy": 0.859375,
+            "class_recall": {
+              "0": 0.84375,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 9,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 0.9375,
+                "class_recall": {
+                  "0": 0.9166666666666666,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 0.9583333333333333,
+                "timeouts": 1,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.9166666666666666,
+              "balanced_accuracy": 0.921875,
+              "class_recall": {
+                "0": 0.84375,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 5,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.9040178571428571,
+            "no_feedback": 0.9040178571428571,
+            "inconsistent": 0.7946428571428572
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "separate-occupancy": {
+          "metrics": {
+            "accuracy": 0.59375,
+            "balanced_accuracy": 0.59375,
+            "class_recall": {
+              "0": 0.375,
+              "1": 0.8125
+            },
+            "precision": 0.65,
+            "timeouts": 12,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 0.6875,
+                "class_recall": {
+                  "0": 0.25,
+                  "1": 0.8333333333333334
+                },
+                "balanced_accuracy": 0.5416666666666667,
+                "timeouts": 5,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 0.5,
+                "class_recall": {
+                  "0": 0.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 0.5,
+                "timeouts": 2,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 0.9375,
+                "class_recall": {
+                  "0": 0.9166666666666666,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 0.9583333333333333,
+                "timeouts": 1,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 0,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.6333333333333333,
+              "balanced_accuracy": 0.6517857142857143,
+              "class_recall": {
+                "0": 0.375,
+                "1": 0.9285714285714286
+              },
+              "precision": 0.65,
+              "timeouts": 8,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": null,
+          "original_history_control_gate": null,
+          "gate": false
+        }
+      },
+      "familiar_correct": 15,
+      "undo": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "class_recall": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "precision": 1.0,
+        "timeouts": 0,
+        "presentations": 16
+      },
+      "joint_judgment_gate": false
+    },
+    "sequence": null,
+    "pilot_gate": false
+  },
+  {
+    "epoch": 2,
+    "teaching_events": 25,
+    "memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9927932024002075,
+      "minimum_efficacy": 0.10488668084144592,
+      "sha256": "ec69e444df64faf4cef3107c00b570c853b294880b33d121fe55ae317a076c64",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.9624991416931152,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8950884508007758,
+      "u_max": 0.962472292738201,
+      "u_sha256": "ddee7750887431b1e4164a83cd876851a3cb748c31adf50942d45caae85a4533",
+      "w_sha256": "b4c034028bf2d8cd1f47365c272d14585e5e7302efc9d0e3bf7b292cbbe41252"
+    },
+    "checkpoint": "20260919-1-epoch-02-memory.npz",
+    "scores": {
+      "policies": {
+        "eight-per-pair": {
+          "metrics": {
+            "accuracy": 0.6875,
+            "balanced_accuracy": 0.6875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.5
+            },
+            "precision": 1.0,
+            "timeouts": 14,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "balanced_accuracy": 0.5,
+                "timeouts": 6,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.7333333333333333,
+              "balanced_accuracy": 0.7232142857142857,
+              "class_recall": {
+                "0": 0.875,
+                "1": 0.5714285714285714
+              },
+              "precision": 1.0,
+              "timeouts": 10,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.6607142857142857,
+            "no_feedback": 0.6607142857142857,
+            "inconsistent": 0.4263392857142857
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "capped-24": {
+          "metrics": {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 8,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9375,
+              "class_recall": {
+                "0": 0.875,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 4,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.9196428571428571,
+            "no_feedback": 0.9196428571428571,
+            "inconsistent": 0.8102678571428572
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "separate-occupancy": {
+          "metrics": {
+            "accuracy": 0.765625,
+            "balanced_accuracy": 0.765625,
+            "class_recall": {
+              "0": 0.65625,
+              "1": 0.875
+            },
+            "precision": 0.9655172413793104,
+            "timeouts": 14,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 0.6666666666666666,
+                "class_recall": {
+                  "0": 0.3333333333333333,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 0.6666666666666666,
+                "timeouts": 8,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 0.25
+                },
+                "balanced_accuracy": null,
+                "timeouts": 2,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.8166666666666667,
+              "balanced_accuracy": 0.828125,
+              "class_recall": {
+                "0": 0.65625,
+                "1": 1.0
+              },
+              "precision": 0.9655172413793104,
+              "timeouts": 10,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": null,
+          "original_history_control_gate": null,
+          "gate": false
+        }
+      },
+      "familiar_correct": 16,
+      "undo": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "class_recall": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "precision": 1.0,
+        "timeouts": 0,
+        "presentations": 16
+      },
+      "joint_judgment_gate": false
+    },
+    "sequence": null,
+    "pilot_gate": false
+  },
+  {
+    "epoch": 3,
+    "teaching_events": 17,
+    "memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9920797944068909,
+      "minimum_efficacy": 0.11497402936220169,
+      "sha256": "781d4f6c0e589a68f4905286fe26d15646121616cc07fa8181781f35cc9d892e",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.9516524076461792,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8850013830443944,
+      "u_max": 0.9516258526776624,
+      "u_sha256": "8dd9c51f9e0de4ed66feea45ef8d6f6aa4a51ec3d5ef2eb38c0a4cafd4a44693",
+      "w_sha256": "8bc70314be8e1d6cfcfe3bfc1efd66b77f206ea484f1d32258c27f527811afe5"
+    },
+    "checkpoint": "20260919-1-epoch-03-memory.npz",
+    "scores": {
+      "policies": {
+        "eight-per-pair": {
+          "metrics": {
+            "accuracy": 0.6875,
+            "balanced_accuracy": 0.6875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.5
+            },
+            "precision": 1.0,
+            "timeouts": 13,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "balanced_accuracy": 0.5,
+                "timeouts": 5,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.7333333333333333,
+              "balanced_accuracy": 0.7232142857142857,
+              "class_recall": {
+                "0": 0.875,
+                "1": 0.5714285714285714
+              },
+              "precision": 1.0,
+              "timeouts": 9,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.6607142857142857,
+            "no_feedback": 0.6607142857142857,
+            "inconsistent": 0.4263392857142857
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "capped-24": {
+          "metrics": {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 8,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9375,
+              "class_recall": {
+                "0": 0.875,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 4,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.9196428571428571,
+            "no_feedback": 0.9196428571428571,
+            "inconsistent": 0.8102678571428572
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "separate-occupancy": {
+          "metrics": {
+            "accuracy": 0.890625,
+            "balanced_accuracy": 0.890625,
+            "class_recall": {
+              "0": 0.90625,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 7,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 0.25
+                },
+                "balanced_accuracy": null,
+                "timeouts": 3,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.95,
+              "balanced_accuracy": 0.953125,
+              "class_recall": {
+                "0": 0.90625,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 3,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": null,
+          "original_history_control_gate": null,
+          "gate": false
+        }
+      },
+      "familiar_correct": 16,
+      "undo": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "class_recall": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "precision": 1.0,
+        "timeouts": 0,
+        "presentations": 16
+      },
+      "joint_judgment_gate": false
+    },
+    "sequence": null,
+    "pilot_gate": false
+  },
+  {
+    "epoch": 4,
+    "teaching_events": 10,
+    "memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9918283820152283,
+      "minimum_efficacy": 0.12085457891225815,
+      "sha256": "9a8f1d2c20ef7bfaa9793ecba8238bb0a270732e9a4c4e1ea92930dad3b8d0f6",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.9453290700912476,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8791209968904633,
+      "u_max": 0.9453027806519914,
+      "u_sha256": "e32a66a44ace7bacaad43f1d5351d45e89d81bc9735084451390a88a2a63cbad",
+      "w_sha256": "88cafff806e6bed82d50baffe2f2ed1a810af1112eaab1c846e289d5a2d9fd3b"
+    },
+    "checkpoint": "20260919-1-epoch-04-memory.npz",
+    "scores": {
+      "policies": {
+        "eight-per-pair": {
+          "metrics": {
+            "accuracy": 0.6875,
+            "balanced_accuracy": 0.6875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.5
+            },
+            "precision": 1.0,
+            "timeouts": 13,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "balanced_accuracy": 0.5,
+                "timeouts": 5,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.7333333333333333,
+              "balanced_accuracy": 0.7232142857142857,
+              "class_recall": {
+                "0": 0.875,
+                "1": 0.5714285714285714
+              },
+              "precision": 1.0,
+              "timeouts": 9,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.6607142857142857,
+            "no_feedback": 0.6607142857142857,
+            "inconsistent": 0.4263392857142857
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "capped-24": {
+          "metrics": {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 8,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9375,
+              "class_recall": {
+                "0": 0.875,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 4,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.9196428571428571,
+            "no_feedback": 0.9196428571428571,
+            "inconsistent": 0.8102678571428572
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "separate-occupancy": {
+          "metrics": {
+            "accuracy": 0.90625,
+            "balanced_accuracy": 0.90625,
+            "class_recall": {
+              "0": 0.96875,
+              "1": 0.84375
+            },
+            "precision": 1.0,
+            "timeouts": 6,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 0.9583333333333334,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.9166666666666666
+                },
+                "balanced_accuracy": 0.9583333333333333,
+                "timeouts": 1,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.75,
+                "class_recall": {
+                  "0": 0.75
+                },
+                "balanced_accuracy": null,
+                "timeouts": 1,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.9666666666666667,
+              "balanced_accuracy": 0.9665178571428572,
+              "class_recall": {
+                "0": 0.96875,
+                "1": 0.9642857142857143
+              },
+              "precision": 1.0,
+              "timeouts": 2,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": null,
+          "original_history_control_gate": null,
+          "gate": false
+        }
+      },
+      "familiar_correct": 16,
+      "undo": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "class_recall": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "precision": 1.0,
+        "timeouts": 0,
+        "presentations": 16
+      },
+      "joint_judgment_gate": false
+    },
+    "sequence": null,
+    "pilot_gate": false
+  },
+  {
+    "epoch": 5,
+    "teaching_events": 3,
+    "memory": {
+      "plastic_edges": 7835,
+      "changed_edges": 3580,
+      "mean_efficacy": 0.9921296238899231,
+      "minimum_efficacy": 0.12261111289262772,
+      "sha256": "0602c77c40f2a24a5835794e7abada0a0c5f1e37067309fcb81b6e1af9f61203",
+      "model": "stonkfly-dual-compartment-v1",
+      "maximum_efficacy": 1.943440318107605,
+      "at_lower_bound": 0,
+      "at_upper_bound": 0,
+      "u_min": -0.8773645119670979,
+      "u_max": 0.9434140644364719,
+      "u_sha256": "d9df626455877e9c39afd0baeb90e9fef14e32f902270f33041eaf1eeeb9eaeb",
+      "w_sha256": "fc9255178ad464342f3c08003d3bb15eafc116c37995274f23cc414fc9de9414"
+    },
+    "checkpoint": "20260919-1-epoch-05-memory.npz",
+    "scores": {
+      "policies": {
+        "eight-per-pair": {
+          "metrics": {
+            "accuracy": 0.6875,
+            "balanced_accuracy": 0.6875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.5
+            },
+            "precision": 1.0,
+            "timeouts": 13,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 0.25,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 0.0
+                },
+                "balanced_accuracy": 0.5,
+                "timeouts": 5,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.7333333333333333,
+              "balanced_accuracy": 0.7232142857142857,
+              "class_recall": {
+                "0": 0.875,
+                "1": 0.5714285714285714
+              },
+              "precision": 1.0,
+              "timeouts": 9,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.6607142857142857,
+            "no_feedback": 0.6607142857142857,
+            "inconsistent": 0.4263392857142857
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "capped-24": {
+          "metrics": {
+            "accuracy": 0.875,
+            "balanced_accuracy": 0.875,
+            "class_recall": {
+              "0": 0.875,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 8,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "0": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9375,
+              "class_recall": {
+                "0": 0.875,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 4,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": false,
+          "original_history_control_gains": {
+            "frozen": 0.9196428571428571,
+            "no_feedback": 0.9196428571428571,
+            "inconsistent": 0.8102678571428572
+          },
+          "original_history_control_gate": true,
+          "gate": false
+        },
+        "separate-occupancy": {
+          "metrics": {
+            "accuracy": 0.9375,
+            "balanced_accuracy": 0.9375,
+            "class_recall": {
+              "0": 1.0,
+              "1": 0.875
+            },
+            "precision": 1.0,
+            "timeouts": 4,
+            "presentations": 64,
+            "by_distinct_peers": {
+              "0": {
+                "accuracy": 0.0,
+                "class_recall": {
+                  "1": 0.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 4,
+                "contexts": 4
+              },
+              "1": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "2": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 24
+              },
+              "3": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0,
+                  "1": 1.0
+                },
+                "balanced_accuracy": 1.0,
+                "timeouts": 0,
+                "contexts": 16
+              },
+              "4": {
+                "accuracy": 1.0,
+                "class_recall": {
+                  "0": 1.0
+                },
+                "balanced_accuracy": null,
+                "timeouts": 0,
+                "contexts": 4
+              }
+            },
+            "nonempty": {
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "class_recall": {
+                "0": 1.0,
+                "1": 1.0
+              },
+              "precision": 1.0,
+              "timeouts": 0,
+              "presentations": 60
+            }
+          },
+          "absolute_gate": true,
+          "original_history_control_gains": null,
+          "original_history_control_gate": null,
+          "gate": true
+        }
+      },
+      "familiar_correct": 16,
+      "undo": {
+        "accuracy": 1.0,
+        "balanced_accuracy": 1.0,
+        "class_recall": {
+          "0": 1.0,
+          "1": 1.0
+        },
+        "precision": 1.0,
+        "timeouts": 0,
+        "presentations": 16
+      },
+      "joint_judgment_gate": true
+    },
+    "sequence": {
+      "2-easy": {
+        "puzzles": 32,
+        "solved": 32,
+        "solve_rate": 1.0
+      },
+      "3-easy": {
+        "puzzles": 32,
+        "solved": 32,
+        "solve_rate": 1.0
+      },
+      "3-trap": {
+        "puzzles": 32,
+        "solved": 32,
+        "solve_rate": 1.0
+      },
+      "4-easy": {
+        "puzzles": 32,
+        "solved": 32,
+        "solve_rate": 1.0
+      },
+      "4-trap": {
+        "puzzles": 32,
+        "solved": 31,
+        "solve_rate": 0.96875
+      }
+    },
+    "pilot_gate": true
+  }
+]
