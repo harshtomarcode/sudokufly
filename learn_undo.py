@@ -217,7 +217,12 @@ def play_with_undo(case, responses, templates, groups, undo_groups, policy, mapp
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--out", type=Path, required=True)
+    parser.add_argument("--epochs", type=int, default=8)
+    parser.add_argument("--paired-only", action="store_true", help="Diagnostic only; control-dependent gates remain unassessed")
     args = parser.parse_args()
+    if args.epochs < 2 or args.epochs % 2:
+        parser.error("Use a positive even number of epochs for balanced per-pattern controls")
+    arm_names = ("paired",) if args.paired_only else ("paired", "frozen", "no_feedback", "inconsistent")
     started = time.perf_counter()
     prior = ROOT / "experiments/level-05/001-variable-peers/development"
     source_summary = json.loads((SOURCE / "summary.json").read_text())
@@ -301,7 +306,7 @@ def main():
     schedules = {}
     for seed in (20260919, 20260920):
         schedule = []
-        for epoch in range(8):
+        for epoch in range(args.epochs):
             chunk = [i for i, row in enumerate(undo_contexts) for _ in range(15 if row["label"] else 1)]
             random.Random(seed + epoch * 100).shuffle(chunk)
             schedule.extend({"epoch": epoch, "context": i} for i in chunk)
@@ -311,8 +316,8 @@ def main():
             random.Random(seed + i + 50000).shuffle(labels)
             for j, label in zip(occurrences, labels):
                 schedule[j]["inconsistent_label"] = label
-        assert len(schedule) == 240
-        assert sum(row["inconsistent_label"] for row in schedule) == 120
+        assert len(schedule) == 30 * args.epochs
+        assert sum(row["inconsistent_label"] for row in schedule) == 15 * args.epochs
         schedules[str(seed)] = schedule
     (args.out / "schedules.json").write_text(json.dumps(schedules, indent=2) + "\n")
     source_files = ("learn_undo.py", "sequence_sudoku.py", "constraint_transfer.py", "one_blank.py", "compare_symbols.py", "sudokufly.py")
@@ -327,15 +332,20 @@ def main():
         "cases_sha256": hashlib.sha256((prior / "cases.json").read_bytes()).hexdigest(),
         "parameters": {"KC_current": parameters["kc_current"], "MBON_current": source_protocol["inference_mbon_current"],
                        "eta": parameters["eta"], "duration_ms": 500, "DAN_current": 20},
+        "epochs": args.epochs, "trials_per_arm": 30 * args.epochs,
+        "nonfrozen_active_seconds_per_arm": 36 * args.epochs,
+        "arms": list(arm_names), "controls_evaluated": not args.paired_only,
         "decoder": {"offset_hz": offset, "threshold_hz": threshold},
         "undo_KC_ids": brain.ids[undo_groups].tolist(), "anatomy_partition": anatomy,
         "encoder": "Visible UNDO marker and four template-presence bits from highlighted target peers select one of16 equally sized disjoint KC groups. Anatomical ranking excludes every original sensory KC. No new plastic edges, equality flag, dead-end label, or learned output head. All16 patterns are trained; this is an engineered lookup representation, not learned Boolean composition or novel-pattern generalization.",
-        "training": "8 fixed epochs of30 trials: full-peer pattern15 times, each other pattern once. All trials receive bidirectional teaching: cue500 frozen; targetDAN200 learning; passive250; reset retaining memory; oppositeDAN200 frozen; cue500 learning; passive250. No response-dependent stopping. Passive weight decay remains active in nonfrozen training windows, including old placement synapses.",
+        "training": f"{args.epochs} fixed epochs of30 trials: full-peer pattern15 times, each other pattern once. All trials receive bidirectional teaching: cue500 frozen; targetDAN200 learning; passive250; reset retaining memory; oppositeDAN200 frozen; cue500 learning; passive250. No response-dependent stopping. Passive weight decay remains active in nonfrozen training windows, including old placement synapses.",
         "controls": "Every arm starts the SAME paired Step3 memory within its mapping/history. Frozen replays correct pulses with weights frozen. No-feedback removes both pulses but retains learning windows and passive decay. Inconsistent shuffles50/50 labels separately across ALL occurrences of each pattern, not epoch blocks; every pulsed trial still delivers both compartments once.",
         "evaluation": "Frozen121-input evaluation from electrical reset; replayed episodes reuse measured deterministic responses and are not independent neural observations. Full W hash before/after each batch. Stage erasure restores inherited W/u/w, full erasure restores original W/u/w; both remeasure16 Undo and16 familiar placement inputs against reference.",
         "sequence": "Development160 cases, both prior placement policies,16 sweeps and1024 decision limit. Row-major currently empty targets; candidates1..4, commit first accept immediately; ALWAYS offer Undo afterward, including after acceptance. Neural Undo acceptance pops latest nongiven placement. Continue global scan without per-branch cursors, legality filtering or grader access; grading after episode only. Stop a repeated complete board+stack state at a sweep boundary because reset/frozen inference would repeat it forever; no retry or repair.",
         "gates": {"undo_balanced_accuracy": .90, "undo_class_recall": .85, "minimum_warm_control_gain": .25,
-                  "familiar_placement_retention_accuracy": 1.0, "sequence_per_stratum_solve_rate": .90},
+                  "familiar_placement_retention_accuracy": 1.0, "sequence_per_stratum_solve_rate": .90,
+                  "nonempty_placement_balanced_accuracy": .90, "placement_occupancy_class_recall": .85,
+                  "placement_gain_over_original_history_controls": .25},
         "stage5_complete": False,
         "limits": "Development association/recovery experiment only. Failed001 occupancy prerequisites remain reported; no heldout confirmation in this run. Even a successful Undo association cannot complete Step5. Two inherited training histories are deterministic saved states, not independent connectomes. Fixed vision, state routing, scan order and stack mechanics are supplied."}
     (args.out / "protocol.json").write_text(json.dumps(protocol, indent=2) + "\n")
@@ -422,7 +432,7 @@ def main():
             inherited_full = hashlib.sha256(brain.weight.tobytes()).hexdigest()
             inherited = evaluate({"seed": seed, "mapping": mapping, "phase": "inherited"})
             arms = {}
-            for arm in ("paired", "frozen", "no_feedback", "inconsistent"):
+            for arm in arm_names:
                 brain.reset(keep_memory=False)
                 brain.weight[c["edges"]], brain.memory_u[:], brain.memory_w[:] = inherited_weights, inherited_u, inherited_w
                 assert memory_state(brain) == inherited_state
@@ -491,14 +501,25 @@ def main():
                 arms[arm] = {"undo": undo_score, "policies": policy_results, "memory": state,
                              "delta_from_inherited": delta, "changed_response_inputs": sum(recall[k]["spikes_sha256"] != inherited[k]["spikes_sha256"] for k in inputs),
                              "familiar_placement_retained": all(recall[k]["action"] == inherited[k]["action"] for k in familiar),
+                             "familiar_placement_correct": sum(recall[k]["action"] == inherited[k]["action"] for k in familiar),
                              "stage_erasure_exact": True, "full_erasure_exact": True, "nonplastic_unchanged": True}
                 print(json.dumps({"seed": seed, "mapping": mapping, "arm": arm, "undo": undo_score,
                                   "retained": arms[arm]["familiar_placement_retained"],
                                   "solves": {p: {k: v['solve_rate'] for k, v in row['sequence'].items()} for p, row in policy_results.items()}}), flush=True)
             paired = arms["paired"]
-            gate = (paired["undo"]["balanced_accuracy"] >= .90 and min(paired["undo"]["class_recall"].values()) >= .85 and
+            recall_gate = paired["undo"]["balanced_accuracy"] >= .90 and min(paired["undo"]["class_recall"].values()) >= .85
+            gate = None if args.paired_only else (recall_gate and
                     all(paired["undo"]["balanced_accuracy"] >= arms[a]["undo"]["balanced_accuracy"] + .25 for a in ("frozen", "no_feedback", "inconsistent")))
+            prior_run = next(r for r in prior_summary["runs"] if r["seed"] == seed and r["mapping"] == mapping)
+            occupancy_gates = {}
+            for policy, row in paired["policies"].items():
+                scored = row["placement"]
+                occupancy_gates[policy] = (scored["nonempty"]["balanced_accuracy"] >= .90 and
+                    all(value >= .85 for n, group in scored["by_distinct_peers"].items() if n != "0" for value in group["class_recall"].values()) and
+                    all(scored["nonempty"]["balanced_accuracy"] >= prior_run["arms"][a]["policies"][policy]["probe"]["nonempty"]["balanced_accuracy"] + .25
+                        for a in ("frozen", "no_feedback", "inconsistent")))
             results.append({"seed": seed, "mapping": mapping, "arms": arms, "undo_gate": gate,
+                            "undo_recall_gate": recall_gate, "current_occupancy_gates": occupancy_gates,
                             "retention_gate": paired["familiar_placement_retained"],
                             "sequence_gates": {p: all(v["solve_rate"] >= .90 for v in row["sequence"].values()) for p, row in paired["policies"].items()}})
             (args.out / "partial-results.json").write_text(json.dumps(results, indent=2) + "\n")
@@ -506,7 +527,10 @@ def main():
     training_log.close()
     (args.out / "full-weight-checks.json").write_text(json.dumps(weight_checks, indent=2) + "\n")
     (args.out / "memory-references.json").write_text(json.dumps(references, indent=2) + "\n")
-    summary = {"stage5_complete": False, "undo_gate": all(r["undo_gate"] for r in results),
+    summary = {"stage5_complete": False, "undo_gate": None if args.paired_only else all(r["undo_gate"] for r in results),
+               "controls_evaluated": not args.paired_only,
+               "undo_recall_gate": all(r["undo_recall_gate"] for r in results),
+               "current_occupancy_gates": {p: all(r["current_occupancy_gates"][p] for r in results) for p in POLICIES},
                "retention_gate": all(r["retention_gate"] for r in results), "prior_occupancy_gates": prior_summary["policy_gates"],
                "sequence_gates": {p: all(r["sequence_gates"][p] for r in results) for p in POLICIES},
                "runs": results, "measured_neural_evaluations": measured, "elapsed_seconds": time.perf_counter() - started,
