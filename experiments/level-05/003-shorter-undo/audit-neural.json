@@ -1,0 +1,84 @@
+{
+  "audit_passed": true,
+  "episodes_independently_verified_here": false,
+  "source_commit": "e42ad52512c96abaf9107e4fe0d34678e956b102",
+  "artifact_hashes": 20,
+  "training_trials": 240,
+  "frozen_evaluations": 1345,
+  "full_weight_batches": 17,
+  "input_hashes": 121,
+  "undo_gate": null,
+  "undo_recall_gate": true,
+  "current_occupancy_gates": {
+    "eight-per-pair": false,
+    "capped-24": false
+  },
+  "episode_records": 1280,
+  "retention_gate": false,
+  "sequence_gates": {
+    "eight-per-pair": true,
+    "capped-24": true
+  },
+  "decay_and_association": [
+    {
+      "seed": 20260919,
+      "mapping": 0,
+      "arm": "paired",
+      "passive_seconds": 72.0,
+      "predicted_u_factor": 0.9607894391523232,
+      "old_u_max_residual": 4.6074255521943996e-14,
+      "old_w_max_residual": 4.618527782440651e-14,
+      "new_u_max_associative_residual": 0.9998333472214503,
+      "old_changed_weights": 909,
+      "new_changed_weights": 892,
+      "other_changed_weights": 0,
+      "familiar_other_KC_spikes": 0,
+      "endogenous_no_feedback_DAN_spikes": null
+    },
+    {
+      "seed": 20260919,
+      "mapping": 1,
+      "arm": "paired",
+      "passive_seconds": 72.0,
+      "predicted_u_factor": 0.9607894391523232,
+      "old_u_max_residual": 4.3298697960381105e-14,
+      "old_w_max_residual": 4.340972026284362e-14,
+      "new_u_max_associative_residual": 0.9998333472214503,
+      "old_changed_weights": 909,
+      "new_changed_weights": 892,
+      "other_changed_weights": 0,
+      "familiar_other_KC_spikes": 0,
+      "endogenous_no_feedback_DAN_spikes": null
+    },
+    {
+      "seed": 20260920,
+      "mapping": 0,
+      "arm": "paired",
+      "passive_seconds": 72.0,
+      "predicted_u_factor": 0.9607894391523232,
+      "old_u_max_residual": 4.474198789239381e-14,
+      "old_w_max_residual": 4.474198789239381e-14,
+      "new_u_max_associative_residual": 0.9998333472214503,
+      "old_changed_weights": 909,
+      "new_changed_weights": 892,
+      "other_changed_weights": 0,
+      "familiar_other_KC_spikes": 0,
+      "endogenous_no_feedback_DAN_spikes": null
+    },
+    {
+      "seed": 20260920,
+      "mapping": 1,
+      "arm": "paired",
+      "passive_seconds": 72.0,
+      "predicted_u_factor": 0.9607894391523232,
+      "old_u_max_residual": 4.196643033083092e-14,
+      "old_w_max_residual": 4.196643033083092e-14,
+      "new_u_max_associative_residual": 0.9998333472214503,
+      "old_changed_weights": 909,
+      "new_changed_weights": 892,
+      "other_changed_weights": 0,
+      "familiar_other_KC_spikes": 0,
+      "endogenous_no_feedback_DAN_spikes": null
+    }
+  ]
+}

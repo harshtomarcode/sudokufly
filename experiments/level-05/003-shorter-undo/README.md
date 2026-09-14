@@ -30,3 +30,22 @@ than repeat expensive controls for a failed prerequisite.
 ```sh
 .venv/bin/python learn_undo.py --epochs 2 --paired-only --out experiments/level-05/003-shorter-undo/development
 ```
+
+## Result
+
+Source frozen at `e42ad52`; runtime 201.73 seconds. All four conditions retain
+100% Undo recall and solve 159/160 development puzzles under both policies.
+Only one condition passes familiar judgment retention. Both current occupancy
+gates still fail; control-dependent Undo gates remain null, not passed.
+
+The independent [neural audit](audit-neural.json) verifies all 240 teaching
+trials, 1,345 frozen evaluations, 17 full-weight checks, 121 inputs and both
+erasures. The [episode audit](audit-episodes.json) verifies 1,280 episodes and
+17,464 action transitions, plus 432 canonical and 96 episode encodings.
+Old u/w values match the predicted 72-second passive relaxation within 4.7e-14.
+Reports are [bound to the raw summary](audit-files-sha256.json).
+
+Shorter teaching helps but does not finish retention or repair occupancy.
+Proceed to a separate joint-rehearsal pilot with the existing sensory groups,
+reinforcing weak placement and Undo responses through the same learning rule.
+No held-out evaluation or full-stage pass is claimed.
