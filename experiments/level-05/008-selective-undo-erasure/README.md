@@ -56,3 +56,38 @@ for its already frozen confirmation protocol.
 # After passing008development is committed and007heldout passes and is committed:
 .venv/bin/python ablate_undo.py --source experiments/level-05/007-controlled-recovery/heldout --split heldout --development experiments/level-05/008-selective-undo-erasure/development --out experiments/level-05/008-selective-undo-erasure/heldout
 ```
+
+## Development result
+
+Source frozen at `d737800`; runtime 280.19 seconds. **All four conditions pass
+all original gates and the added isolation/effect gates.** Only the 892
+anatomically selected Undo edges and their aligned latent-memory entries were
+restored to their pretraining values. The other 6,943 plastic edges stayed
+exactly trained; all 149 placement responses were unchanged. Restoring the
+intact memory reproduced all 165 responses exactly.
+
+| Answer mapping, both histories | Intact traps | Undo-erased traps | Intact all boards | Undo-erased all boards |
+| --- | --- | --- | --- | --- |
+| 0 | 63/64 | 0/64 | 159/160 | 96/160 |
+| 1 | 63/64 | 6/64 | 159/160 | 45/160 |
+
+Every view gives the same result. Trap solve rate falls by 98.44 and 89.06
+percentage points, respectively, exceeding the prospective 25-point threshold.
+Undo balanced accuracy falls from 100% to 13.33% or 0%; 12/16 or 16/16 Undo
+actions change. Erased Undo responses exactly match the original pretraining
+references. No learning occurs in this assay.
+
+The independent audits verify 1,980 neural evaluations in 12 frozen batches,
+3,840 episodes, all 57,750 actions and 10,389 distinct displayed frames. All
+1,920 intact episodes reproduce 007 exactly. The denominator remains all 64
+predefined traps per view, including the original failure.
+
+This supports a contribution of learned Undo **within this trained placement
+policy**. Mapping-0 warm controls still solve 160/160 without Undo by deferring
+ambiguous placements; their complete tables remain in the summary. The assay
+does not establish superiority over those controls or a general need for Undo.
+
+The [neural audit](development-audit-neural.json) and
+[episode audit](development-audit-episodes.json) are
+[bound to the raw summary](development-audit-files-sha256.json).
+Reserved confirmation has not yet run; full-stage completion remains pending.
