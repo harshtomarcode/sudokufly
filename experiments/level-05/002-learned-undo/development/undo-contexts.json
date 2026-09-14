@@ -1,0 +1,145 @@
+[
+  {
+    "peers": [],
+    "pattern": 0,
+    "input": "3834967174d73b3d7cf019decdbcfa762654885276c8481bf581a9c544856970",
+    "label": 0
+  },
+  {
+    "peers": [
+      1
+    ],
+    "pattern": 8,
+    "input": "a76e1a369aac1c541caf3c3c88c79c3f07c8b4983b2756c23ad893d0776610c4",
+    "label": 0
+  },
+  {
+    "peers": [
+      2
+    ],
+    "pattern": 4,
+    "input": "7ab70c7c665cb3b7b13084fd4612c0f2a81ba90cf8302ead7950210094171bb7",
+    "label": 0
+  },
+  {
+    "peers": [
+      3
+    ],
+    "pattern": 1,
+    "input": "d9a73e102511b368034db7f549c68aad4332e77ab269871c301eb70fedcf0557",
+    "label": 0
+  },
+  {
+    "peers": [
+      4
+    ],
+    "pattern": 2,
+    "input": "4f536ae92ffabdb707b6d2d06cde816f1f64114ff6feb3f48d572d69e078baa0",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      2
+    ],
+    "pattern": 12,
+    "input": "e7535a60426b758b4163b88fd7b72221ba33f71622116a13640fca9657f35a56",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      3
+    ],
+    "pattern": 9,
+    "input": "bf46681aaa78d882f32922c2bb4233e67a7d22b643649b757cdff6c492499da5",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      4
+    ],
+    "pattern": 10,
+    "input": "22a1aef22cca02fe5648649c3dc5f21d4d3b6290c73af87cec4bafc08c5f6df2",
+    "label": 0
+  },
+  {
+    "peers": [
+      2,
+      3
+    ],
+    "pattern": 5,
+    "input": "01195094c386aab12468aa507bf51778f21e2ed86f39b46ff7a8ce39b45e32f2",
+    "label": 0
+  },
+  {
+    "peers": [
+      2,
+      4
+    ],
+    "pattern": 6,
+    "input": "0b7a30412a4c6d032493bf62a9460b9aa06bda5a34884752b419958a52dae281",
+    "label": 0
+  },
+  {
+    "peers": [
+      3,
+      4
+    ],
+    "pattern": 3,
+    "input": "5c7f9a4ab49b5ee3ce0379d74e07458ee7b89552f64db127a54ce3160be1a654",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      2,
+      3
+    ],
+    "pattern": 13,
+    "input": "e071b4065c2a3d39bffbc73f4ccdd898fa3ede711e3c4a6b2941f5a9a195dc47",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      2,
+      4
+    ],
+    "pattern": 14,
+    "input": "717da4260994b04f36ab37c26693ebb11605d578a5614b8c7a6bd14c2bab22da",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      3,
+      4
+    ],
+    "pattern": 11,
+    "input": "ea8c76271bb11aa46ac7411abbad803d3bf0ccfa18e89852f2ffd66c21931c4f",
+    "label": 0
+  },
+  {
+    "peers": [
+      2,
+      3,
+      4
+    ],
+    "pattern": 7,
+    "input": "cbdae79651a52d29a3069192909ebd37f65cee03b9b8d385b6a7ede5f42449fc",
+    "label": 0
+  },
+  {
+    "peers": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "pattern": 15,
+    "input": "903f2003b346a89dccba180d4a669fac58b2fc933eb92556dbb64a552329f68b",
+    "label": 1
+  }
+]
