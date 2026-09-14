@@ -36,6 +36,25 @@ training, turning 4–11 familiar conflict rejections into timeouts. All paired
 conditions fail the predeclared retention gate. The broader placement failures
 from 001 remain unresolved and the reserved-family confirmation was not run.
 The complete source, controls, checkpoints, action histories, independent audits
-and a visual recovery example are recorded in experiment 002. A shorter fixed
-teaching schedule is the next proposed retention experiment; no Step 6 work has
+and a visual recovery example are recorded in experiment 002. No Step 6 work has
 started.
+
+## Retention and placement repair
+
+The [two-epoch dose probe](003-shorter-undo/README.md) preserved perfect Undo
+recall and 159/160 recovery with much less passive decay. It retained all 16
+familiar judgments in only one of four conditions, and every broad placement
+gate still failed. Shortening training alone was insufficient.
+
+The [joint rehearsal pilot](004-joint-rehearsal/README.md) practiced placement
+and Undo together for eight epochs. All four conditions failed: familiar
+retention ended at 12/16, 13/16, 10/16 and 13/16, while Undo remained perfect.
+Only 8 of 640 development episodes solved. These are repeated runs of the same
+160 puzzles. Its complete failed checkpoints and independent audit are retained.
+
+The next [sensory routing pilot](005-occupancy-banks/README.md) separates inputs
+for different observed peer counts while leaving familiar three-peer and Undo
+inputs intact. These are development experiments: neither a selected checkpoint
+nor a successful recovery score alone completes the stage. Controlled learning,
+strict familiar retention, explicit placement accuracy and reserved-family
+confirmation must all pass.

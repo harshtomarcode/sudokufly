@@ -39,3 +39,26 @@ performance or change any threshold while choosing development checkpoints.
 ```
 
 Freeze this source and protocol in Git before execution.
+
+## Result
+
+Source frozen at `075367c`; runtime 853.22 seconds. All four conditions learned
+**all 44 newly routed judgments correctly**, and final Undo recall remained
+100%. Familiar retention nevertheless ended at 12/16, 13/16, 13/16 and 13/16.
+Every condition therefore failed the unchanged gate after eight epochs.
+
+Final nonempty placement balanced accuracy was 93.08%, 94.64%, 94.64% and
+94.64%; those aggregate scores conceal failed familiar judgments. The fixed
+menu solved only 4, 4, 1 and 4 of 160 development puzzles, respectively.
+New input learning alone is insufficient for sequential performance.
+
+The complete run retains 32 checkpoints, 2,432 trial observations and 7,425
+frozen neural evaluations. It supports separate count-dependent sensory routes
+as a useful intervention in this pilot, while the original three-peer teaching
+method still requires repair. It does not yet establish controlled necessity
+for the new learning or any reserved-family success.
+
+The independent [audit](audit.json) verifies all source/artifact hashes,
+608 teaching events, 45 frozen full-weight batches, exact erasures, anatomical
+bank selection and all 640 episodes (11,911 actions). The reports are
+[bound to the raw summary](audit-files-sha256.json).

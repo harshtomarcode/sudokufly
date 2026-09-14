@@ -28,13 +28,16 @@ The 10,752 highlighted board/target cases share 16 familiar neural inputs.
 No new learning occurs; spatial relevance is supplied by the interface.
 See the [results and limits](experiments/level-04/001-frozen-transfer/README.md).
 
-**Step 5 has learned Undo and assisted recovery, but is incomplete:** the new
-Undo associations score 100% under both mappings and histories, versus 0–23.33%
-balanced accuracy in controls starting with the same placement memory. Both
-placement policies solve 159/160 development puzzles, including 63/64 traps.
-Old conflict judgments become timeouts through passive memory decay, failing
-retention; broader placement prerequisites and reserved-family confirmation
-remain open. See the [results, audit and recovery example](experiments/level-05/002-learned-undo/README.md).
+**Step 5 has learned Undo and assisted recovery, but is incomplete:** experiment
+002's new Undo associations score 100% under both mappings and histories, versus
+0–23.33% balanced accuracy in controls starting with the same placement memory.
+Both placement policies solve 159/160 development puzzles, including 63/64 traps,
+but passive decay causes familiar judgment failures. Shorter training helps
+without fully repairing retention; joint rehearsal also fails. Separate sensory
+routing is the next recorded pilot. Explicit placement accuracy, retention,
+controlled learning and reserved-family confirmation must all pass. See the
+[experiment history](experiments/level-05/README.md) and
+[Undo results, audit and recovery example](experiments/level-05/002-learned-undo/README.md).
 
 ## Setup
 
