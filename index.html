@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sudokufly · A fly playing Sudoku</title>
+<style>
+:root{color-scheme:light;--ink:#1d2a32;--muted:#617078;--paper:#f6f7f3;--line:#dfe4df;--green:#16715b;--lime:#ddf4ac;--purple:#8c62b5;--cyan:#248b9f;--amber:#aa6315;--red:#b44949}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,select,input{font:inherit}button,select{border:1px solid var(--line);border-radius:9px;background:white;color:var(--ink);min-height:42px;padding:9px 15px}button{cursor:pointer;font-weight:550;transition:background .15s}button:hover{background:#eef2ec}button:disabled{opacity:.4;cursor:default}button:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--cyan);outline-offset:3px}.primary{background:var(--ink);color:white;border-color:var(--ink);min-width:112px}.primary:hover{background:#34464f}.page{max-width:1290px;margin:auto;padding:22px 38px 24px}header{display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);padding-bottom:16px;gap:18px}.brand{font-weight:650;font-size:19px;letter-spacing:-.7px;display:flex;align-items:center;gap:10px}.brand svg{width:30px;height:32px}.run-label{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.run-label i{width:7px;height:7px;background:var(--green);border-radius:50%}.intro{display:flex;align-items:end;justify-content:space-between;gap:24px;margin:24px 0 20px}h1{font-size:clamp(27px,3.1vw,39px);font-weight:550;letter-spacing:-1.4px;margin:0 0 7px;line-height:1.2}.intro p{margin:0;color:var(--muted);max-width:620px}.case-picker{display:flex;flex-direction:column;gap:5px;min-width:225px}.eyebrow{font-size:11px;font-weight:650;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}.stage{display:grid;grid-template-columns:minmax(305px,.86fr) minmax(430px,1.5fr);gap:22px;align-items:stretch}.panel{background:white;border:1px solid var(--line);border-radius:17px;padding:20px}.panel-top{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:19px}.panel-top h2{margin:0;font-size:16px;font-weight:600;letter-spacing:-.3px}.chip{font-size:11px;border-radius:20px;padding:4px 9px;background:#eff3ed;color:#4f6859;white-space:nowrap}.board{display:grid;grid-template-columns:repeat(4,1fr);max-width:300px;margin:0 auto;border:2px solid #334d47;border-radius:8px;overflow:hidden;aspect-ratio:1;background:#e5ebe7;gap:1px}.board-row{display:contents}.cell{position:relative;display:flex;align-items:center;justify-content:center;background:#fff;font-size:clamp(25px,3.1vw,37px);font-weight:450;line-height:1;transition:background .15s;color:#33423e}.cell:nth-child(2){border-right:2px solid #334d47}.board-row:nth-child(2) .cell{border-bottom:2px solid #334d47}.cell.given{background:#f3f5f0}.cell.learned{color:var(--green);font-weight:600;background:#f7fcf6}.cell.peer{background:#eef5f0}.cell.target{background:#e4f1cf;box-shadow:inset 0 0 0 3px #80a755}.cell.ghost{color:#78916b;font-weight:400}.cell.undone{background:#fff0d6;box-shadow:inset 0 0 0 3px #dba250;color:var(--amber)}.cell .small-tag{position:absolute;bottom:7px;font-size:9px;font-weight:600;letter-spacing:.7px;text-transform:uppercase}.board-key{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin:12px 0 15px;color:var(--muted);font-size:11px}.board-key span{display:flex;align-items:center;gap:6px}.swatch{width:9px;height:9px;background:#e8ebe5;border-radius:2px}.swatch.fly{background:#9abb9b}.swatch.focus{background:#c1da92}.move-card{min-height:82px;border-top:1px solid var(--line);padding-top:17px}.move-title{font-size:18px;font-weight:560;letter-spacing:-.4px}.move-note{font-size:13px;color:var(--muted);margin-top:5px;min-height:38px}.operation{display:inline-flex;align-items:center;gap:7px;font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--green);font-weight:650;margin-bottom:8px}.operation i{width:6px;height:6px;border-radius:50%;background:currentColor}.neural{display:flex;flex-direction:column;min-width:0}.neural .panel-top{margin-bottom:0}.network-wrap{position:relative;min-height:260px;flex:1}.network{display:block;width:100%;height:260px;overflow:visible}.activity-head{display:flex;justify-content:space-between;gap:10px;font-size:11px;color:var(--muted);font-variant-numeric:tabular-nums;margin-top:2px}.activity-track{height:3px;background:#edf1eb;margin-top:7px;border-radius:3px;overflow:hidden}.activity-track span{display:block;height:100%;width:0;background:var(--green)}.readouts{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:17px}.readout-top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:11px;color:var(--muted)}.readout-top strong{font-weight:550;color:var(--ink);font-size:18px;font-variant-numeric:tabular-nums}.readout-bar{height:6px;background:#f0eff4;margin-top:7px;border-radius:3px;overflow:hidden}.readout-bar span{height:100%;display:block;width:0;transition:width .1s;background:var(--purple)}.readout:nth-child(2) .readout-bar span{background:var(--cyan)}.decision-row{display:flex;align-items:center;justify-content:space-between;gap:10px;border-top:1px solid var(--line);margin-top:20px;padding-top:15px}.decision-copy{font-size:12px;color:var(--muted)}.decision-copy strong{display:block;color:var(--ink);font-size:14px;font-weight:550}.decision-pill{font-size:12px;background:#edf2ed;border-radius:8px;padding:7px 12px;min-width:86px;text-align:center;font-weight:600}.decision-pill.accept{background:#e4f2d5;color:#36632a}.decision-pill.undo{background:#fff0d7;color:#96500b}.decision-pill.reject{background:#f0ebf6;color:#785795}.circuit-key{font-size:11px;color:var(--muted);margin-top:13px;line-height:1.5}.controls{display:flex;align-items:center;gap:10px;margin:0 0 18px;flex-wrap:wrap}.controls .spacer{flex:1}.controls label{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--muted)}.controls select{min-height:40px;padding:7px 10px}.counter{font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}.timeline{display:flex;gap:4px;margin-top:16px}.timeline span{height:4px;background:#e2e7e0;flex:1;border-radius:3px}.timeline span.done{background:#779d82}.timeline span.current{background:#c4dca1}.timeline span.undo{background:#d5a056}.finish{padding:13px 17px;border:1px solid #cadfbb;border-radius:10px;margin-top:15px;background:#edf5e5;font-size:14px}.finish.loop{background:#fff6e9;border-color:#ead9bd}.finish[hidden]{display:none}footer{display:flex;justify-content:space-between;gap:20px;border-top:1px solid var(--line);padding-top:19px;margin-top:26px;font-size:11px;color:var(--muted)}details{max-width:760px}summary{cursor:pointer;font-size:12px;color:var(--ink)}details p{margin:8px 0;line-height:1.6}footer a{color:var(--muted);text-underline-offset:3px}.footer-label{white-space:nowrap;text-align:right}.error{padding:18px;background:#fff0e8;border:1px solid #e0bfa7;border-radius:10px}button svg{vertical-align:-3px;margin-right:6px} [hidden]{display:none!important}
+@media(max-width:900px){.page{padding:22px}.stage{grid-template-columns:minmax(260px,.9fr) minmax(340px,1.15fr)}.panel{padding:19px}.intro{align-items:start}.network{height:315px}.network-wrap{min-height:315px}}
+@media(max-width:700px){.page{padding:18px 15px}.intro{flex-direction:column;margin:25px 0 20px;gap:18px}.case-picker{width:100%}.stage{grid-template-columns:1fr}.panel{padding:20px}.board{width:100%;max-width:340px}.cell{font-size:35px}.network{height:340px}.controls{gap:8px}.controls .spacer{display:none}.counter{width:100%;order:5;margin-top:4px}.controls label{margin-left:auto}.controls button{padding:9px 12px}footer{flex-direction:column;gap:12px}.footer-label{text-align:left}.run-label{font-size:10px}.intro p{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.network-wrap{min-height:420px}.network{height:420px;cursor:grab;touch-action:pan-y}.network:active{cursor:grabbing}.anatomy-controls{display:flex;align-items:center;justify-content:space-between;gap:9px;font-size:10px;color:var(--muted);margin:0 0 9px;flex-wrap:wrap}.anatomy-controls label{display:flex;align-items:center;gap:5px;white-space:nowrap}.anatomy-controls input{accent-color:var(--green)}.neural .panel-top{margin-bottom:0}.readouts{margin-top:10px}.decision-row{margin-top:12px;padding-top:10px}.circuit-key{margin-top:10px}.panel:first-child{display:flex;flex-direction:column}.panel:first-child .move-card{margin-top:auto}.panel:first-child .board{width:100%}.board-key{margin-bottom:18px}@media(max-width:700px){.network{height:420px}.network-wrap{min-height:420px}.panel:first-child .move-card{margin-top:0}}
+</style>
+</head>
+<body>
+<main class="page">
+<header><div class="brand"><svg viewBox="0 0 40 42" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="12" cy="16" rx="7" ry="12" transform="rotate(-33 12 16)"/><ellipse cx="28" cy="16" rx="7" ry="12" transform="rotate(33 28 16)"/><path d="M20 9v28M18 27l-7 8m11-8 7 8M17 19l-9 5m15-5 9 5"/><ellipse cx="20" cy="23" rx="4" ry="11" fill="currentColor"/><circle cx="20" cy="8" r="4" fill="currentColor"/></g></svg>sudokufly</div><div class="run-label"><i></i>Recorded fly run · Step 5</div></header>
+<section class="intro"><div><h1>A fly, a puzzle, and a glimpse inside.</h1><p>Watch a recorded Sudoku solve, with neural activity mapped to real positions inside the fly’s brain.</p></div><label class="case-picker"><span class="eyebrow">Choose a replay</span><select id="case-select" aria-label="Choose a replay"></select></label></section>
+<div class="error" id="error" hidden role="alert">The recorded replay could not be loaded. Keep index.html and data.js in the same folder.</div>
+<div class="controls"><button type="button" class="primary" id="play" aria-label="Play replay">▶ Play</button><button type="button" id="next">Next decision →</button><button type="button" id="reset">↺ Reset Sudoku</button><div class="spacer"></div><span class="counter" id="counter">Decision 0 / 0</span><label>Speed<select id="speed" aria-label="Replay speed"><option value="1">1×</option><option value="2">2×</option><option value="4">4×</option></select></label></div>
+<section class="stage">
+<section class="panel"><div class="panel-top"><h2>The Sudoku</h2><span class="chip" id="board-status">4 empty cells</span></div><div id="board" class="board" role="grid" aria-label="Sudoku board"></div><div class="board-key"><span><i class="swatch"></i>Given</span><span><i class="swatch fly"></i>Fly’s placement</span><span><i class="swatch focus"></i>Current offer</span></div><div class="move-card" aria-live="polite"><div class="operation" id="operation"><i></i>Ready to replay</div><div class="move-title" id="move-title">A puzzle with a way back.</div><div class="move-note" id="move-note">Press Play to follow the recorded choices, including an Undo.</div></div></section>
+<section class="panel neural"><div class="panel-top"><h2>The fly’s brain</h2><span class="chip" id="route-name">Waiting for an input</span></div><div class="network-wrap"><canvas id="network" class="network" role="img" aria-label="Fly illustration with recorded activations at measured neuron positions"></canvas></div><div class="anatomy-controls"><span id="location-info"></span><label><input id="show-links" type="checkbox"> Synaptic links</label></div><div class="activity-head"><span id="activity-caption">Recorded spikes · slowed down for viewing</span><span id="neural-time">0 / 500 ms</span></div><div class="activity-track"><span id="activity-progress"></span></div><div class="readouts"><div class="readout"><div class="readout-top"><span>MBON07 · 4 output cells</span><strong id="rate-a">—</strong></div><div class="readout-bar"><span id="bar-a"></span></div></div><div class="readout"><div class="readout-top"><span>MBON11 · 2 output cells</span><strong id="rate-b">—</strong></div><div class="readout-bar"><span id="bar-b"></span></div></div></div><div class="decision-row"><div class="decision-copy"><strong>Fixed readout</strong><span id="decision-detail">The difference between the two outputs selects an action.</span></div><span class="decision-pill" id="decision">Waiting</span></div><div class="circuit-key">Green: input cells · Purple / blue: readout cells. Faint dots provide anatomy only. Soma positions are measured; the fly body is illustrated.</div></section>
+</section>
+
+<div id="timeline" class="timeline" aria-hidden="true"></div><div id="finish" class="finish" role="status" hidden></div>
+<footer><details><summary>What am I watching?</summary><p>This is a replay of actual decisions and neural spike counts from the frozen Step 5 experiment, not a new training run. A fixed visual adapter selects the input cells. The brain close-up preserves the neuron cell-body coordinates supplied with the MaleCNS dataset. Faint dots are anatomical context, not measured silence: per-cell activity is available here only for the selected input cells and six readout neurons. One selected input cell has no recorded position and is excluded from the spatial overlay. The fly body is AI illustrated, not a registered anatomical scan. Optional straight links show known synaptic connectivity, not the paths of neurites or measured causal transmission.</p><p>Learning took place in existing fly-connectome synapses. The board scan, visual recognition, and Undo stack are supplied by the experiment. Readout activity is measured over 500 ms per decision; no rewards or weight changes occur during this replay. The score is mean MBON11 − mean MBON07 − 1.625 Hz: at least +2 accepts, at most −2 rejects, and values between time out.</p><p>The trained policy solved 158 of 160 reserved puzzles. A conservative control solved all 160 by avoiding ambiguous choices, so successful recovery does not establish superior general Sudoku reasoning.</p><p id="provenance"></p></details><div class="footer-label">166,700 neurons in the simulation<br>Focused view of the learned circuit</div></footer>
+</main>
+<script src="data.js"></script>
+<script>
+(() => {
+'use strict';
+const data=window.FLY_DEMO_DATA, $=id=>document.getElementById(id);
+if(!data || !data.cases?.length){$('error').hidden=false;for(const b of document.querySelectorAll('button,select'))b.disabled=true;return;}
+const cells=[];
+const flyImage=new Image();flyImage.src="fly.png";
+let brainAngle=0,brainTilt=-.18,drag=null,brainHits=[];
+let selected=0,index=-1,phase=0,playing=false,lastTime=0,frameId=0,resizeWidth=0;
+const rateCeiling=Math.max(1,...Object.values(data.inputs).flatMap(r=>Object.values(r.output_hz)));
+for(let row=0;row<4;row++){const r=document.createElement('div');r.className='board-row';r.setAttribute('role','row');for(let col=0;col<4;col++){const el=document.createElement('div');el.className='cell';el.setAttribute('role','gridcell');r.append(el);cells.push(el);} $('board').append(r);}
+for(const [i,c] of data.cases.entries()){const opt=document.createElement('option');opt.value=i;opt.textContent=c.title;$('case-select').append(opt);}
+function currentCase(){return data.cases[selected];}
+function currentEvent(){return index>=0?currentCase().events[index]:null;}
+function currentInput(){const event=currentEvent();return data.inputs[event?event.input:currentCase().events[0].input];}
+function projectedPoint(xyz,center,scale,angle=0,tilt=-.18){
+ const b=data.anatomy.bounds, x=xyz[0]-(b.min[0]+b.max[0])/2,y=xyz[1]-(b.min[1]+b.max[1])/2,z=xyz[2]-(b.min[2]+b.max[2])/2;
+ const rx=x*Math.cos(angle)+z*Math.sin(angle),rz=-x*Math.sin(angle)+z*Math.cos(angle);
+ return [center[0]+rx*scale,center[1]+(y*Math.cos(tilt)-rz*Math.sin(tilt))*scale];
+}
+function drawFly(input,activity,outputActivity,idle){
+ const canvas=$('network'),w=canvas.clientWidth,h=canvas.clientHeight,dpr=Math.min(window.devicePixelRatio||1,2);
+ if(canvas.width!==Math.round(w*dpr)||canvas.height!==Math.round(h*dpr)){canvas.width=Math.round(w*dpr);canvas.height=Math.round(h*dpr);}
+ const ctx=canvas.getContext('2d');ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,w,h);
+ const imageSize=Math.min(w*.88,330),imageX=w-imageSize-2,imageY=-imageSize*.11;
+ const brainOrigin=[imageX+imageSize*.239,imageY+imageSize*.483];
+ const bounds=data.anatomy.bounds,spans=bounds.max.map((v,i)=>v-bounds.min[i]);
+ const horizontalSpan=spans[0]*Math.abs(Math.cos(brainAngle))+spans[2]*Math.abs(Math.sin(brainAngle));
+ const verticalSpan=spans[1]*Math.abs(Math.cos(brainTilt))+(spans[0]*Math.abs(Math.sin(brainAngle))+spans[2]*Math.abs(Math.cos(brainAngle)))*Math.abs(Math.sin(brainTilt));
+ const brainCenter=[w*.5,h-106],brainScale=Math.min((w-40)/horizontalSpan,160/verticalSpan);brainHits=[];
+ if(flyImage.complete&&flyImage.naturalWidth){ctx.save();ctx.globalAlpha=.96;ctx.drawImage(flyImage,imageX,imageY,imageSize,imageSize);ctx.restore();}
+ const miniScale=imageSize*.0018/1000;
+ // The fly body is illustrative. Both overlays use the measured soma coordinates.
+ ctx.save();ctx.translate(brainOrigin[0],brainOrigin[1]);ctx.rotate(Math.PI/2);
+ for(const p of data.anatomy.background){const q=projectedPoint(p.xyz,[0,0],miniScale,0,0);ctx.fillStyle='rgba(42,66,62,.19)';ctx.beginPath();ctx.arc(q[0],q[1],.45,0,Math.PI*2);ctx.fill();}
+ for(let i=0;i<input.kc_ids.length;i++){const n=data.anatomy.neurons[input.kc_ids[i]];if(!n?.xyz)continue;const q=projectedPoint(n.xyz,[0,0],miniScale,0,0);ctx.fillStyle=!idle&&activity[i]?'#4affc1':'rgba(32,113,89,.55)';ctx.shadowColor='#33f6b4';ctx.shadowBlur=!idle&&activity[i]?5:0;ctx.beginPath();ctx.arc(q[0],q[1],!idle&&activity[i]?1.5:.8,0,Math.PI*2);ctx.fill();}
+ for(let i=0;i<data.outputs.length;i++){const out=data.outputs[i],n=data.anatomy.neurons[out.id];if(!n?.xyz)continue;const q=projectedPoint(n.xyz,[0,0],miniScale,0,0),firing=!idle&&outputActivity[i]>0;ctx.fillStyle=out.type==='MBON07'?'#b986d8':'#45d4f5';ctx.globalAlpha=firing?1:.45;ctx.shadowColor=ctx.fillStyle;ctx.shadowBlur=firing?5:0;ctx.beginPath();ctx.arc(q[0],q[1],firing?1.8:1,0,Math.PI*2);ctx.fill();}
+ ctx.restore();ctx.shadowBlur=0;
+ const lensY=h-222;
+ ctx.strokeStyle='#8b9e91';ctx.lineWidth=.8;ctx.setLineDash([3,4]);ctx.beginPath();ctx.moveTo(brainOrigin[0]-15,brainOrigin[1]+15);ctx.lineTo(26,lensY-10);ctx.lineTo(26,lensY+8);ctx.stroke();ctx.setLineDash([]);
+ ctx.fillStyle='#53695f';ctx.font='11px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText('Brain inside the head',15,Math.max(18,brainOrigin[1]-35));
+ ctx.fillStyle='rgba(247,250,247,.94)';ctx.beginPath();ctx.roundRect(0,lensY,w,218,12);ctx.fill();
+ ctx.fillStyle='#233d32';ctx.font='600 12px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText('Brain close-up',15,lensY+23);
+ ctx.fillStyle='#6b7d73';ctx.font='10px -apple-system, BlinkMacSystemFont, sans-serif';ctx.textAlign='right';ctx.fillText('Measured cell-body positions',w-15,lensY+23);ctx.textAlign='left';
+ for(const p of data.anatomy.background){const q=projectedPoint(p.xyz,brainCenter,brainScale,brainAngle,brainTilt);ctx.fillStyle=p.group==='kenyon_cell'?'rgba(73,112,91,.2)':p.group==='optic_lobe'?'rgba(141,155,155,.26)':'rgba(108,132,119,.3)';ctx.beginPath();ctx.arc(q[0],q[1],.75,0,Math.PI*2);ctx.fill();}
+ const points=new Map();for(const id of input.kc_ids){const n=data.anatomy.neurons[id];if(n?.xyz)points.set(id,projectedPoint(n.xyz,brainCenter,brainScale,brainAngle,brainTilt));}
+ for(const out of data.outputs){const n=data.anatomy.neurons[out.id];if(n?.xyz)points.set(out.id,projectedPoint(n.xyz,brainCenter,brainScale,brainAngle,brainTilt));}
+ // Straight links express connectivity only; no invented neurite trajectories.
+ if($('show-links').checked){const active=new Map(input.kc_ids.map((id,i)=>[id,activity[i]]));for(const edge of input.edges){const a=points.get(edge.source),b=points.get(edge.target);if(!a||!b)continue;ctx.strokeStyle=!idle&&active.get(edge.source)?'rgba(43,151,117,.30)':'rgba(127,155,135,.06)';ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(a[0],a[1]);ctx.lineTo(b[0],b[1]);ctx.stroke();}}
+ for(let i=0;i<input.kc_ids.length;i++){const id=input.kc_ids[i],q=points.get(id);if(!q)continue;brainHits.push({point:q,id,type:data.anatomy.neurons[id].type,spikes:idle?0:activity[i]});const firing=!idle&&activity[i]>0;ctx.fillStyle=firing?'#32c98c':'#4e8264';ctx.shadowBlur=firing?8:0;ctx.shadowColor='#48d59f';ctx.beginPath();ctx.arc(q[0],q[1],firing?2.8:1.65,0,Math.PI*2);ctx.fill();}
+ ctx.shadowBlur=0;
+ for(let i=0;i<data.outputs.length;i++){const out=data.outputs[i],q=points.get(out.id);if(!q)continue;brainHits.push({point:q,id:out.id,type:out.type,spikes:idle?0:outputActivity[i]});const firing=!idle&&outputActivity[i]>0,color=out.type==='MBON07'?'#ab63bb':'#2798b3';ctx.fillStyle=firing?color:'#f7faf7';ctx.strokeStyle=color;ctx.lineWidth=1.3;ctx.shadowBlur=firing?8:0;ctx.shadowColor=color;ctx.beginPath();ctx.arc(q[0],q[1],firing?3.7:2.6,0,Math.PI*2);ctx.fill();ctx.stroke();}
+ ctx.shadowBlur=0;ctx.fillStyle='#6b7d73';ctx.font='10px -apple-system, BlinkMacSystemFont, sans-serif';ctx.fillText('Drag the close-up to rotate',15,h-13);
+ const missing=input.kc_ids.filter(id=>!data.anatomy.neurons[id]?.xyz).length;
+ $('location-info').textContent=`${input.kc_ids.length-missing}/${input.kc_ids.length} input cells located · 6 readout cells${missing?' · 1 cell has no recorded position':''}`;
+ canvas.setAttribute('aria-label',`Illustrated fly with measured neuron positions. ${input.kc_ids.length-missing} located input cells, ${idle?0:activity.filter((n,i)=>n>0&&data.anatomy.neurons[input.kc_ids[i]]?.xyz).length} recorded as active in this view. ${missing?'One selected cell is unlocated.':''}`);
+}
+function paintActivity(input,progress,idle){
+ const finished=progress>=1,elapsed=progress*500,totalsK=input.kc_ids.map(()=>0),totalsO=data.outputs.map(()=>0);
+ for(const bin of input.trace){if(bin.end_ms<=elapsed || finished){bin.kc.forEach((n,i)=>totalsK[i]+=n);bin.output.forEach((n,i)=>totalsO[i]+=n);}}
+ const bin=input.trace.find(b=>elapsed>=b.start_ms&&elapsed<b.end_ms);
+ const activity=idle?totalsK.map(()=>0):finished?totalsK:(bin?.kc||totalsK.map(()=>0));
+ const outputActivity=idle?totalsO.map(()=>0):finished?totalsO:(bin?.output||totalsO.map(()=>0));
+ drawFly(input,activity,outputActivity,idle);
+ const rates={};for(const type of ['MBON07','MBON11']){const ids=data.outputs.map((o,i)=>o.type===type?i:-1).filter(i=>i>=0);rates[type]=elapsed>0?ids.reduce((s,i)=>s+totalsO[i],0)/ids.length/(elapsed/1000):0;if(finished)rates[type]=input.output_hz[type];}
+ $('rate-a').textContent=idle?'—':`${rates.MBON07.toFixed(1)} Hz`;$('rate-b').textContent=idle?'—':`${rates.MBON11.toFixed(1)} Hz`;
+ $('bar-a').style.width=idle?'0%':`${Math.min(100,rates.MBON07/rateCeiling*100)}%`;$('bar-b').style.width=idle?'0%':`${Math.min(100,rates.MBON11/rateCeiling*100)}%`;
+ $('neural-time').textContent=`${Math.round(elapsed)} / 500 ms`;$('activity-progress').style.width=`${progress*100}%`;
+ $('activity-caption').textContent=idle?'Recorded spikes · slowed down for viewing':finished?'All recorded spikes for this decision':'Recorded activity · slowed down for viewing';
+}
+function render(){
+ const c=currentCase(),event=currentEvent(),idle=!event,done=event&&phase>=.82,input=currentInput(),progress=idle?0:Math.min(1,phase/.82),board=idle?c.initial_board:done?event.board_after:event.board_before;
+ for(let i=0;i<16;i++){const cell=cells[i];cell.className='cell';cell.textContent=board[i]||'';if(c.initial_board[i])cell.classList.add('given');else if(board[i])cell.classList.add('learned');
+  if(event){const t=event.target,r=Math.floor(i/4),col=i%4,tr=Math.floor(t/4),tc=t%4;if(i!==t&&(r===tr||col===tc||(Math.floor(r/2)===Math.floor(tr/2)&&Math.floor(col/2)===Math.floor(tc/2))))cell.classList.add('peer');
+   if(i===t){cell.classList.add('target');if(!done&&event.op==='place'&&!board[i]){cell.textContent=event.candidate;cell.classList.add('ghost');const tag=document.createElement('span');tag.className='small-tag';tag.textContent='try';cell.append(tag);}}
+   if(done&&event.undo_executed&&i===event.popped[0]){cell.classList.add('undone');cell.textContent='↶';}}
+  cell.setAttribute('aria-label',`Row ${Math.floor(i/4)+1}, column ${i%4+1}: ${board[i]||'empty'}${c.initial_board[i]?', given':''}`);
+ }
+ const empties=board.filter(n=>!n).length;$('board-status').textContent=empties?`${empties} empty cell${empties===1?'':'s'}`:'Board complete';
+ resizeWidth=$('network').clientWidth;paintActivity(input,progress,idle);
+ $('route-name').textContent=idle?'Waiting for an input':event.op==='undo'?'Undo memory route':`${event.distinct_peers} peer-symbol route`;
+ const title=$('move-title'),note=$('move-note'),operation=$('operation'),pill=$('decision');pill.className='decision-pill';
+ if(idle){operation.innerHTML='<i></i>Ready to replay';title.textContent=c.title;note.textContent=c.description;operation.style.color='var(--green)';pill.textContent='Waiting';$('decision-detail').textContent='The difference between the two outputs selects an action.';}
+ else{const location=`row ${Math.floor(event.target/4)+1}, column ${event.target%4+1}`;operation.style.color=event.op==='undo'?'var(--amber)':'var(--green)';operation.innerHTML=`<i></i>${event.op==='undo'?'Undo offer':'Placement offer'} · ${location}`;
+  title.textContent=event.op==='place'?`Try ${event.candidate} in this cell`:'Should the fly undo its last move?';
+  if(!done){note.textContent='The selected input cells stimulate the trained circuit.';pill.textContent='Reading…';$('decision-detail').textContent='Accumulating 500 ms of recorded activity.';}
+  else{const accepted=event.action===1,popped=event.popped;
+   if(event.op==='place'){pill.textContent=accepted?'Place':event.action===-1?'Timeout':'Skip';note.textContent=accepted?`The fly accepts ${event.candidate} and fills the cell.`:event.action===-1?'No decisive response. The menu moves to the next offer.':`The fly rejects ${event.candidate}. The menu continues.`;}
+   else{pill.textContent=accepted?'Undo':event.action===-1?'Timeout':'Keep';note.textContent=event.undo_executed?`Undo accepted: remove ${popped[1]} from row ${Math.floor(popped[0]/4)+1}, column ${popped[0]%4+1}.`:accepted?'Undo accepted, but there is no earlier placement to remove.':'The fly keeps its placements and continues.';}
+   pill.classList.add(accepted?(event.op==='undo'?'undo':'accept'):'reject');$('decision-detail').textContent=`Recorded score ${input.score_hz>=0?'+':''}${input.score_hz.toFixed(2)} Hz · ${event.action===1?'above +2':event.action===0?'below −2':'inside ±2'} threshold`;
+  }
+ }
+ $('counter').textContent=`Decision ${idle?0:index+1} / ${c.events.length}`;
+ const over=index===c.events.length-1&&phase>=1;
+ $('play').textContent=playing?'Ⅱ Pause':over?'↻ Replay':'▶ Play';$('play').setAttribute('aria-label',playing?'Pause replay':over?'Replay from start':'Play replay');$('next').disabled=over;
+ const marks=$('timeline').children;for(let i=0;i<marks.length;i++){marks[i].className=i<index||(i===index&&done)?(c.events[i].undo_executed?'done undo':'done'):i===index?'current':'';}
+ $('finish').hidden=!over;if(over){$('finish').className=`finish${c.solved?'':' loop'}`;$('finish').textContent=c.solved?`Solved. The fly completed this recorded puzzle${c.events.some(e=>e.undo_executed)?' with an Undo along the way':''}.`:'A recorded limit: the board and move stack repeated. This run stopped instead of solving the puzzle.';}
+}
+function stop(){playing=false;cancelAnimationFrame(frameId);lastTime=0;}
+function reset(){stop();index=-1;phase=0;brainAngle=0;brainTilt=-.18;$('timeline').replaceChildren(...currentCase().events.map(()=>document.createElement('span')));render();}
+function tick(time){if(!playing)return;const delta=lastTime?Math.min(time-lastTime,100):0;lastTime=time;phase+=delta/2400*Number($('speed').value);
+ if(phase>=1){if(index===currentCase().events.length-1){phase=1;stop();render();return;}phase=0;index++;}
+ render();frameId=requestAnimationFrame(tick);
+}
+$('play').addEventListener('click',()=>{if(playing){stop();render();return;}if(index===currentCase().events.length-1&&phase>=1)reset();if(index<0){index=0;phase=0;}playing=true;lastTime=0;render();frameId=requestAnimationFrame(tick);});
+$('next').addEventListener('click',()=>{stop();if(index<0)index=0;else if(phase>=1&&index<currentCase().events.length-1)index++;phase=1;render();});
+$('reset').addEventListener('click',reset);
+$('case-select').addEventListener('change',e=>{selected=Number(e.target.value);reset();});
+$('provenance').textContent=`Recorded source: ${data.meta.source}. Training history ${data.meta.seed}, answer mapping ${data.meta.mapping}, ${data.meta.view} view. Anatomy comes from the somaLocation field in the MaleCNS annotations. Data axes are retained; the body overlay is illustrative.`;
+flyImage.addEventListener('load',()=>render());
+$('show-links').addEventListener('change',()=>render());
+$('network').addEventListener('pointerdown',e=>{if(e.offsetY<$('network').clientHeight-222)return;drag={x:e.clientX,y:e.clientY,angle:brainAngle,tilt:brainTilt};$('network').setPointerCapture(e.pointerId);});
+$('network').addEventListener('pointermove',e=>{if(!drag){const hit=brainHits.find(p=>Math.hypot(p.point[0]-e.offsetX,p.point[1]-e.offsetY)<7);$('network').title=hit?`${hit.type} · neuron ${hit.id} · ${hit.spikes} spikes in the displayed interval`:'';return;}brainAngle=drag.angle+(e.clientX-drag.x)*.009;brainTilt=Math.max(-1.1,Math.min(1.1,drag.tilt+(e.clientY-drag.y)*.007));render();});
+$('network').addEventListener('pointerup',()=>drag=null);
+$('network').addEventListener('pointercancel',()=>drag=null);
+new ResizeObserver(()=>{if(Math.abs($('network').clientWidth-resizeWidth)>1){render();}}).observe($('network'));
+reset();
+})();
+</script>
+</body>
+</html>
