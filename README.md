@@ -44,7 +44,7 @@ engineered; this is not general Sudoku search. See the
 
 ## Visual demo
 
-[Watch the fly play Sudoku](demo/index.html) with recorded neural activity at
+[Watch the fly play Sudoku](https://harshtomarcode.github.io/sudokufly/) with recorded neural activity at
 measured cell-body positions, a rotatable brain close-up, and Reset Sudoku.
 See [demo instructions and provenance](demo/README.md) to open it locally.
 

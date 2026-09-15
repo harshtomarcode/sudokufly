@@ -1,5 +1,9 @@
 # A fly playing Sudoku
 
+[Open the public demo](https://harshtomarcode.github.io/sudokufly/), hosted on
+GitHub Pages. Play, neural activity, brain rotation and Reset Sudoku work entirely
+in the visitor's browser.
+
 Open `index.html` in a browser. Keep `data.js` and `fly.png` beside it. Everything
 runs locally, without a package install or a live neural simulator. Alternatively,
 from the repository root:
@@ -12,6 +16,33 @@ Open http://127.0.0.1:8765. Play/Pause runs the recorded decisions, Next decisio
 steps through them, and Reset Sudoku restores the original puzzle and stops
 playback. Drag the brain close-up to rotate its measured 3D coordinates. Optional
 synaptic links connect the known source and target cells.
+
+## Publish an update
+
+GitHub Pages publishes the root of `codex/github-pages`. That dedicated branch
+contains only `index.html`, `data.js`, `fly.png` and an empty `.nojekyll` file;
+its initial deployment is `de98146`, exported from source commit `7cbc71f`.
+Pushing updated display files to that branch triggers another deployment.
+Changes to `main` or `demo/` alone do not update the public site.
+
+From a checkout containing the reviewed demo, use an unused temporary directory:
+
+```sh
+git fetch origin codex/github-pages
+git worktree add /tmp/sudokufly-pages codex/github-pages
+git -C /tmp/sudokufly-pages pull --ff-only
+cp demo/index.html demo/data.js demo/fly.png /tmp/sudokufly-pages/
+touch /tmp/sudokufly-pages/.nojekyll
+git -C /tmp/sudokufly-pages add index.html data.js fly.png .nojekyll
+git -C /tmp/sudokufly-pages commit -m "Update fly Sudoku demo"
+git -C /tmp/sudokufly-pages push origin HEAD:codex/github-pages
+git worktree remove /tmp/sudokufly-pages
+```
+
+After the repository's Pages build finishes, check the public URL, playback and
+Reset Sudoku. The simulator, research data and exporter are not needed to serve
+the page. Keep source changes on a normal review branch; the deployment branch
+has a separate static-only history.
 
 ## What is real
 
