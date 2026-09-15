@@ -42,6 +42,12 @@ reserved boards loop. Recognition, sensory routing and action mechanics remain
 engineered; this is not general Sudoku search. See the
 [complete experiment history and scope](experiments/level-05/README.md).
 
+## Visual demo
+
+[Watch the fly play Sudoku](demo/index.html) with recorded neural activity at
+measured cell-body positions, a rotatable brain close-up, and Reset Sudoku.
+See [demo instructions and provenance](demo/README.md) to open it locally.
+
 ## Setup
 
 Requires Python 3.11+ and a C++17 compiler available as `c++` (Apple Command Line
