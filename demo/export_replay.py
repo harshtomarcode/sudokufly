@@ -1,4 +1,4 @@
-"""Export verified recorded Step 5 decisions, spike bins, and anatomical edges.
+"""Export verified recorded decisions, spike bins, and anatomical edges.
 
 Run from any directory with the repository's existing .venv Python. This reads
 saved experiments only; it neither simulates neurons nor solves new puzzles.
@@ -16,6 +16,8 @@ import pyarrow.feather as feather
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "experiments/level-05/007-controlled-recovery/heldout"
 SEED, MAPPING = 20260919, 0
+PILOT = ROOT / "experiments/level-06/001-cautious-choice/development"
+PILOT_CASE = "b4-000026c16537b13c"  # Outcome-independent first lexicographic development four-blank case.
 
 
 def read_json(path):
@@ -143,6 +145,48 @@ def anatomical_locations(ids, inputs, outputs):
                       "Any fly-body illustration is context, not a registration of the MaleCNS coordinates to that drawing."]}
 
 
+def export_response(row, key, registry, memory, arrays, index_by_id, output_by_index, decoder):
+    """Verify recorded spikes and bind displayed edges to this exact checkpoint."""
+    weight_by_edge = dict(zip(memory["edge_indices"].tolist(), memory["weights"].tolist()))
+    assert row["frozen"] and not row["learning"] and row["pulse"] is None
+    assert row["duration_ms"] == 500 and row["memory_before"] == row["memory_after"]
+    for name, field in (("weights", "sha256"), ("u", "u_sha256"), ("w", "w_sha256")):
+        assert hashlib.sha256(memory[name].tobytes()).hexdigest() == row["memory_before"][field]
+    kc_ids = registry[key]["KC_ids"]
+    indices = np.array([index_by_id[value] for value in kc_ids], dtype=np.int32)
+    assert np.all(indices[:-1] < indices[1:]) and hashlib.sha256(indices.tobytes()).hexdigest() == key
+    trace, counts, previous_end = [], np.zeros(6, dtype=int), 0
+    for sample in row["trace"]:
+        assert sample["start_ms"] == previous_end and sample["end_ms"] > previous_end
+        kc = sample["selected_KC_counts"]
+        output = sample["output_counts"]["MBON07"] + sample["output_counts"]["MBON11"]
+        assert len(kc) == len(kc_ids) and len(output) == 6 and min(kc + output) >= 0
+        counts += output
+        trace.append({"start_ms": sample["start_ms"], "end_ms": sample["end_ms"], "kc": kc, "output": output})
+        previous_end = sample["end_ms"]
+    assert previous_end == 500
+    assert counts[:4].mean() * 2 == row["output_hz"]["MBON07"]
+    assert counts[4:].mean() * 2 == row["output_hz"]["MBON11"]
+    score = row["output_hz"]["MBON11"] - row["output_hz"]["MBON07"] - decoder["offset_hz"]
+    threshold = decoder["threshold_hz"]
+    assert score == row["score_hz"] and row["action"] == (1 if score >= threshold else 0 if score <= -threshold else -1)
+    edges = []
+    for kc_id, index in zip(kc_ids, indices):
+        for edge in range(arrays["ptr"][index], arrays["ptr"][index + 1]):
+            target = int(arrays["post"][edge])
+            if target in output_by_index:
+                baseline = float(arrays["weight"][edge])
+                assert baseline > 0 and edge in weight_by_edge
+                weight = weight_by_edge[edge]
+                edges.append({"source": str(kc_id), "target": output_by_index[target]["id"],
+                              "edge_index": edge, "weight": weight, "baseline_weight": baseline,
+                              "efficacy": weight / baseline})
+    return {"kc_ids": list(map(str, kc_ids)), "edges": edges, "trace": trace,
+                   "output_hz": row["output_hz"], "score_hz": score, "raw_action": row["action"],
+                   "KC_spikes": row["KC_spikes"], "DAN_spikes": row["DAN_spikes"],
+                   "spikes_sha256": row["spikes_sha256"]}
+
+
 def main():
     protocol, summary = read_json(SOURCE / "protocol.json"), read_json(SOURCE / "summary.json")
     assert summary["gate_passed"] and summary["no_new_learning"] and protocol["split"] == "heldout"
@@ -172,8 +216,6 @@ def main():
     assert sha256(memory_path) == reference["sha256"]
     memory = np.load(memory_path)
     assert hashlib.sha256(memory["edge_indices"].tobytes()).hexdigest() == circuit["plastic_edges_sha256"]
-    weight_by_edge = dict(zip(memory["edge_indices"].tolist(), memory["weights"].tolist()))
-
     episodes = [row for row in records(SOURCE / "episodes.jsonl.gz")
                 if (row["seed"], row["mapping"], row["arm"], row["view"]) == (SEED, MAPPING, "paired", "base")]
     pools = [
@@ -195,43 +237,8 @@ def main():
         key = row["input"]
         if key not in needed:
             continue
-        assert key not in inputs and row["frozen"] and not row["learning"] and row["pulse"] is None
-        assert row["duration_ms"] == 500 and row["memory_before"] == row["memory_after"]
-        for name, field in (("weights", "sha256"), ("u", "u_sha256"), ("w", "w_sha256")):
-            assert hashlib.sha256(memory[name].tobytes()).hexdigest() == row["memory_before"][field]
-        kc_ids = registry[key]["KC_ids"]
-        indices = np.array([index_by_id[value] for value in kc_ids], dtype=np.int32)
-        assert np.all(indices[:-1] < indices[1:]) and hashlib.sha256(indices.tobytes()).hexdigest() == key
-        trace, counts, previous_end = [], np.zeros(6, dtype=int), 0
-        for sample in row["trace"]:
-            assert sample["start_ms"] == previous_end and sample["end_ms"] > previous_end
-            kc = sample["selected_KC_counts"]
-            output = sample["output_counts"]["MBON07"] + sample["output_counts"]["MBON11"]
-            assert len(kc) == len(kc_ids) and len(output) == 6 and min(kc + output) >= 0
-            counts += output
-            trace.append({"start_ms": sample["start_ms"], "end_ms": sample["end_ms"], "kc": kc, "output": output})
-            previous_end = sample["end_ms"]
-        assert previous_end == 500
-        assert counts[:4].mean() * 2 == row["output_hz"]["MBON07"]
-        assert counts[4:].mean() * 2 == row["output_hz"]["MBON11"]
-        score = row["output_hz"]["MBON11"] - row["output_hz"]["MBON07"] - protocol["decoder"]["offset_hz"]
-        threshold = protocol["decoder"]["threshold_hz"]
-        assert score == row["score_hz"] and row["action"] == (1 if score >= threshold else 0 if score <= -threshold else -1)
-        edges = []
-        for kc_id, index in zip(kc_ids, indices):
-            for edge in range(arrays["ptr"][index], arrays["ptr"][index + 1]):
-                target = int(arrays["post"][edge])
-                if target in output_by_index:
-                    baseline = float(arrays["weight"][edge])
-                    assert baseline > 0 and edge in weight_by_edge
-                    weight = weight_by_edge[edge]
-                    edges.append({"source": str(kc_id), "target": output_by_index[target]["id"],
-                                  "edge_index": edge, "weight": weight, "baseline_weight": baseline,
-                                  "efficacy": weight / baseline})
-        inputs[key] = {"kc_ids": list(map(str, kc_ids)), "edges": edges, "trace": trace,
-                       "output_hz": row["output_hz"], "score_hz": score, "raw_action": row["action"],
-                       "KC_spikes": row["KC_spikes"], "DAN_spikes": row["DAN_spikes"],
-                       "spikes_sha256": row["spikes_sha256"]}
+        assert key not in inputs
+        inputs[key] = export_response(row, key, registry, memory, arrays, index_by_id, output_by_index, protocol["decoder"])
     assert set(inputs) == needed
     placement = {(tuple(row["peers"]), row["candidate"]): row["input"]
                  for row in read_json(SOURCE / "contexts.json") if row["policy"] == "separate-occupancy"}
@@ -239,11 +246,84 @@ def main():
     cases = [{"id": episode["case_id"], "title": title, "description": description,
               **{key: episode[key] for key in ("stratum", "blanks", "initial_board", "final_board", "solved", "end", "undo_count", "sweeps", "first_loop")},
               "events": verify_episode(episode, inputs, placement, undo)} for title, description, episode in selected]
+    pilot_meta = None
+    if (PILOT / "summary.json").exists() and read_json(PILOT / "summary.json")["pilot_gate"]:
+        pilot_summary, pilot_protocol = read_json(PILOT / "summary.json"), read_json(PILOT / "protocol.json")
+        assert not pilot_summary["heldout_evaluated"] and not pilot_summary["stage6_complete"]
+        assert pilot_protocol["seed"] == SEED and pilot_protocol["decoder"] == protocol["decoder"]
+        for name, expected in pilot_summary["files_sha256"].items():
+            assert sha256(PILOT / name) == expected, f"Pilot artifact changed: {name}"
+        for name, expected in pilot_protocol["source_sha256"].items():
+            assert sha256(ROOT / name) == expected, f"Pilot source changed: {name}"
+        pilot_run = next(row for row in pilot_summary["runs"] if row["mapping"] == MAPPING)
+        assert pilot_run["pilot_gate"] and pilot_run["selected_epoch"] is not None
+        epoch = pilot_run["selected_epoch"]
+        pilot_cases = read_json(PILOT / "cases.json")
+        assert min(row["id"] for row in pilot_cases if row["blank_count"] == 4) == PILOT_CASE
+        case = next(row for row in pilot_cases if row["id"] == PILOT_CASE)
+        assert case["split"] == "development"
+        episode = next(row for row in records(PILOT / "episodes.jsonl.gz")
+                       if (row["mapping"], row["arm"], row["epoch"], row["case_id"]) == (MAPPING, "paired", epoch, PILOT_CASE))
+        assert episode["solved"] and episode["wrong_placements"] == 0 and episode["end"] == "filled"
+        pilot_memory_path = PILOT / f"{MAPPING}-paired-epoch-{epoch:02d}-memory.npz"
+        pilot_memory = np.load(pilot_memory_path)
+        assert np.array_equal(pilot_memory["edge_indices"], memory["edge_indices"])
+        pilot_needed = {offer["input"] for assessment in episode["assessments"] for offer in assessment["offers"]}
+        for row in records(PILOT / "neural.jsonl.gz"):
+            if (row["mapping"], row["arm"], row["epoch"]) != (MAPPING, "paired", epoch) or row["input"] not in pilot_needed:
+                continue
+            key = row["input"]
+            assert "pilot:" + key not in inputs
+            inputs["pilot:" + key] = export_response(row, key, registry, pilot_memory, arrays, index_by_id, output_by_index, pilot_protocol["decoder"])
+        assert all("pilot:" + key in inputs for key in pilot_needed)
+        board, events, assessments, offers_seen = list(case["board"]), [], [], 0
+        assert board == episode["initial_board"]
+        for round_index, assessment in enumerate(episode["assessments"]):
+            assert board == assessment["board"]
+            offers = assessment["offers"]
+            assert [(offer["target"], offer["candidate"]) for offer in offers] == [
+                (target, digit) for target in range(16) if not board[target] for digit in range(1, 5)]
+            for offer in offers:
+                target, candidate, key = offer["target"], offer["candidate"], offer["input"]
+                peers = tuple(sorted({board[i] for i in peer_cells(board, target)}))
+                assert key == placement[peers, candidate]
+                response = inputs["pilot:" + key]
+                assert offer["raw_action"] == response["raw_action"]
+                assert offer["action"] == (offer["raw_action"] if offer["raw_action"] == -1 else offer["raw_action"] ^ MAPPING)
+                assert offer["score_hz"] == (1 - 2 * MAPPING) * response["score_hz"]
+            accepted = [offer for offer in offers if offer["action"] == 1]
+            chosen = max(accepted, key=lambda offer: offer["score_hz"]) if accepted else None
+            assert chosen is not None and chosen == assessment["chosen"]
+            event = episode["events"][round_index]
+            assert all(event[key] == value for key, value in chosen.items())
+            assert event["board_before"] == board and event["assessment"] == round_index
+            attended = peer_cells(board, chosen["target"])
+            peers = sorted({board[i] for i in attended})
+            board[chosen["target"]] = chosen["candidate"]
+            assert board == event["board_after"]
+            offers_seen += len(offers)
+            assessments.append({"board": assessment["board"], "offers": [
+                {**offer, "input": "pilot:" + offer["input"], "selected": offer == chosen} for offer in offers]})
+            events.append({**event, "input": "pilot:" + event["input"], "distinct_peers": len(peers),
+                           "peer_cells": attended, "peer_values": peers, "undo_executed": False, "popped": None,
+                           "assessment_count": len(offers), "assessments_so_far": offers_seen})
+        assert board == episode["final_board"] == case["solution"]
+        assert len(events) == len(episode["events"]) == case["blank_count"] and offers_seen == episode["neural_offers"]
+        pilot_meta = {"source": str(PILOT.relative_to(ROOT)), "summary_sha256": sha256(PILOT / "summary.json"),
+                      "memory": {"path": str(pilot_memory_path.relative_to(ROOT)), "sha256": sha256(pilot_memory_path)},
+                      "seed": SEED, "mapping": MAPPING, "epoch": epoch, "split": "development",
+                      "selection": "First lexicographic four-blank development case; selection does not use policy outcomes.",
+                      "selector": pilot_protocol["selector"]}
+        cases.insert(0, {"id": PILOT_CASE, "title": "Careful choices", "mode": "cautious", "source": pilot_meta,
+                         "description": "A development pilot learns to defer ambiguous offers. Every empty cell and digit is assessed; the fixed selector chooses the highest accepted neural score.",
+                         "stratum": episode["stratum"], "blanks": episode["blanks"], "initial_board": episode["initial_board"],
+                         "final_board": board, "solved": True, "end": "filled", "undo_count": 0,
+                         "events": events, "assessments": assessments, "neural_offers": offers_seen})
     anatomy = anatomical_locations(arrays["ids"], inputs, outputs)
     data = {"meta": {"source": str(SOURCE.relative_to(ROOT)), "seed": SEED, "mapping": MAPPING,
                      "view": "base", "recorded": True, "graph": protocol["graph"], "decoder": protocol["decoder"],
                      "summary_sha256": sha256(SOURCE / "summary.json"), "source_files_sha256": summary["files_sha256"],
-                     "memory": reference, "circuit_protocol_sha256": sha256(circuit_path),
+                     "memory": reference, "pilot": pilot_meta, "circuit_protocol_sha256": sha256(circuit_path),
                      "notes": ["Recorded, frozen 500 ms input-response trials are reused by the recorded board driver; this is not a live simulation.",
                                "Highlighted cells receive engineered sensory input. Node flashes show their measured spike counts in recorded time bins.",
                                "Lines are actual KC-to-MBON anatomical edges, with trained weights. Lighting a line indicates its source cell spiked, not measured causal flow through that synapse.",
