@@ -1,0 +1,261 @@
+{
+  "kind": "Independent read-only source provenance and neural-context audit",
+  "runner_commit": "4402991",
+  "source_summary_sha256": "1800352217ef79490cdf081cb2144670a606b6e019bfe23bffdc844ae222f462",
+  "source_seed": 20260919,
+  "all_checks_passed": true,
+  "provenance_checks": [
+    {
+      "path": "experiments/level-05/007-controlled-recovery/development/protocol.json",
+      "sha256": "8316ebff94f9cafdfd865245cc675a9235cc5bc9586be0b3b7310095353042d7",
+      "bound_by": "Step5 summary manifest"
+    },
+    {
+      "path": "experiments/level-03/010-curriculum-continuation/development/summary.json",
+      "sha256": "2c7c3756e1b7641771f8e3426c367b1c5649bb97faa7d6b8f97fb2be429bc5f3",
+      "bound_by": "Step5 protocol memory_summary_sha256"
+    },
+    {
+      "path": "experiments/level-03/010-curriculum-continuation/development/protocol.json",
+      "sha256": "a49e2d2a6d7a09a2caa029242f748991d206ec5ea9021220d2c98022acb88f8a",
+      "bound_by": "Step3 summary manifest"
+    },
+    {
+      "path": "experiments/level-02/005-controlled-replication/train/summary.json",
+      "sha256": "4e0b034ada2efdf3aed887776f142130cfa9659c0da0755e5b0c25a6533e1808",
+      "bound_by": "Step3 protocol memory_summary_sha256"
+    },
+    {
+      "path": "experiments/level-02/005-controlled-replication/train/protocol.json",
+      "sha256": "65f2da720703f322f220827b878fca2522d60f12793827c79a7b6b2a7601e96d",
+      "bound_by": "Step3 protocol memory_protocol_sha256"
+    },
+    {
+      "path": "experiments/level-02/005-controlled-replication/train/protocol.json",
+      "sha256": "65f2da720703f322f220827b878fca2522d60f12793827c79a7b6b2a7601e96d",
+      "bound_by": "Step2 summary manifest"
+    },
+    {
+      "path": "experiments/level-05/007-controlled-recovery/development/contexts.json",
+      "sha256": "36b45697b8d6f100c465f723388db78ad21362ea69a5254be01796f3cc0122d7",
+      "bound_by": "Step5 summary manifest"
+    },
+    {
+      "path": "experiments/level-05/007-controlled-recovery/development/undo-contexts.json",
+      "sha256": "6f655db2b6a607e1ae1e28ac57a3c2c7dc5741d8cc34f6134b5ef11812f7f5b1",
+      "bound_by": "Step5 summary manifest"
+    },
+    {
+      "path": "experiments/level-05/007-controlled-recovery/development/neural.jsonl.gz",
+      "sha256": "b711da38198854f3008bdf16c8fe2a5c54882969e9c2b472efe7e9027b3ee5a2",
+      "bound_by": "Step5 summary manifest"
+    },
+    {
+      "path": "experiments/level-05/007-controlled-recovery/development/episodes.jsonl.gz",
+      "sha256": "2a86e347883721f5dcf199318f65ea583da3f234d981cf4d7a72535daf062971",
+      "bound_by": "Step5 summary manifest"
+    }
+  ],
+  "recorded_source_responses_checked": 330,
+  "source_scores": [
+    {
+      "mapping": 0,
+      "nonempty": {
+        "contexts": 60,
+        "source_old_correct": 60,
+        "new_correct": 36,
+        "forced_positives": 4,
+        "forced_correct": 4,
+        "defer_negatives": 56,
+        "defer_correct": 32,
+        "changed": 24,
+        "changed_correct": 0,
+        "unchanged": 36,
+        "unchanged_correct": 36,
+        "timeouts": 0,
+        "balanced_accuracy": 0.7857142857142857
+      },
+      "by_distinct_peers": {
+        "0": {
+          "contexts": 4,
+          "source_old_correct": 0,
+          "new_correct": 0,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 4,
+          "defer_correct": 0,
+          "changed": 4,
+          "changed_correct": 0,
+          "unchanged": 0,
+          "unchanged_correct": 0,
+          "timeouts": 4,
+          "balanced_accuracy": null
+        },
+        "1": {
+          "contexts": 16,
+          "source_old_correct": 16,
+          "new_correct": 4,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 16,
+          "defer_correct": 4,
+          "changed": 12,
+          "changed_correct": 0,
+          "unchanged": 4,
+          "unchanged_correct": 4,
+          "timeouts": 0,
+          "balanced_accuracy": null
+        },
+        "2": {
+          "contexts": 24,
+          "source_old_correct": 24,
+          "new_correct": 12,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 24,
+          "defer_correct": 12,
+          "changed": 12,
+          "changed_correct": 0,
+          "unchanged": 12,
+          "unchanged_correct": 12,
+          "timeouts": 0,
+          "balanced_accuracy": null
+        },
+        "3": {
+          "contexts": 16,
+          "source_old_correct": 16,
+          "new_correct": 16,
+          "forced_positives": 4,
+          "forced_correct": 4,
+          "defer_negatives": 12,
+          "defer_correct": 12,
+          "changed": 0,
+          "changed_correct": 0,
+          "unchanged": 16,
+          "unchanged_correct": 16,
+          "timeouts": 0,
+          "balanced_accuracy": 1.0
+        },
+        "4": {
+          "contexts": 4,
+          "source_old_correct": 4,
+          "new_correct": 4,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 4,
+          "defer_correct": 4,
+          "changed": 0,
+          "changed_correct": 0,
+          "unchanged": 4,
+          "unchanged_correct": 4,
+          "timeouts": 0,
+          "balanced_accuracy": null
+        }
+      },
+      "undo_correct": 16,
+      "contrast_balanced_accuracy": 0.5
+    },
+    {
+      "mapping": 1,
+      "nonempty": {
+        "contexts": 60,
+        "source_old_correct": 60,
+        "new_correct": 36,
+        "forced_positives": 4,
+        "forced_correct": 4,
+        "defer_negatives": 56,
+        "defer_correct": 32,
+        "changed": 24,
+        "changed_correct": 0,
+        "unchanged": 36,
+        "unchanged_correct": 36,
+        "timeouts": 0,
+        "balanced_accuracy": 0.7857142857142857
+      },
+      "by_distinct_peers": {
+        "0": {
+          "contexts": 4,
+          "source_old_correct": 0,
+          "new_correct": 0,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 4,
+          "defer_correct": 0,
+          "changed": 4,
+          "changed_correct": 0,
+          "unchanged": 0,
+          "unchanged_correct": 0,
+          "timeouts": 4,
+          "balanced_accuracy": null
+        },
+        "1": {
+          "contexts": 16,
+          "source_old_correct": 16,
+          "new_correct": 4,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 16,
+          "defer_correct": 4,
+          "changed": 12,
+          "changed_correct": 0,
+          "unchanged": 4,
+          "unchanged_correct": 4,
+          "timeouts": 0,
+          "balanced_accuracy": null
+        },
+        "2": {
+          "contexts": 24,
+          "source_old_correct": 24,
+          "new_correct": 12,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 24,
+          "defer_correct": 12,
+          "changed": 12,
+          "changed_correct": 0,
+          "unchanged": 12,
+          "unchanged_correct": 12,
+          "timeouts": 0,
+          "balanced_accuracy": null
+        },
+        "3": {
+          "contexts": 16,
+          "source_old_correct": 16,
+          "new_correct": 16,
+          "forced_positives": 4,
+          "forced_correct": 4,
+          "defer_negatives": 12,
+          "defer_correct": 12,
+          "changed": 0,
+          "changed_correct": 0,
+          "unchanged": 16,
+          "unchanged_correct": 16,
+          "timeouts": 0,
+          "balanced_accuracy": 1.0
+        },
+        "4": {
+          "contexts": 4,
+          "source_old_correct": 4,
+          "new_correct": 4,
+          "forced_positives": 0,
+          "forced_correct": 0,
+          "defer_negatives": 4,
+          "defer_correct": 4,
+          "changed": 0,
+          "changed_correct": 0,
+          "unchanged": 4,
+          "unchanged_correct": 4,
+          "timeouts": 0,
+          "balanced_accuracy": null
+        }
+      },
+      "undo_correct": 16,
+      "contrast_balanced_accuracy": 0.5
+    }
+  ],
+  "notes": [
+    "No simulation, learning, or reserved-family evaluation performed.",
+    "Empty-peer source judgments are reported separately and excluded from nonempty gates.",
+    "This supplements the running pilot without modifying its files."
+  ]
+}

@@ -1,0 +1,922 @@
+{
+  "pilot_gate": true,
+  "stage6_complete": false,
+  "heldout_evaluated": false,
+  "source_summary_sha256": "1800352217ef79490cdf081cb2144670a606b6e019bfe23bffdc844ae222f462",
+  "runs": [
+    {
+      "mapping": 0,
+      "selected_epoch": 4,
+      "attempted_epochs": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "scores": {
+            "changed_correct": 8,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.6666666666666666,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 150,
+            "wrong_placements": 10,
+            "placements": 492,
+            "neural_offers": 4440,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 28
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 26
+              }
+            }
+          },
+          "pass": false
+        },
+        {
+          "epoch": 2,
+          "scores": {
+            "changed_correct": 20,
+            "unchanged_correct": 35,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9166666666666667,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": false
+        },
+        {
+          "epoch": 3,
+          "scores": {
+            "changed_correct": 23,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9791666666666667,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": false
+        },
+        {
+          "epoch": 4,
+          "scores": {
+            "changed_correct": 24,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 1.0,
+            "all_judgments_pass": true
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": true
+        }
+      ],
+      "source_sequence": {
+        "puzzles": 160,
+        "solved": 128,
+        "wrong_placements": 32,
+        "placements": 448,
+        "neural_offers": 4352,
+        "strata": {
+          "2-easy": {
+            "puzzles": 32,
+            "solved": 32
+          },
+          "3-easy": {
+            "puzzles": 32,
+            "solved": 30
+          },
+          "3-trap": {
+            "puzzles": 32,
+            "solved": 15
+          },
+          "4-easy": {
+            "puzzles": 32,
+            "solved": 31
+          },
+          "4-trap": {
+            "puzzles": 32,
+            "solved": 20
+          }
+        }
+      },
+      "arms": {
+        "paired": {
+          "scores": {
+            "changed_correct": 24,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 1.0,
+            "all_judgments_pass": true
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3272,
+            "mean_efficacy": 1.006719946861267,
+            "minimum_efficacy": 0.16433905065059662,
+            "sha256": "3c80220c4b98f52f03332bee3116178746ea5573ac37131b185daab44be21926",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9266103506088257,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.835637740797501,
+            "u_max": 0.9265845314682439,
+            "u_sha256": "489990538369853d96bdc8c198e02758e85d4750783bf131a51deb9467f7373c",
+            "w_sha256": "fb83e1456fd6b508145f0ab1b9fc474e0f100404a1d0b0e160c970583a43b024"
+          },
+          "update_window_ms": 62550,
+          "DAN_pulse_duration_ms": {
+            "aversive": 10800,
+            "reward": 10200
+          }
+        },
+        "frozen": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 128,
+            "wrong_placements": 32,
+            "placements": 448,
+            "neural_offers": 4352,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3272,
+            "mean_efficacy": 1.0004615783691406,
+            "minimum_efficacy": 0.13689732551574707,
+            "sha256": "d6198e87263a651e790d26798cb47fe2a3a2aa0e30edf5ad176f0e558b0148c0",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9593760967254639,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8630786948205021,
+            "u_max": 0.9593493353414205,
+            "u_sha256": "1dadc7307deefb1ed9e8ba689e1ae7512beea16c3cc9c38e3177a38524c77733",
+            "w_sha256": "2175d18af3f8d491e9e87c49f8c5868cc0e6d3af42110bc897fb683a139e1f95"
+          },
+          "update_window_ms": 0,
+          "DAN_pulse_duration_ms": {
+            "aversive": 10800,
+            "reward": 10200
+          }
+        },
+        "no_feedback": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 32,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 127,
+            "wrong_placements": 33,
+            "placements": 446,
+            "neural_offers": 4348,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3272,
+            "mean_efficacy": 1.0004459619522095,
+            "minimum_efficacy": 0.16637499630451202,
+            "sha256": "61e85626cad4e5abdb0ab2ad76983e1b81327392711f75d4c71356f05d25757f",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9266103506088257,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8336018367864646,
+            "u_max": 0.9265845314682439,
+            "u_sha256": "372cdebdf1645ebc8ab78a0aeb8c397d0a0a49fe3d9ed6519307cd716de79c0e",
+            "w_sha256": "aa25c69dbab72257f323488bb6756f9f803c697720548343c8a9b8bbbcd28e2b"
+          },
+          "update_window_ms": 62550,
+          "DAN_pulse_duration_ms": {}
+        },
+        "inconsistent": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 35,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 122,
+            "wrong_placements": 38,
+            "placements": 435,
+            "neural_offers": 4320,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 17
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 29
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 14
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3272,
+            "mean_efficacy": 1.0009706020355225,
+            "minimum_efficacy": 0.16637499630451202,
+            "sha256": "d97b06073052f0958d0c31b99ec32ac1b6068a28df6947c073b14bcc7ec5337a",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9266103506088257,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8336018367864646,
+            "u_max": 0.9265845314682439,
+            "u_sha256": "13fcb2814fbcad2a8ac5794fabf9692419c268dc904dc2b33106b7f1c9938bbd",
+            "w_sha256": "a746964ee547cf7ce566f3e454fe02a05cc621cb3153dc8dfa373f96ac0d034d"
+          },
+          "update_window_ms": 62550,
+          "DAN_pulse_duration_ms": {
+            "reward": 10400,
+            "aversive": 10600
+          }
+        }
+      },
+      "control_gaps": {
+        "frozen": 0.5,
+        "no_feedback": 0.5,
+        "inconsistent": 0.5
+      },
+      "erasure_exact": true,
+      "nonplastic_unchanged": true,
+      "pilot_gate": true
+    },
+    {
+      "mapping": 1,
+      "selected_epoch": 4,
+      "attempted_epochs": 4,
+      "history": [
+        {
+          "epoch": 1,
+          "scores": {
+            "changed_correct": 2,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5416666666666666,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": false
+        },
+        {
+          "epoch": 2,
+          "scores": {
+            "changed_correct": 20,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9166666666666667,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": false
+        },
+        {
+          "epoch": 3,
+          "scores": {
+            "changed_correct": 23,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9791666666666667,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": false
+        },
+        {
+          "epoch": 4,
+          "scores": {
+            "changed_correct": 24,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 1.0,
+            "all_judgments_pass": true
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "pass": true
+        }
+      ],
+      "source_sequence": {
+        "puzzles": 160,
+        "solved": 114,
+        "wrong_placements": 46,
+        "placements": 419,
+        "neural_offers": 4288,
+        "strata": {
+          "2-easy": {
+            "puzzles": 32,
+            "solved": 32
+          },
+          "3-easy": {
+            "puzzles": 32,
+            "solved": 32
+          },
+          "3-trap": {
+            "puzzles": 32,
+            "solved": 9
+          },
+          "4-easy": {
+            "puzzles": 32,
+            "solved": 31
+          },
+          "4-trap": {
+            "puzzles": 32,
+            "solved": 10
+          }
+        }
+      },
+      "arms": {
+        "paired": {
+          "scores": {
+            "changed_correct": 24,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 1.0,
+            "all_judgments_pass": true
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3580,
+            "mean_efficacy": 0.9873826503753662,
+            "minimum_efficacy": 0.15588928759098053,
+            "sha256": "4da3c8d066c50891a959517a0ffe1d947b82ce1a0c95597a8c48e8f840b617fb",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9076569080352783,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8440872570946782,
+            "u_max": 0.9076316389516593,
+            "u_sha256": "32b9f52d53563cd682d494e9fd3a5fab72d28b159c97324d112c2fe842646a32",
+            "w_sha256": "4dfe0402fc31b2141ad2a0654a42741604425e0e24c9ae7db0ebbbacddeff66d"
+          },
+          "update_window_ms": 69600,
+          "DAN_pulse_duration_ms": {
+            "reward": 11600,
+            "aversive": 11600
+          }
+        },
+        "frozen": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 114,
+            "wrong_placements": 46,
+            "placements": 419,
+            "neural_offers": 4288,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 9
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 10
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3580,
+            "mean_efficacy": 0.9921296238899231,
+            "minimum_efficacy": 0.12261111289262772,
+            "sha256": "0602c77c40f2a24a5835794e7abada0a0c5f1e37067309fcb81b6e1af9f61203",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.943440318107605,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8773645119670979,
+            "u_max": 0.9434140644364719,
+            "u_sha256": "d9df626455877e9c39afd0baeb90e9fef14e32f902270f33041eaf1eeeb9eaeb",
+            "w_sha256": "fc9255178ad464342f3c08003d3bb15eafc116c37995274f23cc414fc9de9414"
+          },
+          "update_window_ms": 0,
+          "DAN_pulse_duration_ms": {
+            "reward": 11600,
+            "aversive": 11600
+          }
+        },
+        "no_feedback": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 114,
+            "wrong_placements": 46,
+            "placements": 419,
+            "neural_offers": 4288,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 9
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 10
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3580,
+            "mean_efficacy": 0.992428183555603,
+            "minimum_efficacy": 0.15588928759098053,
+            "sha256": "149d1f3c11133fa8ef0fdfd8ea7315110b1bd6c7bab4ec98f0f51b3aa7cccc73",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9076569080352783,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8440872570946782,
+            "u_max": 0.9076316389516593,
+            "u_sha256": "b972c80e4d29ed4dfb607211ca614d95de0a1d60f5bc5f7d44cb10ce40c8b455",
+            "w_sha256": "4c3710f1363726c3c20fef24d6b68e39b27ae1dc9d8da1ce04873119ff89fa1b"
+          },
+          "update_window_ms": 69600,
+          "DAN_pulse_duration_ms": {}
+        },
+        "inconsistent": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 35,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 130,
+            "wrong_placements": 30,
+            "placements": 452,
+            "neural_offers": 4360,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "memory": {
+            "plastic_edges": 7835,
+            "changed_edges": 3580,
+            "mean_efficacy": 0.9937919974327087,
+            "minimum_efficacy": 0.15588928759098053,
+            "sha256": "8d3a6cce6edfc297757bc12d1730c919cd29af8281366b9f2173a74abb15a904",
+            "model": "stonkfly-dual-compartment-v1",
+            "maximum_efficacy": 1.9076569080352783,
+            "at_lower_bound": 0,
+            "at_upper_bound": 0,
+            "u_min": -0.8440872570946782,
+            "u_max": 0.9076316389516593,
+            "u_sha256": "85dd3e6e3daff9be3113132d3e0d8dbd2c221ee9a3fca2d067254bd3e23c9e8f",
+            "w_sha256": "80887d093abad1265662b95c9e88d1b12bed81b0576fbdd514114c41f53d81e7"
+          },
+          "update_window_ms": 69600,
+          "DAN_pulse_duration_ms": {
+            "aversive": 11600,
+            "reward": 11600
+          }
+        }
+      },
+      "control_gaps": {
+        "frozen": 0.5,
+        "no_feedback": 0.5,
+        "inconsistent": 0.5
+      },
+      "erasure_exact": true,
+      "nonplastic_unchanged": true,
+      "pilot_gate": true
+    }
+  ],
+  "elapsed_seconds": 591.715818541008,
+  "files_sha256": {
+    "0-frozen-memory.npz": "3442bf31e28122ab877504cf47203960ca474eb2344aca07eba25c298cf6e661",
+    "0-history.json": "f4144ffd53edb981f61f06d52619fa57a292a9734e600df38e493039074b7ab4",
+    "0-inconsistent-memory.npz": "2986e87f8eb53dd752c50bf2bd003449d2d7458e94cb835c2216903c72e2dbad",
+    "0-no_feedback-memory.npz": "1c72bd3b6a3bdf41e4ce82d37a9fe6081c7bceb019e175bea690e2ef4f27aaa5",
+    "0-paired-epoch-01-memory.npz": "e90bee48b541c81050f48cd3075a54677df0b351e34908f6a2aafd2b7f38b043",
+    "0-paired-epoch-02-memory.npz": "2e3bfe730cee956b28623d8b274f50aeb56029a4cb4a921f72b027d32a940e3f",
+    "0-paired-epoch-03-memory.npz": "35eb292d2d964ecce1ae66248b7bd0f19137a9c299435ed988800f15a7da2f32",
+    "0-paired-epoch-04-memory.npz": "37faeae01f9b7fcef7b415102792ab30d99810cdbbecf58aa43616741bf76a53",
+    "0-selected-schedule.json": "3a696371dbcda59c475bc82991cfb3904fcbfb769c93aff924861d1056ffe713",
+    "1-frozen-memory.npz": "9f39626dc106ee58c34ad7899490aa628bfbaa1697a87213492b0a9d0f0c91f2",
+    "1-history.json": "65444688a6908e2230acf3a247fbe7711e1b9b6653d13d4efe50bbcb2a5ed20e",
+    "1-inconsistent-memory.npz": "4bc72d347608cf54b27c5cc847e2d9f3a473666a305f9ba5ee8c2e8882a37a5f",
+    "1-no_feedback-memory.npz": "e6084497683dd4fc4333bc94a8fea8e4703a6bc068c1b925a4c66766a475db87",
+    "1-paired-epoch-01-memory.npz": "9d3b9785b5172d5a0a302d927644c9364e3ece5a9a91f81076c8bde6df9cee52",
+    "1-paired-epoch-02-memory.npz": "67ecbf971a105b29c08046d4e23839e27d312a1f107620d5a5c952ce6dda9ece",
+    "1-paired-epoch-03-memory.npz": "6477052d674ef11880c50ff797b971899645af6239be39646db49da98a1cce39",
+    "1-paired-epoch-04-memory.npz": "a2412d6192a0e466749ecb154ed82e68c0acf5ac6ba852078a1e040b722164d5",
+    "1-selected-schedule.json": "51eb1625748ee8abe61873583f604782f50c49e7ce7fcdafb90dad367374a62a",
+    "cases.json": "148ec4749ec0f9c3eeafd849f12418f3c1fd9a7e171e9273ffc28bcfda73c5e9",
+    "episodes.jsonl.gz": "815b223d086c6faaae2cecfb683c5f4d3e201f93f0d3c7927c82c6d2aab4c202",
+    "full-weight-checks.json": "ef1443c43253f4bb9b51e6a1cc35c441efdd6eb12556daaf7b9835c8d8ae780c",
+    "neural.jsonl.gz": "5c839548e25d2e39e04089c4980b7aefeb35a2d76cf8f40aa6ba302eab6d405b",
+    "partial-results.json": "9baf778854150f72f41fb006dd74fe3edbd437c2c40ca9e24c7ac559fb70928f",
+    "protocol.json": "8d5fcec80b5ea4aa2d7c5e507da63f923d5118f27cb192335a3dc3a7d3b0321d",
+    "training.jsonl.gz": "a8b84eb974b05e4fbf59994a020b1fe8dadb1bd957d9a9a9f44e4ebfbd85d341"
+  }
+}

@@ -1,0 +1,166 @@
+[
+  {
+    "epoch": 1,
+    "scores": {
+      "changed_correct": 8,
+      "unchanged_correct": 36,
+      "undo_correct": 16,
+      "forced_correct": 4,
+      "contrast_balanced_accuracy": 0.6666666666666666,
+      "all_judgments_pass": false
+    },
+    "sequence": {
+      "puzzles": 160,
+      "solved": 150,
+      "wrong_placements": 10,
+      "placements": 492,
+      "neural_offers": 4440,
+      "strata": {
+        "2-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-trap": {
+          "puzzles": 32,
+          "solved": 28
+        },
+        "4-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-trap": {
+          "puzzles": 32,
+          "solved": 26
+        }
+      }
+    },
+    "pass": false
+  },
+  {
+    "epoch": 2,
+    "scores": {
+      "changed_correct": 20,
+      "unchanged_correct": 35,
+      "undo_correct": 16,
+      "forced_correct": 4,
+      "contrast_balanced_accuracy": 0.9166666666666667,
+      "all_judgments_pass": false
+    },
+    "sequence": {
+      "puzzles": 160,
+      "solved": 160,
+      "wrong_placements": 0,
+      "placements": 512,
+      "neural_offers": 4480,
+      "strata": {
+        "2-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-trap": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-trap": {
+          "puzzles": 32,
+          "solved": 32
+        }
+      }
+    },
+    "pass": false
+  },
+  {
+    "epoch": 3,
+    "scores": {
+      "changed_correct": 23,
+      "unchanged_correct": 36,
+      "undo_correct": 16,
+      "forced_correct": 4,
+      "contrast_balanced_accuracy": 0.9791666666666667,
+      "all_judgments_pass": false
+    },
+    "sequence": {
+      "puzzles": 160,
+      "solved": 160,
+      "wrong_placements": 0,
+      "placements": 512,
+      "neural_offers": 4480,
+      "strata": {
+        "2-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-trap": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-trap": {
+          "puzzles": 32,
+          "solved": 32
+        }
+      }
+    },
+    "pass": false
+  },
+  {
+    "epoch": 4,
+    "scores": {
+      "changed_correct": 24,
+      "unchanged_correct": 36,
+      "undo_correct": 16,
+      "forced_correct": 4,
+      "contrast_balanced_accuracy": 1.0,
+      "all_judgments_pass": true
+    },
+    "sequence": {
+      "puzzles": 160,
+      "solved": 160,
+      "wrong_placements": 0,
+      "placements": 512,
+      "neural_offers": 4480,
+      "strata": {
+        "2-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "3-trap": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-easy": {
+          "puzzles": 32,
+          "solved": 32
+        },
+        "4-trap": {
+          "puzzles": 32,
+          "solved": 32
+        }
+      }
+    },
+    "pass": true
+  }
+]

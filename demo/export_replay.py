@@ -17,7 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "experiments/level-05/007-controlled-recovery/heldout"
 SEED, MAPPING = 20260919, 0
 PILOT = ROOT / "experiments/level-06/001-cautious-choice/development"
-PILOT_CASE = "b4-000026c16537b13c"  # Outcome-independent first lexicographic development four-blank case.
+PILOT_CASE = "b4-0009393db5453f62"  # First lexicographic four-blank development trap, using the original stratum.
 
 
 def read_json(path):
@@ -259,7 +259,7 @@ def main():
         assert pilot_run["pilot_gate"] and pilot_run["selected_epoch"] is not None
         epoch = pilot_run["selected_epoch"]
         pilot_cases = read_json(PILOT / "cases.json")
-        assert min(row["id"] for row in pilot_cases if row["blank_count"] == 4) == PILOT_CASE
+        assert min(row["id"] for row in pilot_cases if row["blank_count"] == 4 and row["stratum"] == "trap") == PILOT_CASE
         case = next(row for row in pilot_cases if row["id"] == PILOT_CASE)
         assert case["split"] == "development"
         episode = next(row for row in records(PILOT / "episodes.jsonl.gz")
@@ -312,7 +312,7 @@ def main():
         pilot_meta = {"source": str(PILOT.relative_to(ROOT)), "summary_sha256": sha256(PILOT / "summary.json"),
                       "memory": {"path": str(pilot_memory_path.relative_to(ROOT)), "sha256": sha256(pilot_memory_path)},
                       "seed": SEED, "mapping": MAPPING, "epoch": epoch, "split": "development",
-                      "selection": "First lexicographic four-blank development case; selection does not use policy outcomes.",
+                      "selection": "First lexicographic four-blank development trap in the original stratum; chosen after training to illustrate ambiguity, without filtering on new policy outcomes.",
                       "selector": pilot_protocol["selector"]}
         cases.insert(0, {"id": PILOT_CASE, "title": "Careful choices", "mode": "cautious", "source": pilot_meta,
                          "description": "A development pilot learns to defer ambiguous offers. Every empty cell and digit is assessed; the fixed selector chooses the highest accepted neural score.",
