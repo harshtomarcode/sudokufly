@@ -42,10 +42,22 @@ reserved boards loop. Recognition, sensory routing and action mechanics remain
 engineered; this is not general Sudoku search. See the
 [complete experiment history and scope](experiments/level-05/README.md).
 
+**Step 6's cautious-choice development pilot passes; the stage remains incomplete.**
+Additional learning in the same existing synapses teaches the inherited policy
+to defer ambiguous moves. Both answer mappings first pass at epoch 4, solving
+160/160 development boards with zero wrong placements and retaining all other
+placement and Undo judgments. A fixed selector compares all offered cell/digit
+pairs; it is supplied by the experiment. This costs more neural evaluations
+than the old menu and has not been tested on reserved puzzles. See the
+[pilot results, controls and limits](experiments/level-06/001-cautious-choice/RESULTS.md).
+
 ## Visual demo
 
 [Watch the fly play Sudoku](https://harshtomarcode.github.io/sudokufly/) with recorded neural activity at
 measured cell-body positions, a rotatable brain close-up, and Reset Sudoku.
+The default **Careful choices** development replay shows four chosen placements
+and exposes all 40 candidate assessments. The original three Step 5 replays,
+including recovery and a remaining failure, are still available.
 See [demo instructions and provenance](demo/README.md) to open it locally.
 
 ## Setup

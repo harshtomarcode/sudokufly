@@ -17,6 +17,31 @@ steps through them, and Reset Sudoku restores the original puzzle and stops
 playback. Drag the brain close-up to rotate its measured 3D coordinates. Optional
 synaptic links connect the known source and target cells.
 
+## Careful choices
+
+When the committed Step 6 development pilot passes its controls, the exporter
+adds **Careful choices** as the default replay. The fly learns Place/Defer through
+existing synapses, accepting locally forced placements and deferring ambiguous
+ones. A fixed selector compares the neural readout of every digit in every empty
+cell, selects the highest accepted score, and stops if nothing is accepted. It
+does not use a Sudoku legality filter or the puzzle solution to choose a move.
+
+This replay animates the four chosen placements. The total of 40 candidate
+assessments stays visible; expand the table to inspect all offers for each move.
+The brain animation shows the chosen offer's recorded activity. Evaluations of
+other offers are not animated, and the score is not a probability of success.
+The board is the first lexicographic four-blank development trap,
+`b4-0009393db5453f62`, using the original dataset's stratum. The visual example was
+chosen after training to show ambiguous offers, without filtering on new policy
+outcomes. Its new responses
+and synaptic weights are bound to the selected pilot checkpoint, with separate
+input identifiers so they cannot overwrite the original Step 5 recordings.
+
+This is development-only evidence from one inherited training history and both
+answer mappings. It does not complete Step 6 or demonstrate general Sudoku
+planning. The original three Step 5 replays remain available for comparison.
+See the [prospective pilot protocol](../experiments/level-06/001-cautious-choice/README.md).
+
 ## Publish an update
 
 GitHub Pages publishes the root of `codex/github-pages`. That dedicated branch
@@ -46,16 +71,17 @@ has a separate static-only history.
 
 ## What is real
 
-The 42 decisions across three selected examples, 18 frozen neural traces and
-1,069 distinct KC→MBON connections come from the audited Step 5 reserved run:
+The original Step 5 examples contain 42 decisions, 18 frozen neural traces and
+1,069 distinct KC→MBON connections, all from the audited Step 5 reserved run:
 seed 20260919, mapping 0, paired arm, base view. The examples are the shortest
 recorded recovery, straightforward four-blank solve, and remaining loop in their
 respective pools, with case ID as the tie-breaker. They are illustrations, not
 an additional evaluation sample.
 
 Cell-body positions come from `somaLocation` in the original, checksum-verified
-MaleCNS annotations. All 321 available positions among the 322 displayed neurons
-are preserved, with rotation and uniform scaling for display. KC 110815 has no
+MaleCNS annotations. All available positions of displayed neurons are preserved,
+with rotation and uniform scaling for display. The original Step 5 views contain
+321 located neurons among 322 selected. KC 110815 has no
 recorded position: its spikes still contribute to the replay, but it is explicitly
 unlocated on recovery decision 3 and loop decision 1. The faint background shows
 all 4,050 located Kenyon cells plus 2,000 sampled brain cells. No VNC cells or
@@ -85,9 +111,10 @@ checkpoint weights and latent state, neuron identities, trace-derived rates and
 choices, every board/Undo transition, clue preservation and final validity. The
 committed data makes the demo usable without the full research dataset.
 
-Browser checks covered all 42 displayed board transitions and readout rates,
-correct Undo highlighting, solved/loop endings, pause/resume, reset during
-playback, the unlocated-neuron notice and responsive layout.
+Browser checks cover all 46 displayed board transitions and readout rates,
+all 40 cautious-policy candidate assessments, correct Undo highlighting,
+solved/loop endings, pause/resume, reset during playback, the unlocated-neuron
+notice and responsive layout, including the new table at 390 px width.
 
 ## Fly artwork
 

@@ -1,0 +1,1439 @@
+{
+  "audit": "Independent Step6 development artifact audit",
+  "runner_commit": "4402991efd02d614dc899548fe5d2586fbb53965",
+  "all_checks_passed": true,
+  "summary_sha256": "aa977c906bf36090c6854a0daad734af0ef366e8d084649f98def6e7be868395",
+  "artifact_hashes_verified": 25,
+  "counts": {
+    "trace_bins": 193050,
+    "measurements": 7606,
+    "neural_records": 2970,
+    "episodes": 2560,
+    "offers": 70396,
+    "placements": 7562,
+    "training_trials": 2432
+  },
+  "distinct_images_rechecked": 7396,
+  "runs": [
+    {
+      "mapping": 0,
+      "batches": {
+        "source-0": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 128,
+            "wrong_placements": 32,
+            "placements": 448,
+            "neural_offers": 4352,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "ambiguous_placements": 72
+        },
+        "paired-1": {
+          "scores": {
+            "changed_correct": 8,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.6666666666666666,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 5,
+              "changed_contexts": 12,
+              "changed_correct": 1,
+              "timeouts": 11,
+              "accepted": 0,
+              "deferred": 5
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 19,
+              "changed_contexts": 12,
+              "changed_correct": 7,
+              "timeouts": 4,
+              "accepted": 1,
+              "deferred": 19
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 150,
+            "wrong_placements": 10,
+            "placements": 492,
+            "neural_offers": 4440,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 28
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 26
+              }
+            }
+          },
+          "ambiguous_placements": 10
+        },
+        "paired-2": {
+          "scores": {
+            "changed_correct": 20,
+            "unchanged_correct": 35,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9166666666666667,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 8,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 12
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 24,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 24
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 15,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 1,
+              "accepted": 4,
+              "deferred": 11
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "paired-3": {
+          "scores": {
+            "changed_correct": 23,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9791666666666667,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 15,
+              "changed_contexts": 12,
+              "changed_correct": 11,
+              "timeouts": 1,
+              "accepted": 0,
+              "deferred": 15
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 24,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 24
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "paired-4": {
+          "scores": {
+            "changed_correct": 24,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 1.0,
+            "all_judgments_pass": true
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 16
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 24,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 24
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "frozen-4": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 128,
+            "wrong_placements": 32,
+            "placements": 448,
+            "neural_offers": 4352,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "ambiguous_placements": 72
+        },
+        "no_feedback-4": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 32,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 1,
+              "accepted": 11,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 12,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 4,
+              "deferred": 8
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 127,
+            "wrong_placements": 33,
+            "placements": 446,
+            "neural_offers": 4348,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "ambiguous_placements": 69
+        },
+        "inconsistent-4": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 35,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 3,
+              "accepted": 9,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 1,
+              "accepted": 11,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 15,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 1,
+              "accepted": 4,
+              "deferred": 11
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 122,
+            "wrong_placements": 38,
+            "placements": 435,
+            "neural_offers": 4320,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 30
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 17
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 29
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 14
+              }
+            }
+          },
+          "ambiguous_placements": 73
+        }
+      },
+      "control_gaps": {
+        "frozen": 0.5,
+        "no_feedback": 0.5,
+        "inconsistent": 0.5
+      },
+      "pilot_gate": true
+    },
+    {
+      "mapping": 1,
+      "batches": {
+        "source-0": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 114,
+            "wrong_placements": 46,
+            "placements": 419,
+            "neural_offers": 4288,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 9
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 10
+              }
+            }
+          },
+          "ambiguous_placements": 68
+        },
+        "paired-1": {
+          "scores": {
+            "changed_correct": 2,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5416666666666666,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 9,
+              "accepted": 3,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 14,
+              "changed_contexts": 12,
+              "changed_correct": 2,
+              "timeouts": 10,
+              "accepted": 0,
+              "deferred": 14
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "paired-2": {
+          "scores": {
+            "changed_correct": 20,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9166666666666667,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 8,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 12
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 24,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 24
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "paired-3": {
+          "scores": {
+            "changed_correct": 23,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.9791666666666667,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 15,
+              "changed_contexts": 12,
+              "changed_correct": 11,
+              "timeouts": 1,
+              "accepted": 0,
+              "deferred": 15
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 24,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 24
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "paired-4": {
+          "scores": {
+            "changed_correct": 24,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 1.0,
+            "all_judgments_pass": true
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 16
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 24,
+              "changed_contexts": 12,
+              "changed_correct": 12,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 24
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 160,
+            "wrong_placements": 0,
+            "placements": 512,
+            "neural_offers": 4480,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 32
+              }
+            }
+          },
+          "ambiguous_placements": 0
+        },
+        "frozen-4": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 114,
+            "wrong_placements": 46,
+            "placements": 419,
+            "neural_offers": 4288,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 9
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 10
+              }
+            }
+          },
+          "ambiguous_placements": 68
+        },
+        "no_feedback-4": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 36,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 12,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 12,
+              "deferred": 12
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 114,
+            "wrong_placements": 46,
+            "placements": 419,
+            "neural_offers": 4288,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 9
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 10
+              }
+            }
+          },
+          "ambiguous_placements": 68
+        },
+        "inconsistent-4": {
+          "scores": {
+            "changed_correct": 0,
+            "unchanged_correct": 35,
+            "undo_correct": 16,
+            "forced_correct": 4,
+            "contrast_balanced_accuracy": 0.5,
+            "all_judgments_pass": false
+          },
+          "by_distinct_peers": {
+            "0": {
+              "contexts": 4,
+              "correct": 0,
+              "changed_contexts": 4,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 0,
+              "deferred": 0
+            },
+            "1": {
+              "contexts": 16,
+              "correct": 4,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 1,
+              "accepted": 11,
+              "deferred": 4
+            },
+            "2": {
+              "contexts": 24,
+              "correct": 11,
+              "changed_contexts": 12,
+              "changed_correct": 0,
+              "timeouts": 4,
+              "accepted": 9,
+              "deferred": 11
+            },
+            "3": {
+              "contexts": 16,
+              "correct": 16,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 4,
+              "deferred": 12
+            },
+            "4": {
+              "contexts": 4,
+              "correct": 4,
+              "changed_contexts": 0,
+              "changed_correct": 0,
+              "timeouts": 0,
+              "accepted": 0,
+              "deferred": 4
+            }
+          },
+          "sequence": {
+            "puzzles": 160,
+            "solved": 130,
+            "wrong_placements": 30,
+            "placements": 452,
+            "neural_offers": 4360,
+            "strata": {
+              "2-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-easy": {
+                "puzzles": 32,
+                "solved": 32
+              },
+              "3-trap": {
+                "puzzles": 32,
+                "solved": 15
+              },
+              "4-easy": {
+                "puzzles": 32,
+                "solved": 31
+              },
+              "4-trap": {
+                "puzzles": 32,
+                "solved": 20
+              }
+            }
+          },
+          "ambiguous_placements": 68
+        }
+      },
+      "control_gaps": {
+        "frozen": 0.5,
+        "no_feedback": 0.5,
+        "inconsistent": 0.5
+      },
+      "pilot_gate": true
+    }
+  ],
+  "limitations": [
+    "Selected-cell traces reconstruct MBON scores/actions, not the entire network spike hash.",
+    "Reset placement and restriction of weight writes were independently code-reviewed; logs verify phase sequence and memory continuity.",
+    "Full network immutability during training is supported by committed runner restoration assertions; checkpoint files contain plastic edges only.",
+    "No simulation, retraining, or heldout evaluation performed."
+  ]
+}

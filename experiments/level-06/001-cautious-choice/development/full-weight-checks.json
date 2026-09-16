@@ -1,0 +1,128 @@
+[
+  {
+    "mapping": 0,
+    "arm": "source",
+    "epoch": 0,
+    "before_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1",
+    "after_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1"
+  },
+  {
+    "mapping": 0,
+    "arm": "paired",
+    "epoch": 1,
+    "before_sha256": "90dbaf1075944d454ac63b8c0982dbd87c14bde337dc98d92c90de083c84132c",
+    "after_sha256": "90dbaf1075944d454ac63b8c0982dbd87c14bde337dc98d92c90de083c84132c"
+  },
+  {
+    "mapping": 0,
+    "arm": "paired",
+    "epoch": 2,
+    "before_sha256": "c77e0aa4d574c56dead8513e41ba2800bcdbf8a462bb8d4028dcda0b5ce5552a",
+    "after_sha256": "c77e0aa4d574c56dead8513e41ba2800bcdbf8a462bb8d4028dcda0b5ce5552a"
+  },
+  {
+    "mapping": 0,
+    "arm": "paired",
+    "epoch": 3,
+    "before_sha256": "638dedae3c38c818230784b90537f727b455a6f29f0d2e8e8e8ec4c7e2f1ea66",
+    "after_sha256": "638dedae3c38c818230784b90537f727b455a6f29f0d2e8e8e8ec4c7e2f1ea66"
+  },
+  {
+    "mapping": 0,
+    "arm": "paired",
+    "epoch": 4,
+    "before_sha256": "906971cc1bcf327ff700ae5e8b171d92ab6529650d4496c9c6ad178a64a2749e",
+    "after_sha256": "906971cc1bcf327ff700ae5e8b171d92ab6529650d4496c9c6ad178a64a2749e"
+  },
+  {
+    "mapping": 0,
+    "arm": "erased",
+    "epoch": 4,
+    "before_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1",
+    "after_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1"
+  },
+  {
+    "mapping": 0,
+    "arm": "frozen",
+    "epoch": 4,
+    "before_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1",
+    "after_sha256": "389b2087636c382456925690a2b8285d6ca576d2030d7cd670a784dc6c8b46f1"
+  },
+  {
+    "mapping": 0,
+    "arm": "no_feedback",
+    "epoch": 4,
+    "before_sha256": "8d39eb8ea8d5acd4f76e4956a80b2b0f2d7ef7acfd61ab0e3a2bcd29fb678ce1",
+    "after_sha256": "8d39eb8ea8d5acd4f76e4956a80b2b0f2d7ef7acfd61ab0e3a2bcd29fb678ce1"
+  },
+  {
+    "mapping": 0,
+    "arm": "inconsistent",
+    "epoch": 4,
+    "before_sha256": "b6b54a7187a75ea51b4a43a4af6a9d67ae82c73d24acabbc6ec3a7951d5fbc57",
+    "after_sha256": "b6b54a7187a75ea51b4a43a4af6a9d67ae82c73d24acabbc6ec3a7951d5fbc57"
+  },
+  {
+    "mapping": 1,
+    "arm": "source",
+    "epoch": 0,
+    "before_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639",
+    "after_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639"
+  },
+  {
+    "mapping": 1,
+    "arm": "paired",
+    "epoch": 1,
+    "before_sha256": "8f202c4b455eb80b24d2ab4c35cee851b2a49bb13c01b9ce96688eb5edb5c8ee",
+    "after_sha256": "8f202c4b455eb80b24d2ab4c35cee851b2a49bb13c01b9ce96688eb5edb5c8ee"
+  },
+  {
+    "mapping": 1,
+    "arm": "paired",
+    "epoch": 2,
+    "before_sha256": "5c407be1e738ad9f78539cdf2646f42a7e87e69f1f5092b1360a1c69216778a3",
+    "after_sha256": "5c407be1e738ad9f78539cdf2646f42a7e87e69f1f5092b1360a1c69216778a3"
+  },
+  {
+    "mapping": 1,
+    "arm": "paired",
+    "epoch": 3,
+    "before_sha256": "b4a5b76bedd2fde2b78fbd3f48904d264e9457e646f521e5b25d3901e2b6a615",
+    "after_sha256": "b4a5b76bedd2fde2b78fbd3f48904d264e9457e646f521e5b25d3901e2b6a615"
+  },
+  {
+    "mapping": 1,
+    "arm": "paired",
+    "epoch": 4,
+    "before_sha256": "319bd1f8b100b034a4a944f21763c63fc1765e78809f3968baeaa9d87c7a1d3d",
+    "after_sha256": "319bd1f8b100b034a4a944f21763c63fc1765e78809f3968baeaa9d87c7a1d3d"
+  },
+  {
+    "mapping": 1,
+    "arm": "erased",
+    "epoch": 4,
+    "before_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639",
+    "after_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639"
+  },
+  {
+    "mapping": 1,
+    "arm": "frozen",
+    "epoch": 4,
+    "before_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639",
+    "after_sha256": "21357fdf722ad7d0ef2da3b209be519339c2408d1fd94e129fd27140f2b30639"
+  },
+  {
+    "mapping": 1,
+    "arm": "no_feedback",
+    "epoch": 4,
+    "before_sha256": "72915c1e12f6acf476622467c5003d296fcd5f278b4ed2f89c7d6bf2e5cf1ed6",
+    "after_sha256": "72915c1e12f6acf476622467c5003d296fcd5f278b4ed2f89c7d6bf2e5cf1ed6"
+  },
+  {
+    "mapping": 1,
+    "arm": "inconsistent",
+    "epoch": 4,
+    "before_sha256": "b5a1c0961b6ad8d3f1e77e4229e3720dac84e44af1afdff3d86e6a65cb2e9ab1",
+    "after_sha256": "b5a1c0961b6ad8d3f1e77e4229e3720dac84e44af1afdff3d86e6a65cb2e9ab1"
+  }
+]
