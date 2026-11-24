@@ -1,0 +1,161 @@
+{
+  "name": "Gemma 4 credit-analysis generation prompts",
+  "version": "1.0",
+  "created_date": "2026-11-24",
+  "model_reference": "google/gemma-4-26B-A4B-it",
+  "model_note": "Use your deployed model alias and its matching tokenizer/chat-template revision.",
+  "scope": "Ten basic English generation prompts. No source documents, retrieval, browsing, or tool calls are required. All issuers, financials, and ratings are fictional.",
+  "target_visible_output_tokens": {
+    "minimum": 800,
+    "maximum": 1000
+  },
+  "tested_on_user_server": false,
+  "system_prompt": "You are an experienced credit analyst writing illustrative credit-research articles.\n\nUse the formal, balanced, analytical style of a credit-rating agency report, similar to S&P Global Ratings. Explain how business conditions, financial performance, and funding affect credit quality.\n\nAll issuers, transactions, ratings, and financial figures in this exercise are fictional. Invent plausible details and internally consistent financials. Briefly identify the article as illustrative, without a lengthy disclaimer. Do not claim that a real rating agency published the article or took a rating action, and do not invent citations.\n\nWrite approximately 600–650 English words in total, including any table text. Develop each requested section with substantive analysis. Finish with a complete outlook or conclusion. Avoid padding, repeated conclusions, and a displayed word or token count.\n\nInclude specific figures, year-over-year comparisons, and forward-looking assumptions where relevant. Clearly distinguish illustrative historical results from forecasts. Keep currencies, units, periods, and financial definitions consistent. Ratios must reconcile with the figures used to calculate them; distinguish gross debt from net debt. If you introduce rating triggers, describe them as assumptions for this fictional case rather than published agency criteria.\n\nFollow the headings and output format specified in the user prompt. Keep any requested financial table compact. Return only the finished article, with no conversational introduction, drafting notes, or explanation of your writing process.",
+  "prompts": [
+    {
+      "id": "CR01",
+      "title": "Industrial manufacturer — investment grade", 
+      "sector": "Industrials",
+      "user_prompt": "Write an S&P-style credit analysis article on Aster Industrial Holdings, a fictional diversified manufacturer, with an illustrative BBB rating and Stable outlook.\n\nDescribe a business with established customer relationships, moderate cyclicality, and manageable leverage. Include extensive financial discussion: revenue, EBITDA, EBITDA margin, gross debt, unrestricted cash, net debt/EBITDA, cash interest, operating cash flow, capital expenditure, and free cash flow. Compare two historical years and give a one-year forecast.\n\nUse these headings: Rating Overview; Business Risk; Financial Risk; Liquidity; Outlook and Rating Triggers.\n\nInclude one compact financial table. Explain both an upside scenario and a downside scenario, with illustrative numerical triggers."
+    },
+    {
+      "id": "CR02",
+      "title": "Telecommunications — refinancing pressure",
+      "sector": "Telecommunications",
+      "user_prompt": "Write an S&P-style credit analysis article on Crestwave Telecom, a fictional mobile and broadband operator, with an illustrative BB rating and Negative outlook.\n\nAssume subscriber growth is slowing, network investment remains high, and significant debt matures within 18 months. Invent plausible financials covering revenue growth, EBITDA margin, debt/EBITDA, interest coverage, capital expenditure, free cash flow, available cash, and undrawn committed facilities.\n\nUse these headings: Credit View; Competitive Position; Earnings and Leverage; Refinancing and Liquidity; Outlook.\n\nMake the article mainly narrative. Quantify how a 10% EBITDA decline and higher refinancing costs would affect debt-service capacity. Explain which developments could stabilize the outlook and which could increase downgrade pressure."
+    },
+    {
+      "id": "CR03",
+      "title": "Data centers — growth and construction risk",
+      "sector": "Digital infrastructure",
+      "user_prompt": "Write an S&P-style credit analysis article on Meridian Data Infrastructure, a fictional data-center developer and operator, with an illustrative BBB- rating and Stable outlook.\n\nBalance strong demand and contracted revenue against customer concentration, construction commitments, power availability, and debt-funded expansion. Include figures for operational capacity, occupancy, contracted backlog, revenue, EBITDA, debt, capital expenditure, interest expense, and liquidity.\n\nUse these headings: Summary; Operating Position; Expansion and Execution Risk; Financial Profile; Outlook.\n\nCompare the current year with a two-year forecast. Explain a downside involving delayed commissioning and higher construction costs, and quantify its effect on leverage and funding needs. Clearly distinguish operating assets from projects under construction."
+    },
+    {
+      "id": "CR04",
+      "title": "Regulated utility — capital investment and cash flow",
+      "sector": "Utilities",
+      "user_prompt": "Write an S&P-style credit analysis article on Linden Vale Electricity, a fictional regulated electricity utility, with an illustrative A- rating and Stable outlook.\n\nDiscuss predictable regulated earnings alongside a large network investment program, recovery of costs through tariffs, storm exposure, and financing needs. Invent financials for revenue, EBITDA, funds from operations, gross debt, FFO/debt, capital expenditure, dividends, and available liquidity.\n\nUse these headings: Rating Rationale; Regulatory and Business Profile; Financial Forecast; Liquidity; Upside and Downside Scenarios.\n\nInclude a compact table covering two historical years and one forecast year. Define FFO briefly. Explain why stable earnings can coexist with negative free cash flow, and identify illustrative financial thresholds that could change the credit view."
+    },
+    {
+      "id": "CR05",
+      "title": "Regional bank — deposits and asset quality",
+      "sector": "Banking",
+      "user_prompt": "Write an S&P-style credit analysis article on Cedarbridge Regional Bank, a fictional commercial bank, with an illustrative BBB rating and Negative outlook.\n\nAssume deposit competition is increasing and the bank has meaningful commercial real-estate exposure. Include total assets, loans, deposits, uninsured-deposit share, loan-to-deposit ratio, net interest margin, return on assets, CET1 capital ratio, nonperforming loans, reserve coverage, and liquid assets.\n\nUse these headings: Credit Summary; Franchise and Earnings; Capital and Asset Quality; Funding and Liquidity; Outlook.\n\nDiscuss changes over two years and a one-year downside. Quantify a deposit-outflow scenario without treating all liquid assets as immediately available at book value. Explain why satisfactory capital does not eliminate liquidity risk."
+    },
+    {
+      "id": "CR06",
+      "title": "Office REIT — occupancy and refinancing",
+      "sector": "Real estate",
+      "user_prompt": "Write an S&P-style credit analysis article on Hawthorne Office REIT, a fictional owner of office properties, with an illustrative BB+ rating and Stable outlook.\n\nAssume occupancy is recovering slowly but lease expirations, tenant incentives, and refinancing costs remain significant. Include portfolio value, occupancy, rental income, net operating income, debt, loan-to-value, interest coverage, capital expenditure, cash, and upcoming maturities.\n\nUse these headings: Credit Overview; Property and Tenant Profile; Cash Flow and Leverage; Liquidity and Refinancing; Outlook.\n\nInclude one compact current-year financial table. Explain a scenario with lower occupancy and higher capitalization rates, distinguishing the effect on cash earnings from the effect on property valuations. Describe measurable conditions for an upgrade or downgrade."
+    },
+    {
+      "id": "CR07",
+      "title": "Airport — traffic recovery and expansion",
+      "sector": "Transportation infrastructure",
+      "user_prompt": "Write an S&P-style credit analysis article on Westhaven International Airport, a fictional airport operator, with an illustrative BBB rating and Stable outlook.\n\nAssume passenger traffic has recovered, commercial revenue is growing, and a major terminal expansion is beginning. Include passenger volumes, aeronautical and commercial revenue, EBITDA, outstanding debt, annual debt service, cash available for debt service, debt-service coverage, expansion spending, and liquidity.\n\nUse these headings: Credit Highlights; Demand and Competitive Position; Financial Performance; Capital Program and Debt Service; Outlook.\n\nCompare two historical years and one forecast year. Define the debt-service coverage calculation. Analyze a 15% traffic decline and explain how revenue composition, operating costs, and capital spending could affect financial resilience."
+    },
+    {
+      "id": "CR08",
+      "title": "Auto supplier — customer concentration and transition",
+      "sector": "Automotive suppliers",
+      "user_prompt": "Write an S&P-style credit analysis article on Vantage Mobility Components, a fictional automotive parts supplier, with an illustrative BB rating and Stable outlook.\n\nDiscuss customer concentration, exposure to vehicle production cycles, pricing pressure, raw-material costs, and investment in electric-vehicle components. Include revenue, EBITDA margin, debt, cash, gross leverage, interest coverage, working-capital needs, capital expenditure, and free cash flow.\n\nUse these headings: Rating Rationale; Business Position; Financial Assessment; Liquidity; Outlook and Sensitivities.\n\nUse narrative paragraphs rather than a table. Compare two historical years and a one-year forecast. Quantify the impact of losing part of a major customer contract and explain how management responses could protect cash while affecting future competitiveness."
+    },
+    {
+      "id": "CR09",
+      "title": "Property insurer — underwriting and catastrophe exposure",
+      "sector": "Insurance",
+      "user_prompt": "Write an S&P-style credit analysis article on Bluehaven General Insurance, a fictional property and casualty insurer, with an illustrative A- rating and Stable outlook.\n\nBalance profitable underwriting and a diversified investment portfolio against catastrophe exposure, claims inflation, reserve uncertainty, and reinsurance dependence. Include gross and net premiums, loss ratio, expense ratio, combined ratio, underwriting profit, investment income, equity, liquid assets, and catastrophe losses.\n\nUse these headings: Credit Overview; Business and Underwriting Performance; Capital and Investments; Catastrophe Risk and Liquidity; Outlook.\n\nCompare two historical years and a one-year forecast. Keep premium and ratio definitions consistent. Explain a severe-weather scenario, distinguishing gross claims from net retained losses and immediate cash payments from eventual reinsurance recoveries."
+    },
+    {
+      "id": "CR10",
+      "title": "Auto-loan securitization — senior-note analysis",
+      "sector": "Structured finance",
+      "user_prompt": "Write an S&P-style structured-finance analysis article on Crescent Auto Receivables 2026-1, a fictional auto-loan securitization, with an illustrative senior-note rating of AA (sf).\n\nInvent an internally consistent transaction with a receivables pool, senior notes, mezzanine notes, and first-loss equity. Include pool balance, loan count, average loan size, borrower characteristics, arrears, expected defaults, recovery assumptions, credit enhancement, excess spread, and reserve funding.\n\nUse these headings: Transaction Overview; Collateral Quality; Capital Structure; Cash Flow and Stress Analysis; Key Risks and Monitoring.\n\nInclude a compact capital-structure table. Explain a base case and a higher-loss scenario, including allocation of principal losses between tranches. Distinguish credit enhancement from liquidity protection and avoid implying that a simple loss calculation alone determines the rating."
+    }
+  ],
+  "usage": {
+    "messages": "For each case, start a new chat with system_prompt as the system message and that case's user_prompt as the user message. Send the same messages in both conditions.",
+    "paired_conditions": [
+      {
+        "label": "watermarked",
+        "watermarking": true
+      },
+      {
+        "label": "unwatermarked",
+        "watermarking": false
+      }
+    ],
+    "sampling": "Keep the production sampling configuration identical across conditions. Gumbel requires nonzero temperature and cannot embed with top_k=1. Do not raise temperature only to improve detection.",
+    "length": "600–650 words is an approximate prompt cue, not a guaranteed token count. Measure the actual final answer with the deployed tokenizer. Track out-of-range responses and finish_reason.",
+    "optional_strict_length_openai_sdk_kwargs": {
+      "max_tokens": 1000,
+      "extra_body": {
+        "min_tokens": 800,
+        "chat_template_kwargs": {
+          "enable_thinking": false
+        }
+      }
+    },
+    "strict_length_note": "These length settings constrain generated sequences and can force continuation or truncate an article. They do not guarantee a complete 800–1000-token visible answer. Avoid custom stop strings that terminate early; verify actual returned length. For naturally completed articles, leave min_tokens at its production setting, allow more headroom, and use the measured 800–1000-token length stratum.",
+    "reasoning": "The optional non-thinking setting simplifies this first pilot. If production uses thinking, separately validate that production mode and detect only the text that will actually be delivered.",
+    "watermarking_flag": "When using the OpenAI Python client, put watermarking in extra_body alongside the other vLLM extensions. Verify engine watermarking is configured and enforce does not override the false condition.",
+    "detector_fields": [
+      "score",
+      "p_value",
+      "num_scored_tokens",
+      "is_watermarked"
+    ],
+    "record_per_output": [
+      "prompt_id",
+      "condition",
+      "model_and_tokenizer_revision",
+      "vllm_version",
+      "sampling_parameters",
+      "watermark_profile_id",
+      "seed_if_used",
+      "final_text",
+      "generated_token_count",
+      "visible_text_token_count",
+      "finish_reason",
+      "num_scored_tokens",
+      "score",
+      "p_value",
+      "is_watermarked"
+    ],
+    "calibration_notes": [
+      "Ten pairs form a diagnostic pilot, not enough evidence to choose and validate a low false-positive threshold.",
+      "For a candidate threshold tau, an evaluation rule can classify a response as detected when p_value <= tau. A p-value is not a posterior probability of authorship or watermark presence.",
+      "Choose a threshold against representative unwatermarked negatives and inspect sensitivity on watermarked positives. Freeze it before independent validation.",
+      "Use the same deployed watermark key, algorithm, PRF, context width, tokenizer and detector configuration. Keep detector context deduplication enabled unless separately calibrated.",
+      "Expand with substantively different cases and wording; repeated seeds on identical prompts do not guarantee independent Gumbel outputs. Keep variants of the same case together when splitting calibration and validation sets.",
+      "This suite covers long-form generation only. Do not extend its results to other lengths, editing, extraction, JSON, or other workflows without evaluating those separately.",
+      "For a fixed threshold and representative independent validation negatives with zero false positives, the exact one-sided 95% upper FPR bound is 1 - 0.05^(1/n). It is about 25.89% for n=10, 0.9936% for n=300, and 0.09981% for n=3000."
+    ]
+  },
+  "sources": [
+    {
+      "title": "vLLM text watermarking",
+      "url": "https://docs.vllm.ai/en/stable/features/watermarking/"
+    },
+    {
+      "title": "Gemma 4 prompt formatting",
+      "url": "https://gemma.ai/get-started/prompt-formatting/"
+    },
+    {
+      "title": "vLLM reasoning outputs",
+      "url": "https://docs.vllm.ai/en/stable/features/reasoning_outputs/"
+    },
+    {
+      "title": "vLLM sampling parameters",
+      "url": "https://docs.vllm.ai/en/stable/api/vllm/sampling_params/"
+    },
+    {
+      "title": "vLLM reference watermark detector",
+      "url": "https://docs.vllm.ai/en/v0.33.0/examples/basic/online_serving/#watermark-detection-server"
+    },
+    {
+      "title": "NIST exact binomial confidence limits",
+      "url": "https://www.itl.nist.gov/div898/software/dataplot/refman2/auxillar/exacbino.htm"
+    }
+  ]
+}
